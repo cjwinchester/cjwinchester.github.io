@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+
+      <style>
+      body {
+margin:50px;
+padding:0px;
+text-align:center;
+	}
+	
+.container {
+width:600px;
+margin:0px auto;
+text-align:left;
+margin-top:-10px;
+	}
+
+h2 { 
+font-family: Calibri, Helvetica, Arial, sans-serif;
+font-size: 4em;
+margin-top:0;
+text-align:center;
+margin-bottom:20px;
+}
+    
+table {
+border-collapse: collapse;
+font-size: 80%;
+font-family: Arial, sans-serif;
+}
+
+table td {
+padding: 10px;
+vertical-align:middle;
+}
+
+table tr {
+border-bottom: 1px solid #ccc;
+border-top: 1px solid #ccc;
+}
+      </style>
+      
+      <script>
+ 
+var table_content='';
+
+function displayContent(json) {
+            var len = json.feed.entry.length;
+     for (var i=0; i<len; i++) {        
+            var hed = json.feed.entry[i].gsx$hed.$t;
+            var url = json.feed.entry[i].gsx$url.$t;
+            var time = json.feed.entry[i].gsx$time.$t;
+            var brief = json.feed.entry[i].gsx$brief.$t;
+            var hathed = json.feed.entry[i].gsx$hathed.$t;
+            var haturl = json.feed.entry[i].gsx$haturl.$t;
+            var hattime = json.feed.entry[i].gsx$hattime.$t;
+            var hatbrief = json.feed.entry[i].gsx$hatbrief.$t;
+            var xmashed = json.feed.entry[i].gsx$xmashed.$t;
+            var xmasurl = json.feed.entry[i].gsx$xmasurl.$t;
+            var xmastime = json.feed.entry[i].gsx$xmastime.$t;
+            var xmasbrief = json.feed.entry[i].gsx$xmasbrief.$t;
+            
+            table_content += [
+            '<tr><td><a href="' + url + '" target="_blank"><em><strong>' + hed + '</strong></em></a></td><td>' + brief + '</td><td>' + time + '</td></tr>' + '<tr><td><a href="' + haturl + '" target="_blank"><em><strong>' + hathed + '</strong></em></a></td><td>' + hatbrief + '</td><td>' + hattime + '</td></tr>' + '<tr><td><a href="' + xmasurl + '" target="_blank"><em><strong>' + xmashed + '</strong></em></a></td><td>' + xmasbrief + '</td><td>' + xmastime + '</td></tr>'
+            ].join('')
+            
+            }                                      
+
+
+document.getElementById('results').innerHTML = 
+'<table>' + table_content + '</table>'
+
+}
+            
+      </script>
+
+    </head>
+   
+   <body>
+
+   <h2>FORBIDDEN LEDES</h2>
+   
+   <div class="container">
+   <div id="results"></div>
+   </div>
+   
+<script src="http://spreadsheets.google.com/feeds/list/0Ag4MM37uq7FmdGpoX18zR0JIel96YkVpSGNycTZwenc/od6/public/values?alt=json-in-script&amp;callback=displayContent" type="text/javascript"></script>
+
+
+</body>
+</html>
