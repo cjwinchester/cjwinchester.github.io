@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Projects - Cody Winchester</title>
+    <style>
+      #bars { opacity:0.4; cursor:hand; cursor:pointer; }
+    </style>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
@@ -66,8 +69,8 @@ $ git checkout gh-pages
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>
     $('#bars').click(function() {
-      $('#slider').slideDown('fast');
-      })  
+      $('#slider').slideToggle(200);
+      })
     </script>
   </body>
 </html>
