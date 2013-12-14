@@ -54,6 +54,7 @@ padding-bottom: 10px;
 var official_content='';
 var hat_content='';
 var xmas_content='';
+var dic_content='';
 
 function displayContent(json) {
             var len = json.feed.entry.length;
@@ -70,6 +71,10 @@ function displayContent(json) {
             var xmasurl = json.feed.entry[i].gsx$xmasurl.$t;
             var xmastime = json.feed.entry[i].gsx$xmastime.$t;
             var xmasbrief = json.feed.entry[i].gsx$xmasbrief.$t;
+            var diched = json.feed.entry[i].gsx$diched.$t;
+            var dicurl = json.feed.entry[i].gsx$dicurl.$t;
+            var dictime = json.feed.entry[i].gsx$dictime.$t;
+            var dicbrief = json.feed.entry[i].gsx$dicbrief.$t;
             
 	    if (hed != "" && hed != null) {
             official_content += [
@@ -86,11 +91,16 @@ function displayContent(json) {
             '<tr><td><a href="' + xmasurl + '" target="_blank"><em><strong>' + xmashed + '</strong></em></a></td><td>' + xmasbrief + '</td><td>' + xmastime + '</td></tr>'].join('')
             }
             
+            if (diched != "" && diched != null) {
+            dic_content += [
+            '<tr><td><a href="' + dicurl + '" target="_blank"><em><strong>' + diched + '</strong></em></a></td><td>' + dicbrief + '</td><td>' + dictime + '</td></tr>'].join('')
+            }            
+            
             }                                      
 
 
 document.getElementById('results').innerHTML = 
-'<table>' + official_content + hat_content + xmas_content + '</table>'
+'<table>' + official_content + hat_content + xmas_content + dic_content '</table>'
 
 }
             
@@ -103,7 +113,7 @@ document.getElementById('results').innerHTML =
    <h2>Forbidden Ledes</h2>
    
    <div class="graf">
-   	"Christmas came early" ... "wears many hats" ... "It's official"
+   	"Christmas came early" ... "wears many hats" ... "It's official" ... "the dictionary defines"
    </div>
    
    <div class="container">
