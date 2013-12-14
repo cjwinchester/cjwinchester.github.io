@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>
+News quizzin'
+</title>
+
+<link rel="stylesheet" type="text/css" href="newsquiz.css" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script src="newsquiz.js"></script>	
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>NEWS QUIZ YO</h1>
+
+<div class="text">
+<p>Pay attention to the news!</p>
+</div>
+
+<h4>1. A federal appeals court ruled July 19 that New York Times reporter James Risen must do what?</h4>
+
+<ul>
+<li class="qlist">
+<input type="radio" name="risen" id="risen1" value="1"><span class="answer frank">Testify in the criminal trial of a CIA agent accused of leaking him state secrets</span>
+</li>
+
+<li class="qlist">
+<input type="radio" name="risen" id="risen2" value="0"><span class="answer sally">Dance on the head of a pin</span>
+</li>
+
+<li class="qlist">
+<input type="radio" name="risen" id="risen3" value="0"><span class="answer sally">Divulge the answer to a particularly hard crossword clue</span>
+</li>
+
+<li class="qlist">
+<input type="radio" name="risen" id="risen4" value="0"><span class="answer sally">Eat a pound of butter</span>
+</li>
+
+</ul>
+
+<h4>2. Which major American city just filed for bankruptcy?</h4>
+
+<ul>
+
+<li class="qlist">
+<input type="radio" name="bankrupt" id="bankrupt2" value="0"><span class="answer sally">Cincinnati</span>
+</li>
+
+<li class="qlist">
+<input type="radio" name="bankrupt" id="bankrupt3" value="0"><span class="answer sally">Sacramento</span>
+</li>
+
+<li class="qlist">
+<input type="radio" name="bankrupt" id="bankrupt1" value="1"><span class="answer frank">Detroit</span>
+</li>
+
+<li class="qlist">
+<input type="radio" name="bankrupt" id="bankrupt4" value="0"><span class="answer sally">Austin</span>
+</li>
+
+</ul>
+
+<h4>3. The Learning Community of Douglas and Sarpy County came under fire recently for considering hiring a consultant whose fee is:</h4>
+
+<ul>
+
+<li class="qlist">
+<input type="radio" name="learningcomm" id="learningcomm2" value="0"><span class="answer sally">$600 a day</span>
+</li>
+
+<li class="qlist">
+<input type="radio" name="learningcomm" id="learningcomm3" value="0"><span class="answer sally">$5,000 a day</span>
+</li>
+
+<li class="qlist">
+<input type="radio" name="learningcomm" id="learningcomm1" value="1"><span class="answer frank">$1,000 a day</span>
+</li>
+
+<li class="qlist">
+<input type="radio" name="learningcomm" id="learningcomm4" value="0"><span class="answer sally">$300 a day</span>
+</li>
+
+</ul>
+
+<h4>4. Who is Anthony J. Garcia?</h4>
+
+<ul>
+
+<li class="qlist">
+<input type="radio" name="garcia" id="garcia2" value="0"><span class="answer sally">A local drug kingpin</span>
+</li>
+
+<li class="qlist">
+<input type="radio" name="garcia" id="garcia3" value="0"><span class="answer sally">A rising star on the junior tennis circuit</span>
+</li>
+
+<li class="qlist">
+<input type="radio" name="garcia" id="garcia1" value="1"><span class="answer frank">The man accused of brutally murdering four people in Omaha</span>
+</li>
+
+<li class="qlist">
+<input type="radio" name="garcia" id="garcia4" value="0"><span class="answer sally">A political scientist at UNO</span>
+</li>
+
+</ul>
+
+<div id="break" style="margin-top:20px;"></div>
+
+<a class="button score" onclick="getScore()">SUBMIT</a>
+<a class="button" id="resetter" onclick="reset()">RESET</a>
+
+<div id="toTop">^ BACK TO TOP</div>
+       
+       <div id="modal" class="styled" onclick="hide()">
+       
+       <div class="closeout">&#10006;</div>
+       
+       <div id="tweetBtn">
+    <a class="twitter-share-button" href="http://twitter.com/share" data-url="http://omaha.com" data-text="Check out the @OWHnews quiz:" data-count="none">Tweet</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
+       
+       </div>
+       
+       </div>
+       
+</body>
+
+</html>
