@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+
+<head>
+
+<title>
+What am I reading?
+</title>
+
+<!--stylesheets-->
+<link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<link rel='stylesheet' href='jquery-ui.css' />
+<link rel='stylesheet' href='reading.css' />
+
+<!--scripts-->
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js'></script>
+<script src="jquery-ui.js" type="text/javascript"></script>
+<script src="reading.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+<div id="whatreadingnow"></div>
+</div>
+
+<script src="http://spreadsheets.google.com/feeds/list/0Ag4MM37uq7FmdFE5aktUSUN2aVdIUExHZTI4NVl3Umc/od6/public/values?alt=json-in-script&amp;callback=displayContent" type="text/javascript"></script>
+
+<script>
+$(document).tooltip({ track: true });
+</script>
+
+</body>
+
+</html>
