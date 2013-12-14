@@ -51,7 +51,9 @@ padding-bottom: 10px;
 
 // h/t Michelle Minkoff: http://michelleminkoff.com/2010/11/22/using-google-spreadsheets-as-your-database/
  
-var table_content='';
+var official_content='';
+var hat_content='';
+var xmas_content='';
 
 function displayContent(json) {
             var len = json.feed.entry.length;
@@ -69,15 +71,26 @@ function displayContent(json) {
             var xmastime = json.feed.entry[i].gsx$xmastime.$t;
             var xmasbrief = json.feed.entry[i].gsx$xmasbrief.$t;
             
-            table_content += [
-            if (hed != "" && hed != null) {'<tr><td><a href="' + url + '" target="_blank"><em><strong>' + hed + '</strong></em></a></td><td>' + brief + '</td><td>' + time + '</td></tr>' +} else if (hathed !='' && hathed != null) { '<tr><td><a href="' + haturl + '" target="_blank"><em><strong>' + hathed + '</strong></em></a></td><td>' + hatbrief + '</td><td>' + hattime +} else if (xmashed != '' && xmashed != null) {</td></tr>' + '<tr><td><a href="' + xmasurl + '" target="_blank"><em><strong>' + xmashed + '</strong></em></a></td><td>' + xmasbrief + '</td><td>' + xmastime + '</td></tr>'}
-            ].join('')
+	    if (hed != "" && hed != null) {
+            official_content += [
+            '<tr><td><a href="' + url + '" target="_blank"><em><strong>' + hed + '</strong></em></a></td><td>' + brief + '</td><td>' + time + '</td></tr>'].join('')
+            }
+            
+            if (hathed != "" && hathed != null) {
+            hat_content += [
+            '<tr><td><a href="' + haturl + '" target="_blank"><em><strong>' + hathed + '</strong></em></a></td><td>' + hatbrief + '</td><td>' + hattime + '</td></tr>'].join('')
+            }
+            
+            if (xmashed != "" && xmashed != null) {
+            xmas_content += [
+            '<tr><td><a href="' + xmasurl + '" target="_blank"><em><strong>' + xmashed + '</strong></em></a></td><td>' + xmasbrief + '</td><td>' + xmastime + '</td></tr>'].join('')
+            }
             
             }                                      
 
 
 document.getElementById('results').innerHTML = 
-'<table>' + table_content + '</table>'
+'<table>' + official_content + hat_content + xmas_content + '</table>'
 
 }
             
