@@ -1,0 +1,6 @@
+ul { list-style:none; }
+td { padding:20px; }
+.unstyled a { text-decoration:none; }
+.unstyled a:hover { text-decoration:none; }
+#toTop { position:fixed; bottom:10px; right:10px; cursor:pointer; display:none; }
+div.DC-document-list {height:500px;}
