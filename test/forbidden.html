@@ -3,50 +3,10 @@
    <head>
       <meta charset="utf-8">
 
-      <style>
-      body {
-margin:50px;
-padding:0px;
-text-align:center;
-	}
-	
-.container {
-margin:0px auto;
-text-align:left;
-	}
+<!-- bootstrap -->
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 
-h2 { 
-font-family: Calibri, Helvetica, Arial, sans-serif;
-font-size: 4em;
-margin-top:0;
-text-align:center;
-margin-bottom:20px;
-}
-    
-table {
-border-collapse: collapse;
-font-size: 80%;
-font-family: Arial, sans-serif;
-}
-
-table td {
-padding: 10px;
-vertical-align:middle;
-}
-
-table tr {
-border-bottom: 1px solid #ccc;
-border-top: 1px solid #ccc;
-}
-
-.graf {
-font-style:italic;
-border-top:1px solid #ccc;
-padding-top: 10px;
-padding-bottom: 10px;
-}
-      </style>
-      
       <script>
 
 // h/t Michelle Minkoff: http://michelleminkoff.com/2010/11/22/using-google-spreadsheets-as-your-database/
@@ -100,7 +60,7 @@ function displayContent(json) {
 
 
 document.getElementById('results').innerHTML = 
-'<table>' + official_content + hat_content + xmas_content + dic_content + '</table>'
+'<table class="table table-condensed table-striped">' + official_content + hat_content + xmas_content + dic_content + '</table>'
 
 }
             
@@ -110,18 +70,29 @@ document.getElementById('results').innerHTML =
    
    <body>
 
-   <h2>Forbidden Ledes</h2>
+
    
-   <div class="graf">
-   	"Christmas came early" ... "wears many hats" ... "It's official" ... "the dictionary defines"
-   </div>
    
+
+
    <div class="container">
+   <div class="col-md-6 col-md-offset-3">
+   
+      <h2>Forbidden Ledes</h2>
+      
+         <span class="label label-danger">christmas came early</span>
+   	<span class="label label-danger">wears many hats</span>
+   	<span class="label label-danger">it's official</span>
+   	<span class="label label-danger">the dictionary defines</span>
+   
+   <hr/>
+   
    <div id="results"></div>
+   	
+   	</div>
    </div>
    
 <script src="http://spreadsheets.google.com/feeds/list/0Ag4MM37uq7FmdGpoX18zR0JIel96YkVpSGNycTZwenc/od6/public/values?alt=json-in-script&amp;callback=displayContent" type="text/javascript"></script>
-
 
 </body>
 </html>
