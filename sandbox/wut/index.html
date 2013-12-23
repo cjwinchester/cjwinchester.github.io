@@ -4,7 +4,7 @@
       <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>\o/</title>
+      <title>404</title>
 	  
 	  <style>
 	  .panel-default {cursor: pointer; cursor: hand; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: moz-none; -ms-user-select: none; user-select: none; }
@@ -28,13 +28,19 @@
       </style>
    </head>
    <body>
-      <div class="container">
+      
+	  <div id="four">
+	  <h1 style="text-align:center;">
+	  404
+	  </h1>
+	  </div>
+	  
+	  <div class="container" id="mainthing" style="display:none;">
          <h1 style="text-align:center;">
          January: "Evidence-based"
          </h1>
          <div class="row">
             <div class="col-lg-8 col-md-offset-2">
-<hr/>		
 		<div class="panel-group" id="accordion">
   <div class="panel panel-default" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
     <div class="panel-heading">
@@ -44,7 +50,7 @@
     </div>
     <div id="collapseOne" class="panel-collapse collapse">
       <div class="panel-body">
-        List of stories here
+        List of stories	
       </div>
     </div>
   </div>
@@ -152,5 +158,9 @@
 		 </div>
 		          
       </div>
+
+	  <script>
+$(document).ready(function(){var e=[];var t="38,38,40,40,37,39,37,39,66,65";$(document).keydown(function(n){e.push(n.keyCode);if(e.toString().indexOf(t)>=0){$("#four").hide();$("#mainthing").fadeIn("fast");document.title="\\o/";e=[]}})})
+	  </script>
    </body>
 </html>
