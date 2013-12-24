@@ -1,0 +1,206 @@
+<!doctype html>
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+
+<style>
+
+html, body {
+overflow-x:hidden;
+}
+
+</style>
+
+<title>
+Records requests
+</title>
+
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="row">
+<div class="col-md-8 col-md-offset-2" style="text-align:center; margin-top:20px;">
+<p>
+<button type="button" class="btn btn-default btn-lg" onclick="window.open('https://docs.google.com/spreadsheet/ccc?key=0Ag4MM37uq7FmdFQybENRVGUzVFpwYWtUVnVsYUdSaXc&usp=sharing')">Edit spreadsheet</button>
+ </form>
+
+  
+  <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#foia">FOIA template</button>
+  <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#neb">NE template</button>
+</p>
+
+</div>
+</div>
+
+<hr/>
+<div class="col-md-12" id="records"></div>
+
+<!-- FOIA Modal -->
+<div class="modal fade" id="foia" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body" id="foiatext">
+   
+   <p>DATE</p>
+
+<p>PERSON'S NAME AND TITLE<br/>AGENCY<br/>ADDRESS<br/>ADDRESS<br/></p>
+
+<p>FOIA Request (Fee waiver requested)</p>
+
+<p>Dear PERSON:</p>
+
+<p>Pursuant to the federal Freedom of Information Act, 5 U.S.C. &sect; 552, I request the following records:</p>
+
+<p>X Y and Z</p>
+
+<p>I request these records be provided in an electronic format that can be imported into standard database software. Examples include an Excel .xls or .xlsx file, an Access .mdb or .accdb file, a text-based delimited file, a .dbf file or an SQL dump readable by standard open-source database software. (This would not include PDFs, which are not readable by database software.)</p>
+
+<p>This information is being sought on behalf of the Omaha World-Herald for dissemination to the general public; therefore, I ask that you waive any applicable fees. If my request is denied in whole or part, I ask that you justify all deletions by reference to specific exemptions of the act. I will also expect you to release all segregable portions of otherwise exempt material. I reserve the right to appeal your decision to withhold any information or to deny a waiver of fees.</p>
+
+<p>As I am making this request as a journalist and this information is of timely value, I would appreciate your communicating with me by e-mail or telephone rather than by mail if you have questions regarding this request.</p>
+
+<p>Sincerely,<br/>		
+Cody Winchester<br/>
+Omaha World-Herald<br/>
+cody.winchester@owh.com<br/>
+o: 402-444-1216<br/>
+c: 605-645-1561
+				
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" onclick="selectText('foiatext');">Select text</button>
+		<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- Neb Modal -->
+<div class="modal fade" id="neb" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body" id="nebtext">
+        
+		
+		<p>DATE</p>
+
+<p>PERSON'S NAME AND TITLE<br/>AGENCY<br/>ADDRESS<br/>ADDRESS<br/></p>
+
+<p>Records Request (Fee waiver requested)</p>
+
+<p>Dear PERSON:</p>
+		
+<p>Pursuant to Neb. Rev. Stat. Secs. 84-712 to 84-712.09, I request copies of the following records:</p>
+
+<p>X Y and Z</p>
+
+<p>In the event you are not the custodian of the records being requested, please redirect this to the appropriate person&rsquo;s attention and apprise me of the change. </p>
+
+<p>I request these records be provided in an electronic format that can be imported into standard database software. Examples include an Excel .xls or .xlsx file, an Access .mdb or .accdb file, a text-based delimited file, a .dbf file or an SQL dump readable by standard open-source database software. (This would not include PDFs, which are not readable by database software.)</p>
+
+<p>If you expect the cost of this request to exceed $50, please contact me beforehand. If you deny this request, please provide a written explanation, including a reference to the specific statutory exemption(s) on which you rely. Note that state law requires you to provide all redacted portions of otherwise exempt material.</p>
+
+<p>Please don't hesitate to contact me if you have any questions about fulfilling this request. As I am making this request as a journalist and this information is of timely value, I would appreciate your communicating with me by e-mail or telephone rather than by mail if you have questions regarding this request.</p>
+		
+<p>Sincerely,<br/>		
+Cody Winchester<br/>
+Omaha World-Herald<br/>
+cody.winchester@owh.com<br/>
+o: 402-444-1216<br/>
+c: 605-645-1561
+			
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" onclick="selectText('nebtext');">Select text</button>
+		<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+	<script>
+	
+	var trcol, icon, diff;
+	
+	function displayContent(json) {
+            var table_content='';
+            var len = json.feed.entry.length;
+     for (var i=0; i<len; i++) {        
+            var agency = json.feed.entry[i].gsx$agency.$t;
+            var record = json.feed.entry[i].gsx$record.$t;
+            var reqdate = json.feed.entry[i].gsx$requestdate.$t;
+			var returndate = json.feed.entry[i].gsx$returndate.$t;
+            var contact = json.feed.entry[i].gsx$contact.$t;
+            var phone = json.feed.entry[i].gsx$phone.$t;
+            var email = json.feed.entry[i].gsx$email.$t;
+			var status = json.feed.entry[i].gsx$status.$t;
+			var now = new Date();
+			
+			var day = 86400000;
+			var reqin = new Date(json.feed.entry[i].gsx$requestdate.$t);
+			var retin = new Date(json.feed.entry[i].gsx$returndate.$t);
+			
+			if (returndate == '' || returndate == null) 
+				{ diff = Math.abs((now.getTime() - reqin.getTime())/(day)).toFixed(0) }
+			else
+				{ diff = Math.abs((retin.getTime() - reqin.getTime())/(day)).toFixed(0) }
+            		
+			if (status == "approved") 
+				{ icon = '<span class="sourcenote" data-toggle="tooltip" alt="Approved" title="Approved"><i class="fa fa-smile-o"></i></span>' } 
+			else if (status == "denied") 
+				{ icon = '<span class="sourcenote" data-toggle="tooltip" alt="Denied" title="Denied"><i class="fa fa-frown-o"></i></span>' }
+			else if (status == "unresponsive")
+				{ icon = '<span class="sourcenote" data-toggle="tooltip" alt="No responsive records" title="No responsive records"><i class="fa fa-meh-o"></i></span>' }
+			else if (status == "pending")
+				{ icon = '<span class="sourcenote" data-toggle="tooltip" alt="Pending" title="Pending"><i class="fa fa-clock-o"></i></span>' }
+				
+            table_content += [
+            '<tr><td>' + agency + '</td><td>' + record + '</td><td>' + reqdate + '</td><td>' + returndate + '</td><td>' + diff + '</td><td>' + '<a href="mailto:' + email + '">' + contact + '</a></td><td>' + phone + '</td><td>' + icon + '</td></tr>'
+].join('');
+                        
+document.getElementById('records').innerHTML = "<table class='table table-striped table-condensed'><thead><tr><th>Agency</th><th>Record</th><th>Requested</th><th>Returned</th><th>Days passed</th><th>Contact</th><th>Phone</th><th>Status</th></thead><tbody>" + table_content + '</tbody></table>'
+
+}
+
+}
+
+function selectText(element) {
+    var doc = document;
+    var text = doc.getElementById(element);    
+
+    if (doc.body.createTextRange) { 
+        var range = doc.body.createTextRange();
+        range.moveToElementText(text);
+        range.select();
+    } else if (window.getSelection) {
+        var selection = window.getSelection();            
+        var range = doc.createRange();
+        range.selectNodeContents(text);
+        selection.removeAllRanges();
+        selection.addRange(range);
+    }
+}
+
+$( document ).ready(function() {
+$('.sourcenote').tooltip({
+'placement' : 'auto'
+});
+});
+
+
+</script>
+
+<script src="http://spreadsheets.google.com/feeds/list/0Ag4MM37uq7FmdFQybENRVGUzVFpwYWtUVnVsYUdSaXc/od6/public/values?alt=json-in-script&amp;callback=displayContent" type="text/javascript"></script>
+
+</body>
+
+</html>
