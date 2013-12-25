@@ -61,6 +61,11 @@
 <div class="modal fade" id="entry" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
+    
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Add new entry</h4>
+      </div>
       <div class="modal-body" id="formentry">
    
 <script type="text/javascript">var submitted=false;</script>
@@ -115,7 +120,12 @@
 <div class="modal fade" id="foia" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-body" id="foiatext">
+<div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">FOIA template</h4>
+      </div>     
+
+     <div class="modal-body" id="foiatext">
    
 <p>March 3, 2013</p>
 
@@ -140,11 +150,7 @@ Washington, D.C. 12345<br/>
 
 Sincerely,<br/>                
 Cody Winchester<br/>
-Omaha World-Herald<br/>
-cody.winchester@owh.com<br/>
-o: 402-444-1216<br/>
-c: 605-645-1561
-                                
+Omaha World-Herald<br/>                                
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" onclick="selectText('foiatext');">Select text</button>
@@ -158,6 +164,11 @@ c: 605-645-1561
 <div class="modal fade" id="neb" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
+     <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Nebraska records request template</h4>
+      </div>
+    
       <div class="modal-body" id="nebtext">
         
 <p>May 1, 2013</p>
@@ -165,7 +176,7 @@ c: 605-645-1561
 <p>
 Deputy County Attorney Mike Smith<br/>
 Sarpy County<br/>
-1210 Golden Gate Dr.<br/>
+1234 Golden Gate Dr.<br/>
 Papillion, NE 68046<br/>
 </p>
 
@@ -183,11 +194,7 @@ Papillion, NE 68046<br/>
                 
 Sincerely,<br/>                
 Cody Winchester<br/>
-Omaha World-Herald<br/>
-cody.winchester@owh.com<br/>
-o: 402-444-1216<br/>
-c: 605-645-1561
-                        
+Omaha World-Herald                        
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" onclick="selectText('nebtext');">Select text</button>
@@ -197,10 +204,27 @@ c: 605-645-1561
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
+<!-- Old Modal -->
+<div class="modal fade" id="oldmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+     <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Requests older than 30 days</h4>
+      </div>
+      <div class="modal-body" id="oldtext"></div>
+      <div class="modal-footer">
+       <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
 <script type="text/javascript" src="http://dataomaha.com/media/scripts/tablesorter/jquery.tablesorter.min.js"></script>
         <script>
 
         var icon, diff;
+        var oldrequests = [];
         
         function displayContent(json) {
             var table_content='';
@@ -224,7 +248,12 @@ c: 605-645-1561
                     { diff = Math.abs((now.getTime() - reqin.getTime())/(day)).toFixed(0) }
             else
                     { diff = Math.abs((retin.getTime() - reqin.getTime())/(day)).toFixed(0) }
-                
+            
+            if (diff > 30) {
+                var old = '<li class="list-group-item"><strong>' + agency + '</strong>: <em>' + record + ' (' + diff + ' days out)</em></li>'
+                oldrequests.push(old)
+                }
+            
             if (status == "approved") 
                     { icon = '<span style="display:none;">approved</span><span class="sourcenote" data-toggle="tooltip" alt="Approved" title="Approved"><i class="fa fa-smile-o"></i></span>' } 
             else if (status == "denied") 
@@ -239,6 +268,8 @@ table_content += [
 ].join('');
                         
 document.getElementById('records').innerHTML = "<table id='reqqqs' class='table table-striped table-condensed'><thead><tr><th>Agency</th><th>Record</th><th>Requested</th><th>Returned</th><th>Days passed</th><th>Contact</th><th>Phone</th><th>Status</th></thead><tbody>" + table_content + '</tbody></table>'
+
+document.getElementById('oldtext').innerHTML = "<ul class='list-group'>" + oldrequests + "</ul>"
 
     } }
 
@@ -261,6 +292,7 @@ function selectText(element) {
 $(document).ready(function() {
 $('.sourcenote').tooltip({
 'placement' : 'auto' });
+$('#oldmodal').modal('show');
 });
 
 </script>
