@@ -226,13 +226,13 @@ c: 605-645-1561
                     { diff = Math.abs((retin.getTime() - reqin.getTime())/(day)).toFixed(0) }
                 
             if (status == "approved") 
-                    { icon = '<span class="sourcenote" data-toggle="tooltip" alt="Approved" title="Approved"><i class="fa fa-smile-o"></i></span>' } 
+                    { icon = '<span style="display:none;">approved</span><span class="sourcenote" data-toggle="tooltip" alt="Approved" title="Approved"><i class="fa fa-smile-o"></i></span>' } 
             else if (status == "denied") 
-                    { icon = '<span class="sourcenote" data-toggle="tooltip" alt="Denied" title="Denied"><i class="fa fa-frown-o"></i></span>' }
+                    { icon = '<span style="display:none;">denied</span><span class="sourcenote" data-toggle="tooltip" alt="Denied" title="Denied"><i class="fa fa-frown-o"></i></span>' }
             else if (status == "unresponsive")
-                    { icon = '<span class="sourcenote" data-toggle="tooltip" alt="No responsive records" title="No responsive records"><i class="fa fa-meh-o"></i></span>' }
+                    { icon = '<span style="display:none;">unresponsive no responsive records</span><span class="sourcenote" data-toggle="tooltip" alt="No responsive records" title="No responsive records"><i class="fa fa-meh-o"></i></span>' }
             else if (status == "pending")
-                    { icon = '<span class="sourcenote" data-toggle="tooltip" alt="Pending" title="Pending"><i class="fa fa-clock-o"></i></span>' }
+                    { icon = '<span style="display:none;">pending</span><span class="sourcenote" data-toggle="tooltip" alt="Pending" title="Pending"><i class="fa fa-clock-o"></i></span>' }
                     
 table_content += [
 '<tr><td>' + agency + '</td><td>' + record + '</td><td>' + reqdate + '</td><td>' + returndate + '</td><td>' + diff + '</td><td>' + '<a href="mailto:' + email + '">' + contact + '</a></td><td>' + phone + '</td><td>' + icon + '</td></tr>'
