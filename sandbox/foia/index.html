@@ -73,7 +73,7 @@
 
     <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {location.reload()}"></iframe>    
 
-<form action="https://docs.google.com/forms/d/1uBTm61auGJl_Gqa5V1gwEUUWfhhS5W_Hqv6Agvv2eho/formResponse" method="POST" id="thinger" target="hidden_iframe" role="form" onsubmit="Javascript: setTimeout(function() {$('#thinger').find('input:text, input:password, input:file, select, textarea').val(''); $('#entry').modal('hide'); $('#thinger').find('input:radio, input:checkbox').removeAttr('checked').removeAttr('selected'); $('#buttondiv').click()}, 1500);">
+<form action="https://docs.google.com/forms/d/1uBTm61auGJl_Gqa5V1gwEUUWfhhS5W_Hqv6Agvv2eho/formResponse" method="POST" id="thinger" target="hidden_iframe" role="form" onsubmit="Javascript: setTimeout(function() {$('#thinger').find('input:text, input:password, input:file, select, textarea').val(''); $('#entry').modal('hide'); $('#thinger').find('input:radio, input:checkbox').removeAttr('checked').removeAttr('selected');}, 1500);">
 
     <label for="entry_596595219">Agency</label>
     <input type="text" name="entry.596595219" value="" class="form-control" id="entry_596595219" placeholder="Who's got the records?" dir="auto" aria-label="agency  " title=""><br/>
@@ -268,7 +268,7 @@ table_content += [
 '<tr><td>' + agency + '</td><td>' + record + '</td><td class="c">' + reqdate + '</td><td class="c">' + returndate + '</td><td class="c">' + diff + '</td><td class="c">' + '<a href="mailto:' + email + '">' + contact + '</a></td><td class="c">' + phone + '</td><td class="c">' + icon + '</td></tr>'
 ].join('');
                         
-document.getElementById('records').innerHTML = "<table id='reqqqs' class='table table-striped table-condensed'><thead><tr><th>Agency</th><th>Record</th><th class='c'>Requested</th><th class='c'>Returned</th class='c'><th class='c'>Days passed</th><th class='c'>Contact</th><th class='c'>Phone</th><th class='c'>Status</th></thead><tbody>" + table_content + '</tbody></table>'
+document.getElementById('records').innerHTML = "<table id='reqqqs' class='table table-striped table-condensed'><thead><tr><th>Agency</th><th>Record</th><th class='c'>Requested</th><th class='c'>Returned</th><th class='c'>Days passed</th><th class='c'>Contact</th><th class='c'>Phone</th><th class='c'>Status</th></thead><tbody>" + table_content + '</tbody></table>'
 
 document.getElementById('oldtext').innerHTML = "<ul class='list-group' id='oldlist'>" + oldrequests + "</ul>"
 
