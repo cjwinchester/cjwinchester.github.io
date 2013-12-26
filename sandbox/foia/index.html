@@ -13,6 +13,7 @@
     body { overflow-x:hidden; padding-top:50px;}
     th { cursor: pointer; cursor: hand; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: moz-none; -ms-user-select: none; user-select: none; }
     th:hover { background: #ecf4fb; }
+    .c { text-align:center; }
     </style>
 
     <title>Records requests</title>
@@ -264,10 +265,10 @@ Omaha World-Herald
                     { icon = '<span style="display:none;">pending</span><span class="sourcenote" data-toggle="tooltip" alt="Pending" title="Pending"><i class="fa fa-clock-o"></i></span>' }
                     
 table_content += [
-'<tr><td>' + agency + '</td><td>' + record + '</td><td>' + reqdate + '</td><td>' + returndate + '</td><td>' + diff + '</td><td>' + '<a href="mailto:' + email + '">' + contact + '</a></td><td>' + phone + '</td><td>' + icon + '</td></tr>'
+'<tr><td>' + agency + '</td><td>' + record + '</td><td class="c">' + reqdate + '</td><td class="c">' + returndate + '</td><td class="c">' + diff + '</td><td class="c">' + '<a href="mailto:' + email + '">' + contact + '</a></td><td class="c">' + phone + '</td><td class="c">' + icon + '</td></tr>'
 ].join('');
                         
-document.getElementById('records').innerHTML = "<table id='reqqqs' class='table table-striped table-condensed'><thead><tr><th>Agency</th><th>Record</th><th>Requested</th><th>Returned</th><th>Days passed</th><th>Contact</th><th>Phone</th><th>Status</th></thead><tbody>" + table_content + '</tbody></table>'
+document.getElementById('records').innerHTML = "<table id='reqqqs' class='table table-striped table-condensed'><thead><tr><th>Agency</th><th>Record</th><th class='c'>Requested</th><th class='c'>Returned</th class='c'><th class='c'>Days passed</th><th class='c'>Contact</th><th class='c'>Phone</th><th class='c'>Status</th></thead><tbody>" + table_content + '</tbody></table>'
 
 document.getElementById('oldtext').innerHTML = "<ul class='list-group' id='oldlist'>" + oldrequests + "</ul>"
 
