@@ -18,7 +18,7 @@
 
 </head>
 
-<body class="clicker">
+<body>
 
 <h1 id="hed" class="centered notouchy"></h1>
 
@@ -32,7 +32,7 @@ List via <a href="http://mst3k.wikia.com/wiki/List_of_Nicknames_for_Dave_Ryder" 
     <script>    
     var names = ['Beat PunchBeef', 'Big, Brave Brick of Meat', 'Big McLargeHuge', 'Blast HardCheese', 'Blast ThickNeck', 'Bob Johnson', 'Bold BigFlank', 'Bulk VanderHuge', 'Brick HardMeat', 'Buck PlankChest', 'Buff DrinkLots', 'Buff HardBack', 'Butch DeadLift', 'ChunkHead', 'Chunky', 'Crud BoneMeal', 'Crunch ButtSteak', 'Dirk HardPec', 'Fist RockBone', 'Flink', 'Flint IronStag', 'Fridge LargeMeat', 'Gristle McThornBody', 'Hack BlowFist', 'Hunk', 'Lump BeefBroth', 'Punch RockGroin', 'Punch Side-Iron', 'Punt SpeedChunk', 'Reef BlastBody', 'Roll Fizzlebeef', 'Rip SteakFace', 'Slab BulkHead', 'Slab SquatThrust', 'Slam', 'Slate Fistcrunch', 'Slate SlabRock', 'Smash LampJaw', 'Smoke ManMuscle', 'Splint ChestHair', 'Stump BeefKnob', 'Stump Chunkman', 'Thick McRunFast', 'Touch RustRod', 'Trunk SlamChest', 'Whip SlagCheek']
         
-    $('.clicker').click(function() {
+    $('body').click(function() {
         var rando = names[Math.floor(Math.random() * names.length)];
         $('#hed').html(rando);
     });
