@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<title>Listen!</title>
+
+<!--scripts-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script type="text/javascript" src="jplayer/jquery.jplayer.min.js"></script>
+<script type="text/javascript" src="jplayer/jplayer.playlist.min.js"></script>
+
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
+
+	new jPlayerPlaylist({
+		jPlayer: "#jquery_jplayer_1",
+		cssSelectorAncestor: "#jp_container_1"
+	}, [
+		{
+	title:"Cat Stevens - When I Speak To The Flowers",
+	mp3:"https://dl.dropboxusercontent.com/u/38884522/mix/01%20-%20Cat%20Stevens%20-%20When%20I%20Speak%20To%20The%20Flowers.mp3"
+},
+{
+	title:"Rubblebucket - Save Charlie",
+	mp3:"https://dl.dropboxusercontent.com/u/38884522/mix/02%20-%20Rubblebucket%20-%20Save%20Charlie.mp3"
+},
+{
+	title:"John Prine - The Sins Of Memphisto",
+	mp3:"https://dl.dropboxusercontent.com/u/38884522/mix/03%20-%20John%20Prine%20-%20The%20Sins%20Of%20Memphisto.mp3"
+},
+{
+	title:"Songs: Ohia - Love and Work",
+	mp3:"https://dl.dropboxusercontent.com/u/38884522/mix/04%20-%20Songs%20Ohia%20-%20Love%20and%20Work.mp3"
+},
+{
+	title:"The National - So Far Around the Bend",
+	mp3:"https://dl.dropboxusercontent.com/u/38884522/mix/05%20-%20The%20National%20-%20So%20Far%20Around%20the%20Bend.mp3"
+},
+{
+	title:"Crystal Castles - Air War",
+	mp3:"https://dl.dropboxusercontent.com/u/38884522/mix/06%20-%20Crystal%20Castles%20-%20Air%20War.mp3"
+},
+{
+	title:"Ani DiFranco - I Know This Bar",
+	mp3:"https://dl.dropboxusercontent.com/u/38884522/mix/07%20-%20Ani%20DiFranco%20-%20I%20Know%20This%20Bar.mp3"
+},
+{
+	title:"Vince Guaraldi - Work Song",
+	mp3:"https://dl.dropboxusercontent.com/u/38884522/mix/08%20-%20Vince%20Guaraldi%20-%20Work%20Song.mp3"
+},
+{
+	title:"Keller Williams - In A Big Country",
+	mp3:"https://dl.dropboxusercontent.com/u/38884522/mix/09%20-%20Keller%20Williams%20-%20In%20A%20Big%20Country.mp3"
+},
+{
+	title:"Ween - The HIV Song",
+	mp3:"https://dl.dropboxusercontent.com/u/38884522/mix/10%20-%20Ween%20-%20The%20HIV%20Song.mp3"
+},
+{
+	title:"Elizabeth Cotten - Freight Train",
+	mp3:"https://dl.dropboxusercontent.com/u/38884522/mix/11%20-%20Elizabeth%20Cotten%20-%20Freight%20Train.mp3"
+},
+{
+	title:"Harpers Bizarre - Witchi Tai To",
+	mp3:"https://dl.dropboxusercontent.com/u/38884522/mix/12%20-%20Harpers%20Bizarre%20-%20Witchi%20Tai%20To.mp3"
+},
+{
+	title:"Ryan Adams - Night Birds",
+	mp3:"https://dl.dropboxusercontent.com/u/38884522/mix/13%20-%20Ryan%20Adams%20-%20Night%20Birds.mp3"
+},
+{
+	title:"Deerhunter - Cryptograms",
+	mp3:"https://dl.dropboxusercontent.com/u/38884522/mix/14%20-%20Deerhunter%20-%20Cryptograms.mp3"
+},
+{
+	title:"Dan Reeder - Cowboy Song",
+	mp3:"https://dl.dropboxusercontent.com/u/38884522/mix/15%20-%20Dan%20Reeder%20-%20Cowboy%20Song.mp3"
+},
+{
+	title:"Wilco - One Sunday Morning",
+	mp3:"https://dl.dropboxusercontent.com/u/38884522/mix/16%20-%20Wilco%20-%20One%20Sunday%20Morning.mp3"
+},
+{
+	title:"Mum - I'm 9 Today",
+	mp3:"https://dl.dropboxusercontent.com/u/38884522/mix/17%20-%20Mum%20-%20I'm%209%20Today.mp3"
+},
+{
+	title:"Caribou - Every Time She Turns Round It's Her Birthday",
+	mp3:"https://dl.dropboxusercontent.com/u/38884522/mix/18%20-%20Caribou%20-%20Every%20Time%20She%20Turns%20Round%20It's%20Her%20Birthday.mp3"
+    }
+        
+	], {
+		swfPath: "js",
+		supplied: "mp3",
+		wmode: "window"
+	});
+});
+//]]>
+</script>
+
+<!--css-->
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+<style>
+body, html {
+    margin:0px;
+    padding:20px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    overflow-x:hidden;
+    }
+
+#container {
+    width: 33%;
+    margin:auto auto;
+    text-align:center;
+    }
+    
+.notouchy { -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: moz-none; -ms-user-select: none; user-select: none; }
+
+.fa { font-size:4em; cursor:pointer; cursor:hand; opacity: 0.6;}
+
+#jplayer { text-align:left; width: 100%; display: none; }
+
+a { text-decoration: none; color: inherit; }
+
+@media screen and (max-width: 641px) {
+			#container { width: 100%; }
+			.fa { font-size:2em; }
+		}
+
+    </style>
+
+<link href="jplayer/jplayer.morning.light.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+<div id="container">
+
+<div id="icons" style="overflow:hidden; padding-bottom:15px;">
+<h1 id="listen" class="notouchy" style="display:inline; color: #2b8cbe; padding-right:20px;"><i class="fa fa-headphones"></i></h1>
+<a href="https://dl.dropboxusercontent.com/u/38884522/boom.zip"><h1 id="getit" class="notouchy" style="display:inline; color: #e34a33; padding-left:20px;"><i class="fa fa-cloud-download"></i></h1></a>
+</div>
+
+<div id="jplayer">
+
+<div id="jquery_jplayer_1" class="jp-jplayer"></div>
+
+	<div id="jp_container_1" class="jp-audio" style="width:100%">
+		<div class="jp-type-playlist">
+			<div class="jp-gui jp-interface">
+				<ul class="jp-controls">
+					<li><a href="javascript:;" class="jp-previous" tabindex="1">previous</a></li>
+					<li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
+					<li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
+					<li><a href="javascript:;" class="jp-next" tabindex="1">next</a></li>
+					<li><a href="javascript:;" class="jp-stop" tabindex="1">stop</a></li>
+					<li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li>
+					<li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li>
+					<li><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a></li>
+				</ul>
+				<div class="jp-progress">
+					<div class="jp-seek-bar">
+						<div class="jp-play-bar"></div>
+					</div>
+				</div>
+				<div class="jp-volume-bar">
+					<div class="jp-volume-bar-value"></div>
+				</div>
+				<div class="jp-time-holder">
+					<div class="jp-current-time"></div>
+					<div class="jp-duration"></div>
+				</div>
+				<ul class="jp-toggles">
+					<li><a href="javascript:;" class="jp-shuffle" tabindex="1" title="shuffle">shuffle</a></li>
+					<li><a href="javascript:;" class="jp-shuffle-off" tabindex="1" title="shuffle off">shuffle off</a></li>
+					<li><a href="javascript:;" class="jp-repeat" tabindex="1" title="repeat">repeat</a></li>
+					<li><a href="javascript:;" class="jp-repeat-off" tabindex="1" title="repeat off">repeat off</a></li>
+				</ul>
+			</div>
+			<div class="jp-playlist">
+			<ul>
+					<li></li>
+				</ul>
+			</div>
+			<div class="jp-no-solution">
+				<span>Update Required</span>
+				To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+			</div>
+		</div>
+	</div>
+
+
+</div>
+
+</div>
+
+<script>
+$('#listen').click(function() {
+  $('#jplayer').fadeToggle(200)
+});
+
+$(".fa").hover(
+  function() {
+    $(this).fadeTo(200, 1.0);
+  }, function() {
+    $(this).fadeTo(200, 0.6);
+  }
+);
+
+</script>
+
+</body>
+
+</html>
