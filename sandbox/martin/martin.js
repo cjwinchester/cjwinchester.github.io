@@ -1,3 +1,14 @@
+/*
+
+Key: 
+[0] = sound
+[1] = source
+[2] = issue
+[3] = date
+[4] = page
+
+*/
+
 [
   ["AAAAGH! EEEEEOOOW ACK! UGH UGH MMP AGH! AEEK","REMOVAL OF A DEEP ROOTED TOOTH","MAD NO. 66","OCT. 1961","PAGE 20"],
   ["AAAK AAK","BUSY CITY PEOPLE COUGHING","MAD NO. 164","JAN. 1974","PAGE 33"],
