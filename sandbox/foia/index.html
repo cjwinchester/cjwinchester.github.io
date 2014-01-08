@@ -54,7 +54,7 @@
   </div>
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
-      <li><a href="#" data-toggle="modal" data-target="#entry">Add new entry</a></li>
+      <li><a href="#" data-toggle="modal" id="newentry" data-target="#entry">Add new entry</a></li>
       <li><a href="#" data-toggle="modal" data-target="#foia">FOIA template</a></li>
       <li><a href="#" data-toggle="modal" data-target="#neb">Nebraska records request template</a></li>
       <li><a href='https://docs.google.com/spreadsheet/ccc?key=0Ag4MM37uq7FmdFFuMW15Rk1seGVFd3cyaUFtcjN0THc&usp=sharing' target="_blank">Edit spreadsheet</a></li>
@@ -304,6 +304,10 @@ if ($('#oldlist li').length != 0)
     {
 $('#oldmodal').modal('show');
     }
+});
+
+$('#newentry').click(function() {
+setTimeout(function() {$('#entry_596595219').focus()}, 500);
 });
 
 </script>
