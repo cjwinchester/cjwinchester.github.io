@@ -83,6 +83,12 @@ html, body {
     map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(document.getElementById('googft-legend-open'));
     map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(document.getElementById('googft-legend'));
 
+          google.maps.event.addDomListener(window, "resize", function() {
+var center = map.getCenter();
+google.maps.event.trigger(map, "resize");
+map.setCenter(center); 
+});
+    
     layer = new google.maps.FusionTablesLayer({
       map: map,
       heatmap: { enabled: false },
@@ -95,9 +101,11 @@ html, body {
         styleId: 2,
         templateId: 2
       }
-    }); 
-  }
+      
+});
 
+  }
+  
       function changeMap_0() {
       var whereClause;
       var searchString = document.getElementById('search-string_0').value.replace(/'/g, "\\'");
@@ -112,6 +120,7 @@ html, body {
         }
       });
     }
+
   
       function reset() {
 document.getElementById('search-string_0').value = "--Select--";
