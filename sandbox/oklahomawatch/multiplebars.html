@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>       </title>
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([            
+['Year', 'White', 'Black', 'Hispanic'],
+['1969', 16, 45.5, null],	
+['1979', 11.3, 30.1, 21.8],
+['1989', 13.7, 34.6, 29.2],
+['1999', 11.8, 29.4, 26.3],
+['2012', 14.6, 29.8, 28.8]
+            
+        ]);
+
+        var options = {
+          title: 'Poverty rate in Oklahoma by race or ethnicity',
+          titleTextStyle: {fontSize: 18 },
+          colors: ['#74a9cf', '#2b8cbe', '#045a8d' ],
+          chartArea: {left:80, top:30},
+          vAxis: {title: 'Percentage', maxValue:100},
+          chartArea: { }
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+</head>
+<body>
+  <div id="chart_div" style="width: 700px; height: 300px;"></div>
+</body>
+</html>

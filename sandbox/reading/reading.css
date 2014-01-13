@@ -1,0 +1,61 @@
+body {
+margin:50px;
+padding:0px;
+text-align:center;
+	}
+	
+.container {
+width:600px;
+margin:0px auto;
+text-align:left;
+margin-top:-10px;
+	}
+
+table {
+border-collapse: collapse;
+font-size: 80%;
+font-family: Arial, sans-serif;
+}
+
+table td {
+padding: 10px;
+vertical-align:middle;
+}
+
+table tr {
+border-bottom: 1px solid #ccc;
+border-top: 1px solid #ccc;
+}
+
+h2 { 
+font-family: Calibri, Helvetica, Arial, sans-serif;
+font-size: 4em;
+margin-top:0;
+text-align:center;
+margin-bottom:0;
+}
+    
+.ui-tooltip {
+font-size:10px;
+}
+
+.imagechart {
+margin-bottom:-20px;
+padding-bottom:10px;
+padding-top:10px;
+}
+
+.fakebutton {
+padding:3px;
+color:white;
+font-weight:bold;
+border-radius:3px;
+cursor: pointer;
+cursor: hand;
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: moz-none;
+-ms-user-select: none;
+user-select: none;
+}

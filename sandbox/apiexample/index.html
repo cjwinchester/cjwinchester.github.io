@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Sunlight API example</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script>
+
+var apikey = 'f00f12cb0ba2462ab77637cfc36369b9';
+var base = 'http://openstates.org/api/v1/';
+
+var legislators = base + 'legislators/?state=ne&active=true&apikey=' + apikey;
+
+var first = "John"
+
+$(document).ready(function() {
+    $.ajax({
+        url: legislators + '&first_name=' + encodeURI(first),
+        dataType: "jsonp",
+        success: dontComeItACallBack
+  });
+});
+
+function dontComeItACallBack(e) {
+ $('#results').append('Oh hey there I found ' + e.length + ' legislators with the first name ' + first);
+}
+
+</script>
+
+</head>
+<body>
+
+<div id="results"></div>
+
+</body>
+</html>

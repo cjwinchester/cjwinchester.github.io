@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Tooltip adder thing</title>
+      <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+      <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+       <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+      <style>
+         body, html { padding-bottom:20px; }
+         h1, h2, h3 { font-weight: bold; }
+         .sourcenote { background:#eff3ff; }
+      </style>
+   </head>
+   <body>
+<div class="container">
+<h1>Add tooltips to your story</h1>
+<hr />
+<div class="row">
+<div class="col-lg-6">
+<h3>Instructions</h3>
+<ol>
+<li>Paste your story into the box.</li>
+<li>Highlight text that needs a <span class="sourcenote" data-toggle="tooltip" title="hi I am a tooltip are we friends">tooltip</span>.</li>
+<li>Click "Add note." Follow the prompt to add text to the tooltip.</li>
+<li>Keep doing this until you've gone through the whole story.</li>
+<li>Copy-paste everything into an email and <a href="mailto:burt@reynolds.com?subject=Uh so got a story here with some interactive notes">send it over.</a></li>
+</ol><br /> <button type="button" class="btn btn-success btn-block" onmousedown="doTheThing()"><strong>Add note</strong></button> <button type="button" class="btn btn-danger btn-block" onclick="clearText()"><strong>Clear text</strong></button> <button type="button" class="btn btn-primary btn-block" onclick="previewIt()"><strong>Preview</strong></button></div>
+<div class="col-lg-6">
+<h3>In here, yo</h3>
+<textarea id="inhere" class="form-control" rows="11"></textarea></div>
+</div>
+<div class="row" id="preview" style="display: none;"><hr />
+<h3>Preview</h3>
+<div id="results"></div>
+</div>
+</div>
+<script type="text/javascript">// <![CDATA[
+         var dt = document.getElementsByTagName("textarea")[0];
+         
+         function doTheThing(){
+             var text = '';
+             if(window.getSelection){
+                 text = window.getSelection();
+             }
+             else if(document.getSelection){
+                 text = document.getSelection();
+             }
+             else if(document.selection){
+                 text = document.selection.createRange().text;
+                 }
+         
+             if (text == '' || text == null) { alert("But you didn't select anything, so.") }
+                 else {
+             var fintext = text.toString();
+             var thenote = prompt("What should this tooltip say?","");
+             if (thenote != '' && thenote != null)
+                 { dt.value = dt.value.replace(fintext, '<span class="sourcenote" data-toggle="tooltip" title="' + thenote.replace(/"/g,"'") + '">' + fintext + '</span>');
+                   }
+             else { alert("You didn't write anything.") }    
+                     }
+             } // end main function
+             
+         function clearText() {
+         $('#inhere').val('');
+         $('#preview').hide();
+         }
+         
+         $('.sourcenote').tooltip();
+                  
+function previewIt() {
+    if ($('#preview').is(":visible") != true) 
+    {
+    dt.value = '<p>' + dt.value.replace(/\n/g, '</p>\n\n<p>').replace(/\n\n<p><\/p>/g, '') + '</p>'
+    $('#results').html(dt.value);
+    $('#preview').show();
+    $('.sourcenote').tooltip();
+    }
+}
+// ]]></script>
+</body>
+</html>
