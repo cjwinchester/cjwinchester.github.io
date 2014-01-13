@@ -21,14 +21,21 @@ What am I reading?
 
 <body>
 
-<div class="container">
+<div id="header">
+
+<h2>What am I reading?</h2>
+<script type="text/javascript">var submitted=false;</script><iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location.reload()}"></iframe>
+<form action="https://docs.google.com/forms/d/1eK0Dch0MNPG8lghTlTPZp-kXxjUJVmxEwLABcSyFTVg/formResponse" id="mainform" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+<input type="text" name="entry.1059936569" value="" id="entry_1059936569" placeholder="Suggestions?" dir="auto">
+<input type="submit" value="Submit" type="submit" name="submit" onsubmit="Javascript: setTimeout(function() {$('#entry_1059936569').val('');}, 1500); setTimeout(function() {location.reload(true);}, 2500)" />
+</form></div>
 <div id="whatreadingnow"></div>
-</div>
 
 <script src="http://spreadsheets.google.com/feeds/list/0Ag4MM37uq7FmdFE5aktUSUN2aVdIUExHZTI4NVl3Umc/od6/public/values?alt=json-in-script&amp;callback=displayContent" type="text/javascript"></script>
 
 <script>
 $(document).tooltip({ track: true });
+$("table").addTableFilter();
 </script>
 
 </body>
