@@ -82,30 +82,22 @@
 
 <form action="https://docs.google.com/forms/d/1uBTm61auGJl_Gqa5V1gwEUUWfhhS5W_Hqv6Agvv2eho/formResponse" method="POST" id="thinger" target="hidden_iframe" role="form" onsubmit="Javascript: setTimeout(function() {$('#thinger').find('input:text, input:password, input:file, select, textarea').val(''); $('#entry').modal('hide'); $('#thinger').find('input:radio, input:checkbox').removeAttr('checked').removeAttr('selected');}, 1500); setTimeout(function() {location.reload(true);}, 2500)">
 
-    <label for="entry_596595219">Agency</label>
-    <input type="text" name="entry.596595219" value="" class="form-control" id="entry_596595219" placeholder="Who's got the records?" dir="auto" aria-label="agency  " title=""><br/>
+    <input type="text" name="entry.596595219" value="" class="form-control" id="entry_596595219" placeholder="Which agency has the records?" dir="auto" aria-label="agency  " title=""><br/>
     
-    <label aria-hidden="true" for="entry_2002669445">Record</label>
     <textarea name="entry.2002669445" rows="3" class="form-control" id="entry_2002669445" dir="auto" aria-label="record  " placeholder="What records did you request?"></textarea><br/>
 
-    <label aria-hidden="true" for="entry_441692025">Requested</label>
-    <input type="text" name="entry.441692025" value="" class="form-control" id="entry_441692025" dir="auto" aria-label="requestdate  " placeholder="mm/dd/yyyy" title=""><br/>
+    <input type="text" name="entry.441692025" value="" class="form-control" id="entry_441692025" dir="auto" aria-label="requestdate  " placeholder="When did you request them? Enter as mm/dd/yyyy" title=""><br/>
     
-    <label aria-hidden="true" for="entry_555092091">Returned</label>
-    <input type="text" name="entry.555092091" value="" class="form-control" id="entry_555092091" dir="auto" aria-label="returndate  " placeholder="mm/dd/yyyy" title=""><br/>
+    <input type="text" name="entry.555092091" value="" class="form-control" id="entry_555092091" dir="auto" aria-label="returndate  " placeholder="When were they returned? Enter as mm/dd/yyyy" title=""><br/>
 
-    <label aria-hidden="true" for="entry_643362610">Contact</label>
     <input type="text" name="entry.643362610" value="" class="form-control" id="entry_643362610" dir="auto" aria-label="contact  " placeholder="To whom did you send this request?" title=""><br/>
 
-    <label aria-hidden="true" for="entry_503172213">Phone</label>
-    <input type="text" name="entry.503172213" value="" class="form-control" placeholder="555-555-5555" id="entry_503172213" dir="auto" aria-label="phone  " title=""><br/>
+    <input type="text" name="entry.503172213" value="" class="form-control" placeholder="Phone: Enter as 555-555-5555" id="entry_503172213" dir="auto" aria-label="phone  " title=""><br/>
 
-    <label aria-hidden="true" for="entry_1262310475">Email</label>
-    <input type="text" name="entry.1262310475" value="" class="form-control" id="entry_1262310475" dir="auto" aria-label="email  " title="" placeholder="person@org.gov"><br/>
+    <input type="text" name="entry.1262310475" value="" class="form-control" id="entry_1262310475" dir="auto" aria-label="email  " title="" placeholder="Email: enter as person@org.gov"><br/>
 
-    <label aria-hidden="true" for="entry_71447735">Status</label>
     <select name="entry.71447735" class="form-control" id="entry_71447735" aria-label="status  ">
-    <option value=""></option>
+    <option value="">-- Status --</option>
     <option value="approved">Approved</option>
     <option value="denied">Denied</option>
     <option value="unresponsive">No responsive records</option>
