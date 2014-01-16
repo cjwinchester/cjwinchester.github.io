@@ -11,9 +11,10 @@
 
     <style>
     body { overflow-x:hidden; padding-top:50px;}
-    th, .fa { cursor: pointer; cursor: hand; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: moz-none; -ms-user-select: none; user-select: none; }
+    th, .fa, h1 { cursor: pointer; cursor: hand; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: moz-none; -ms-user-select: none; user-select: none; }
     th:hover { background: #ecf4fb; }
     .c { text-align:center; }
+	.hint { float:left; font-weight:bold; display:none; }
     </style>
 
     <title>Records requests</title>
@@ -62,6 +63,10 @@
   </div>
 </nav>
 
+ <div class="jumbotron" style="background:#2c7fb8; color:#fff">
+             <h1 style="font-weight:bold; letter-spacing: -1px;"><i class="fa fa-file-text-o"></i> Records requests</h1>
+        </div>
+
 
 <div class="col-md-12" id="records"></div>
 
@@ -78,9 +83,9 @@
    
 <script type="text/javascript">var submitted=false;</script>
 
-    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {location.reload()}"></iframe>    
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {location.reload()}"></iframe>
 
-<form action="https://docs.google.com/forms/d/1uBTm61auGJl_Gqa5V1gwEUUWfhhS5W_Hqv6Agvv2eho/formResponse" method="POST" id="thinger" target="hidden_iframe" role="form" onsubmit="Javascript: $('#entry').modal('hide'); setTimeout(function() {$('#thinger').find('input:text, input:password, input:file, select, textarea').val(''); $('#thinger').find('input:radio, input:checkbox').removeAttr('checked').removeAttr('selected');}, 1500); setTimeout(function() {location.reload(true);}, 2500)">
+<form action="https://docs.google.com/forms/d/1uBTm61auGJl_Gqa5V1gwEUUWfhhS5W_Hqv6Agvv2eho/formResponse" method="POST" id="thinger" target="hidden_iframe" role="form" onsubmit="Javascript: $('#entry').modal('hide'); setTimeout(function() {$('#thinger').find('input:text, input:password, input:file, select, textarea').val(''); $('#thinger').find('input:radio, input:checkbox').removeAttr('checked').removeAttr('selected');}, 1500); setTimeout(function() {location.reload(true);}, 3000)">
 
     <input type="text" name="entry.596595219" value="" class="form-control" id="entry_596595219" placeholder="Which agency has the records?" dir="auto" aria-label="agency  " title=""><br/>
     
@@ -153,6 +158,7 @@ Cody Winchester<br/>
 Omaha World-Herald<br/>                                
       </div>
       <div class="modal-footer">
+	  <span class="hint"></span>
         <button type="button" class="btn btn-primary" onclick="selectText('foiatext');">Select text</button>
          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
       </div>
@@ -197,6 +203,7 @@ Cody Winchester<br/>
 Omaha World-Herald                        
       </div>
       <div class="modal-footer">
+	  <span class="hint"></span>
         <button type="button" class="btn btn-primary" onclick="selectText('nebtext');">Select text</button>
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
       </div>
@@ -234,9 +241,12 @@ Omaha World-Herald
             var record = json.feed.entry[i].gsx$record.$t;
             var reqdate = json.feed.entry[i].gsx$requestdate.$t.replace("'","");
             var returndate = json.feed.entry[i].gsx$returndate.$t.replace("'","");
-            var contact = json.feed.entry[i].gsx$contact.$t;
             var phone = json.feed.entry[i].gsx$phone.$t;
-            var email = json.feed.entry[i].gsx$email.$t;
+			var contact = ''
+			if (json.feed.entry[i].gsx$email.$t)
+				{contact = '<a href="mailto:' + json.feed.entry[i].gsx$email.$t + '">' + json.feed.entry[i].gsx$contact.$t + '</a>'}
+			else
+				{contact = json.feed.entry[i].gsx$contact.$t };			
             var status = json.feed.entry[i].gsx$status.$t;
             var now = new Date();
                         
@@ -250,7 +260,7 @@ Omaha World-Herald
                     { diff = Math.abs((retin.getTime() - reqin.getTime())/(day)).toFixed(0) }
             
             if (diff > 30 && status == "pending") {
-                var old = '<li class="list-group-item"><strong>' + agency + '</strong>: <em>' + record + ' (' + diff + ' days out)</em></li>'
+                var old = '<li class="list-group-item"><strong>' + agency + '</strong>: ' + record + ' <span style="background:yellow; font-weight:bold;">' + diff + ' days out</span></li>'
                 oldrequests.push(old)
                 }
             
@@ -264,7 +274,7 @@ Omaha World-Herald
                     { icon = '<span style="display:none;">pending</span><span class="sourcenote" data-toggle="tooltip" alt="Pending" title="Pending"><i class="fa fa-clock-o"></i></span>' }
                     
 table_content += [
-'<tr><td>' + agency + '</td><td>' + record + '</td><td class="c">' + reqdate + '</td><td class="c">' + returndate + '</td><td class="c">' + diff + '</td><td class="c">' + '<a href="mailto:' + email + '">' + contact + '</a></td><td class="c">' + phone + '</td><td class="c">' + icon + '</td></tr>'
+'<tr><td>' + agency + '</td><td>' + record + '</td><td class="c">' + reqdate + '</td><td class="c">' + returndate + '</td><td class="c">' + diff + '</td><td class="c">' + contact + '</td><td class="c">' + phone + '</td><td class="c">' + icon + '</td></tr>'
 ].join('');
                         
 document.getElementById('records').innerHTML = "<table id='reqqqs' class='table table-striped table-condensed'><thead><tr><th>Agency</th><th>Record</th><th class='c'>Requested</th><th class='c'>Returned</th><th class='c'>Days passed</th><th class='c'>Contact</th><th class='c'>Phone</th><th class='c'>Status</th></thead><tbody>" + table_content + '</tbody></table>'
@@ -287,6 +297,10 @@ function selectText(element) {
         selection.removeAllRanges();
         selection.addRange(range);
     }
+	
+	$('.hint').html('Press Ctrl + C to copy');
+    $('.hint').fadeIn('slow');
+
 }
 
 $(document).ready(function() {
@@ -301,6 +315,15 @@ $('#oldmodal').modal('show');
 $('#newentry').click(function() {
 setTimeout(function() {$('#entry_596595219').focus()}, 500);
 });
+
+function KeyPress(e) {
+    var evtobj = window.event? event : e
+    if (evtobj.keyCode == 67 && evtobj.ctrlKey) 
+    {$('.hint').html('Copied!').fadeOut('slow')};
+}
+
+document.onkeydown = KeyPress;
+
 
 </script>
 <!--
