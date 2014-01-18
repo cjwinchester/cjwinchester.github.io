@@ -25,7 +25,7 @@ function displayContent(json) {
             if (pages_done == pages_total) {fraction = "Finished"} else if (pages_done == 0) {fraction = "Not started"} else {fraction = ((pages_done / pages_total) * 100).toFixed(0) + '&#37; done"'};
             
             table_content += [
-            '<tr><td><a href="' + link + '" target="_blank"><em><strong>' + title + '</strong></em></a>, by ' + author + '</td><td>' + '<img class="imagechart" src="http://chart.googleapis.com/chart?chxs=0,00000000,11.5,0,_,00000000|1,00000000,11.5,0,t,00000000&chxt=x,y&chbh=a&chs=200x50&cht=bhs&chco=0570b0,bdc9e1&chds=0,' + pages_total + ',0,' + pages_total + '&chd=t:' + pages_done + '|' + (pages_total - pages_done) + '" title="' + fraction + '" alt="' + fraction + '"/>' + '</td><td style="width:70px;">' + rating.repeat(stars) + rating_rest.repeat(emptystars) + '</td></tr>'
+            '<tr><td><a href="' + link + '" target="_blank"><em><strong>' + title + '</strong></em></a>, by ' + author + '</td><td>' + '<img class="imagechart" src="http://chart.googleapis.com/chart?chxs=0,00000000,11.5,0,_,00000000|1,00000000,11.5,0,t,00000000&chxt=x,y&chbh=a&chs=200x50&cht=bhs&chco=08519c,6baed6&chds=0,' + pages_total + ',0,' + pages_total + '&chd=t:' + pages_done + '|' + (pages_total - pages_done) + '" title="' + fraction + '" alt="' + fraction + '"/>' + '</td><td style="width:70px;">' + rating.repeat(stars) + rating_rest.repeat(emptystars) + '</td></tr>'
 ].join('');
 
 document.getElementById('whatreadingnow').innerHTML = 

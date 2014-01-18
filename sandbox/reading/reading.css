@@ -8,11 +8,11 @@ overflow-x:hidden;
 	}
     
 a {
-color:#0570b0;
+color:#08519c;
 }
 
 a:visited {
-color:#bdc9e1;
+color:#6baed6;
 }
 
 #whatreadingnow {
@@ -25,7 +25,7 @@ margin: auto auto;
 width:100%;
 text-align:center;
 padding:20px;
-background:#0570b0;
+background:#08519c;
 color:#fff;
 margin-bottom:4em;
 }
