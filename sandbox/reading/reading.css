@@ -6,7 +6,7 @@ width:100%;
 height:100%;
 overflow-x:hidden;
 	}
-    
+
 a {
 color:#08519c;
 }
@@ -16,7 +16,7 @@ color:#6baed6;
 }
 
 #whatreadingnow {
-width:50%;
+width:55%;
 text-align:left;
 margin: auto auto;
 }
@@ -24,10 +24,11 @@ margin: auto auto;
 #header {
 width:100%;
 text-align:center;
-padding:20px;
+padding:3.5em 0 2.5em 0;
 background:#08519c;
 color:#fff;
-margin-bottom:4em;
+margin-top:-2em;
+margin-bottom:2.5em;
 }
     
 table {
@@ -50,8 +51,7 @@ border-bottom: 0;
 
 h2 { 
 font-size: 4em;
-margin-top:0;
-margin-bottom:0.5em;
+margin:0;
 }
     
 .ui-tooltip {
