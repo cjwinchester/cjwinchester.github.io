@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<title>Gun crimes: binned!</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    
+<link rel="stylesheet" href="css/leaflet.css" />
+<!--[if lte IE 8]>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.ie.css" />
+<![endif]-->
+ 
+<style>
+ 
+ html, body {
+ margin:0;
+ padding:0;
+ height:100%;
+ overflow:hidden;
+ }
+ 
+#map {
+    height: 100%;
+    width:100%;
+    }
+
+</style>
+
+</head>
+
+<body>
+
+<div id="map"></div>
+
+<script src="js/leaflet.js"></script>
+<script src="js/binz.js"></script>
+ 
+<script>
+
+function getColor(d) {
+			return d > 50 ? '#54278f' :
+			       d > 40  ? '#756bb1' :
+			       d > 30  ? '#9e9ac8' :
+			       d > 20  ? '#bcbddc' :
+			       d > 10   ? '#dadaeb' :
+			                  '#f2f0f7';
+		}
+		
+function style(feature) {
+			return {
+				weight: 2.5, 
+				color: "#08519C", 
+				opacity: 1,
+				fillColor: getColor(feature.properties.COUNT),
+				fillOpacity:0.8
+			};
+		}
+
+var oppd = new L.LayerGroup();
+
+L.geoJson(bins, {
+			style: style,
+			onEachFeature: onEachFeature,
+				}).addTo(oppd);
+				
+	var map = L.map('map', {
+	center: [41.267614125703695, -95.9901237487793],
+	zoom: 12,	
+	layers: [oppd]
+});
+
+	L.tileLayer('http://a.tile.stamen.com/toner/{z}/{x}/{y}.png', {
+	maxZoom: 18,
+	attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.'
+}).addTo(map);
+
+function onEachFeature(feature, layer) {
+var info = '<h3>Gun crimes: ' + feature.properties.COUNT + '</h3>'
+if (feature.properties && feature.properties.COUNT) {
+        layer.bindPopup(info);
+    }
+}
+
+	</script>
+	
+	</body>
+</html>
