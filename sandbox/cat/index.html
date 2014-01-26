@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>What should we name our cat?</title>
+
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>    
+    
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+    
+</head>
+
+<body>
+
+ <div class="jumbotron" style='background:#fff'>
+             <h1 style="font-weight:bold; text-align:center; letter-spacing: -1px;"> What should we name our cat?</h1>
+        </div>
+
+        <div class="container">
+        <div style="text-align:center; margin-bottom:4em;"><img src="cat.png" class="img-circle" width="300" /></div>
+        
+        <div class="row" style="margin-bottom:2em;">
+        <div class="col-md-6 col-md-offset-3">
+        <h4>We just adopted Toby, a 15-pound tabby. We're looking for a new name. Ideas?</h4>
+        </div>
+        </div>
+
+        <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+        <script type="text/javascript">var submitted=false;</script>
+
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {location.reload()}"></iframe>
+    
+        <form class="form-inline" role="form" action="https://docs.google.com/forms/d/1F6XQ4XF85fjZf10Y9OflO7Di3CSCTUdUJLCGWcAwd3k/formResponse" method="POST" id="catform" target="hidden_iframe" onsubmit="Javascript: setTimeout(function() {$('#catform').find('input:text').val('');}, 1500); setTimeout(function() {location.reload(true);}, 3000)">
+          <div class="form-group col-xs-8">
+          <input type="text" name="entry.1511895246" value="" class="form-control" id="entry_1511895246" dir="auto">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+        </div>
+        </div>
+
+        <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+        <div class="col-md-12" id="names"></div>
+        </div>
+        </div>
+
+        </div>
+
+        <script>
+        var nameArray = [];
+      function displayContent(json) {
+            var suggestions = '';
+            var len = json.feed.entry.length;
+     for (var i=0; i<len; i++) {        
+            var name = json.feed.entry[i].gsx$name.$t.toUpperCase();
+            nameArray.push(name);
+            suggestions += [
+            '<h1>' + name + '</h1>'
+            ].join('');
+            document.getElementById('names').innerHTML = suggestions
+            } 
+        }
+
+</script>
+
+<script src="http://spreadsheets.google.com/feeds/list/0Ag4MM37uq7FmdENwUkxNRVR4cTVMTTRzZDZhRTJIc1E/od6/public/values?alt=json-in-script&amp;callback=displayContent" type="text/javascript"></script>
+
+</body>
+
+</html>
