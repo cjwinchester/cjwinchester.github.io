@@ -57,7 +57,7 @@ function toAp(num) {
 function exCounter(json) {
 	   console.log(json.feed.entry[0].gsx$sum.$t)
 	   console.log(toAp(json.feed.entry[0].gsx$sum.$t))
-	   $('#results').html('$' + toAp(json.feed.entry[0].gsx$sum.$t));
+	   $('#results').html('To date, OPPD has paid Exelon $' + toAp(json.feed.entry[0].gsx$sum.$t));
     }
 </script>
 
