@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+
+<head>
+
+<style>
+body {
+font-family:Helvetica,Arial,sans-serif;
+}
+</style>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script>
+
+function toAp(num) {
+    if (typeof(num) != "string") 
+    { numstripped = parseInt(num) }
+    else { 
+        numstring = num.replace(/,|$|€|¥|%|(|)/g,'');
+        numstripped = parseInt(numstring);
+      };
+  if (numstripped < 10) {
+  var apnums = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
+  return apnums[numstripped]
+  }
+  
+  else if (numstripped > 999999)
+  {
+    var striplength = numstripped.toString().length;
+  
+   if (striplength >= 7 && striplength <= 9)
+    {return ((numstripped / 1000000).toFixed(2) + ' million').replace('.00','')}
+   if (striplength >= 10 && striplength <= 12)
+    {return ((numstripped / 1000000000).toFixed(2) + ' billion').replace('.00','')}
+   if (striplength >= 13 && striplength <= 15)
+    {return ((numstripped / 1000000000000).toFixed(2) + ' trillion').replace('.00','')}
+        }
+ 
+  else if (999 > numstripped < 999999) 
+  { numstripped += '';
+  x = numstripped.split('.');
+  x1 = x[0];
+  x2 = x.length > 1 ? '.' + x[1] : '';
+  var rgx = /(\d+)(\d{3})/;
+  while (rgx.test(x1)) {
+    x1 = x1.replace(rgx, '$1' + ',' + '$2');
+       }
+    return x1 + x2;
+  }
+  
+  else 
+    { return numstripped }
+  }
+
+
+function exCounter(json) {
+	   console.log(json.feed.entry[0].gsx$sum.$t)
+	   console.log(toAp(json.feed.entry[0].gsx$sum.$t))
+	   $('#results').html('$' + toAp(json.feed.entry[0].gsx$sum.$t));
+    }
+</script>
+
+
+</head>
+
+<body>
+
+<h1 id="results"></h1>
+
+<script src="http://spreadsheets.google.com/feeds/list/0Ag4MM37uq7FmdFN2Q2VFem5Qb2k4SEg2QzhLNEVZVHc/od6/public/values?alt=json-in-script&amp;callback=exCounter" type="text/javascript"></script>
+
+</body>
+
+</html>
