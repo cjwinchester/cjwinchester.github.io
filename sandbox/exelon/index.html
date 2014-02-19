@@ -4,9 +4,12 @@
 <head>
 
 <style>
-body {
-font-family:Helvetica,Arial,sans-serif;
-}
+
+body, html { margin:0; font-family: Helvetica, Arial, sans-serif; height:100%; width:100%; background-image: url('https://pbs.twimg.com/profile_background_images/378800000161644316/_zAqrgFw.jpeg'); background-size: 100%; background-position:center; overflow:hidden;}
+#hed { margin:0; font-weight:900; background:#fff; text-align:center;}
+.centered { margin: auto; width:100%;}
+.notouchy { -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: moz-none; -ms-user-select: none; user-select: none; }
+
 </style>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -20,8 +23,7 @@ function toAp(num) {
         numstring = num.replace(/,|$|€|¥|%|(|)/g,'');
         numstripped = parseInt(numstring);
       };
-
-    var striplength = numstripped.toString().length;
+   var striplength = numstripped.toString().length;
 
    if (striplength >= 7 && striplength <= 9)
     {return ((numstripped / 1000000).toFixed(2) + ' million').replace('.00','')}
@@ -34,6 +36,23 @@ function toAp(num) {
 function exCounter(json) {
 	   $('#results').html('To date, OPPD has paid Exelon $' + toAp(json.feed.entry[0].gsx$sum.$t) + '.');
     }
+    
+$('document').ready(function(){
+    $('.centered').css({
+        position:'absolute',
+        left: ($(window).width() - $('.centered').outerWidth())/2,
+        top: (($(window).height() - $('.centered').outerHeight())/2)
+    });
+});
+
+$( window ).resize(function() {
+    $('.centered').css({
+        position:'absolute',
+        left: ($(window).width() - $('.centered').outerWidth())/2,
+        top: (($(window).height() - $('.centered').outerHeight())/2)
+    });
+});
+    
 </script>
 
 
@@ -41,7 +60,9 @@ function exCounter(json) {
 
 <body>
 
+<div id="hed" class="centered notouchy">
 <h1 id="results"></h1>
+</div>
 
 <script src="http://spreadsheets.google.com/feeds/list/0Ag4MM37uq7FmdFN2Q2VFem5Qb2k4SEg2QzhLNEVZVHc/od6/public/values?alt=json-in-script&amp;callback=exCounter" type="text/javascript"></script>
 
