@@ -23,7 +23,7 @@ function displayContent(json) {
             var rating_rest = "<i class='fa fa-star-o'></i>";
                           
             table_content += [
-            '<tr><td class="row" data=' + (pages_done / pages_total) + '><a href="' + link + '" target="_blank"><em>' + title + '</em></a>, by ' + author + '</td><td>' + rating.repeat(stars) + rating_rest.repeat(emptystars) + '</td></tr>'
+            '<tr><td class="row" data=' + (pages_done / pages_total) * 100 + '><a href="' + link + '" target="_blank"><em>' + title + '</em></a>, by ' + author + '</td><td>' + rating.repeat(stars) + rating_rest.repeat(emptystars) + '</td></tr>'
             ].join('');
 
 document.getElementById('whatreadingnow').innerHTML = 
