@@ -1,51 +1,49 @@
 <!doctype html>
-<html lang="en">
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
+    <title>
+    What am I reading?
+    </title>
 
-<title>
-What am I reading?
-</title>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta charset="utf-8" />
-
-<!--stylesheets-->
 <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-<link rel='stylesheet' href='jquery-ui.css' />
-<link rel='stylesheet' href='reading.css' />
 
-<!--scripts-->
-<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js'></script>
-<script src="jquery-ui.js" type="text/javascript"></script>
-<script src="reading.js" type="text/javascript"></script>
+<link rel="stylesheet" href="css/foundation.min.css" />
+<script src="js/vendor/modernizr.js"></script>
+
+<style>
+table tr { background-color: transparent !important; }
+table td:nth-of-type(even) {text-align:right;}
+.row { background-color: transparent; background-image: url('css/img/back.png'); background-repeat: no-repeat; }
+a { font-weight: bold; color: #7b2e00;}
+a:hover {border-bottom:1px dotted #7b2e00;}
+</style>
 
 </head>
 
 <body>
 
-<img src="http://i.imgur.com/kNC9t21.png?1" width="100%" style="margin:0; margin-top:-1em; overflow:hidden;" />
+      <div style="width:100%; margin-bottom:1em;"><img src="css/img/topper.png" width="100%;" /></div>
 
-<div id="header">
-
-<h2>What am I reading?</h2>
-
-<!--
-<script type="text/javascript">var submitted=false;</script><iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location.reload()}"></iframe>
-<form action="https://docs.google.com/forms/d/1eK0Dch0MNPG8lghTlTPZp-kXxjUJVmxEwLABcSyFTVg/formResponse" id="mainform" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
-<input type="text" name="entry.1059936569" value="" id="entry_1059936569" placeholder="Suggestions?" dir="auto">
-<input type="submit" value="Submit" type="submit" name="submit" onsubmit="Javascript: setTimeout(function() {$('#entry_1059936569').val('');}, 1500); setTimeout(function() {location.reload(true);}, 2500)" />
-</form>
--->
-
+<div class="row">
+<div class="small-12 large-12 columns" id="whatreadingnow"></div>
 </div>
-<div id="whatreadingnow"></div>
 
 <script src="http://spreadsheets.google.com/feeds/list/0Ag4MM37uq7FmdFE5aktUSUN2aVdIUExHZTI4NVl3Umc/od6/public/values?alt=json-in-script&amp;callback=displayContent" type="text/javascript"></script>
 
-<script type="text/javascript">
-$(document).tooltip({ track: true });
-$("table").addTableFilter();
+<script src="js/vendor/jquery.js"></script>
+<script src="js/foundation.min.js"></script>
+<script src="js/reading.js"></script>
+
+<script>
+$('.row').each(function() {
+    var wide = $(this).attr('data');
+    $(this).css('backgroundSize', wide + "% 100%");
+});
+
+$('table').addTableFilter();
 </script>
 
 </body>
