@@ -1,0 +1,653 @@
+<!doctype html>
+<html>
+
+<head>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<style>
+
+body, html {
+font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+padding:0;
+margin:0;
+}
+
+.bar {
+float:left; width:25%; height:30px; font-size:12px;
+}
+
+.bar1 {
+background:#e41a1c;
+}
+
+.bar2 {
+background: #377eb8;
+}
+
+.bar3 {
+background:#4daf4a;
+}
+
+.bar4 {
+background:#984ea3;
+}
+
+.bartext {
+vertical-align:-8px; color:#fff; font-weight:bold; padding-left:5px;
+}
+
+table {
+	border-collapse: collapse;
+	font-family: Arial, sans-serif;
+    width:100%;
+    font-size:12px;
+}
+
+table td {
+	border-top: 1px solid #eee;
+	padding: 10px;
+    text-align:center;
+}
+
+table thead th {
+	color: #000;
+	border-bottom: 1px solid #444;
+	padding: 10px;
+}
+
+.tabletext { color: #fff; font-weight:bold; text-align:left;}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Generation</h1>
+
+<input type="button" id="one" value="Scenario 1" />
+<input type="button" id="two" value="Scenario 2" />
+<input type="button" id="three" value="Scenario 3" />
+<input type="button" id="four" value="Scenario 4" />
+<input type="button" id="five" value="Scenario 5" />
+
+<div id="descrip" style="padding-bottom:20px;"></div>
+
+<div id="bar2018-1" class="bar bar1"><span class="bartext">2018</span></div>
+<div id="bar2018-2" class="bar bar2"></div>
+<div id="bar2018-3" class="bar bar3"></div>
+<div id="bar2018-4" class="bar bar4"></div>
+
+<div style="clear:both;margin-top:10px;"></div>
+
+<div id="bar2023-1" class="bar bar1"><span class="bartext">2023</span></div>
+<div id="bar2023-2" class="bar bar2"></div>
+<div id="bar2023-3" class="bar bar3"></div>
+<div id="bar2023-4" class="bar bar4"></div>
+
+
+<div style="clear:both;margin-top:10px;"></div>
+
+
+<div id="bar2028-1" class="bar bar1"><span class="bartext">2028</span></div>
+<div id="bar2028-2" class="bar bar2"></div>
+<div id="bar2028-3" class="bar bar3"></div>
+<div id="bar2028-4" class="bar bar4"></div>
+<div style="clear:both;margin-top:10px;"></div>
+
+<div id="bar2033-1" class="bar bar1"><span class="bartext">2033</span></div>
+<div id="bar2033-2" class="bar bar2"></div>
+<div id="bar2033-3" class="bar bar3"></div>
+<div id="bar2033-4" class="bar bar4"></div>
+
+<div style="clear:both;margin-top:10px;"></div>
+<div id="res_table" style="display:none; padding-top:20px;">
+
+<table>
+
+<thead>
+
+<th></th>
+
+<th>
+2018
+</th>
+
+<th>
+2023
+</th>
+
+<th>
+2028
+</th>
+
+<th>
+2033
+</th>
+</thead>
+
+<tbody>
+<tr>
+<td class="tabletext bar1">Nuclear</td>
+<td id="nuke18"></td>
+<td id="nuke23"></td>
+<td id="nuke28"></td>
+<td id="nuke33"></td>
+</tr>
+
+<tr>
+<td class="tabletext bar2">Coal</td>
+<td id="coal18"></td>
+<td id="coal23"></td>
+<td id="coal28"></td>
+<td id="coal33"></td>
+</tr>
+
+<tr>
+<td class="tabletext bar3">Renewables</td>
+<td id="renew18"></td>
+<td id="renew23"></td>
+<td id="renew28"></td>
+<td id="renew33"></td>
+</tr>
+
+<tr>
+<td class="tabletext bar4">Natural gas and oil</td>
+<td id="gas18"></td>
+<td id="gas23"></td>
+<td id="gas28"></td>
+<td id="gas33"></td>
+</tr>
+
+<tr style="font-weight:bold;">
+<td style="text-align:left;">Total</td>
+<td id="total18"></td>
+<td id="total23"></td>
+<td id="total28"></td>
+<td id="total33"></td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+
+<script>
+
+$( ".bar1" ).hover(
+  function() {
+    $( '.bar2' ).css('opacity', 0.3);
+    $( '.bar3' ).css('opacity', 0.3);
+    $( '.bar4' ).css('opacity', 0.3);
+    }, function() {
+    $( '.bar2' ).css('opacity', 1.0);
+    $( '.bar3' ).css('opacity', 1.0);
+    $( '.bar4' ).css('opacity', 1.0);
+  }
+);
+
+$( ".bar2" ).hover(
+  function() {
+    $( '.bar1' ).css('opacity', 0.3);
+    $( '.bar3' ).css('opacity', 0.3);
+    $( '.bar4' ).css('opacity', 0.3);
+    }, function() {
+    $( '.bar1' ).css('opacity', 1.0);
+    $( '.bar3' ).css('opacity', 1.0);
+    $( '.bar4' ).css('opacity', 1.0);
+  }
+);
+
+$( ".bar3" ).hover(
+  function() {
+    $( '.bar2' ).css('opacity', 0.3);
+    $( '.bar1' ).css('opacity', 0.3);
+    $( '.bar4' ).css('opacity', 0.3);
+    }, function() {
+    $( '.bar2' ).css('opacity', 1.0);
+    $( '.bar1' ).css('opacity', 1.0);
+    $( '.bar4' ).css('opacity', 1.0);
+  }
+);
+
+$( ".bar4" ).hover(
+  function() {
+    $( '.bar2' ).css('opacity', 0.3);
+    $( '.bar3' ).css('opacity', 0.3);
+    $( '.bar1' ).css('opacity', 0.3);
+    }, function() {
+    $( '.bar2' ).css('opacity', 1.0);
+    $( '.bar3' ).css('opacity', 1.0);
+    $( '.bar1' ).css('opacity', 1.0);
+  }
+);
+
+
+$("#one").click(function(){
+$('#res_table').hide();
+  $("#bar2018-1").css({
+    width: '33%',
+  });
+    $("#bar2018-2").css({
+    width: '30%',
+  });
+      $("#bar2018-3").css({
+    width: '33%',
+  });
+  $("#bar2018-4").css({
+    width: '4%',
+  });
+  
+ $("#bar2023-1").css({
+    width: '36%',
+  });
+    $("#bar2023-2").css({
+    width: '17%',
+  });
+      $("#bar2023-3").css({
+    width: '31%',
+  });
+  $("#bar2023-4").css({
+    width: '16%',
+  });
+
+   $("#bar2028-1").css({
+    width: '28%',
+  });
+    $("#bar2028-2").css({
+    width: '16%',
+  });
+      $("#bar2028-3").css({
+    width: '28%',
+  });
+  $("#bar2028-4").css({
+    width: '28%',
+  }); 
+
+   $("#bar2033-1").css({
+    width: '26%',
+  });
+    $("#bar2033-2").css({
+    width: '19%',
+  });
+      $("#bar2033-3").css({
+    width: '20%',
+  });
+  $("#bar2033-4").css({
+    width: '35%',
+  });  
+  
+  $('#nuke18').html('3,647 GWh (33%)');
+  $('#nuke23').html('4,294 GWh (36%)');
+  $('#nuke28').html('3,633 GWh (28%)');
+  $('#nuke33').html('3,724 GWh (26%)');
+  
+  $('#coal18').html('3,316 GWh (30%)');
+  $('#coal23').html('2,028 GWh (17%)');
+  $('#coal28').html('2,077 GWh (16%)');
+  $('#coal33').html('2,721 GWh (19%)');
+  
+  $('#renew18').html('3,647 GWh (33%)');
+  $('#renew23').html('3,698 GWh (31%)');
+  $('#renew28').html('3,633 GWh (28%)');
+  $('#renew33').html('2,865 GWh (20%)');
+  
+  $('#gas18').html('442 GWh (4%)');
+  $('#gas23').html('1,909 GWh (16%)');
+  $('#gas28').html('3,633 GWh (28%)');
+  $('#gas33').html('5,012 GWh (35%)');
+  
+  $('#total18').html('11,052 GWh');
+  $('#total23').html('11,929 GWh');
+  $('#total28').html('12,976 GWh');
+  $('#total33').html('14,322 GWh');
+  $('#res_table').show();
+  
+  $('#descrip').html('<h3>North Omaha Station</h3><b>2016:</b> Refuel units 1-3 with gas, retrofit units 4-5 with basic emissions controls<br/><b>2023:</b> Refuel units 4-5 with gas<h3>Nebraska City Station</h3><b>2016:</b> Retrofit unit 1 with basic emissions controls')  
+  });
+
+$("#two").click(function(){
+$('#res_table').hide();
+  $("#bar2018-1").css({
+    width: '33%',
+  });
+    $("#bar2018-2").css({
+    width: '30%',
+  });
+      $("#bar2018-3").css({
+    width: '33%',
+  });
+  $("#bar2018-4").css({
+    width: '4%',
+  });
+  
+ $("#bar2023-1").css({
+    width: '36%',
+  });
+    $("#bar2023-2").css({
+    width: '19%',
+  });
+      $("#bar2023-3").css({
+    width: '31%',
+  });
+  $("#bar2023-4").css({
+    width: '14%',
+  });
+
+   $("#bar2028-1").css({
+    width: '28%',
+  });
+    $("#bar2028-2").css({
+    width: '20%',
+  });
+      $("#bar2028-3").css({
+    width: '28%',
+  });
+  $("#bar2028-4").css({
+    width: '24%',
+  }); 
+
+   $("#bar2033-1").css({
+    width: '26%',
+  });
+    $("#bar2033-2").css({
+    width: '23%',
+  });
+      $("#bar2033-3").css({
+    width: '20%',
+  });
+  $("#bar2033-4").css({
+    width: '31%',
+  });  
+  
+  $('#nuke18').html('3,647 GWh (33%)');
+  $('#nuke23').html('4,294 GWh (36%)');
+  $('#nuke28').html('3,633 GWh (28%)');
+  $('#nuke33').html('3,724 GWh (26%)');
+  
+  $('#coal18').html('3,316 GWh (30%)');
+  $('#coal23').html('2,267 GWh (19%)');
+  $('#coal28').html('2,595 GWh (20%)');
+  $('#coal33').html('3,294 GWh (23%)');
+  
+  $('#renew18').html('3,647 GWh (33%)');
+  $('#renew23').html('3,698 GWh (31%)');
+  $('#renew28').html('3,633 GWh (28%)');
+  $('#renew33').html('2,864 GWh (20%)');
+  
+  $('#gas18').html('442 GWh (4%)');
+  $('#gas23').html('1,670 GWh (14%)');
+  $('#gas28').html('3,115 GWh (24%)');
+  $('#gas33').html('4,440 GWh (31%)');
+  
+  $('#total18').html('11,052 GWh');
+  $('#total23').html('11,929 GWh');
+  $('#total28').html('12,976 GWh');
+  $('#total33').html('14,322 GWh');
+  
+  $('#res_table').show();
+  
+    $('#descrip').html('<h3>North Omaha Station</h3><b>2016:</b> Retrofit units 1-5 with basic emissions controls<h3>Nebraska City Station</h3><b>2016:</b> Retrofit unit 1 with basic emissions controls')
+  
+  });
+  
+$("#three").click(function(){
+$('#res_table').hide();
+  $("#bar2018-1").css({
+    width: '33%',
+  });
+    $("#bar2018-2").css({
+    width: '30%',
+  });
+      $("#bar2018-3").css({
+    width: '33%',
+  });
+  $("#bar2018-4").css({
+    width: '4%',
+  });
+  
+ $("#bar2023-1").css({
+    width: '36%',
+  });
+    $("#bar2023-2").css({
+    width: '19%',
+  });
+      $("#bar2023-3").css({
+    width: '31%',
+  });
+  $("#bar2023-4").css({
+    width: '14%',
+  });
+
+   $("#bar2028-1").css({
+    width: '28%',
+  });
+    $("#bar2028-2").css({
+    width: '18%',
+  });
+      $("#bar2028-3").css({
+    width: '28%',
+  });
+  $("#bar2028-4").css({
+    width: '26%',
+  }); 
+
+   $("#bar2033-1").css({
+    width: '26%',
+  });
+    $("#bar2033-2").css({
+    width: '20%',
+  });
+      $("#bar2033-3").css({
+    width: '20%',
+  });
+  $("#bar2033-4").css({
+    width: '34%',
+  });  
+  
+  $('#nuke18').html('3,647 GWh (33%)');
+  $('#nuke23').html('4,294 GWh (36%)');
+  $('#nuke28').html('3,633 GWh (28%)');
+  $('#nuke33').html('3,725 GWh (26%)');
+  
+  $('#coal18').html('3,316 GWh (30%)');
+  $('#coal23').html('2,267 GWh (19%)');
+  $('#coal28').html('2,336 GWh (18%)');
+  $('#coal33').html('2,864 GWh (20%)');
+  
+  $('#renew18').html('3,647 GWh (33%)');
+  $('#renew23').html('3,698 GWh (31%)');
+  $('#renew28').html('3,633 GWh (28%)');
+  $('#renew33').html('2,864 GWh (20%)');
+  
+  $('#gas18').html('442 GWh (4%)');
+  $('#gas23').html('1,670 GWh (14%)');
+  $('#gas28').html('3,374 GWh (26%)');
+  $('#gas33').html('4,869 GWh (34%)');
+  
+  $('#total18').html('11,052 GWh');
+  $('#total23').html('11,929 GWh');
+  $('#total28').html('12,976 GWh');
+  $('#total33').html('14,322 GWh');
+  
+  $('#res_table').show();
+
+  $('#descrip').html('<h3>North Omaha Station</h3><b>2016:</b> Retire units 1-3 and replace with new natural gas peaking plant; retrofit units 4-5 with basic emissions controls<h3>Nebraska City Station</h3><b>2016:</b> Retrofit unit 1 with basic emissions controls')
+  });
+  
+$("#four").click(function(){
+$('#res_table').hide();
+  $("#bar2018-1").css({
+    width: '33%',
+  });
+    $("#bar2018-2").css({
+    width: '30%',
+  });
+      $("#bar2018-3").css({
+    width: '34%',
+  });
+  $("#bar2018-4").css({
+    width: '3%',
+  });
+  
+ $("#bar2023-1").css({
+    width: '36%',
+  });
+    $("#bar2023-2").css({
+    width: '19%',
+  });
+      $("#bar2023-3").css({
+    width: '31%',
+  });
+  $("#bar2023-4").css({
+    width: '14%',
+  });
+
+   $("#bar2028-1").css({
+    width: '29%',
+  });
+    $("#bar2028-2").css({
+    width: '18%',
+  });
+      $("#bar2028-3").css({
+    width: '28%',
+  });
+  $("#bar2028-4").css({
+    width: '25%',
+  }); 
+
+   $("#bar2033-1").css({
+    width: '26%',
+  });
+    $("#bar2033-2").css({
+    width: '21%',
+  });
+      $("#bar2033-3").css({
+    width: '20%',
+  });
+  $("#bar2033-4").css({
+    width: '33%',
+  });  
+  
+  $('#nuke18').html('3,647 GWh (33%)');
+  $('#nuke23').html('4,294 GWh (36%)');
+  $('#nuke28').html('3,763 GWh (29%)');
+  $('#nuke33').html('3,724 GWh (26%)');
+  
+  $('#coal18').html('3,316 GWh (30%)');
+  $('#coal23').html('2,267 GWh (19%)');
+  $('#coal28').html('2,336 GWh (18%)');
+  $('#coal33').html('3,008 GWh (21%)');
+  
+  $('#renew18').html('3,758 GWh (34%)');
+  $('#renew23').html('3,698 GWh (31%)');
+  $('#renew28').html('3,633 GWh (28%)');
+  $('#renew33').html('2,864 GWh (20%)');
+  
+  $('#gas18').html('331 GWh (3%)');
+  $('#gas23').html('1,670 GWh (14%)');
+  $('#gas28').html('3,244 GWh (25%)');
+  $('#gas33').html('4,726 GWh (33%)');
+  
+  $('#total18').html('11,052 GWh');
+  $('#total23').html('11,929 GWh');
+  $('#total28').html('12,976 GWh');
+  $('#total33').html('14,322 GWh');
+  
+  $('#res_table').show();
+
+  $('#descrip').html('<h3>North Omaha Station</h3><b>2016:</b> Retire units 1-3 and replace with new natural gas peaking plant; retrofit units 4-5 with basic emissions controls<h3>Nebraska City Station</h3><b>2016:</b> Retrofit unit 1 with basic emissions controls<h3>Demand-side management</h3><b>2018:</b> Reduce load by 100MW with customer participation in energy efficiency programs')
+  });
+
+$("#five").click(function(){
+$('#res_table').hide();
+  $("#bar2018-1").css({
+    width: '33%',
+  });
+    $("#bar2018-2").css({
+    width: '27%',
+  });
+      $("#bar2018-3").css({
+    width: '37%',
+  });
+  $("#bar2018-4").css({
+    width: '3%',
+  });
+  
+ $("#bar2023-1").css({
+    width: '36%',
+  });
+    $("#bar2023-2").css({
+    width: '17%',
+  });
+      $("#bar2023-3").css({
+    width: '35%',
+  });
+  $("#bar2023-4").css({
+    width: '12%',
+  });
+
+   $("#bar2028-1").css({
+    width: '28%',
+  });
+    $("#bar2028-2").css({
+    width: '18%',
+  });
+      $("#bar2028-3").css({
+    width: '31%',
+  });
+  $("#bar2028-4").css({
+    width: '23%',
+  }); 
+
+   $("#bar2033-1").css({
+    width: '26%',
+  });
+    $("#bar2033-2").css({
+    width: '20%',
+  });
+      $("#bar2033-3").css({
+    width: '23%',
+  });
+  $("#bar2033-4").css({
+    width: '31%',
+  });  
+  
+  $('#nuke18').html('3,647 GWh (33%)');
+  $('#nuke23').html('4,294 GWh (36%)');
+  $('#nuke28').html('3,633 GWh (28%)');
+  $('#nuke33').html('3,724 GWh (26%)');
+  
+  $('#coal18').html('2,984 GWh (27%)');
+  $('#coal23').html('2,028 GWh (17%)');
+  $('#coal28').html('2,336 GWh (18%)');
+  $('#coal33').html('2,864 GWh (20%)');
+  
+  $('#renew18').html('4,089 GWh (37%)');
+  $('#renew23').html('4,023 GWh (35%)');
+  $('#renew28').html('4,023 GWh (31%)');
+  $('#renew33').html('3,294 GWh (23%)');
+  
+  $('#gas18').html('332 GWh (3%)');
+  $('#gas23').html('1,431 GWh (12%)');
+  $('#gas28').html('2,984 GWh (23%)');
+  $('#gas33').html('4,440 GWh (31%)');
+  
+  $('#total18').html('11,052 GWh');
+  $('#total23').html('11,929 GWh');
+  $('#total28').html('12,976 GWh');
+  $('#total33').html('14,322 GWh');
+  
+  $('#res_table').show();
+
+  $('#descrip').html('<h3>North Omaha Station</h3><b>2016:</b> Retire units 1-3 and replace with new natural gas peaking plant; retrofit units 4-5 with basic emissions controls<h3>Nebraska City Station</h3><b>2016:</b> Retrofit unit 1 with basic emissions controls<h3>New solar</h3><b>2018:</b> Increase by 100MW the amount of power generated by solar sources')
+  });
+  
+</script>
+
+</body>
+
+</html>
