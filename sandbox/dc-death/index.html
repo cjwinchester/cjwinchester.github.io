@@ -7,6 +7,12 @@
 
 <style>
 
+html, body {
+margin:0;
+padding:0;
+font-family: Arial;
+}
+
 table {
 	border-collapse: collapse;
 	font-family: Arial, sans-serif;
@@ -18,11 +24,34 @@ table td {
 	padding: 20px;
 }
 
+.overlay {
+	position:absolute;
+    padding:15px;
+	top:15px;
+	right:15px;
+    font-size:70%;
+	border: 1px solid #ccc;
+	background-color:#ffffff;
+	box-shadow: 0 0 15px rgba(0,0,0,0.2);
+	border-radius: 5px;
+	z-index:1;
+		}
+
+.color {
+        height: 12px;
+        width: 12px;
+        margin-right: 4px;
+        float: left;
+        margin-top:1px;
+      }
+        
 </style>
 
 </head>
 
 <body>
+
+<div class="overlay"></div>
 
 <table>
 
@@ -122,10 +151,23 @@ table td {
 
 <script>
 
+var col = [];
+
+var data = [ ['#b2182b', 'Burial'], ['#ef8a62', 'Cremation'], ['#fddbc7', 'Donation'], ['#2166ac', 'Entombment'], ['#67a9cf', 'Removal'], ['#d1e5f0', 'Other/Unknown'] ]
+
+var len = data.length;
+var legendfill = '';
+
+for (var i=0; i<len; i++) {
+col.push(data[i][0]);
+legendfill += '<div class="color" style="background:' + data[i][0] + '"></div> ' + data[i][1] + '<br/>';
+}
+
 $("span.pie").peity("pie", {
-  fill: ['#b2182b', '#ef8a62', '#fddbc7', '#2166ac', '#67a9cf', '#d1e5f0']
+  fill: col
 })
 
+$('.overlay').html(legendfill);
 
 
 </script>
