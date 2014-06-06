@@ -1,176 +1,25 @@
 <!doctype html>
 <html>
+    <head>
+     <title>Douglas County deaths by disposition, 2003-2012</title>
+     <link rel="stylesheet" href="css/jquery-ui.min.css">
+     <link rel="stylesheet" href="css/main.css" />
+    </head>
+    
+    <body>
 
-<head>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="http://benpickles.github.io/peity/jquery.peity.min.js"></script>
-
-<style>
-
-html, body {
-    margin:0;
-    padding:0;
-    font-family: Arial, sans-serif;
-}
-
-table {
-    border-collapse: collapse;
-    width:100%;
-}
-
-table td {
-border-bottom: 1px solid #eee;
-	padding: 20px;
-}
-
-.overlay {
-	position:fixed;
-    padding:15px;
-	top:15px;
-	right:15px;
-    font-size:70%;
-	border: 1px solid #ccc;
-	background-color:#ffffff;
-	box-shadow: 0 0 15px rgba(0,0,0,0.2);
-	border-radius: 5px;
-	z-index:1;
-		}
-
-.color {
-    height: 12px;
-    width: 12px;
-    margin-right: 4px;
-    float: left;
-    margin-top:1px;
-      }
-        
-</style>
-
-</head>
-
-<body>
-
-<div class="overlay"></div>
-
-<table>
-
-<tr>
-<td>
-<h3>2003</h3>
-</td>
-<td>
-<span data-diameter="100" class="pie">2538,951,69,0,65,11</span>
-</td>
-</tr>
-
-<tr>
-<td>
-<h3>2004</h3>
-</td>
-<td>
-<span data-diameter="100" class="pie">2389,985,63,0,65,3</span>
-</td>
-</tr>
-
-<tr>
-<td>
-<h3>2005</h3>
-</td>
-<td>
-<span data-diameter="100" class="pie">2251,1111,69,38,62,5</span>
-</td>
-</tr>
-
-<tr>
-<td>
-<h3>2006</h3>
-</td>
-<td>
-<span data-diameter="100" class="pie">2249,1112,86,39,68,5</span>
-</td>
-</tr>
-
-<tr>
-<td>
-<h3>2007</h3>
-</td>
-<td>
-<span data-diameter="100" class="pie">2138,1221,85,51,78,13</span>
-</td>
-</tr>
-
-<tr>
-<td>
-<h3>2008</h3>
-</td>
-<td>
-<span data-diameter="100" class="pie">2219,1280,80,53,61,7</span>
-</td>
-</tr>
-
-<tr>
-<td>
-<h3>2009</h3>
-</td>
-<td>
-<span data-diameter="100" class="pie">1903,1346,76,44,49,5</span>
-</td>
-</tr>
-
-<tr>
-<td>
-<h3>2010</h3>
-</td>
-<td>
-<span data-diameter="100" class="pie">2000,1456,61,66,43,7</span>
-</td>
-</tr>
-
-<tr>
-<td>
-<h3>2011</h3>
-</td>
-<td>
-<span data-diameter="100" class="pie">1985,1598,94,33,66,3</span>
-</td>
-</tr>
-
-<tr>
-<td>
-<h3>2012</h3>
-</td>
-<td>
-<span data-diameter="100" class="pie">1863,1760,74,67,63,5</span>
-</td>
-</tr>
-
-
-
-</table>
-
-<script>
-
-var col = [];
-
-var data = [ ['#b2182b', 'Burial'], ['#ef8a62', 'Cremation'], ['#fddbc7', 'Donation'], ['#2166ac', 'Entombment'], ['#67a9cf', 'Removal'], ['#d1e5f0', 'Other/Unknown'] ]
-
-var len = data.length;
-var legendfill = '';
-
-for (var i=0; i<len; i++) {
-col.push(data[i][0]);
-legendfill += '<div class="color" style="background:' + data[i][0] + '"></div> ' + data[i][1] + '<br/>';
-}
-
-$("span.pie").peity("pie", {
-  fill: col
-})
-
-$('.overlay').html(legendfill);
-
-
-</script>
-
-</body>
-
+    <div class="container">    
+    <h2 style="margin-bottom:25px;">Douglas County deaths by disposition, <span id="hed_yr">2003</span></h2>
+    <div id="slider"></div>
+    <table id="breakdown"></table>
+    <div id="ref"></div>
+    <div class="source" style="text-align:right; margin-right:-19px; margin-top:3px;">100%</div>
+    <div class="source">"Removed" means the body was taken to another jurisdiction. The county began tracking entombments and other above-ground grave sites in 2005. <a href="http://www.douglascountyhealth.com/images/stories/stats/death/SummaryOfDeaths.pdf">Source</a> (pdf)</div>
+    </div>
+    
+     <script src="js/jquery.min.js"></script>
+     <script src="js/jquery-ui.min.js"></script>
+     <script src="js/main.js"></script>
+    
+    </body>
 </html>
