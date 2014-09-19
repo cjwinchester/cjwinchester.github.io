@@ -1,63 +1,155 @@
-<!doctype html>
-<html>
-  <head>
+<!DOCTYPE html>
+<html lang="en"><head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>here are some things ok ok ok</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Winchester? Winchester!</title>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+	<style type="text/css">
+        .main { margin-top: 80px; }
+		body { background-image:url('css/gray.gif'); overflow-x:hidden;}
+		.blob { background: #fff; padding: 1em; margin-bottom: 2em; box-shadow: 0 1px 2px #ccc; }
+        .clicker {cursor:pointer; cursor:hand; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: moz-none; -ms-user-select: none; user-select: none; }
+        h4 {font-weight:bold; margin-top:0px;}
+        .navbar-scroller li a {font-weight:bold;}
+        h4.app a {color:#428bca;}
+        h4.art a {color:#9b4a48;}
+        h4.misc a {color:#eea236;}
+        .datelabel {text-transform:uppercase; font-size:80%; padding-bottom:5px; border-bottom:1px solid #eee;}
+        
+	</style>
+
+	</head>
+
+  <body data-spy="scroll" data-target=".navbar-scroller">
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" style="color:#9b4a48;">Articles</a>
+          <a class="navbar-brand" style="color:#428bca;">Apps</a>
+          <a class="navbar-brand" style="color:#eea236;">Misc</a>
+        </div>
+      </div>
+    </div>
+	
+    <div class="container main" id="main" style="margin-bottom: 50px;"></div>
+
+	</body>
+
+	<script type="text/javascript" src="javascripts/masonry.pkgd.min.js"></script>
+	
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script>
     
-    html, body {
-    background: #000;
+    var entries = [
+    {
+        'hed': 'Public payroll',
+        'type': 'app',
+        'date': 'March 2, 2014',
+        'url': 'http://www.dataomaha.com/salaries',
+        'desc': 'A searchable database of thousands of public employee salaries in the Omaha metro area.'
+    },
+    {
+        'hed': 'What am I reading?',
+        'type': 'misc',
+        'date': 'Dec. 2, 2013',
+        'url': 'http://cjwinchester.github.io/sandbox/reading',
+        'desc': 'A mostly up-to-date list of the books I\'m cracking.'
+    },
+    {
+        'hed': 'Nebraska Primary 2014',
+        'date': 'May 13, 2014',
+        'type': 'app',
+        'url': 'http://www.dataomaha.com/media/election2014',
+        'desc': 'Landing page to slurp in results from the 2014 Nebraska primary election.'
+    },
+    {
+        'hed': 'Military surplus shipments',
+        'date': 'Sept. 20, 2014',
+        'type': 'app',
+        'url': 'http://www.dataomaha.com/militarysurplus',
+        'desc': 'A database of thousands of surplus items transferred to local law enforcement agencies, including assault rifles, armored vehicles and grenade launchers.'
+    },
+    {
+        'hed': 'Dutch World-Herald',
+        'date': 'Jan. 6, 2014',
+        'type': 'misc',
+        'url': 'http://www.twitter.com/dutchowh',
+        'desc': 'A Twitter bot that retweets the Omaha World-Herald account &mdash; in Dutch! (<a href="https://github.com/cjwinchester/dutchowh">repo</a>).'
+    },    
+    {
+        'hed': 'Minimum wage analysis',
+        'date': 'Sept. 7, 2014',
+        'type': 'app',
+        'url': 'http://www.dataomaha.com/minimumwage',
+        'desc': 'A searchable database and analysis of signatories to a statewide petition to raise the minimum wage.'
+    },
+    {
+        'hed': 'Nuke plant costs',
+        'date': 'May 7, 2014',
+        'type': 'app',
+        'url': 'http://dataomaha.com/exelon',
+        'desc': 'Tracking contractor invoices for the manager of a nuclear plant.'
+    },
+    {
+        'hed': 'The many names of David Ryder',
+        'date': 'Jan. 12, 2014',
+        'type': 'misc',
+        'url': 'http://cjwinchester.github.io/sandbox/ryder/',
+        'desc': 'A tribute to the greatest space hero this side of Zapp Branagan.'
+    },    
+    {
+        'hed': 'Medicare payments',
+        'date': 'April 10, 2014',
+        'type': 'app',
+        'url': 'http://dataomaha.com/medicare',
+        'desc': 'A searchable database of Medicare payments in Nebraska and Iowa.'
+    },
+    {
+        'hed': 'Food in the newsroom',
+        'date': 'Sept. 10, 2013',
+        'type': 'misc',
+        'url': 'http://istherefoodinthenewsroom.us',
+        'desc': 'Is there food in the World-Herald newsroom? This page maybe will tell you.'
+    },
+    {
+        'hed': 'Prison miscalculations',
+        'date': 'June 27, 2014',
+        'type': 'app',
+        'url': 'http://dataomaha.com/inmates',
+        'desc': 'A searchable database of inmates whose sentences were improperly calculated.'
+    }   
+    ]
+    
+    var doit = '';
+    for (i=0;i<entries.length;i++) {
+        doit += [
+        '<div class="col-md-3 col-xs-11 blob"><p class="small datelabel">' + entries[i].date + '</p><h4 class="' + entries[i].type + '"><a href="' + entries[i].url + '">' + entries[i].hed + '</a></h4><p>' + entries[i].desc + '</p></div>'
+        ].join('')        
     }
     
-    a:hover {opacity:0.6}
+    document.getElementById('main').innerHTML = doit
     
-    </style>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
+		var container = document.querySelector('#main');
+		var msnry = new Masonry( container, {
+		  columnWidth: 175,
+		  itemSelector: '.blob'
+		});
+            
+    </script>
     
-    <section style="width:100%;">      
-<code style="color:#fff;">
-<span style="color:green;">#!/usr/bin/</span><br/><br/>
-<span style="color:orange;">import</span> winchester<br/>
-<span style="color:orange;">from</span> owhpeeps <span style="color:orange;">import</span> <a href="https://twitter.com/mattwynn" target="_blank">wynn</a>, <a href="https://twitter.com/bvankat" target="_blank">vankat</a><br/><br/>
-<span style="color:orange;">for</span> project <span style="color:orange;">in</span> projects<span style="color:yellow;">:</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:orange;">try</span><span style="color:yellow;">:</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://dataomaha.com/salaries" target="_blank">ne public salaries</a><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://dataomaha.com/inmates" target="_blank">ne inmate scandal</a><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://dataomaha.com/media/election2014/" target="_blank">ne primary 2014</a><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://dataomaha.com/exelon" target="_blank">exelon payments</a><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/cjwinchester/dms-to-decimal" target="_blank">lat/long converter</a><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://istherefoodinthenewsroom.us/" target="_blank">is there food in the newsroom?</a><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://dataomaha.com/medicare" target="_blank">medicare payments</a><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cjwinchester.github.io/sandbox/garcia-dashboard/" target="_blank">reporting dashboard</a><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cjwinchester.github.io/sandbox/gottime/" target="_blank">ain't nobody got time for that</a><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cjwinchester.github.io/sandbox/ryder/" target="_blank">the many names of david ryder</a><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/cjwinchester/mapbug-bot" target="_blank">mapbug bot</a><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cjwinchester.github.io/sandbox/reading/" target="_blank">what am i reading?</a><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://forbiddenledes.us/" target="_blank">forbidden ledes</a><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://dataomaha.com/media/metro-dams/" target="_blank">metro dams</a><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://dataomaha.com/media/oppd-gen/" target="_blank">oppd energy options</a><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://archive.argusleader.com/newsroom/maps/2013recruits/" target="_blank">sd recruits</a><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/cjwinchester/fcs-events" target="_blank">nuke plant event checker</a><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://twitter.com/fortcalhounbot" target="_blank">fort calhoun bot</a> <span style="color:yellow;">(</span><a href="https://github.com/cjwinchester/fcs-tweeter" target="_blank">git</a><span style="color:yellow;">)</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://twitter.com/dutchowh" target="_blank">dutch world-herald bot</a> <span style="color:yellow;">(</span><a href="https://github.com/cjwinchester/dutchowh" target="_blank">git</a><span style="color:yellow;">)</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/cjwinchester/achewood" target="_blank">achewood scraper</a><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/cjwinchester/sd-fuel" target="_blank">sd fuel license scraper</a><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/cjwinchester/minnehaha-jail" target="_blank">minnehaha jail scraper</a><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/cjwinchester/trophyscraper" target="_blank">ne hunting trophy scraper</a><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/cjwinchester/sarpy-claims" target="_blank">sarpy claim scraper</a><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:orange;">except</span><span style="color:yellow;">:</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:orange;">print</span> <span style="color:green;">"trololololololo"</span>
-      </code>
-      </section>
-    </body>
-</html>
+  </html>

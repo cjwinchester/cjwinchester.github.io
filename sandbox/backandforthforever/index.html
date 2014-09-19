@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>#bbff</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        body,html {background-image:url('forever.gif');margin:0;padding:0;overflow:hidden;}
+        </style>
+    </head>
+
+    <body>
+    
+    <div id="bbaff"></div>
+    
+    <div id="forever">
+    <blink>Forever</blink>
+    </div>
+
+    <script>
+    
+    String.prototype.repeat = function(n){return new Array(isNaN(n) ? 1 : ++n).join(this);}
+    
+    x = '<marquee direction="left"><img src="bacon.png" /></marquee><marquee direction="right"><img src="bacon.png" /></marquee>'
+    
+    document.getElementById('bbaff').innerHTML = x.repeat(19)
+    
+    </script>
+    
+    </body>
+
+</html>

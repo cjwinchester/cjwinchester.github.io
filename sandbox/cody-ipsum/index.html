@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Cody ipsum!</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+<style>
+
+.container {background:#fff; padding:3em;}
+
+</style>
+    
+	</head>
+
+  <body>
+
+<div class="container">
+<div class="col-md-6 col-md-offset-3">
+
+
+<div class="col-md-6" style="margin-bottom:1em;">
+<select class="form-control input-lg" style="width:100%;" id="opts">
+<option value="">how many grafs</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+</select>
+</div>
+
+<div class="col-md-6" style="margin-bottom:1em;">
+<select class="form-control input-lg" style="width:100%;" id="ptags">
+<option value="with">with p tags</option>
+<option value="without">without</option>
+</select>
+</div>
+
+
+<div class="col-md-12" style="margin-bottom:1em;">
+<button type="button" class="btn btn-info btn-lg btn-block" id="doit" onclick="doTheThing(opts.value)"><i class="fa fa-cog fa-spin"></i> do the thing</button>
+</div>
+
+
+<div id="morebuttons"></div>
+
+
+<div id="ipsum"></div>
+
+</div>
+
+
+	</body>
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://dataomaha.com/media/scripts/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+   
+    <script type="text/javascript">
+    
+    $('#opts').focus();
+    
+    var text = 'hambone knucklehead trololo jam band gringo syrup fingerling beefcake metonymy skullcrusher crinkle-cut hobnob jesus mask for-loopin\' lampshade turkey-necked corpse flower penny-ante assiduous grime cracker roustabout dingus yob|stiffy quark butts butts and additional butts rob ford pipe-delimited tuna can nutter butter quirt slicker thirteen hours of meatball surgery bingo-bango gif and also giles with a hard g bangerang mencsh duder-bop funny story grendel what even|tremolo hoosegow killbot jitters ocean lake gremlin eyeteeth crewcut c.r.e.a.m. pickle back cherry blunt haberdasher columbo gin slushie safe word horrorshow langer loksh knuckle duster eggplant potpourri dad jokes|Quetzalcoatl? Quetzalcoatl! this just in wang dang doodle turn down for what ringadingding bacon back and forth forever tankini linguini martini bikini anthropophagy fiddlehead drunkard squeamish slatternly junebug everyone is the worst|rowsdower! turd mcgurt backseat drover recursive moist towlette cincinnati porcine iterator why i hardly knew \'er horse laugh velveeta milkshake here is literally some mud in your eye frank burns eats worms conway twitty is a god'
+    
+    function doTheThing(x) {
+        var out = ''
+        var tags = ''
+        if (x != "") {
+        var ips = text.split("|")
+        for (i=0;i<x;i++) {
+        if (document.getElementById('ptags').value == 'with') 
+                {out += ["<p>&lt;p>" + ips[i] + "&lt;/p></p>"].join('')}
+            else 
+                {out += ["<p>" + ips[i] + "</p>"].join('')}
+            }            
+            
+            document.getElementById('morebuttons').innerHTML = '<div class="col-md-12"><button type="button" id="selector" class="btn btn-default btn-lg btn-block" onclick="selectText(\'ipsum\')" style="margin-bottom:1em;"><i class=\'fa fa-clipboard\'></i> select yo\' ipsum</button></div>';
+            
+            document.getElementById('ipsum').innerHTML = '<div class="col-md-12">' + out + '</div>';
+            }
+        else { 
+        alert('seriously pick a number dude') 
+        $('#opts').focus();
+        };
+        }
+    
+        function selectText(element) {
+            var doc = document
+                , text = doc.getElementById(element)
+                , range, selection
+            ;    
+            if (doc.body.createTextRange) {
+                range = doc.body.createTextRange();
+                range.moveToElementText(text);
+                range.select();
+            } else if (window.getSelection) {
+                selection = window.getSelection();        
+                range = doc.createRange();
+                range.selectNodeContents(text);
+                selection.removeAllRanges();
+                selection.addRange(range);
+            }
+        }
+        
+	</script>
+
+</html>
