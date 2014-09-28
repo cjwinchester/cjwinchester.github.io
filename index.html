@@ -20,13 +20,14 @@
         .main { margin-top: 80px; }
 		body { background-image:url('css/gray.gif'); overflow-x:hidden;}
 		.blob { background: #fff; padding: 1em; margin-bottom: 2em; box-shadow: 0 1px 2px #ccc; }
-        .clicker {cursor:pointer; cursor:hand; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: moz-none; -ms-user-select: none; user-select: none; }
+        .clicker {cursor:pointer; cursor:hand; font-weight:bold; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: moz-none; -ms-user-select: none; user-select: none; }
         h4 {font-weight:bold; margin-top:0px;}
         .navbar-scroller li a {font-weight:bold;}
         h4.app a {color:#428bca;}
         h4.art a {color:#9b4a48;}
         h4.misc a {color:#eea236;}
         .datelabel {text-transform:uppercase; font-size:80%; padding-bottom:5px; border-bottom:1px solid #eee;}
+        .quiet { opacity: 0.5; }
         
 	</style>
 
@@ -37,9 +38,9 @@
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" style="color:#9b4a48;">Articles</a>
-          <a class="navbar-brand" style="color:#428bca;">Apps</a>
-          <a class="navbar-brand" style="color:#eea236;">Misc</a>
+          <a class="navbar-brand clicker" id="artclicker" style="color:#9b4a48;">Articles</a>
+          <a class="navbar-brand clicker" id="appclicker" style="color:#428bca;">Apps</a>
+          <a class="navbar-brand clicker" id="miscclicker" style="color:#eea236;">Misc</a>
         </div>
       </div>
     </div>
@@ -56,6 +57,13 @@
     <script>
     
     var entries = [
+        {
+        'hed': 'Prison scandal',
+        'type': 'app',
+        'date': 'Sept. 28, 2014',
+        'url': 'http://dataomaha.com/prison',
+        'desc': 'A database of prisoners in Nebraska whose sentences were mistakenly cut short.'
+    },
     {
         'hed': 'Public payroll',
         'type': 'app',
@@ -125,31 +133,24 @@
         'type': 'misc',
         'url': 'http://istherefoodinthenewsroom.us',
         'desc': 'Is there food in the World-Herald newsroom? This page maybe will tell you.'
-    },
-    {
-        'hed': 'Prison miscalculations',
-        'date': 'June 27, 2014',
-        'type': 'app',
-        'url': 'http://dataomaha.com/inmates',
-        'desc': 'A searchable database of inmates whose sentences were improperly calculated.'
     }   
     ]
     
     var doit = '';
     for (i=0;i<entries.length;i++) {
         doit += [
-        '<div class="col-md-3 col-xs-11 blob"><p class="small datelabel">' + entries[i].date + '</p><h4 class="' + entries[i].type + '"><a href="' + entries[i].url + '">' + entries[i].hed + '</a></h4><p>' + entries[i].desc + '</p></div>'
+        '<div class="col-md-3 col-xs-11 blob ' + entries[i].type + '"><p class="small datelabel">' + entries[i].date + '</p><h4 class="' + entries[i].type + '"><a href="' + entries[i].url + '">' + entries[i].hed + '</a></h4><p>' + entries[i].desc + '</p></div>'
         ].join('')        
     }
     
     document.getElementById('main').innerHTML = doit
-    
+ 
 		var container = document.querySelector('#main');
 		var msnry = new Masonry( container, {
 		  columnWidth: 175,
 		  itemSelector: '.blob'
 		});
-            
+    
     </script>
     
   </html>
