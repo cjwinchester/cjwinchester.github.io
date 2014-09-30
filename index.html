@@ -17,17 +17,17 @@
     <![endif]-->
 
 	<style type="text/css">
+        div.navbar {background:#fff;}
         .main { margin-top: 80px; }
 		body { background-image:url('css/gray.gif'); overflow-x:hidden;}
 		.blob { background: #fff; padding: 1em; margin-bottom: 2em; box-shadow: 0 1px 2px #ccc; }
-        .clicker {cursor:pointer; cursor:hand; font-weight:bold; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: moz-none; -ms-user-select: none; user-select: none; }
+        .clicker {font-weight:bold; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: moz-none; -ms-user-select: none; user-select: none; }
         h4 {font-weight:bold; margin-top:0px;}
         .navbar-scroller li a {font-weight:bold;}
         h4.app a {color:#428bca;}
         h4.art a {color:#9b4a48;}
         h4.misc a {color:#eea236;}
         .datelabel {text-transform:uppercase; font-size:80%; padding-bottom:5px; border-bottom:1px solid #eee;}
-        .quiet { opacity: 0.5; }
         
 	</style>
 
@@ -38,9 +38,9 @@
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand clicker" id="artclicker" style="color:#9b4a48;">Articles</a>
-          <a class="navbar-brand clicker" id="appclicker" style="color:#428bca;">Apps</a>
-          <a class="navbar-brand clicker" id="miscclicker" style="color:#eea236;">Misc</a>
+          <a class="navbar-brand clicker" style="color:#9b4a48;">Articles</a>
+          <a class="navbar-brand clicker" style="color:#428bca;">Apps</a>
+          <a class="navbar-brand clicker" style="color:#eea236;">Misc</a>
         </div>
       </div>
     </div>
@@ -69,14 +69,14 @@
         'type': 'app',
         'date': 'March 2, 2014',
         'url': 'http://www.dataomaha.com/salaries',
-        'desc': 'A searchable database of thousands of public employee salaries in the Omaha metro area.'
+        'desc': 'A database of thousands of public employee salaries in the Omaha metro area.'
     },
     {
         'hed': 'What am I reading?',
         'type': 'misc',
         'date': 'Dec. 2, 2013',
         'url': 'http://cjwinchester.github.io/sandbox/reading',
-        'desc': 'A mostly up-to-date list of the books I\'m cracking.'
+        'desc': 'A list of books I\'m cracking.'
     },
     {
         'hed': 'Nebraska Primary 2014',
@@ -93,6 +93,13 @@
         'desc': 'A database of thousands of surplus items transferred to local law enforcement agencies, including assault rifles, armored vehicles and grenade launchers.'
     },
     {
+        'hed': 'Bid problems',
+        'date': 'May 20, 2014',
+        'type': 'art',
+        'url': 'http://www.omaha.com/news/metro/with-douglas-co-director-under-scrutiny-state-halts-work-on/article_7bc74930-9131-5cdb-97da-0a8ed946f8dc.html?TNNoMobile',
+        'desc': 'A county 911 director is investigated for his role in bidding a $10 million state contract.'
+    }, 
+    {
         'hed': 'Dutch World-Herald',
         'date': 'Jan. 6, 2014',
         'type': 'misc',
@@ -104,7 +111,7 @@
         'date': 'Sept. 7, 2014',
         'type': 'app',
         'url': 'http://www.dataomaha.com/minimumwage',
-        'desc': 'A searchable database and analysis of signatories to a statewide petition to raise the minimum wage.'
+        'desc': 'A database and analysis of signatories to a statewide petition to raise the minimum wage.'
     },
     {
         'hed': 'Nuke plant costs',
@@ -112,6 +119,13 @@
         'type': 'app',
         'url': 'http://dataomaha.com/exelon',
         'desc': 'Tracking contractor invoices for the manager of a nuclear plant.'
+    },
+    {
+        'hed': 'OPPD salaries',
+        'date': 'March 2, 2014',
+        'type': 'art',
+        'url': 'http://www.omaha.com/news/oppd-salaries-perks-keep-staff-from-straying/article_b3ae0ef5-e7cc-5cc9-8eb1-7b01dc09d493.html',
+        'desc': 'Analyzing the pay scale at the local electrical utility.'
     },
     {
         'hed': 'The many names of David Ryder',
@@ -125,7 +139,7 @@
         'date': 'April 10, 2014',
         'type': 'app',
         'url': 'http://dataomaha.com/medicare',
-        'desc': 'A searchable database of Medicare payments in Nebraska and Iowa.'
+        'desc': 'A database of Medicare payments in Nebraska and Iowa.'
     },
     {
         'hed': 'Food in the newsroom',
@@ -133,7 +147,29 @@
         'type': 'misc',
         'url': 'http://istherefoodinthenewsroom.us',
         'desc': 'Is there food in the World-Herald newsroom? This page maybe will tell you.'
-    }   
+    },
+    {
+        'hed': 'Analysis: 911 dispatch times',
+        'date': 'May 5, 2013',
+        'type': 'art',
+        'url': 'http://www.omaha.com/news/vital-time-lost-in-calls-to-sarpy-county-s-center/article_4773a77a-860f-540f-9c6b-766256873340.html?mode=jqm',
+        'desc': 'Our analysis showed that Sarpy County dispatchers were taking too long to dispatch fire and medical calls.'
+    },
+    {
+        'hed': 'OPPD energy options',
+        'date': 'June 9, 2014',
+        'type': 'misc',
+        'url': 'http://dataomaha.com/media/oppd-gen/',
+        'desc': 'In which the local electrical utility moves away from coal.'
+    },
+    {
+        'hed': 'OK state pay',
+        'date': 'Oct. 1, 2014',
+        'type': 'app',
+        'url': 'http://oklahomawatchdata.org/state-salaries',
+        'desc': 'App tracking state payroll in Oklahoma (and a <a href="http://oklahomawatchdata.org/university-salaries">companion version for colleges and universities</a>).'
+    }
+    
     ]
     
     var doit = '';
