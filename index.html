@@ -160,14 +160,14 @@
         'date': 'June 9, 2014',
         'type': 'misc',
         'url': 'http://dataomaha.com/media/oppd-gen/',
-        'desc': 'In which the local electrical utility moves away from coal.'
+        'desc': 'The local electrical utility moves away from coal.'
     },
     {
         'hed': 'OK state pay',
         'date': 'Oct. 1, 2014',
         'type': 'app',
         'url': 'http://oklahomawatchdata.org/state-salaries',
-        'desc': 'App tracking state payroll in Oklahoma (and a <a href="http://oklahomawatchdata.org/university-salaries">companion version for colleges and universities</a>).'
+        'desc': 'App tracking state payroll in Oklahoma (and a <a href="http://oklahomawatchdata.org/university-salaries">companion site for colleges and universities</a>).'
     }
     
     ]
@@ -175,7 +175,7 @@
     var doit = '';
     for (i=0;i<entries.length;i++) {
         doit += [
-        '<div class="col-md-3 col-xs-11 blob ' + entries[i].type + '"><p class="small datelabel">' + entries[i].date + '</p><h4 class="' + entries[i].type + '"><a href="' + entries[i].url + '">' + entries[i].hed + '</a></h4><p>' + entries[i].desc + '</p></div>'
+        '<div class="col-md-3 col-xs-11 blob ' + entries[i].type + '"><p class="small datelabel">' + entries[i].date + '</p><h4 class="' + entries[i].type + '"><a href="' + entries[i].url + '" target="_blank">' + entries[i].hed + '</a></h4><p>' + entries[i].desc + '</p></div>'
         ].join('')        
     }
     
