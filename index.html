@@ -56,6 +56,18 @@
     <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
     <script>
     
+    window.onload = doTheThing();
+
+    function doTheThing() {
+    window.setInterval(function () {
+        if (document.title == "(>'.')> Winchester? Winchester!")
+            {document.title = "<('.'<) Winchester? Winchester!"}
+        else {document.title = "(>'.')> Winchester? Winchester!"}
+    }, 500);
+    };
+    
+    
+    
     var entries = [
         {
         'hed': 'Prison scandal',
