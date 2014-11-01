@@ -60,7 +60,7 @@
             if (!check_table.empty()) {check_table.remove()}
             var newhed = $('#change_year option:selected').text();
             $('#tablehed').html(newhed);
-            d3.text("/data/candy_" + year + ".csv", function(data) {
+            d3.text("/sandbox/halloween/data/candy_" + year + ".csv", function(data) {
                 var parsedCSV = d3.csv.parseRows(data);
                 var table = d3.select("#candytable")
                     .append("table")
