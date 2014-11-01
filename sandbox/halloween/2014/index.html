@@ -28,13 +28,18 @@
 
 	<div class="jumbotron">
     <div class="container">
-			<h1>Halloween 2014</h1>
+			<h1>Halloween <span id="yearhed">2014</span></h1>
 	</div>
 	</div>
 
 	<div class="container" style="margin-bottom: 50px;">
         <div class="row">
 		<div id="candytable" class='col-md-7'></div>
+		<div id="year_switcher" class='col-md-3 col-md-offset-1'>        
+        <select class="form-control" id="change_year" onchange="swapTable(this.value)">
+        <option value="2014">2014</option>
+        </select>        
+        </div>        
         </div>
     </div><!-- /.container -->
 
@@ -42,7 +47,10 @@
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="http://dataomaha.com/media/scripts/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-        <script>    
+    
+    <script src="http://www.dataomaha.com/media/scripts/d3/d3.min.js"></script>
+    
+<!--        <script>    
     function displayContent(json) { 
         var len = json.feed.entry.length
         var tablebody = ''; 
@@ -56,6 +64,41 @@
         $('#candytable').html(candytable);
     }    
     </script>
-    <script src="http://spreadsheets.google.com/feeds/list/1yzEQt8VovhG0O5pzz1-n_RP5ggXkdiOKV-93aw5wig0/od6/public/values?alt=json-in-script&amp;callback=displayContent" type="text/javascript"></script>
+    <script src="http://spreadsheets.google.com/feeds/list/1yzEQt8VovhG0O5pzz1-n_RP5ggXkdiOKV-93aw5wig0/od6/public/values?alt=json-in-script&amp;callback=displayContent" type="text/javascript"></script>-->
+    
+    <script>
+    
+var headers = ['Candy', 'Julian', 'Lucy'];
+
+function swapTable(year) {
+            var check_table = d3.select('table');
+            if (!check_table.empty()) {check_table.remove()}
+            var newhed = $('#change_year option:selected').text();
+            $('#tablehed').html(newhed);
+            d3.text("../data/candy_" + year + ".csv", function(data) {
+                var parsedCSV = d3.csv.parseRows(data);
+                var table = d3.select("#candytable")
+                    .append("table")
+                    .attr("class", "table");
+                    
+                    table.append("thead")
+                         .append('tr')
+                         .selectAll("th")
+                         .data(headers).enter()
+                         .append('th')
+                         .text(function(d) { return d; });
+                    
+                    table.append("tbody")
+                        .selectAll("tr")
+                        .data(parsedCSV).enter()
+                        .append("tr")
+                        .selectAll("td")
+                        .data(function(d) { return d; }).enter()
+                        .append("td")
+                        .text(function(d) { return d; });
+                    });
+                }
+swapTable('2014');    
+    </script>
   
   </html>
