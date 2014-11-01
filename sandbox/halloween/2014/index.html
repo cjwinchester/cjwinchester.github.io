@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+   
+    <title>Halloween 2014</title>
+
+    <link href="http://dataomaha.com/media/scripts/bootstrap/3.2.0/css/bootstrap.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+	<style type="text/css">
+    div.jumbotron { background:#bd5515; color:#fff; }
+	div.jumbotron h1 {font-family: 'Lobster', cursive;}    
+    </style>
+    
+	</head>
+
+  <body>
+
+	<div class="jumbotron">
+    <div class="container">
+			<h1>Halloween 2014</h1>
+	</div>
+	</div>
+
+	<div class="container" style="margin-bottom: 50px;">
+        <div class="row">
+		<div id="candytable" class='col-md-7'></div>
+        </div>
+    </div><!-- /.container -->
+
+	</body>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://dataomaha.com/media/scripts/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+        <script>    
+    function displayContent(json) { 
+        var len = json.feed.entry.length
+        var tablebody = ''; 
+        for (i=0;i<len;i++) {
+            tablebody += [
+            '<tr><td>' + json.feed.entry[i].gsx$type.$t + '</td><td>' + json.feed.entry[i].gsx$julian.$t + '</td><td>' + json.feed.entry[i].gsx$lucy.$t + '</td></tr>'
+            ].join('')            
+        }
+        var candytable = '<table class="table"><thead><tr><th>Candy</th><th>Julian</th><th>Lucy</th></thead><tbody>' + tablebody + '</tbody></table>'        
+        
+        $('#candytable').html(candytable);
+    }    
+    </script>
+    <script src="http://spreadsheets.google.com/feeds/list/1yzEQt8VovhG0O5pzz1-n_RP5ggXkdiOKV-93aw5wig0/od6/public/values?alt=json-in-script&amp;callback=displayContent" type="text/javascript"></script>
+  
+  </html>
