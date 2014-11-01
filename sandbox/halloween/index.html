@@ -10,7 +10,6 @@
 
     <link href="http://dataomaha.com/media/scripts/bootstrap/3.2.0/css/bootstrap.css" rel="stylesheet">
     
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
@@ -26,67 +25,27 @@
   <body>
 
 	<div class="jumbotron">
-    <div class="container">
-			<h1>Halloween <span id="yearhed">2014</span></h1>
-	</div>
+        <div class="container">
+            <h1>Halloween <span id="yearhed">2014</span></h1>
+        </div>
 	</div>
 
 	<div class="container" style="margin-bottom: 50px;">
         <div class="row">
-		<div id="candytable" class='col-md-7'></div>
-		<div id="year_switcher" class='col-md-3 col-md-offset-1'>        
-        <select class="form-control" id="change_year" onchange="swapTable(this.value)">
-        <option value="2014">2014</option>
-        </select>        
-        </div>        
+            <div id="candytable" class='col-md-7'></div>
+            <div id="year_switcher" class='col-md-3 col-md-offset-1'>
+                <select class="form-control" id="change_year" onchange="swapTable(this.value)">
+                <option value="2014">2014</option>
+                </select>        
+            </div>        
         </div>
     </div><!-- /.container -->
 
 	</body>
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="http://dataomaha.com/media/scripts/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-    
-    <script src="http://www.dataomaha.com/media/scripts/d3/d3.min.js"></script>
-    
-    
-    <script>
-    
-    var headers = ['Candy', 'Julian', 'Lucy'];
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>    
 
-    function swapTable(year) {
-            var check_table = d3.select('table');
-            if (!check_table.empty()) {check_table.remove()}
-            var newhed = $('#change_year option:selected').text();
-            $('#tablehed').html(newhed);
-            d3.text("./data/candy_" + year + ".csv", function(data) {
-                var parsedCSV = d3.csv.parseRows(data);
-                var table = d3.select("#candytable")
-                    .append("table")
-                    .attr("class", "table");
-                    
-                    table.append("thead")
-                         .append('tr')
-                         .selectAll("th")
-                         .data(headers).enter()
-                         .append('th')
-                         .text(function(d) { return d; });
-                    
-                    table.append("tbody")
-                        .selectAll("tr")
-                        .data(parsedCSV).enter()
-                        .append("tr")
-                        .selectAll("td")
-                        .data(function(d) { return d; }).enter()
-                        .append("td")
-                        .text(function(d) { return d; });
-                    });
-                    document.title = "Halloween " + year
-                }
-               
-                
-swapTable('2014');
-
-    </script>
+    <script src="js/d3.min.js"></script>
+    <script src="js/halloween.js"></script>
   
   </html>
