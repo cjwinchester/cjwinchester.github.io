@@ -10,6 +10,9 @@
 
     <link href="http://dataomaha.com/media/scripts/bootstrap/3.2.0/css/bootstrap.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    
+    <script src="//use.typekit.net/rim7lte.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -19,7 +22,7 @@
 
 	<style type="text/css">
     div.jumbotron { background:#bd5515; color:#fff; }
-	div.jumbotron h1 {font-family: 'Lobster', cursive;}    
+	div.jumbotron h1 { font-family: 'proxima-nova', 'Calibri', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
     </style>
     
 	</head>
@@ -50,27 +53,12 @@
     
     <script src="http://www.dataomaha.com/media/scripts/d3/d3.min.js"></script>
     
-<!--        <script>    
-    function displayContent(json) { 
-        var len = json.feed.entry.length
-        var tablebody = ''; 
-        for (i=0;i<len;i++) {
-            tablebody += [
-            '<tr><td>' + json.feed.entry[i].gsx$type.$t + '</td><td>' + json.feed.entry[i].gsx$julian.$t + '</td><td>' + json.feed.entry[i].gsx$lucy.$t + '</td></tr>'
-            ].join('')            
-        }
-        var candytable = '<table class="table"><thead><tr><th>Candy</th><th>Julian</th><th>Lucy</th></thead><tbody>' + tablebody + '</tbody></table>'        
-        
-        $('#candytable').html(candytable);
-    }    
-    </script>
-    <script src="http://spreadsheets.google.com/feeds/list/1yzEQt8VovhG0O5pzz1-n_RP5ggXkdiOKV-93aw5wig0/od6/public/values?alt=json-in-script&amp;callback=displayContent" type="text/javascript"></script>-->
     
     <script>
     
-var headers = ['Candy', 'Julian', 'Lucy'];
+    var headers = ['Candy', 'Julian', 'Lucy'];
 
-function swapTable(year) {
+    function swapTable(year) {
             var check_table = d3.select('table');
             if (!check_table.empty()) {check_table.remove()}
             var newhed = $('#change_year option:selected').text();
@@ -98,7 +86,8 @@ function swapTable(year) {
                         .text(function(d) { return d; });
                     });
                 }
-swapTable('2014');    
+swapTable('2014');
+
     </script>
   
   </html>
