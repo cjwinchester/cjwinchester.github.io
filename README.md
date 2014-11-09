@@ -1,4 +1,4 @@
-cjwinchester.github.io
+codywinchester.com
 ======================
 
-Projects page
+Home page.
