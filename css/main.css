@@ -1,0 +1,9 @@
+@keyframes scrollbg { from { background-position: 0px 0%; } to { background-position: 0px 200%;} }
+@-webkit-keyframes scrollbg { from { background-position: 0px 0%; } to { background-position: 0px 200%;} }
+body, h1, h2, h3, h4 { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+body {background-image: url('/img/mainbg.jpg'); background-size:100%; -webkit-animation:scrollbg 50s linear infinite; animation: scrollbg 50s linear infinite;} 
+.black {color:#aaa; background:#aaa;}
+div.navbar { background: #fff; border-bottom: 1px solid #f7f7f7; box-shadow: 0 0 10px #ccc; }
+div.navbar a { color: #aaa; }
+div.navbar a.navbar-brand { font-weight: bold; color: #aaa; }
+.blob { background: #fff; padding: 1em; margin-bottom: 2em; box-shadow: 0 1px 2px #ccc; }
