@@ -24,15 +24,8 @@
         'hed': 'What am I reading?',
         'type': 'misc',
         'date': 'Dec. 2, 2013',
-        'url': 'http://cjwinchester.github.io/sandbox/reading',
+        'url': '/reading',
         'desc': 'Books I\'m cracking.'
-    },
-    {
-        'hed': 'Nebraska Primary 2014',
-        'date': 'May 13, 2014',
-        'type': 'app',
-        'url': 'http://www.dataomaha.com/media/election2014',
-        'desc': 'Landing page to slurp in results from the 2014 Nebraska primary election.'
     },
     {
         'hed': 'Military surplus shipments',
