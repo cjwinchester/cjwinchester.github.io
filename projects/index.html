@@ -2,76 +2,87 @@
 <html lang="en"><head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-    <title>Winchester? Winchester!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <title>Projects - Cody Winchester - codywinchester.com</title> 
 
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <style>
+    .bold {font-weight:bold;}
+    body { background-image:url('../img/gray.gif'); overflow-x:hidden;}
+    .datelabel {text-transform:uppercase; font-size:80%; padding-bottom:0; font-weight:bold;}
+    a, a:hover {color:#412a7a;}
+    .datelabel {text-transform:uppercase; font-size:80%; padding-bottom:5px; border-bottom:1px solid #eee;}
+    </style>
+        
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
 
-	<style type="text/css">
-        div.navbar {background:#fff;}
-        .main { margin-top: 80px; }
-		body { background-image:url('../img/gray.gif'); overflow-x:hidden;}
-		.blob { background: #fff; padding: 1em; margin-bottom: 2em; box-shadow: 0 1px 2px #ccc; }
-        .clicker {font-weight:bold; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: moz-none; -ms-user-select: none; user-select: none; }
-        h4 {font-weight:bold; margin-top:0px;}
-        .navbar-scroller li a {font-weight:bold;}
-        h4.app a {color:#428bca;}
-        h4.art a {color:#9b4a48;}
-        h4.misc a {color:#eea236;}
-        .datelabel {text-transform:uppercase; font-size:80%; padding-bottom:5px; border-bottom:1px solid #eee;}
-        
-	</style>
-
 	</head>
 
   <body data-spy="scroll" data-target=".navbar-scroller">
 
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="navbar navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand clicker" style="color:#9b4a48;">Articles</a>
-          <a class="navbar-brand clicker" style="color:#428bca;">Apps</a>
-          <a class="navbar-brand clicker" style="color:#eea236;">Misc</a>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar black"></span>
+            <span class="icon-bar black"></span>
+            <span class="icon-bar black"></span>
+          </button>
+          <a class="navbar-brand" href="/">Cody Winchester</a>
         </div>
+        <div class="collapse navbar-collapse">
+
+		<ul class="nav navbar-nav navbar-scroller">
+			<li><a href="http://www.twitter.com/cody_winchester" target="_blank" title="Follow me on Twitter"><i class="fa fa-twitter"></i> <span class="hidden-lg hidden-md hidden-sm">Twitter</span></a></li>
+			<li><a href="https://github.com/cjwinchester" target="_blank" title="Check out my gits"><i class="fa fa-github-alt"></i> <span class="hidden-lg hidden-md hidden-sm">Github</span></a></li>
+            
+			<li><a href="/projects" title="See some of my projects"><i class="fa fa-flask"></i> <span class="hidden-lg hidden-md hidden-sm">Projects</span></a></li>
+			<li><a href="http://cjwinchester.tumblr.com" target="_blank" title="Tumbl my Tumblr"><i class="fa fa-tumblr-square"></i> <span class="hidden-lg hidden-md hidden-sm">Blog</span></a></li>
+			<li><a href="/resume" title="Read my r&eacute;sum&eacute;"><i class="fa fa-file-text-o"></i> <span class="hidden-lg hidden-md hidden-sm">R&eacute;sum&eacute;</span></a></li>
+			<li><a href="mailto:cjwinchester@gmail.com" target="_blank" title="Send me an email"><i class="fa fa-envelope-o"></i> <span class="hidden-lg hidden-md hidden-sm">Email</span></a></li> 
+ 
+		</ul>
+        </div><!--/.nav-collapse -->
       </div>
     </div>
-	
-    <div class="container main" id="main" style="margin-bottom: 50px;"></div>
-
+    
+    <img src="../img/topper-blue.png" style="width:100%; margin-top:50px;" />
+    
+    <div class="main" id="main" style="margin: 40px;"></div>
+    
 	</body>
 
-	<script type="text/javascript" src="../js/masonry.pkgd.min.js"></script>
-	
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
-    <script src="../js/projects.js"></script>
-    
-    <script>       
-    var doit = '';
-    for (i=0;i<entries.length;i++) {
-        doit += [
-        '<div class="col-md-3 col-xs-11 blob ' + entries[i].type + '"><p class="small datelabel">' + entries[i].date + '</p><h4 class="' + entries[i].type + '"><a href="' + entries[i].url + '" target="_blank">' + entries[i].hed + '</a></h4><p>' + entries[i].desc + '</p></div>'
-        ].join('')        
+    <script src=   "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/masonry.pkgd.min.js"></script>
+    <script src="js/projects.js"></script>
+
+    <script>
+    var proj = '';    
+    for (i=0;i<projects.length;i++) {
+        proj += [
+        '<div class="col-md-3 col-xs-11 blob"><p class="small datelabel">' + projects[i].date + '</p><h4 class="bold"><a href="' + projects[i].url + '" target="_blank">' + projects[i].hed + '</a></h4><p>' + projects[i].desc + '</p></div>'
+        ].join('');
     }
     
-    document.getElementById('main').innerHTML = doit
- 
+    document.getElementById('main').innerHTML = proj;
+     
 		var container = document.querySelector('#main');
 		var msnry = new Masonry( container, {
-		  columnWidth: 175,
+		  columnWidth: 200,
 		  itemSelector: '.blob'
 		});
     
-    </script>
     
+    </script>
+       
   </html>

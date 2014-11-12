@@ -1,8 +1,8 @@
-    var entries = [
+    var projects = [
    {
         'hed': 'Election results',
         'type': 'app',
-        'date': 'Nob. 4, 2014',
+        'date': 'Nov. 4, 2014',
         'url': 'http://dataomaha.com/media/election2014/general/',
         'desc': 'Nebraska general election returns, 2014. (<a href="http://blog.dataomaha.com/tarbelling-the-election/">Writeup</a>)'
     },
