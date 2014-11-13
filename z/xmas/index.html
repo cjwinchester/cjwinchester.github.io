@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>Happy Fucking Holidays</title>    
+    <link rel="stylesheet" type="text/css" href="../../css/miniplayer.css" title="style"  media="screen"/>
+    <link href='http://fonts.googleapis.com/css?family=Niconne' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.jplayer.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.mb.miniPlayer.js"></script>
+
+	<script>
+$(function(){ $(".audio").mb_miniPlayer(); });
+	</script>
+    
+      <style>
+          * { margin:0; padding:0; font-family: 'Helvetica Neue', Arial, sans-serif;}
+          body {background:#fff; text-align:center;}
+      </style>
+   </head>
+   <body>
+
+   <h1 style="font-family: 'Niconne', cursive; margin-top:50px; margin-bottom:20px;">Happy Fucking Holidays</h1>      
+      <img id="xMasGif" style="width:300px; margin-bottom:20px;" src="gifs/1.gif" />
+      <a class="audio {skin:'blue', autoPlay:false, inLine:false, showVolumeLevel:true, showRew:true, showTime:false, width:260, addShadow:false, downloadable:false}" href="starfucker_hfh.mp3">Starfucker - Happy Fucking Holidays</a>
+      <br><button class="newGif" value="New GIF">New GIF</button>&emsp;<small><a href="http://christmasgifs.org/" target="_blank">More Christmas GIFs</a></small>
+</div>
+   
+   </body>
+   
+   <script>
+   
+    var gifs = ['1.gif', '2.gif', '3.gif', '4.gif', '5.gif', '6.gif', '7.gif', '8.gif', '9.gif', '10.gif', '11.gif', '12.gif', '13.gif']
+   
+   $('.newGif').click(function () {
+       var rando = gifs[Math.floor(Math.random() * gifs.length)];
+      $('#xMasGif').attr('src', 'gifs/' + rando);
+   });
+   
+   </script>
+   
+</html>
