@@ -1,15 +1,72 @@
-<!doctype html>
-<html>
-<title>Winchester? Winchester!</title> 
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+
+    <title>Cody Winchester - codywinchester.com</title> 
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     
-<style>
-@keyframes scrollbg { from { background-position: 0px 0%; } to { background-position: 0px 200%;} }
-@-webkit-keyframes scrollbg { from { background-position: 0px 0%; } to { background-position: 0px 200%;} }
-body {background-image: url('img/mainbg.jpg'); background-size:100%; -webkit-animation:scrollbg 50s linear infinite; animation: scrollbg 50s linear infinite;} 
-</style>
+    <style>
+    @keyframes scrollbg { from { background-position: 0px 0%; } to { background-position: 0px 200%;} }
+    @-webkit-keyframes scrollbg { from { background-position: 0px 0%; } to { background-position: 0px 200%;} }
+    body {background-image: url('img/mainbg.jpg'); background-size:100%; -webkit-animation:scrollbg 50s linear infinite; animation: scrollbg 50s linear infinite;} 
+    </style>
+        
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
 
-<script>
-console.log('http://www.codywinchester.com/projects\nhttp://www.codywinchester.com/reading\nhttp://www.codywinchester.com/resume\nhttp://www.twitter.com/cody_winchester\nhttp://www.github.com/cjwinchester\nhttp://www.cjwinchester.tumblr.com')
-</script>
+	</head>
 
-</html>
+  <body>
+
+
+        <div class="container">
+        <div class="col-md-6 col-xs-11 col-md-offset-1" style="background:#fff; margin:20px; padding:20px; box-shadow: 0 0 10px #ccc;">
+        
+        <span class="updating-chart"></span>
+        
+        <h2><a href="https://www.google.com/search?q=%22cody+winchester%22+site%3Aomaha.com">I cover local government</a> and build web things for the Omaha World-Herald. Sometimes I write for <a href="http://blog.dataomaha.com/">our nerd blog</a>.</h2>
+        
+        <h2><a href="/projects">You can find work samples here</a>.</h2>
+                  
+        <h2>Also I am on <a href="http://www.twitter.com/cody_winchester">Twitter</a> and <a href="http://www.github.com/cjwinchester">GitHub</a> and <a href="http://cjwinchester.tumblr.com">Tumblr</a>. Look me up! Or <a href="mailto:cjwinchester@gmail.com">send me an email</a>.</h2>
+        
+        </div>
+        </div>
+    
+	</body>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/jquery.peity.min.js"></script>
+    <script>
+
+    $(document).ready(function() {        
+        var initvals = [];
+        for (i=0;i<150;i++) {  
+            initvals.push(Math.round(Math.random() * 20))
+        }    
+        $(".updating-chart").html(initvals.join(","));
+    });
+    
+    var updatingChart = $(".updating-chart").peity("line", { width: '100%',  fill: ["#eef5fa"],  stroke: "#428bca" });
+        setInterval(function() {
+          var random = Math.round(Math.random() * 20)
+          var values = updatingChart.text().split(",")
+          values.shift()
+          values.push(random)
+          updatingChart
+            .text(values.join(","))
+            .change()
+        }, 500)
+        
+        console.log(':)')
+        
+    </script>
+  </html>

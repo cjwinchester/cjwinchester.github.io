@@ -12,10 +12,13 @@
     
     <style>
     .bold {font-weight:bold;}
-    body { background-image:url('../img/gray.gif'); overflow-x:hidden;}
-    .datelabel {text-transform:uppercase; font-size:80%; padding-bottom:0; font-weight:bold;}
-    a, a:hover {color:#412a7a;}
-    .datelabel {text-transform:uppercase; font-size:80%; padding-bottom:5px; border-bottom:1px solid #eee;}
+    body { background-image:url('../img/gray.gif');}
+    .datelabel {text-transform:uppercase; font-size:90%; padding-bottom:5px; border-bottom:1px solid #eee;}
+    .app {color: #8c96c6; }
+    .art { color: #fecc5c; }
+    .misc { color: #a1d99b; }    
+    
+    a, a:hover { color:inherit; }
     </style>
         
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -29,36 +32,18 @@
   <body data-spy="scroll" data-target=".navbar-scroller">
 
     <div class="navbar navbar-fixed-top" role="navigation">
-      <div class="container">
+        <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar black"></span>
-            <span class="icon-bar black"></span>
-            <span class="icon-bar black"></span>
-          </button>
-          <a class="navbar-brand" href="/">Cody Winchester</a>
+          <a class="navbar-brand art" href="javascript:void(0)">Articles</a>
+          <a class="navbar-brand app" href="javascript:void(0)">Web</a>
+          <a class="navbar-brand misc" href="javascript:void(0)">Misc.</a>
         </div>
-        <div class="collapse navbar-collapse">
-
-		<ul class="nav navbar-nav navbar-scroller">
-			<li><a href="http://www.twitter.com/cody_winchester" target="_blank" title="Follow me on Twitter"><i class="fa fa-twitter"></i> <span class="hidden-lg hidden-md hidden-sm">Twitter</span></a></li>
-			<li><a href="https://github.com/cjwinchester" target="_blank" title="Check out my gits"><i class="fa fa-github-alt"></i> <span class="hidden-lg hidden-md hidden-sm">Github</span></a></li>
-            
-			<li><a href="/projects" title="See some of my projects"><i class="fa fa-flask"></i> <span class="hidden-lg hidden-md hidden-sm">Projects</span></a></li>
-			<li><a href="http://cjwinchester.tumblr.com" target="_blank" title="Tumbl my Tumblr"><i class="fa fa-tumblr-square"></i> <span class="hidden-lg hidden-md hidden-sm">Blog</span></a></li>
-			<li><a href="/resume" title="Read my r&eacute;sum&eacute;"><i class="fa fa-file-text-o"></i> <span class="hidden-lg hidden-md hidden-sm">R&eacute;sum&eacute;</span></a></li>
-			<li><a href="mailto:cjwinchester@gmail.com" target="_blank" title="Send me an email"><i class="fa fa-envelope-o"></i> <span class="hidden-lg hidden-md hidden-sm">Email</span></a></li> 
- 
-		</ul>
-        </div><!--/.nav-collapse -->
-      </div>
+        </div>
+    </div>    
+    
+    <div class="container">
+        <div class="main" id="main" style="margin-top:70px;"></div>
     </div>
-    
-    <img src="../img/topper-blue.png" style="width:100%; margin-top:50px;" />
-    
-    <div class="main" id="main" style="margin: 40px;"></div>
-    
 	</body>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -67,10 +52,11 @@
     <script src="js/projects.js"></script>
 
     <script>
+    
     var proj = '';    
     for (i=0;i<projects.length;i++) {
         proj += [
-        '<div class="col-md-3 col-xs-11 blob"><p class="small datelabel">' + projects[i].date + '</p><h4 class="bold"><a href="' + projects[i].url + '" target="_blank">' + projects[i].hed + '</a></h4><p>' + projects[i].desc + '</p></div>'
+        '<div class="col-md-5 col-xs-12 blob"><p class="small datelabel">' + projects[i].date + '</p><h2 class="bold ' + projects[i].type + '"><a href="' + projects[i].url + '" target="_blank">' + projects[i].hed + '</a></h2><p class="lead">' + projects[i].desc + '</p></div>'
         ].join('');
     }
     
@@ -78,7 +64,7 @@
      
 		var container = document.querySelector('#main');
 		var msnry = new Masonry( container, {
-		  columnWidth: 200,
+		  columnWidth: 170,
 		  itemSelector: '.blob'
 		});
     
