@@ -21,7 +21,7 @@ $(function(){ $(".audio").mb_miniPlayer(); });
    <body>
 
    <h1 style="font-family: 'Niconne', cursive; margin-top:50px; margin-bottom:20px;">Happy Fucking Holidays</h1>      
-      <img id="xMasGif" style="width:300px; margin-bottom:20px;" src="gifs/1.gif" />
+      <div id="xMasGif"><img style="width:300px; margin-bottom:20px;" src="gifs/1.gif" /></div>
       <a class="audio {skin:'blue', autoPlay:false, inLine:false, showVolumeLevel:true, showRew:true, showTime:false, width:260, addShadow:false, downloadable:false}" href="starfucker_hfh.mp3">Starfucker - Happy Fucking Holidays</a>
       <br><button class="newGif" value="New GIF">New GIF</button>&emsp;<small><a href="http://christmasgifs.org/" target="_blank">More Christmas GIFs</a></small>
 </div>
@@ -34,7 +34,7 @@ $(function(){ $(".audio").mb_miniPlayer(); });
    
    $('.newGif').click(function () {
        var rando = gifs[Math.floor(Math.random() * gifs.length)];
-      $('#xMasGif').attr('src', 'gifs/' + rando);
+      $('#xMasGif').html('<img src="gifs/' + rando + '" style="width:300px; margin-bottom:20px;" />');
    });
    
    </script>
