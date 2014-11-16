@@ -709,6 +709,14 @@ var books = [
         "url": "http://www.goodreads.com/book/show/12227044-rez-life",
         "done": 200,
         "total": 324,
-        "stars": null
+        "stars": 3
+    },
+    {
+        "title": "Little Brother",
+        "author": "Cory Doctorow",
+        "url": "http://www.goodreads.com/book/show/954674.Little_Brother",
+        "done": 382,
+        "total": 382,
+        "stars": 3
     }
 ]
