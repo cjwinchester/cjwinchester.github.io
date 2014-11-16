@@ -11,7 +11,8 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     
     <style>
-    body {background-image: url('img/mainbg.jpg'); background-size:100%;} 
+    body {background-image: url('img/mainbg.jpg'); background-size:100%; background-attachment: fixed;}
+    .bold { font-weight:bold; }
     </style>
         
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -28,13 +29,18 @@
         <div class="container">
         <div class="col-md-6 col-xs-11 col-md-offset-1" style="background:#fff; margin:20px; padding:20px; box-shadow: 0 0 10px #ccc;">
         
-        <span class="updating-chart"></span>
+        <p class="lead"><a href="https://www.google.com/search?q=%22cody+winchester%22+site%3Aomaha.com">I cover local government</a> for the Omaha World-Herald and build web things. Find me on <a href="http://www.twitter.com/cody_winchester">Twitter</a> or <a href="http://www.github.com/cjwinchester">GitHub</a> or <a href="http://cjwinchester.tumblr.com">Tumblr</a> or <a href="http://blog.dataomaha.com/">our nerd blog</a> or good ol' fashioned <a href="mailto:cjwinchester@gmail.com">email</a>.</p>
         
-        <h3><a href="https://www.google.com/search?q=%22cody+winchester%22+site%3Aomaha.com">I cover local government</a> and build web things for the Omaha World-Herald. Sometimes I write for <a href="http://blog.dataomaha.com/">our nerd blog</a>.</h3>
+        <button type="button" class="btn btn-default btn-block" id="showmore">See what I've been up to lately</button>
         
-        <h3><a href="/projects">I have some work samples here</a>.</h3>
-                  
-        <h3>Also I am on <a href="http://www.twitter.com/cody_winchester">Twitter</a> and <a href="http://www.github.com/cjwinchester">GitHub</a> and <a href="http://cjwinchester.tumblr.com">Tumblr</a> and <a href="mailto:cjwinchester@gmail.com">email</a>. Look me up!</h3>
+        
+        <div id="main" style="display:none;">
+        <div style="text-align:center; margin-top:20px;">
+        <button type="button" class="btn btn-danger bold clicker" id="print"><i class="fa fa-check-circle-o"></i> Print</button> &emsp;
+        <button type="button" class="btn btn-primary bold clicker" id="web"><i class="fa fa-check-circle-o"></i> Web</button>
+        </div>       
+        <div id="projects" style="margin-top:20px;"></div>
+        </div>
         
         </div>
         </div>
@@ -42,29 +48,42 @@
 	</body>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="js/jquery.peity.min.js"></script>
+    <script src="js/projects.js"></script>
+    
     <script>
+    
+        var proj = '';
+        
+    for (i=0;i<projects.length;i++) {
+        var panel_class = '';
+        if (projects[i].type == 'web') { panel_class = 'panel-info' } else { panel_class = 'panel-danger' }
+        proj += [
+        '<div class="panel ' + panel_class + ' ' + projects[i].type + '"><div class="panel-heading"><h3 class="panel-title bold"><a href="' + projects[i].url + '" target="_blank">' + projects[i].hed + '</a></h3></div><div class="panel-body">' + projects[i].desc + '</div></div>'
+        ].join('');
+    }
 
-    $(document).ready(function() {        
-        var initvals = [];
-        for (i=0;i<150;i++) {  
-            initvals.push(Math.round(Math.random() * 20))
-        }    
-        $(".updating-chart").html(initvals.join(","));
+    document.getElementById('projects').innerHTML = proj;
+    
+    $('.clicker').click(function() {
+        var buttclass = ($(this).children('i').attr('class'));
+        var ent = $(this).attr('id');
+            if (buttclass.indexOf("check") > -1 == true)
+                { $(this).children('i').attr('class', 'fa fa-circle-o') 
+                $('.' + ent).hide();
+                }
+            else
+                { $(this).children('i').attr('class', 'fa fa-check-circle-o')
+                $('.' + ent).show();
+                }
     });
     
-    var updatingChart = $(".updating-chart").peity("line", { width: '100%',  fill: ["#f2eeec"],  stroke: "#ae9187" });
-        setInterval(function() {
-          var random = Math.round(Math.random() * 20)
-          var values = updatingChart.text().split(",")
-          values.shift()
-          values.push(random)
-          updatingChart
-            .text(values.join(","))
-            .change()
-        }, 500)
-        
-        console.log(':)')
-        
+    $('#showmore').click(function() {
+      $('#main').toggle();
+        if ($(this).text() == "See what I've been up to lately")
+            { $(this).text('Hide details') }
+        else { $(this).text("See what I've been up to lately") }
+    });
+    
     </script>
+
   </html>
