@@ -707,7 +707,7 @@ var books = [
         "title": "Rez Life",
         "author": "David Treuer",
         "url": "http://www.goodreads.com/book/show/12227044-rez-life",
-        "done": 200,
+        "done": 324,
         "total": 324,
         "stars": 3
     },
