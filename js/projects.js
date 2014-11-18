@@ -1,24 +1,24 @@
     var projects = [
    {
-        'hed': 'Election results',
+        'hed': 'Election results page',
         'type': 'web',
         'date': 'Nov. 4, 2014',
         'url': 'http://dataomaha.com/media/election2014/general/',
-        'desc': 'Nebraska general election returns, 2014. (<a href="http://blog.dataomaha.com/tarbelling-the-election/">writeup</a>)'
+        'desc': 'Catching, cleaning and publishing Nebraska general election returns, 2014. (<a href="http://blog.dataomaha.com/tarbelling-the-election/">writeup</a>)'
     },
     {
-        'hed': 'Prison scandal',
+        'hed': 'Database: Prison sentences',
         'type': 'web',
         'date': 'Sept. 28, 2014',
         'url': 'http://dataomaha.com/prison',
         'desc': 'A database of prisoners in Nebraska whose sentences were mistakenly cut short.'
     },
     {
-        'hed': 'Public payroll',
+        'hed': 'Database: Public payroll',
         'type': 'web',
         'date': 'March 2, 2014',
         'url': 'http://www.dataomaha.com/salaries',
-        'desc': 'A database of thousands of public employee salaries in the Omaha metro area.'
+        'desc': 'A constantly updating database of thousands of public employee salaries in the Omaha metro area.'
     },
     {
         'hed': 'What am I reading?',
@@ -28,7 +28,7 @@
         'desc': 'Books I\'m cracking.'
     },
     {
-        'hed': 'Military surplus shipments',
+        'hed': 'Databse: Military surplus shipments',
         'date': 'Sept. 20, 2014',
         'type': 'web',
         'url': 'http://www.dataomaha.com/militarysurplus',
@@ -63,11 +63,11 @@
         'desc': 'Tracking contractor invoices for the manager of a nuclear plant.'
     },
     {
-        'hed': 'OPPD salaries',
+        'hed': 'OPPD compensation analysis',
         'date': 'March 2, 2014',
         'type': 'print',
         'url': 'http://www.omaha.com/news/oppd-salaries-perks-keep-staff-from-straying/article_b3ae0ef5-e7cc-5cc9-8eb1-7b01dc09d493.html',
-        'desc': 'Analyzing the pay scale at the local electrical utility.'
+        'desc': 'Taking a closer look at the public utlity\'s pay scale.'
     },
     {
         'hed': 'The many names of David Ryder',
@@ -77,7 +77,7 @@
         'desc': 'A tribute to the greatest space hero this side of Zapp Branagan.'
     },    
     {
-        'hed': 'Medicare payments',
+        'hed': 'Database: Medicare payments',
         'date': 'April 10, 2014',
         'type': 'web',
         'url': 'http://dataomaha.com/medicare',
@@ -98,7 +98,7 @@
         'desc': 'Our analysis showed that Sarpy County dispatchers were taking too long to dispatch fire and medical calls.'
     },
     {
-        'hed': 'OPPD energy options',
+        'hed': 'Gaming out OPPD energy options',
         'date': 'June 9, 2014',
         'type': 'web',
         'url': 'http://dataomaha.com/media/oppd-gen/',
