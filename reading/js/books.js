@@ -718,5 +718,13 @@ var books = [
         "done": 382,
         "total": 382,
         "stars": 3
+    },
+    {
+        "title": "The Devil Tree",
+        "author": "Jerzy Kosi&#324;ski",
+        "url": "http://www.goodreads.com/book/show/18463.The_Devil_Tree",
+        "done": 224,
+        "total": 224,
+        "stars": 2
     }
 ]
