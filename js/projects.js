@@ -109,7 +109,7 @@
         'date': 'Nov. 19, 2013',
         'type': 'web',
         'url': '/z/usa',
-        'desc': 'A running tally of which states we\'ve lived in and visited.'
+        'desc': 'A running tally of where we\'ve lived and visited.'
     },
     {
         'hed': 'Gaming out OPPD energy options',
