@@ -110,5 +110,12 @@
         'type': 'web',
         'url': 'http://dataomaha.com/media/oppd-gen/',
         'desc': 'The local electrical utility moves away from coal.'
+    },
+    {
+        'hed': 'Jails, ERs new front line in battling mental illness',
+        'date': 'April 22, 2014',
+        'type': 'print',
+        'url': 'http://m.omaha.com/eedition/sunrise/articles/jails-and-ers-new-front-line-in-battling-mental-illness/article_f4852cbe-3b18-5782-aa5a-0c7263d994e4.html?mode=jqm',
+        'desc': 'Delving into the problems created by an overburdened mental health system.'
     }    
     ]
