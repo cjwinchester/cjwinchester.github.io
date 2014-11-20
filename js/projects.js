@@ -73,9 +73,16 @@
         'hed': 'The many names of David Ryder',
         'date': 'Jan. 12, 2014',
         'type': 'web',
-        'url': 'http://cjwinchester.github.io/sandbox/ryder/',
+        'url': '/z/ryder/',
         'desc': 'A tribute to the greatest space hero this side of Zapp Branagan.'
-    },    
+    },
+        {
+        'hed': 'Analysis: Double-dipping',
+        'date': 'Oct. 6, 2013',
+        'type': 'web',
+        'url': 'http://www.omaha.com/news/more-than-retired-city-of-omaha-employees-return-to-their/article_277a27e3-9c58-5d5c-82f8-b1cc7b774760.html',
+        'desc': 'More than 100 retired City of Omaha employees return to their jobs while drawing pensions.'
+    },
     {
         'hed': 'Database: Medicare payments',
         'date': 'April 10, 2014',
@@ -101,7 +108,7 @@
         'hed': 'USA! USA! USA!',
         'date': 'Nov. 19, 2013',
         'type': 'web',
-        'url': 'http://www.codywinchester.com/z/usa',
+        'url': '/z/usa',
         'desc': 'A running tally of which states we\'ve lived in and visited.'
     },
     {
