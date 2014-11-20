@@ -98,6 +98,13 @@
         'desc': 'Our analysis showed that Sarpy County dispatchers were taking too long to dispatch fire and medical calls.'
     },
     {
+        'hed': 'USA! USA! USA!',
+        'date': 'Nov. 19, 2013',
+        'type': 'web',
+        'url': 'http://www.codywinchester.com/z/usa',
+        'desc': 'A running tally of which states we\'ve lived in and visited.'
+    },
+    {
         'hed': 'Gaming out OPPD energy options',
         'date': 'June 9, 2014',
         'type': 'web',
