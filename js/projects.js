@@ -28,7 +28,7 @@
         'desc': 'Books I\'m cracking.'
     },
     {
-        'hed': 'Databse: Military surplus shipments',
+        'hed': 'Database: Military surplus shipments',
         'date': 'Sept. 20, 2014',
         'type': 'web',
         'url': 'http://www.dataomaha.com/militarysurplus',
