@@ -79,7 +79,7 @@
         {
         'hed': 'Analysis: Double-dipping',
         'date': 'Oct. 6, 2013',
-        'type': 'web',
+        'type': 'print',
         'url': 'http://www.omaha.com/news/more-than-retired-city-of-omaha-employees-return-to-their/article_277a27e3-9c58-5d5c-82f8-b1cc7b774760.html',
         'desc': 'More than 100 retired City of Omaha employees return to their jobs while drawing pensions.'
     },
