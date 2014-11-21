@@ -10,6 +10,7 @@
     img { max-width:100%; margin-top:40px; }
     li { color:#aaa; cursor:hand; cursor:pointer; display: inline; list-style-type: none; margin-right: 6px; font-size:90%;}
     p { font-size:65%; font-style:italic; color:#aaa; margin-top:15px; text-align:right; }
+    .selected { font-weight:bold; border-bottom: 3px solid #aaa; }
     </style>
 </head>
 <body>
@@ -20,7 +21,7 @@
             <span class="lentil" style="background:#386cb0; color:#fff;">Visited</span>
         </div>
         <div>
-            <li style="font-weight:bold;">cody</li>
+            <li class="selected">cody</li>
             <li>laurel</li>
             <li>julian</li>
             <li>lucy</li>
@@ -35,9 +36,9 @@
 <script>
 $( 'li' ).click(function() {
   $( 'li' ).each(function() {
-    $( this ).css( 'font-weight', 'normal' );
+    $( this ).removeClass( 'selected' );
   });
-   $( this ).css( 'font-weight', 'bold' );
+   $( this ).addClass( 'selected' );
    var bananagram = $(this).text().toLowerCase();
    $('#wut').attr('src', bananagram + '_visit.png')
 });
