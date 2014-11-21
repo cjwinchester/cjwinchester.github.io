@@ -26,7 +26,9 @@
             <li>julian</li>
             <li>lucy</li>
         </div>
-            <img id="wut" src="cody_visit.png" />
+            <div id="wut">
+                <img src="cody_visit.png" />
+            <div>
             <p>Updated Nov. 2011</p>
     </div>
 </body>
@@ -40,7 +42,7 @@ $( 'li' ).click(function() {
   });
    $( this ).addClass( 'selected' );
    var bananagram = $(this).text().toLowerCase();
-   $('#wut').attr('src', bananagram + '_visit.png')
+   $('#wut').html('<img src="' + bananagram + '_visit.png" />')
 });
 </script>
 
