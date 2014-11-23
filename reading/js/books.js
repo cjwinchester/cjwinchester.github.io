@@ -559,14 +559,14 @@ var books = [
         "total": 663,
         "stars": 5
     },
-    {
+/*    {
         "title": "Texasville",
         "author": "Larry McMurtry",
         "url": "http://www.goodreads.com/book/show/54814.Texasville",
         "done": 20,
         "total": 544,
-        "stars": null
-    },
+        "stars":
+    },*/
     {
         "title": "Little Big Man",
         "author": "Thomas Berger",
@@ -726,5 +726,21 @@ var books = [
         "done": 224,
         "total": 224,
         "stars": 2
+    },
+    {
+        "title": "Snow Country",
+        "author": "Yasunari Kawabata",
+        "url": "http://www.goodreads.com/book/show/14028.Snow_Country",
+        "done": 100,
+        "total": 175,
+        "stars": 
+    },
+    {
+        "title": "Cannibalism: From Sacrifice to Survival",
+        "author": "Hans Askenasy",
+        "url": "http://www.goodreads.com/book/show/618967.Cannibalism",
+        "done": 20,
+        "total": 246,
+        "stars": 
     }
 ]
