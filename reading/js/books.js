@@ -741,6 +741,6 @@ var books = [
         "url": "http://www.goodreads.com/book/show/7944987-sunset-park",
         "done": 80,
         "total": 311,
-        "stars": 
+        "stars": null
     }
 ]
