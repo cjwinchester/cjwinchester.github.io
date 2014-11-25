@@ -731,16 +731,16 @@ var books = [
         "title": "Snow Country",
         "author": "Yasunari Kawabata",
         "url": "http://www.goodreads.com/book/show/14028.Snow_Country",
-        "done": 100,
+        "done": 175,
         "total": 175,
-        "stars": 
+        "stars": 5
     },
     {
-        "title": "Cannibalism: From Sacrifice to Survival",
-        "author": "Hans Askenasy",
-        "url": "http://www.goodreads.com/book/show/618967.Cannibalism",
-        "done": 20,
-        "total": 246,
+        "title": "Sunset Park",
+        "author": "Paul Auster",
+        "url": "http://www.goodreads.com/book/show/7944987-sunset-park",
+        "done": 80,
+        "total": 311,
         "stars": 
     }
 ]
