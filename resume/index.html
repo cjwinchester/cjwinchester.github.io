@@ -10,10 +10,16 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     
     <style>
-    div.bookchart { height:15px; width:150px; background:#f8ebee; margin: 0; padding:0; }
+    div.reschart { height:15px; width:150px; background:#f1eaf7; margin: 0; padding:0; }
     .bold {font-weight:bold;}
+    .center { text-align:center; }
+    .white { color:#fff; }
+    .blue { color: #428bca; }
+    .fill { margin-bottom:40px; width:100%; padding-top:20px; padding-bottom:20px;}
     td {color:#aaa;}
-    a, a:hover {color: #9a3950;}
+    div.navbar { background: #fff; border-bottom: 1px solid #f7f7f7; box-shadow: 0 0 10px #ccc; }
+	div.navbar a.navbar-brand { font-weight: bold; color: #aaa; }
+    
     </style>
         
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -24,18 +30,96 @@
 
 	</head>
 
-  <body>
+
+  <body data-spy="scroll" data-target=".navbar-scroller">
     
-    <img src="../img/topper-blue.png" style="width:100%;" />
+        <div class="navbar navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">Cody Winchester</a>
+        </div>
+      </div>
+    </div>
     
-    <div class="container">
-        <div class="col-sm-12" style="background:#fff; padding:15px;">
+    
+    <div class="jumbotron" style="background:#428bca; margin-top:50px;">
+        <div class="container">
+
+            <h1 class="fa-stack fa-lg">
+              <i class="white fa fa-circle fa-stack-2x"></i>
+              <i class="blue fa fa-newspaper-o fa-stack-1x"></i>
+            </h1>
+
+
+            <h1 class="fa-stack fa-lg">
+              <i class="white fa fa-circle fa-stack-2x"></i>
+              <i class="blue fa fa-bolt fa-stack-1x"></i>
+            </h1>
+
+            <h1 class="fa-stack fa-lg">
+              <i class="white fa fa-circle fa-stack-2x"></i>
+              <i class="blue fa fa-graduation-cap fa-stack-1x"></i>
+            </h1>
+
+            <h1 class="fa-stack fa-lg">
+              <i class="white fa fa-circle fa-stack-2x"></i>
+              <i class="blue fa fa-envelope fa-stack-1x"></i>
+            </h1>
+            
+       </div>
+    </div>
+    
+    
+         <div class="fill" style="background:#fff; margin-top:50px;">
+         <div class="container">
+        <div class="col-sm-12">
+         <h1 class="bold"><i class="fa fa-briefcase"></i>  Work history</h1>
+            <ul class="fa-ul lead">
+            <li><i class="fa-li fa fa-check-circle"></i> April 2013 - present: Watchdog/data reporter, <em>Omaha World-Herald</em>.</li>
+            <li><i class="fa-li fa fa-check-circle"></i> November 2010 - April 2013: Energy and environment reporter, <em>Sioux Falls (S.D.) Argus Leader</em>.</li>
+            <li><i class="fa-li fa fa-check-circle"></i> May - August 2010: Intern, <em>National Post</em>, Toronto.</li>
+            <li><i class="fa-li fa fa-check-circle"></i> September 2008 - May 2010: Night cops reporter, <em>Waco (Texas) Tribune-Herald</em>.</li>
+            <li><i class="fa-li fa fa-check-circle"></i> August 2008- May 2010: Instructor and teaching assistant, Baylor University journalism department, Waco, Texas.</li>
+            <li><i class="fa-li fa fa-check-circle"></i> November 2009 - February 2010: Writer and editor, ACM-ICPC.</li>
+            <li><i class="fa-li fa fa-check-circle"></i> August 2007 - August 2008: Copy editor, Maverick Publishing, Spearfish, S.D.</li>
+            <li><i class="fa-li fa fa-check-circle"></i> May - August 2006: Intern, <em>Fort Collins (Colo.) Weekly</em>.</li>
+            </ul>
+        </div>
+        </div>
+      </div>  
+
+
+      <div class="white fill" style="background:#4B2865;">
+      <div class="container">
+        <div class="col-sm-12">
+         <h1 class="bold"><i class="fa fa-bank"></i> Education</h1>
+            <ul class="fa-ul lead">
+            <li><i class="fa-li fa fa-check-circle"></i> Baylor University: Masters degree in international journalism, December 2010</li>
+            <li><i class="fa-li fa fa-check-circle"></i> Black Hills State University: B.S. in mass communication, writing minor, May 2007</li>
+         </ul>
+         
+        </div>
+        </div>
+      </div>  
+        
+
+        <h3>Contact</h3>
+        <table class="table">
+        <tr>
+        <td>Email</td>
+        <td><a href="mailto:cjwinchester@gmail.com">cjwinchester@gmail.com</a></td>
+        </tr>
+        <tr>
+        <td>Twitter</td>
+        <td><a href="http://www.twitter.com/cody_winchester">@cody_winchester</a></td>
+        </tr>
+        </table>        
 
         
         
-        </div>
-    </div>
-    
+        
+
+      
 	</body>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

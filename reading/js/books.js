@@ -739,8 +739,40 @@ var books = [
         "title": "Sunset Park",
         "author": "Paul Auster",
         "url": "http://www.goodreads.com/book/show/7944987-sunset-park",
-        "done": 80,
+        "done": 311,
         "total": 311,
+        "stars": 3
+    },
+    {
+        "title": "Things Fall Apart",
+        "author": "Chinua Achebe",
+        "url": "http://www.goodreads.com/book/show/37781.Things_Fall_Apart",
+        "done": 209,
+        "total": 209,
+        "stars": 5
+    },
+    {
+        "title": "All My Puny Sorrows",
+        "author": "Miriam Toews",
+        "url": "http://www.goodreads.com/book/show/18339630-all-my-puny-sorrows",
+        "done": 317,
+        "total": 317,
+        "stars": 4
+    },
+    {
+        "title": "Swing Low: A Life",
+        "author": "Miriam Toews",
+        "url": "http://www.goodreads.com/book/show/10884247-swing-low",
+        "done": 0,
+        "total": 228,
+        "stars": null
+    },
+    {
+        "title": "The Overcoat and Other Short Stories",
+        "author": "Nikolai Gogol",
+        "url": "http://www.goodreads.com/book/show/537094.The_Overcoat",
+        "done": 0,
+        "total": 103,
         "stars": null
     }
 ]
