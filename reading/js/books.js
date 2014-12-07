@@ -763,9 +763,9 @@ var books = [
         "title": "Swing Low: A Life",
         "author": "Miriam Toews",
         "url": "http://www.goodreads.com/book/show/10884247-swing-low",
-        "done": 0,
+        "done": 228,
         "total": 228,
-        "stars": null
+        "stars": 4
     },
     {
         "title": "The Overcoat and Other Short Stories",
@@ -774,5 +774,21 @@ var books = [
         "done": 0,
         "total": 103,
         "stars": null
+    },
+    {
+        "title": "Girls at War and Other Stories",
+        "author": "Chinua Achebe",
+        "url": "http://www.goodreads.com/book/show/37775.Girls_at_War_and_Other_Stories",
+        "done": 0,
+        "total": 129,
+        "stars": null
+    },
+    {
+        "title": "Holy Shit: A Brief History of Swearing",
+        "author": "Melissa Mohr",
+        "url": "http://www.goodreads.com/book/show/16225525-holy-sh-t",
+        "done": 258,
+        "total": 258,
+        "stars": 5
     }
 ]
