@@ -8,12 +8,7 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    
-    <style>
-    body, html {background-image: url('img/mainbg.jpg'); background-size:100%; background-attachment: fixed;}
-    .banana {background:#fff; margin:20px; padding:20px; box-shadow: 0 0 10px #ccc;}
-    .bold { font-weight:bold; }
-    </style>
+    <link href="css/main.css" rel="stylesheet">
         
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -23,27 +18,29 @@
 
 	</head>
 
-  <body>
-
+<body>
 
         <div class="container">
-        <div class="col-md-6 col-xs-11 banana">
+
+        <div class="row">
         
-        <p class="lead"><a href="https://www.google.com/search?q=%22cody+winchester%22+site%3Aomaha.com">I cover local government</a> for the Omaha World-Herald and build web things. Find me on <a href="http://www.twitter.com/cody_winchester">Twitter</a> or <a href="http://www.github.com/cjwinchester">GitHub</a> or <a href="http://cjwinchester.tumblr.com">Tumblr</a> or <a href="http://blog.dataomaha.com/">our nerd blog</a> or good ol' fashioned <a href="mailto:cjwinchester@gmail.com">email</a>.</p>
+        <div class="col-md-3" style="margin-top:30px;">
+        <p>I cover local government for the Omaha World-Herald. Find me on <a href="http://www.twitter.com/cody_winchester">Twitter</a> or <a target="_blank" href="http://www.github.com/cjwinchester">GitHub</a> or our <a href="http://blog.dataomaha.com">nerd blog</a> or good ol' fashioned <a href="mailto:cjwinchester@gmail.com">email</a>.
+        </p>
+        <hr>
+        <!--<input type="text" id="search" class="form-control" style="margin-bottom:10px;" placeholder="Filter ..." />-->
         
-        <button type="button" class="btn btn-default btn-block" id="showmore">See what I've been up to lately</button>
+        <button type="button" class="btn btn-default clicker bold" id="print" style="color:#de2d26; width:48%;"><i class="fa fa-check-circle-o"></i> Print</button>
         
-        
-        <div id="main" style="display:none;">
-        <div style="text-align:center; margin-top:20px;">
-        <button type="button" class="btn btn-danger bold clicker" id="print"><i class="fa fa-check-circle-o"></i> Print</button> &emsp;
-        <button type="button" class="btn btn-primary bold clicker" id="web"><i class="fa fa-check-circle-o"></i> Web</button>
-        </div>       
-        <div id="projects" style="margin-top:20px;"></div>
+        <button type="button" class="btn btn-default clicker bold" id="web" style="color:#4393c3; width:48%; float:right;"><i class="fa fa-check-circle-o"></i> Web</button>        
+        </div>
+
+        <div class="col-md-8 col-md-offset-1" style="margin-top:30px;" id="projects">
         </div>
         
         </div>
-        </div>
+        
+        </div><!-- /container -->
     
 	</body>
 
@@ -52,40 +49,37 @@
     
     <script>
     
-        var proj = '';
+    var proj = '';
         
     for (i=0;i<projects.length;i++) {
-        var panel_class = '';
-        if (projects[i].type == 'web') { panel_class = 'panel-info' } else { panel_class = 'panel-danger' }
+        var col_class = '';
+        var icon = '';
+        if (projects[i].type == "web") { col_class = '#4393c3'; icon = 'fa fa-code' } else { col_class = '#de2d26'; icon = 'fa fa-pencil' }
         proj += [
-        '<div class="panel ' + panel_class + ' ' + projects[i].type + '"><div class="panel-heading"><h3 class="panel-title bold"><a href="' + projects[i].url + '" target="_blank">' + projects[i].hed + '</a></h3></div><div class="panel-body">' + projects[i].desc + '</div></div>'
+        '<div class="flip-container ' + projects[i].type + '"><div class="flipper"><div class="front" style="background:' + col_class + ';"><div class="mid bold"><h1 style="margin-top:0;"><i class="' + icon +  '"></i></h1></div></div><div class="back"><p><span class="col" style="background:' + col_class + ';"></span> <a href="' + projects[i].url + '">' + projects[i].hed + '</a></p><p>' + projects[i].desc + '</p></div></div></div>'
         ].join('');
     }
 
     document.getElementById('projects').innerHTML = proj;
+    
+    $('.flipper').click(function() {
+       $(this).toggleClass('flip');
+    });
     
     $('.clicker').click(function() {
         var buttclass = ($(this).children('i').attr('class'));
         var ent = $(this).attr('id');
             if (buttclass.indexOf("check") > -1 == true)
                 { $(this).children('i').attr('class', 'fa fa-circle-o') 
-                $('.' + ent).hide();
+                $('.' + ent).fadeOut(200);
                 $(this).css('opacity', 0.6);
                 }
             else
                 { $(this).children('i').attr('class', 'fa fa-check-circle-o');
-                $('.' + ent).show();
+                $('.' + ent).fadeIn(200);
                 $(this).css('opacity', 1.0);
                 }
-    });
-    
-    $('#showmore').click(function() {
-      $('#main').toggle();
-        if ($(this).text() == "See what I've been up to lately")
-            { $(this).text('Hide details') }
-        else { $(this).text("See what I've been up to lately") }
-    });
-    
+    });    
     </script>
 
   </html>
