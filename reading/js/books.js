@@ -779,9 +779,9 @@ var books = [
         "title": "Girls at War and Other Stories",
         "author": "Chinua Achebe",
         "url": "http://www.goodreads.com/book/show/37775.Girls_at_War_and_Other_Stories",
-        "done": 0,
+        "done": 129,
         "total": 129,
-        "stars": null
+        "stars": 3
     },
     {
         "title": "Holy Shit: A Brief History of Swearing",
