@@ -790,5 +790,29 @@ var books = [
         "done": 258,
         "total": 258,
         "stars": 5
+    },
+    {
+        "title": "Crap Taxidermy",
+        "author": "Kat Su",
+        "url": "http://www.goodreads.com/book/show/22299612-crap-taxidermy",
+        "done": 95,
+        "total": 95,
+        "stars": 5
+    },
+    {
+        "title": "The Second Plane",
+        "author": "Martin Amis",
+        "url": "http://www.goodreads.com/book/show/1971285.The_Second_Plane",
+        "done": 204,
+        "total": 204,
+        "stars": 2
+    },
+    {
+        "title": "The Flying Troutmans",
+        "author": "Miriam Toews",
+        "url": "http://www.goodreads.com/book/show/2940207-the-flying-troutmans",
+        "done": 274,
+        "total": 274,
+        "stars": 4
     }
 ]
