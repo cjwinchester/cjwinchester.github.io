@@ -28,7 +28,9 @@
         <p>I cover local government for the Omaha World-Herald. Find me on <a href="http://www.twitter.com/cody_winchester">Twitter</a> or <a target="_blank" href="http://www.github.com/cjwinchester">GitHub</a> or our <a href="http://blog.dataomaha.com">nerd blog</a> or good ol' fashioned <a href="mailto:cjwinchester@gmail.com">email</a>.
         </p>
         <hr>
-        <!--<input type="text" id="search" class="form-control" style="margin-bottom:10px;" placeholder="Filter ..." />-->
+        
+        <input type="text" id="search" class="form-control" style="margin-bottom:10px;" placeholder="Filter ..." />
+        <style id="search_style"></style>
         
         <button type="button" class="btn btn-default clicker bold" id="print" style="color:#de2d26; width:48%;"><i class="fa fa-check-circle-o"></i> Print</button>
         
@@ -56,7 +58,7 @@
         var icon = '';
         if (projects[i].type == "web") { col_class = '#4393c3'; icon = 'fa fa-code' } else { col_class = '#de2d26'; icon = 'fa fa-pencil' }
         proj += [
-        '<div class="flip-container ' + projects[i].type + '"><div class="flipper"><div class="front" style="background:' + col_class + ';"><div class="mid bold"><h1 style="margin-top:0;"><i class="' + icon +  '"></i></h1></div></div><div class="back"><p><span class="col" style="background:' + col_class + ';"></span> <a href="' + projects[i].url + '">' + projects[i].hed + '</a></p><p>' + projects[i].desc + '</p></div></div></div>'
+        '<div class="flip-container searchable ' + projects[i].type + '" data-index="' + projects[i].hed.toLowerCase() + '"><div class="flipper"><div class="front" style="background:' + col_class + ';"><div class="mid bold"><h1 style="margin-top:0;"><i class="' + icon +  '"></i></h1></div></div><div class="back"><p><span class="col" style="background:' + col_class + ';"></span> <a href="' + projects[i].url + '">' + projects[i].hed + '</a></p><p>' + projects[i].desc + '</p></div></div></div>'
         ].join('');
     }
 
@@ -79,7 +81,16 @@
                 $('.' + ent).fadeIn(200);
                 $(this).css('opacity', 1.0);
                 }
-    });    
+    });  
+
+	var searchStyle = document.getElementById('search_style');
+		document.getElementById('search').addEventListener('input', function() {
+			if (!this.value) {
+				searchStyle.innerHTML = "";
+			return;
+		}
+			searchStyle.innerHTML = ".searchable:not([data-index*=\"" + this.value.toLowerCase() + "\"]) { display: none; }";
+    });
     </script>
 
   </html>

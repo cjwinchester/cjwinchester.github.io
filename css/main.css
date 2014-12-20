@@ -92,6 +92,11 @@ a:hover { color:inherit; }
     padding:20px;
     cursor:pointer;
     cursor:hand;
+    opacity:0.7;
+}
+
+.front:hover {
+opacity:1.0;
 }
 
 /* back, initially hidden pane */
