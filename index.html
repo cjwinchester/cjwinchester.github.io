@@ -58,7 +58,7 @@
         var icon = '';
         if (projects[i].type == "web") { col_class = '#4393c3'; icon = 'fa fa-code' } else { col_class = '#de2d26'; icon = 'fa fa-pencil' }
         proj += [
-        '<div class="flip-container searchable ' + projects[i].type + '" data-index="' + projects[i].hed.toLowerCase() + '"><div class="flipper"><div class="front" style="background:' + col_class + ';"><div class="mid bold"><h1 style="margin-top:0;"><i class="' + icon +  '"></i></h1></div></div><div class="back"><p><span class="col" style="background:' + col_class + ';"></span> <a href="' + projects[i].url + '">' + projects[i].hed + '</a></p><p>' + projects[i].desc + '</p></div></div></div>'
+        '<div class="col-md-3 searchable ' + projects[i].type + '" data-index="' + projects[i].hed.toLowerCase() + '" style="margin-right:10px; margin-left:10px;"><div class="row"><div class="flip-container"><div class="flipper"><div class="front" style="background:' + col_class + ';"><div class="mid bold"><h1 style="margin-top:0;"><i class="' + icon +  '"></i></h1></div></div><div class="back"><p><span class="col" style="background:' + col_class + ';"></span> <a href="' + projects[i].url + '">' + projects[i].hed + '</a></p><p>' + projects[i].desc + '</p></div></div></div></div></div>'
         ].join('');
     }
 
