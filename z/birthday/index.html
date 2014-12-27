@@ -2,40 +2,40 @@
 <html>
 
 <head>
+<title></title>
 
-<title>HAPPY BIRTHDAY</title>
-
-<link rel="stylesheet" type="text/css" href="../../css/miniplayer.css" title="style"  media="screen"/>
-
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-<script type="text/javascript" src="../../js/jquery.jplayer.min.js"></script>
-<script type="text/javascript" src="../../js/jquery.mb.miniPlayer.js"></script>
-
-	<script>
-$(function(){ $(".audio").mb_miniPlayer({'autoplay':true, 'loop':true}); });
-	</script>
+<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 
 <style>
-
-html, body {
-margin:0;
-padding:0;
-height:100%;
-width:100%; background-image:url('http://media.giphy.com/media/14mSeK935HLtjq/giphy.gif');
-background-size:100%;
-background-repeat: no-repeat;
-overflow:hidden;
- }
-
+html, body { margin:0; padding:0; height:100%; width:100%; background-image:url('horse.gif'); background-size:100%; overflow:hidden; }
+#hed { border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:5px; font-family: 'Lobster', cursive; background:#fff; padding-left:10px; padding-right:10px; top:60%; right:20%; position:fixed; opacity:0.8;}
 </style>
-
 </head>
 
 <body>
 
 <div style="display:none;">
-<a class="audio {skin:'blue', autoPlay:true, inLine:false, showVolumeLevel:true, showRew:true, showTime:false, width:240, addShadow:false, downloadable:true}" href="https://dl.dropboxusercontent.com/u/38884522/swhb.mp3"></a>
+<audio controls autoplay="autoplay" loop="loop">
+<source src="swhb.mp3" type="audio/mpeg">
+</audio>
 </div>
+
+<div id="hed"><h1 id="name"></h1></div>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
+	<script>
+
+if(window.location.hash) {
+    var name = unescape(window.location.hash).replace("#","");
+    $('#name').html(name)
+    $('title').html('Happy Birthday, ' + name)  
+} else {
+    var name = prompt("Sorry, what's your name again?", "Turd Ferguson");
+    $('#name').html(name)
+    $('title').html('Happy Birthday, ' + name)  
+}
+	</script>
 
 </body>
 
