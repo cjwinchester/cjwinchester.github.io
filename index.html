@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
     <link href="css/main.css" rel="stylesheet">
         
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -26,7 +27,7 @@
         
         <div class="col-md-3" style="margin-top:50px;">
         
-        <h3 style="font-weight:bold; margin-top:0;">Winchester!</h3>
+        <h3 class="bold fancy" style="margin-top:0; text-align:center; font-size:3.5em;">Winchester!</h3>
         <p>I cover local government for the Omaha World-Herald.</p>
         
         <table class="table" style="margin-top:30px;">
@@ -85,7 +86,7 @@
         var col_class = '';
         var icon = '';
         var d = new Date(projects[i].date);
-        var thisdate = apmonths[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear();
+        var thisdate = apmonths[d.getMonth()] + " " + (d.getUTCDate()) + ", " + d.getFullYear();
         if (projects[i].type == "web") { col_class = '#4393c3'; icon = 'fa fa-code' } else { col_class = '#de2d26'; icon = 'fa fa-pencil' }
         proj += [
         '<div class="col-md-7 item searchable ' + projects[i].type + '" data-index="' + projects[i].hed.toLowerCase() + '" style="border-left:6px solid ' + col_class + ';"><p class="date bold">' + thisdate + '</p><h4 class="bold" style="color:' + col_class + '"><a href="' + projects[i].url + '" target="_blank">' + projects[i].hed + '</a></h4><p>' + projects[i].desc + '</p></div>'
