@@ -1,11 +1,18 @@
-    var projects = [
+var projects = [
    {
         'hed': 'Election results',
         'type': 'web',
         'date': 'Nov. 4, 2014',
         'url': 'http://dataomaha.com/media/election2014/general/',
-        'desc': 'Catching, cleaning and publishing Nebraska general election returns, 2014. (<a href="http://blog.dataomaha.com/tarbelling-the-election/">writeup</a>)'
+        'desc': 'Parsing Nebraska\'s 2014 general election returns. (<a href="http://blog.dataomaha.com/tarbelling-the-election/">writeup</a>)'
     },
+    {
+        'hed': 'Bid problems',
+        'date': 'May 20, 2014',
+        'type': 'print',
+        'url': 'http://www.omaha.com/news/metro/with-douglas-co-director-under-scrutiny-state-halts-work-on/article_7bc74930-9131-5cdb-97da-0a8ed946f8dc.html?TNNoMobile',
+        'desc': 'A county 911 director is investigated for his role in bidding a $10 million state contract.'
+    }, 
     {
         'hed': 'Prison scandal',
         'type': 'web',
@@ -18,7 +25,7 @@
         'type': 'web',
         'date': 'March 2, 2014',
         'url': 'http://www.dataomaha.com/salaries',
-        'desc': 'A constantly updating database of thousands of public employee salaries in the Omaha metro area.'
+        'desc': 'A database of thousands of public employee salaries in the Omaha metro area.'
     },
     {
         'hed': 'What am I reading?',
@@ -28,19 +35,19 @@
         'desc': 'Books I\'m cracking.'
     },
     {
+        'hed': 'OPPD pay analysis',
+        'date': 'March 2, 2014',
+        'type': 'print',
+        'url': 'http://www.omaha.com/news/oppd-salaries-perks-keep-staff-from-straying/article_b3ae0ef5-e7cc-5cc9-8eb1-7b01dc09d493.html',
+        'desc': 'Taking a close look at the public utlity\'s pay scale.'
+    },
+    {
         'hed': 'Military surplus data',
         'date': 'Sept. 20, 2014',
         'type': 'web',
         'url': 'http://www.dataomaha.com/militarysurplus',
-        'desc': 'A database of thousands of surplus items transferred to local law enforcement agencies, including assault rifles, armored vehicles and grenade launchers.'
+        'desc': 'A database of surplus items transferred to local law enforcement agencies.'
     },
-    {
-        'hed': 'Bid problems',
-        'date': 'May 20, 2014',
-        'type': 'print',
-        'url': 'http://www.omaha.com/news/metro/with-douglas-co-director-under-scrutiny-state-halts-work-on/article_7bc74930-9131-5cdb-97da-0a8ed946f8dc.html?TNNoMobile',
-        'desc': 'A county 911 director is investigated for his role in bidding a $10 million state contract.'
-    }, 
     {
         'hed': 'Dutch World-Herald',
         'date': 'Jan. 6, 2014',
@@ -53,21 +60,14 @@
         'date': 'Sept. 7, 2014',
         'type': 'web',
         'url': 'http://www.dataomaha.com/minimumwage',
-        'desc': 'A database and analysis of signatories to a statewide petition to raise the minimum wage.'
+        'desc': 'A database and analysis of a petition drive to raise the minimum wage.'
     },
     {
         'hed': 'Nuke plant costs',
         'date': 'May 7, 2014',
         'type': 'web',
-        'url': 'http://dataomaha.com/exelon',
+        'url': 'http://dataomaha.com/media/exelon',
         'desc': 'Tracking contractor invoices for the manager of a nuclear plant.'
-    },
-    {
-        'hed': 'OPPD pay analysis',
-        'date': 'March 2, 2014',
-        'type': 'print',
-        'url': 'http://www.omaha.com/news/oppd-salaries-perks-keep-staff-from-straying/article_b3ae0ef5-e7cc-5cc9-8eb1-7b01dc09d493.html',
-        'desc': 'Taking a closer look at the public utlity\'s pay scale.'
     },
     {
         'hed': 'The many names of David Ryder',
@@ -81,7 +81,7 @@
         'date': 'Oct. 6, 2013',
         'type': 'print',
         'url': 'http://www.omaha.com/news/more-than-retired-city-of-omaha-employees-return-to-their/article_277a27e3-9c58-5d5c-82f8-b1cc7b774760.html',
-        'desc': 'More than 100 retired City of Omaha employees return to their jobs while drawing pensions.'
+        'desc': 'We examined how retired city workers can return to their jobs while drawing a pension.'
     },
     {
         'hed': 'Medicare payments',
@@ -102,7 +102,7 @@
         'date': 'May 5, 2013',
         'type': 'print',
         'url': 'http://www.omaha.com/news/vital-time-lost-in-calls-to-sarpy-county-s-center/article_4773a77a-860f-540f-9c6b-766256873340.html?mode=jqm',
-        'desc': 'Our analysis showed that Sarpy County dispatchers were taking too long to dispatch fire and medical calls.'
+        'desc': 'We found that dispatchers in one county were taking too long to dispatch fire and medical calls.'
     },
     {
         'hed': 'USA! USA! USA!',
@@ -116,13 +116,13 @@
         'date': 'June 9, 2014',
         'type': 'web',
         'url': 'http://dataomaha.com/media/oppd-gen/',
-        'desc': 'The local electrical utility moves away from coal.'
+        'desc': 'OPPD moves away from coal.'
     },
     {
         'hed': 'Jails, ERs new front line in battling mental illness',
         'date': 'April 22, 2014',
         'type': 'print',
         'url': 'http://m.omaha.com/eedition/sunrise/articles/jails-and-ers-new-front-line-in-battling-mental-illness/article_f4852cbe-3b18-5782-aa5a-0c7263d994e4.html?mode=jqm',
-        'desc': 'Delving into the problems created by an overburdened mental health system.'
+        'desc': 'Delving into the problems of an overburdened mental health system.'
     }    
-    ]
+]

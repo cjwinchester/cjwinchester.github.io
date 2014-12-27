@@ -814,5 +814,13 @@ var books = [
         "done": 274,
         "total": 274,
         "stars": 4
+    },
+    {
+        "title": "Thus Spake Zarathustra",
+        "author": "Friedrich Nietzsche",
+        "url": "",
+        "done": 58,
+        "total": 381,
+        "stars": null
     }
 ]
