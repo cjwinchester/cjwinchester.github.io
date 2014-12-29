@@ -49,7 +49,7 @@ var projects = [
         'date': '2014-03-02',
         'type': 'print',
         'url': 'http://www.omaha.com/news/oppd-salaries-perks-keep-staff-from-straying/article_b3ae0ef5-e7cc-5cc9-8eb1-7b01dc09d493.html',
-        'desc': 'Taking a close look at the local utility pay scale.',
+        'desc': 'Taking a closer look at the local electrical utility\'s pay scale.',
         'collab': null,
         'tools': null
     },
@@ -85,7 +85,7 @@ var projects = [
         'date': '2014-05-07',
         'type': 'web',
         'url': 'http://dataomaha.com/media/exelon',
-        'desc': 'Tracking contractor invoices for the manager of a nuclear plant.',
+        'desc': 'Tracking contractor invoices for the manager of OPPD\'s nuclear plant.',
         'collab': null,
         'tools': 'Javascript'
     },
@@ -130,7 +130,7 @@ var projects = [
         'date': '2013-05-05',
         'type': 'print',
         'url': 'http://www.omaha.com/news/vital-time-lost-in-calls-to-sarpy-county-s-center/article_4773a77a-860f-540f-9c6b-766256873340.html?mode=jqm',
-        'desc': 'We found that dispatchers in one county were taking too long to dispatch fire and medical calls.',
+        'desc': 'Dispatch times for fire and medical calls lagged in one county we examined.',
         'collab': '<a href="https://twitter.com/roseannmoring" target="_blank">@roseannmoring</a>',
         'tools': null
     },
@@ -148,7 +148,7 @@ var projects = [
         'date': '2014-06-09',
         'type': 'web',
         'url': 'http://dataomaha.com/media/oppd-gen/',
-        'desc': 'The local electrical utility moves away from coal.',
+        'desc': 'Omaha\'s electrical utility moves away from coal.',
         'collab': null,
         'tools': 'Javascript'
     },
@@ -165,8 +165,8 @@ var projects = [
         'hed': 'Happy Birthday!',
         'date': '2014-12-26',
         'type': 'web',
-        'url': 'http://www.codywinchester.com/z/birthday/',
-        'desc': 'Wish your loved one a happy birthday. (Hint: Pass his/her name as a URL hash.)',
+        'url': 'http://www.codywinchester.com/birthday.html',
+        'desc': 'Use this page to wish your loved one a happy birthday. (Hint: Pass his/her name as a URL hash.)',
         'collab': null,
         'tools': 'Javascript'
     }

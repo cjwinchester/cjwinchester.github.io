@@ -7,7 +7,7 @@
 <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 
 <style>
-html, body { margin:0; padding:0; height:100%; width:100%; background-image:url('horse.gif'); background-size:100%; overflow:hidden; }
+html, body { margin:0; padding:0; height:100%; width:100%; background-image:url('birthday/horse.gif'); background-size:100%; overflow:hidden; }
 #hed { border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:5px; font-family: 'Lobster', cursive; background:#fff; padding-left:10px; padding-right:10px; top:60%; right:20%; position:fixed; opacity:0.8;}
 </style>
 </head>
@@ -16,7 +16,7 @@ html, body { margin:0; padding:0; height:100%; width:100%; background-image:url(
 
 <div style="display:none;">
 <audio controls autoplay="autoplay" loop="loop">
-<source src="swhb.mp3" type="audio/mpeg">
+<source src="birthday/swhb.mp3" type="audio/mpeg">
 </audio>
 </div>
 
@@ -26,12 +26,13 @@ html, body { margin:0; padding:0; height:100%; width:100%; background-image:url(
 
 	<script>
 
+var name = '';
 if(window.location.hash) {
-    var name = unescape(window.location.hash).replace("#","");
+    name = unescape(window.location.hash).replace("#","");
     $('#name').html(name)
     $('title').html('Happy Birthday, ' + name)  
 } else {
-    var name = prompt("Sorry, what's your name again?", "Turd Ferguson");
+    name = 'Shooter McGavin';
     $('#name').html(name)
     $('title').html('Happy Birthday, ' + name)  
 }
