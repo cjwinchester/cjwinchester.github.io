@@ -53,7 +53,7 @@ var projects = [
         'date': '2014-01-06',
         'type': 'web',
         'url': 'http://www.twitter.com/dutchowh',
-        'desc': 'A bot that retweets the Omaha World-Herald account &mdash; in Dutch! (<a href="https://github.com/cjwinchester/dutchowh">repo</a> / <a href="http://blog.dataomaha.com/dit-is-een-blogbericht-ja">writeup</a>)'
+        'desc': 'A bot that retweets the Omaha World-Herald account &mdash; in Dutch! (<a href="https://github.com/cjwinchester/dutchowh" target="_blank">repo</a>/<a href="http://blog.dataomaha.com/dit-is-een-blogbericht-ja" target="_blank">writeup</a>)'
     },    
     {
         'hed': 'Minimum wage hike',
