@@ -25,10 +25,21 @@
             <li>julian</li>
             <li>lucy</li>
         </div>
-            <div id="wut">
+            <div id="cody" class="map">
                 <img src="cody_visit.png" />
-            <div>
-    </div>
+            </div>
+
+            <div id="laurel" class="map" style="display:none;">
+                <img src="laurel_visit.png" />
+            </div>
+            
+            <div id="julian" class="map" style="display:none;">
+                <img src="julian_visit.png" />
+            </div>
+
+            <div id="lucy" class="map" style="display:none;">
+                <img src="lucy_visit.png" />
+            </div>
 </body>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -40,8 +51,13 @@ $( 'li' ).click(function() {
   });
    $( this ).addClass( 'selected' );
    var bananagram = $(this).text().toLowerCase();
-   $('#wut').html('<img src="' + bananagram + '_visit.png" />')
-});
+   $('.map').each(function() {
+        if ( $( this ).attr('id') === bananagram )
+            { $( this ).css('display', 'inline') }
+        else
+            { $( this ).css('display', 'none') }
+   });   
+   });
 </script>
 
 </html>
