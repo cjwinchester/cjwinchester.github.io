@@ -78,12 +78,13 @@
 
     var proj = '';    
     for (i=0;i<projects.length;i++) {
-        var col_class = '';
+        var col_class, collab = '';
         var d = new Date(projects[i].date);
         var thisdate = apmonths[d.getMonth()] + " " + (d.getUTCDate()) + ", " + d.getFullYear();
         if (projects[i].type == "web") { col_class = '#4393c3' } else { col_class = '#de2d26' }
+        if ( projects[i].collab ) { collab = ' With ' + projects[i].collab + "."}
         proj += [
-        '<div class="col-md-7 item searchable ' + projects[i].type + '" data-index="' + projects[i].hed.toLowerCase() + '" style="border-left:6px solid ' + col_class + ';"><p class="date bold">' + thisdate + '</p><h4 class="bold" style="color:' + col_class + '"><a href="' + projects[i].url + '" target="_blank">' + projects[i].hed + '</a></h4><p>' + projects[i].desc + '</p></div>'
+        '<div class="col-md-7 item searchable ' + projects[i].type + '" data-index="' + projects[i].hed.toLowerCase() + '" style="border-left:6px solid ' + col_class + ';"><p class="date bold">' + thisdate + '</p><h4 class="bold" style="color:' + col_class + '"><a href="' + projects[i].url + '" target="_blank">' + projects[i].hed + '</a></h4><p>' + projects[i].desc + collab + '</p></div>'
         ].join('');
     }
 
