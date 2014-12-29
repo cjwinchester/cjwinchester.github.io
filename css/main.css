@@ -2,8 +2,9 @@ a, a:hover { font-weight:bold; color:inherit;}
 .bold { font-weight:bold; }
 .item { background:#f6f6f6; padding:8px; padding-left:12px; margin-bottom:20px;}
 .date { font-size:70%; text-transform:uppercase; color:#999; }
+td { text-align:center; }
 
-.fancy { font-family: 'Lobster', cursive; color:#4393c3; -webkit-animation-name: pulse; -webkit-animation-duration: 5s; -webkit-animation-timing-function: ease; -webkit-animation-iteration-count: infinite; -webkit-animation-direction: alternate; -webkit-animation-play-state: running; -moz-animation-name: pulse; -moz-animation-duration: 5s; -moz-animation-timing-function: ease; -moz-animation-iteration-count: infinite; -moz-animation-direction: alternate; -moz-animation-play-state: running; animation-name: pulse; animation-duration: 5s; animation-timing-function: ease; animation-iteration-count: infinite; animation-direction: alternate; animation-play-state: running; }
+.fancy { font-family: 'Lobster', 'Helvetica Neue', Arial, sans-serif; color:#4393c3; -webkit-animation-name: pulse; -webkit-animation-duration: 5s; -webkit-animation-timing-function: ease; -webkit-animation-iteration-count: infinite; -webkit-animation-direction: alternate; -webkit-animation-play-state: running; -moz-animation-name: pulse; -moz-animation-duration: 5s; -moz-animation-timing-function: ease; -moz-animation-iteration-count: infinite; -moz-animation-direction: alternate; -moz-animation-play-state: running; animation-name: pulse; animation-duration: 5s; animation-timing-function: ease; animation-iteration-count: infinite; animation-direction: alternate; animation-play-state: running; }
 
 @-webkit-keyframes pulse { from { color:#4393c3;} to { color:#de2d26; } }
 @-moz-keyframes pulse { from { color:#4393c3;} to { color:#de2d26; } }

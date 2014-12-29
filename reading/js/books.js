@@ -818,9 +818,97 @@ var books = [
     {
         "title": "Thus Spake Zarathustra",
         "author": "Friedrich Nietzsche",
-        "url": "",
-        "done": 58,
+        "url": "http://www.goodreads.com/book/show/51893.Thus_Spoke_Zarathustra",
+        "done": 80,
         "total": 381,
+        "stars": null
+    },
+    {
+        "title": "What If? Serious Scientific Answers to Hypothetical Questions",
+        "author": "Randall Munroe",
+        "url": "http://www.goodreads.com/book/show/21413662-what-if",
+        "done": 295,
+        "total": 295,
+        "stars": 5
+    },
+    {
+        "title": "Beyond Good and Evil",
+        "author": "Friedrich Nietzsche",
+        "url": "http://www.goodreads.com/book/show/12321.Beyond_Good_and_Evil",
+        "done": 0,
+        "total": 212,
+        "stars": null
+    },
+    {
+        "title": "Loneliness",
+        "author": "John T. Cacioppo and William Patrick",
+        "url": "http://www.goodreads.com/book/show/2753527-loneliness",
+        "done": 0,
+        "total": 269,
+        "stars": null
+    },
+    {
+        "title": "The Barbarous Years",
+        "author": "Bernard Bailyn",
+        "url": "http://www.goodreads.com/book/show/13414830-the-barbarous-years",
+        "done": 0,
+        "total": 529,
+        "stars": null
+    },
+    {
+        "title": "The Brooklyn Follies",
+        "author": "Paul Auster",
+        "url": "http://www.goodreads.com/book/show/446.The_Brooklyn_Follies",
+        "done": 0,
+        "total": 306,
+        "stars": null
+    },
+    {
+        "title": "100 Great Poems of the Twentieth Century",
+        "author": "Mark Strand, Ed.",
+        "url": "http://www.goodreads.com/book/show/131947.100_Great_Poems_of_the_Twentieth_Century",
+        "done": 130,
+        "total": 279,
+        "stars": null
+    },
+    {
+        "title": "Literature from the \"Axis of Evil\": Writing from Iran, Iraq, North Korea and other Enemy Nations",
+        "author": "Words Without Borders, Ed.",
+        "url": "http://www.goodreads.com/book/show/98418.Literature_from_the_Axis_of_Evil_",
+        "done": 0,
+        "total": 287,
+        "stars": null
+    },
+    {
+        "title": "South Pole: A Historical Reader",
+        "author": "Anthony Brandt, Ed.",
+        "url": "http://www.goodreads.com/book/show/353059.South_Pole",
+        "done": 0,
+        "total": 461,
+        "stars": null
+    },
+    {
+        "title": "Herzog",
+        "author": "Saul Bellow",
+        "url": "http://www.goodreads.com/book/show/6551.Herzog",
+        "done": 0,
+        "total": 371,
+        "stars": null
+    },
+    {
+        "title": "The Storyteller",
+        "author": "Mario Vargas Llosa",
+        "url": "http://www.goodreads.com/book/show/53931.The_Storyteller",
+        "done": 0,
+        "total": 245,
+        "stars": null
+    },
+    {
+        "title": "Bastard out of Carolina",
+        "author": "Dorothy Allison",
+        "url": "http://www.goodreads.com/book/show/25354.Bastard_Out_of_Carolina",
+        "done": 0,
+        "total": 309,
         "stars": null
     }
 ]

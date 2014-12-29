@@ -4,7 +4,7 @@ var projects = [
         'type': 'web',
         'date': '2014-11-04',
         'url': 'http://dataomaha.com/media/election2014/general/',
-        'desc': 'Parsing Nebraska\'s 2014 general election returns. (<a href="http://blog.dataomaha.com/tarbelling-the-election/">writeup</a>)'
+        'desc': 'Nebraska 2014 general election returns. (<a href="http://blog.dataomaha.com/tarbelling-the-election/">writeup</a>)'
     },
     {
         'hed': 'Bid problems',
@@ -39,21 +39,21 @@ var projects = [
         'date': '2014-03-02',
         'type': 'print',
         'url': 'http://www.omaha.com/news/oppd-salaries-perks-keep-staff-from-straying/article_b3ae0ef5-e7cc-5cc9-8eb1-7b01dc09d493.html',
-        'desc': 'Taking a close look at the public utlity\'s pay scale.'
+        'desc': 'Taking a close look at the local electrical utlity\'s pay scale.'
     },
     {
         'hed': 'Military surplus data',
         'date': '2014-09-20',
         'type': 'web',
         'url': 'http://www.dataomaha.com/militarysurplus',
-        'desc': 'A database of surplus items transferred to local law enforcement agencies.'
+        'desc': 'A database of surplus military items transferred to law enforcement agencies in Nebraska and Iowa.'
     },
     {
         'hed': 'Dutch World-Herald',
         'date': '2014-01-06',
         'type': 'web',
         'url': 'http://www.twitter.com/dutchowh',
-        'desc': 'A Twitter bot that retweets the Omaha World-Herald account &mdash; in Dutch! (<a href="https://github.com/cjwinchester/dutchowh">repo</a>)'
+        'desc': 'A bot that retweets the Omaha World-Herald account &mdash; in Dutch! (<a href="https://github.com/cjwinchester/dutchowh">repo</a> / <a href="http://blog.dataomaha.com/dit-is-een-blogbericht-ja">writeup</a>)'
     },    
     {
         'hed': 'Minimum wage hike',
@@ -109,14 +109,14 @@ var projects = [
         'date': '2014-11-19',
         'type': 'web',
         'url': '/z/usa',
-        'desc': 'A running tally of where we\'ve lived and where we\'ve visited.'
+        'desc': 'A running tally of where we\'ve lived and visited.'
     },
     {
         'hed': 'OPPD\'s energy options',
         'date': '2014-06-09',
         'type': 'web',
         'url': 'http://dataomaha.com/media/oppd-gen/',
-        'desc': 'OPPD moves away from coal.'
+        'desc': 'The local electrical utility moves away from coal.'
     },
     {
         'hed': 'Battling mental illness',
@@ -130,6 +130,6 @@ var projects = [
         'date': '2014-12-26',
         'type': 'web',
         'url': 'http://www.codywinchester.com/z/birthday/',
-        'desc': 'Wish your loved one a happy birthday. (Hint: Pass his/her name as a URL hash.)'
+        'desc': 'Wish your loved one a happy birthday! (Hint: Pass his/her name as a URL hash.)'
     }
 ]
