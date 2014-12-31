@@ -169,5 +169,14 @@ var projects = [
         'desc': 'Use this page to wish your loved one a happy birthday. (Hint: Pass his/her name as a URL hash.)',
         'collab': null,
         'tools': 'Javascript'
+    },
+    {
+        'hed': 'Cody Ipsum',
+        'date': '2014-06-10',
+        'type': 'web',
+        'url': 'http://www.codywinchester.com/tools/cody-ipsum/',
+        'desc': 'My dummy text generator.',
+        'collab': null,
+        'tools': 'Javascript'
     }
 ]
