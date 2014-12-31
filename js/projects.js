@@ -90,6 +90,15 @@ var projects = [
         'tools': 'Javascript'
     },
     {
+        'hed': 'Nebraska choroplethinator',
+        'date': '2014-11-17',
+        'type': 'web',
+        'url': 'https://github.com/cjwinchester/ne-county-choropleth',
+        'desc': 'Shade a county map based on csv data.',
+        'collab': null,
+        'tools': ['Python', 'Inkscape']
+    },
+    {
         'hed': 'The many names of David Ryder',
         'date': '2014-01-12',
         'type': 'web',
