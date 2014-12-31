@@ -859,15 +859,15 @@ var books = [
         "title": "The Brooklyn Follies",
         "author": "Paul Auster",
         "url": "http://www.goodreads.com/book/show/446.The_Brooklyn_Follies",
-        "done": 0,
+        "done": 306,
         "total": 306,
-        "stars": null
+        "stars": 3
     },
     {
         "title": "100 Great Poems of the Twentieth Century",
         "author": "Mark Strand, Ed.",
         "url": "http://www.goodreads.com/book/show/131947.100_Great_Poems_of_the_Twentieth_Century",
-        "done": 130,
+        "done": 150,
         "total": 279,
         "stars": null
     },
@@ -909,6 +909,38 @@ var books = [
         "url": "http://www.goodreads.com/book/show/25354.Bastard_Out_of_Carolina",
         "done": 0,
         "total": 309,
+        "stars": null
+    },
+    {
+        "title": "Harry Potter and the Sorcerer's Stone",
+        "author": "J.K. Rowling",
+        "url": "http://www.goodreads.com/book/show/3.Harry_Potter_and_the_Sorcerer_s_Stone",
+        "done": 0,
+        "total": 309,
+        "stars": null
+    },
+    {
+        "title": "An Improvised Life",
+        "author": "Alan Arkin",
+        "url": "http://www.goodreads.com/book/show/10515446-an-improvised-life",
+        "done": 0,
+        "total": 191,
+        "stars": null
+    },
+    {
+        "title": "The World Without Us",
+        "author": "Alan Weisman",
+        "url": "http://www.goodreads.com/book/show/248787.The_World_Without_Us",
+        "done": 0,
+        "total": 275,
+        "stars": null
+    },
+    {
+        "title": "Collected Poems",
+        "author": "W.H. Auden",
+        "url": "http://www.goodreads.com/book/show/321538.Collected_Poems",
+        "done": 0,
+        "total": 928,
         "stars": null
     }
 ]
