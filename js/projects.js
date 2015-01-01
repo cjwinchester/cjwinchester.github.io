@@ -5,7 +5,7 @@ var projects = [
         'date': '2014-11-04',
         'url': 'http://dataomaha.com/media/election2014/general/',
         'desc': 'Nebraska 2014 general election returns (<a href="http://blog.dataomaha.com/tarbelling-the-election/">writeup</a>).',
-        'collab': '<a href="https://twitter.com/bvankat" target="_blank">@bvankat</a>',
+        'collab': [ { 'name': 'Ben Vankat', 'twitter': 'bvankat' } ],
         'tools': ['Tarbell', 'D3']
     },
     {
@@ -23,7 +23,7 @@ var projects = [
         'date': '2014-09-28',
         'url': 'http://dataomaha.com/prison',
         'desc': 'A database of prisoners in Nebraska whose sentences were mistakenly cut short.',
-        'collab': '<a href="https://twitter.com/bvankat" target="_blank">@bvankat</a> and <a href="https://twitter.com/mattwynn" target="_blank">@mattwynn</a>',
+        'collab': [ { 'name': 'Ben Vankat', 'twitter': 'bvankat' }, { 'name': 'Matt Wynn', 'twitter': 'mattwynn' } ],
         'tools': 'Django'
     },
     {
@@ -32,7 +32,7 @@ var projects = [
         'date': '2014-03-02',
         'url': 'http://www.dataomaha.com/salaries',
         'desc': 'A database of thousands of public employee salaries in the Omaha metro area.',
-        'collab': '<a href="https://twitter.com/bvankat" target="_blank">@bvankat</a> and <a href="https://twitter.com/mattwynn" target="_blank">@mattwynn</a>',
+        'collab': [ { 'name': 'Ben Vankat', 'twitter': 'bvankat' }, { 'name': 'Matt Wynn', 'twitter': 'mattwynn' } ],
         'tools': 'Django'
     },
     {
@@ -59,7 +59,7 @@ var projects = [
         'type': 'web',
         'url': 'http://www.dataomaha.com/militarysurplus',
         'desc': 'A database of surplus military items transferred to law enforcement agencies in Nebraska and Iowa.',
-        'collab': '<a href="https://twitter.com/leahbecerra" target="_blank">@leahbecerra</a>',
+        'collab': [ { 'name': 'Leah Becerra', 'twitter': 'leahbecerra' } ],
         'tools': 'Django'
     },
     {
@@ -77,7 +77,7 @@ var projects = [
         'type': 'web',
         'url': 'http://www.dataomaha.com/minimumwage',
         'desc': 'A database and analysis of a petition drive to raise the minimum wage.',
-        'collab': '<a href="https://twitter.com/mattwynn" target="_blank">@mattwynn</a>',
+        'collab': [ { 'name': 'Matt Wynn', 'twitter': 'mattwynn' } ],
         'tools': 'Django'
     },
     {
@@ -113,7 +113,7 @@ var projects = [
         'type': 'print',
         'url': 'http://www.omaha.com/news/more-than-retired-city-of-omaha-employees-return-to-their/article_277a27e3-9c58-5d5c-82f8-b1cc7b774760.html',
         'desc': 'We examined how retired city workers can return to their jobs while drawing a pension.',
-        'collab': '<a href="https://twitter.com/mattwynn" target="_blank">@mattwynn</a>',
+        'collab': [ { 'name': 'Matt Wynn', 'twitter': 'mattwynn' } ],
         'tools': null
     },
     {
@@ -122,7 +122,7 @@ var projects = [
         'type': 'web',
         'url': 'http://dataomaha.com/medicare',
         'desc': 'A database of Medicare payments in Nebraska and Iowa.',
-        'collab': '<a href="https://twitter.com/bvankat" target="_blank">@bvankat</a>',
+        'collab': [ { 'name': 'Ben Vankat', 'twitter': 'bvankat' } ],
         'tools': 'Django'
     },
     {
@@ -140,7 +140,7 @@ var projects = [
         'type': 'print',
         'url': 'http://www.omaha.com/news/vital-time-lost-in-calls-to-sarpy-county-s-center/article_4773a77a-860f-540f-9c6b-766256873340.html?mode=jqm',
         'desc': 'Dispatch times for fire and medical calls lagged in one county we examined.',
-        'collab': '<a href="https://twitter.com/roseannmoring" target="_blank">@roseannmoring</a>',
+        'collab': [ { 'name': 'Roseann Moring', 'twitter': 'roseannmoring' } ],
         'tools': null
     },
     {
@@ -167,7 +167,7 @@ var projects = [
         'type': 'print',
         'url': 'http://m.omaha.com/eedition/sunrise/articles/jails-and-ers-new-front-line-in-battling-mental-illness/article_f4852cbe-3b18-5782-aa5a-0c7263d994e4.html?mode=jqm',
         'desc': 'Delving into the problems of an overburdened mental health system.',
-        'collab': '<a href="https://twitter.com/roseannmoring" target="_blank">@roseannmoring</a>',
+        'collab': [ { 'name': 'Roseann Moring', 'twitter': 'roseannmoring' } ],
         'tools': null
     },
     {
