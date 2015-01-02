@@ -34,7 +34,7 @@ var apmonths = [ "Jan.", "Feb.", "March", "April", "May", "June", "July", "Aug."
       } else { var tools = '' }
          
         proj += [
-        '<div class="col-md-7 item searchable ' + projects[i].type + '" data-index="' + projects[i].hed.toLowerCase() + " " + morekeys.join(' ') + '" style="border-left:6px solid ' + col_class + ';"><p class="smallblock bold" style="margin-bottom:-15px;">' + thisdate + '</p><h3 class="bold" style="color:' + col_class + '"><a href="' + projects[i].url + '" target="_blank">' + projects[i].hed + '</a></h3><p>' + projects[i].desc + collab + '</p>' + tools + '</div>'
+        '<div class="col-md-7 item searchable ' + projects[i].type + '" data-index="' + projects[i].hed.toLowerCase() + " " + morekeys.join(' ') + '" stywle="border-left:6px solid ' + col_class + ';"><p class="smallblock bold" style="margin-bottom:-15px;">' + thisdate + '</p><h3 class="bold" style="color:' + col_class + '"><a href="' + projects[i].url + '" target="_blank">' + projects[i].hed + '</a></h3><p>' + projects[i].desc + collab + '</p>' + tools + '</div>'
         ].join('');
     }
 

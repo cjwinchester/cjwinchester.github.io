@@ -931,7 +931,7 @@ var books = [
         "title": "The World Without Us",
         "author": "Alan Weisman",
         "url": "http://www.goodreads.com/book/show/248787.The_World_Without_Us",
-        "done": 0,
+        "done": 158,
         "total": 275,
         "stars": null
     },
