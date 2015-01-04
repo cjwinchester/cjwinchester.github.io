@@ -867,9 +867,9 @@ var books = [
         "title": "100 Great Poems of the Twentieth Century",
         "author": "Mark Strand, Ed.",
         "url": "http://www.goodreads.com/book/show/131947.100_Great_Poems_of_the_Twentieth_Century",
-        "done": 150,
+        "done": 279,
         "total": 279,
-        "stars": null
+        "stars": 4
     },
     {
         "title": "Literature from the \"Axis of Evil\": Writing from Iran, Iraq, North Korea and other Enemy Nations",
@@ -923,17 +923,17 @@ var books = [
         "title": "An Improvised Life",
         "author": "Alan Arkin",
         "url": "http://www.goodreads.com/book/show/10515446-an-improvised-life",
-        "done": 0,
+        "done": 191,
         "total": 191,
-        "stars": null
+        "stars": 1
     },
     {
         "title": "The World Without Us",
         "author": "Alan Weisman",
         "url": "http://www.goodreads.com/book/show/248787.The_World_Without_Us",
-        "done": 158,
+        "done": 275,
         "total": 275,
-        "stars": null
+        "stars": 4
     },
     {
         "title": "Collected Poems",
