@@ -843,7 +843,7 @@ var books = [
         "title": "Loneliness",
         "author": "John T. Cacioppo and William Patrick",
         "url": "http://www.goodreads.com/book/show/2753527-loneliness",
-        "done": 0,
+        "done": 180,
         "total": 269,
         "stars": null
     },
