@@ -843,15 +843,15 @@ var books = [
         "title": "Loneliness",
         "author": "John T. Cacioppo and William Patrick",
         "url": "http://www.goodreads.com/book/show/2753527-loneliness",
-        "done": 180,
+        "done": 269,
         "total": 269,
-        "stars": null
+        "stars": 2
     },
     {
         "title": "The Barbarous Years",
         "author": "Bernard Bailyn",
         "url": "http://www.goodreads.com/book/show/13414830-the-barbarous-years",
-        "done": 0,
+        "done": 200,
         "total": 529,
         "stars": null
     },
@@ -915,9 +915,9 @@ var books = [
         "title": "Harry Potter and the Sorcerer's Stone",
         "author": "J.K. Rowling",
         "url": "http://www.goodreads.com/book/show/3.Harry_Potter_and_the_Sorcerer_s_Stone",
-        "done": 0,
+        "done": 309,
         "total": 309,
-        "stars": null
+        "stars": 4
     },
     {
         "title": "An Improvised Life",
