@@ -125,7 +125,7 @@ var projects = [
         'collab': [ { 'name': 'Ben Vankat', 'twitter': 'bvankat' } ],
         'tools': 'Django'
     },
-    {
+/*    {
         'hed': 'Food in the newsroom',
         'date': '2013-09-10',
         'type': 'web',
@@ -133,7 +133,7 @@ var projects = [
         'desc': 'Is there food in the World-Herald newsroom?',
         'collab': null,
         'tools': 'Javascript'
-    },
+    },*/
     {
         'hed': 'Analysis: 911 dispatch times',
         'date': '2013-05-05',
@@ -152,7 +152,7 @@ var projects = [
         'collab': null,
         'tools': ['Inkscape', 'Javascript']
     },
-    {
+/*    {
         'hed': 'OPPD\'s energy options',
         'date': '2014-06-09',
         'type': 'web',
@@ -160,7 +160,7 @@ var projects = [
         'desc': 'Omaha\'s electrical utility moves away from coal.',
         'collab': null,
         'tools': 'Javascript'
-    },
+    },*/
     {
         'hed': 'Battling mental illness',
         'date': '2014-04-22',
@@ -174,7 +174,7 @@ var projects = [
         'hed': 'Happy Birthday!',
         'date': '2014-12-26',
         'type': 'web',
-        'url': 'http://www.codywinchester.com/birthday.html',
+        'url': 'http://www.codywinchester.com/birthday.html#Shooter%20McGavin',
         'desc': 'Use this page to wish your loved one a happy birthday. (Hint: Pass his/her name as a URL hash.)',
         'collab': null,
         'tools': 'Javascript'
