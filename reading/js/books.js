@@ -851,7 +851,7 @@ var books = [
         "title": "The Barbarous Years",
         "author": "Bernard Bailyn",
         "url": "http://www.goodreads.com/book/show/13414830-the-barbarous-years",
-        "done": 200,
+        "done": 387,
         "total": 529,
         "stars": null
     },
@@ -928,6 +928,14 @@ var books = [
         "stars": 1
     },
     {
+        "title": "Sobering Superpower",
+        "author": "Tadeusz R&oacute;&#380;ewicz",
+        "url": "http://www.goodreads.com/book/show/1991184.Superpowers",
+        "done": 0,
+        "total": 319,
+        "stars": null
+    },
+    {
         "title": "The World Without Us",
         "author": "Alan Weisman",
         "url": "http://www.goodreads.com/book/show/248787.The_World_Without_Us",
@@ -941,6 +949,38 @@ var books = [
         "url": "http://www.goodreads.com/book/show/321538.Collected_Poems",
         "done": 0,
         "total": 928,
+        "stars": null
+    },
+    {
+        "title": "Nature: Poems Old and New",
+        "author": "May Swenson",
+        "url": "http://www.goodreads.com/book/show/1211355.Nature",
+        "done": 0,
+        "total": 236,
+        "stars": null
+    },
+    {
+        "title": "A Wilderness of Error",
+        "author": "Errol Morris",
+        "url": "http://www.goodreads.com/book/show/13503531-a-wilderness-of-error",
+        "done": 0,
+        "total": 489,
+        "stars": null
+    },
+    {
+        "title": "The Best of Ogden Nash",
+        "author": "Ogden Nash",
+        "url": "http://www.goodreads.com/book/show/1054270.The_Best_of_Ogden_Nash",
+        "done": 0,
+        "total": 438,
+        "stars": null
+    },
+    {
+        "title": "Lady Chatterley's Lover",
+        "author": "D.H. Lawrence",
+        "url": "http://www.goodreads.com/book/show/32067.Lady_Chatterley_s_Lover",
+        "done": 0,
+        "total": 491,
         "stars": null
     }
 ]
