@@ -851,9 +851,9 @@ var books = [
         "title": "The Barbarous Years",
         "author": "Bernard Bailyn",
         "url": "http://www.goodreads.com/book/show/13414830-the-barbarous-years",
-        "done": 387,
+        "done": 529,
         "total": 529,
-        "stars": null
+        "stars": 3
     },
     {
         "title": "The Brooklyn Follies",
@@ -955,7 +955,7 @@ var books = [
         "title": "Nature: Poems Old and New",
         "author": "May Swenson",
         "url": "http://www.goodreads.com/book/show/1211355.Nature",
-        "done": 0,
+        "done": 100,
         "total": 236,
         "stars": null
     },
