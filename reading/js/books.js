@@ -920,6 +920,54 @@ var books = [
         "stars": 4
     },
     {
+        "title": "Harry Potter and the Chamber of Secrets",
+        "author": "J.K. Rowling",
+        "url": "http://www.goodreads.com/book/show/15881.Harry_Potter_and_the_Chamber_of_Secrets",
+        "done": 341,
+        "total": 341,
+        "stars": 4
+    },
+    {
+        "title": "Harry Potter and the Prisoner of Azkaban",
+        "author": "J.K. Rowling",
+        "url": "http://www.goodreads.com/book/show/5.Harry_Potter_and_the_Prisoner_of_Azkaban",
+        "done": 435,
+        "total": 435,
+        "stars": 4
+    },
+    {
+        "title": "Harry Potter and the Goblet of Fire",
+        "author": "J.K. Rowling",
+        "url": "http://www.goodreads.com/book/show/6.Harry_Potter_and_the_Goblet_of_Fire",
+        "done": 0,
+        "total": 734,
+        "stars": null
+    },
+    {
+        "title": "Harry Potter and the Order of the Phoenix",
+        "author": "J.K. Rowling",
+        "url": "http://www.goodreads.com/book/show/2.Harry_Potter_and_the_Order_of_the_Phoenix",
+        "done": 0,
+        "total": 870,
+        "stars": null
+    },
+    {
+        "title": "Harry Potter and the Half-Blood Prince",
+        "author": "J.K. Rowling",
+        "url": "http://www.goodreads.com/book/show/1.Harry_Potter_and_the_Half_Blood_Prince",
+        "done": 0,
+        "total": 652,
+        "stars": null
+    },
+    {
+        "title": "Harry Potter and the Deathly Hallows",
+        "author": "J.K. Rowling",
+        "url": "http://www.goodreads.com/book/show/136251.Harry_Potter_and_the_Deathly_Hallows",
+        "done": 0,
+        "total": 759,
+        "stars": null
+    },
+    {
         "title": "An Improvised Life",
         "author": "Alan Arkin",
         "url": "http://www.goodreads.com/book/show/10515446-an-improvised-life",
@@ -955,9 +1003,9 @@ var books = [
         "title": "Nature: Poems Old and New",
         "author": "May Swenson",
         "url": "http://www.goodreads.com/book/show/1211355.Nature",
-        "done": 100,
+        "done": 236,
         "total": 236,
-        "stars": null
+        "stars": 4
     },
     {
         "title": "A Wilderness of Error",
