@@ -939,9 +939,9 @@ var books = [
         "title": "Harry Potter and the Goblet of Fire",
         "author": "J.K. Rowling",
         "url": "http://www.goodreads.com/book/show/6.Harry_Potter_and_the_Goblet_of_Fire",
-        "done": 0,
+        "done": 734,
         "total": 734,
-        "stars": null
+        "stars": 3
     },
     {
         "title": "Harry Potter and the Order of the Phoenix",
@@ -976,28 +976,12 @@ var books = [
         "stars": 1
     },
     {
-        "title": "Sobering Superpower",
-        "author": "Tadeusz R&oacute;&#380;ewicz",
-        "url": "http://www.goodreads.com/book/show/1991184.Superpowers",
-        "done": 0,
-        "total": 319,
-        "stars": null
-    },
-    {
         "title": "The World Without Us",
         "author": "Alan Weisman",
         "url": "http://www.goodreads.com/book/show/248787.The_World_Without_Us",
         "done": 275,
         "total": 275,
         "stars": 4
-    },
-    {
-        "title": "Collected Poems",
-        "author": "W.H. Auden",
-        "url": "http://www.goodreads.com/book/show/321538.Collected_Poems",
-        "done": 0,
-        "total": 928,
-        "stars": null
     },
     {
         "title": "Nature: Poems Old and New",
@@ -1011,17 +995,9 @@ var books = [
         "title": "A Wilderness of Error",
         "author": "Errol Morris",
         "url": "http://www.goodreads.com/book/show/13503531-a-wilderness-of-error",
-        "done": 0,
+        "done": 489,
         "total": 489,
-        "stars": null
-    },
-    {
-        "title": "The Best of Ogden Nash",
-        "author": "Ogden Nash",
-        "url": "http://www.goodreads.com/book/show/1054270.The_Best_of_Ogden_Nash",
-        "done": 0,
-        "total": 438,
-        "stars": null
+        "stars": 5
     },
     {
         "title": "Lady Chatterley's Lover",
