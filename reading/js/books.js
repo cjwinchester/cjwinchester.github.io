@@ -947,9 +947,9 @@ var books = [
         "title": "Harry Potter and the Order of the Phoenix",
         "author": "J.K. Rowling",
         "url": "http://www.goodreads.com/book/show/2.Harry_Potter_and_the_Order_of_the_Phoenix",
-        "done": 0,
+        "done": 870,
         "total": 870,
-        "stars": null
+        "stars": 3
     },
     {
         "title": "Harry Potter and the Half-Blood Prince",
@@ -1006,5 +1006,13 @@ var books = [
         "done": 0,
         "total": 491,
         "stars": null
+    },
+    {
+        "title": "Redeployment",
+        "author": "Phil Klay",
+        "url": "http://www.goodreads.com/book/show/18114068-redeployment",
+        "done": 291,
+        "total": 291,
+        "stars": 5
     }
 ]
