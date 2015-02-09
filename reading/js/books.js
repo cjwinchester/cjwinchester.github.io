@@ -832,14 +832,6 @@ var books = [
         "stars": 5
     },
     {
-        "title": "Beyond Good and Evil",
-        "author": "Friedrich Nietzsche",
-        "url": "http://www.goodreads.com/book/show/12321.Beyond_Good_and_Evil",
-        "done": 0,
-        "total": 212,
-        "stars": null
-    },
-    {
         "title": "Loneliness",
         "author": "John T. Cacioppo and William Patrick",
         "url": "http://www.goodreads.com/book/show/2753527-loneliness",
@@ -955,17 +947,17 @@ var books = [
         "title": "Harry Potter and the Half-Blood Prince",
         "author": "J.K. Rowling",
         "url": "http://www.goodreads.com/book/show/1.Harry_Potter_and_the_Half_Blood_Prince",
-        "done": 0,
+        "done": 652,
         "total": 652,
-        "stars": null
+        "stars": 4
     },
     {
         "title": "Harry Potter and the Deathly Hallows",
         "author": "J.K. Rowling",
         "url": "http://www.goodreads.com/book/show/136251.Harry_Potter_and_the_Deathly_Hallows",
-        "done": 0,
+        "done": 759,
         "total": 759,
-        "stars": null
+        "stars": 4
     },
     {
         "title": "An Improvised Life",
@@ -1000,19 +992,35 @@ var books = [
         "stars": 5
     },
     {
-        "title": "Lady Chatterley's Lover",
-        "author": "D.H. Lawrence",
-        "url": "http://www.goodreads.com/book/show/32067.Lady_Chatterley_s_Lover",
-        "done": 0,
-        "total": 491,
-        "stars": null
-    },
-    {
         "title": "Redeployment",
         "author": "Phil Klay",
         "url": "http://www.goodreads.com/book/show/18114068-redeployment",
         "done": 291,
         "total": 291,
         "stars": 5
+    },
+    {
+        "title": "Honor Thy Father",
+        "author": "Gay Talese",
+        "url": "http://www.goodreads.com/book/show/1159133.Honor_Thy_Father",
+        "done": 526,
+        "total": 526,
+        "stars": 4
+    },
+    {
+        "title": "Pay Any Price",
+        "author": "James Risen",
+        "url": "http://www.goodreads.com/book/show/19484530-pay-any-price",
+        "done": 273,
+        "total": 273,
+        "stars": null
+    },
+    {
+        "title": "Election",
+        "author": "Tom Perrotta",
+        "url": "http://www.goodreads.com/book/show/28282.Election",
+        "done": 200,
+        "total": 200,
+        "stars": null
     }
 ]
