@@ -1011,7 +1011,7 @@ var books = [
         "title": "Pay Any Price",
         "author": "James Risen",
         "url": "http://www.goodreads.com/book/show/19484530-pay-any-price",
-        "done": 273,
+        "done": 0,
         "total": 273,
         "stars": null
     },
@@ -1019,7 +1019,7 @@ var books = [
         "title": "Election",
         "author": "Tom Perrotta",
         "url": "http://www.goodreads.com/book/show/28282.Election",
-        "done": 200,
+        "done": 0,
         "total": 200,
         "stars": null
     }
