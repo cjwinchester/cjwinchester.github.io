@@ -771,9 +771,9 @@ var books = [
         "title": "The Overcoat and Other Short Stories",
         "author": "Nikolai Gogol",
         "url": "http://www.goodreads.com/book/show/537094.The_Overcoat",
-        "done": 0,
+        "done": 103,
         "total": 103,
-        "stars": null
+        "stars": 4
     },
     {
         "title": "Girls at War and Other Stories",
@@ -1011,9 +1011,9 @@ var books = [
         "title": "Pay Any Price",
         "author": "James Risen",
         "url": "http://www.goodreads.com/book/show/19484530-pay-any-price",
-        "done": 180,
+        "done": 273,
         "total": 273,
-        "stars": null
+        "stars": 3
     },
     {
         "title": "Election",

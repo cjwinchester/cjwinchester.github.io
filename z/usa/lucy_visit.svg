@@ -15,7 +15,7 @@
 fill:#ffff99;
 }
 
-.wy, .mn, .ia {
+.wy, .mn, .ia, .ok, .ks {
 fill:#386cb0;
 }
 
