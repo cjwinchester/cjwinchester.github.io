@@ -819,7 +819,7 @@ var books = [
         "title": "Thus Spake Zarathustra",
         "author": "Friedrich Nietzsche",
         "url": "http://www.goodreads.com/book/show/51893.Thus_Spoke_Zarathustra",
-        "done": 80,
+        "done": 198,
         "total": 381,
         "stars": null
     },
@@ -899,9 +899,9 @@ var books = [
         "title": "Bastard out of Carolina",
         "author": "Dorothy Allison",
         "url": "http://www.goodreads.com/book/show/25354.Bastard_Out_of_Carolina",
-        "done": 0,
+        "done": 309,
         "total": 309,
-        "stars": null
+        "stars": 4
     },
     {
         "title": "Harry Potter and the Sorcerer's Stone",
