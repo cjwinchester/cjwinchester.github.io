@@ -819,9 +819,9 @@ var books = [
         "title": "Thus Spake Zarathustra",
         "author": "Friedrich Nietzsche",
         "url": "http://www.goodreads.com/book/show/51893.Thus_Spoke_Zarathustra",
-        "done": 198,
+        "done": 381,
         "total": 381,
-        "stars": null
+        "stars": 3
     },
     {
         "title": "What If? Serious Scientific Answers to Hypothetical Questions",
@@ -891,9 +891,9 @@ var books = [
         "title": "The Storyteller",
         "author": "Mario Vargas Llosa",
         "url": "http://www.goodreads.com/book/show/53931.The_Storyteller",
-        "done": 0,
+        "done": 245,
         "total": 245,
-        "stars": null
+        "stars": 5
     },
     {
         "title": "Bastard out of Carolina",
@@ -1022,5 +1022,13 @@ var books = [
         "done": 200,
         "total": 200,
         "stars": 3
+    }
+    {
+        "title": "Hell and Good Company: The Spanish Civil War and the World it Made",
+        "author": "Richard Rhodes",
+        "url": "http://www.goodreads.com/book/show/22609404-hell-and-good-company",
+        "done": 239,
+        "total": 239,
+        "stars": 4
     }
 ]
