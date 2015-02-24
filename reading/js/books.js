@@ -1022,7 +1022,7 @@ var books = [
         "done": 200,
         "total": 200,
         "stars": 3
-    }
+    },
     {
         "title": "Hell and Good Company: The Spanish Civil War and the World it Made",
         "author": "Richard Rhodes",
