@@ -4,88 +4,13 @@
 		<meta charset="utf-8" />
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 		
-		<title>Knock knock</title>
-				 
+		<title>\o/</title>
+
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 		<script type="text/javascript" src="js/demo.js"></script>
 		<script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
 		<script type="text/javascript" src="js/jplayer.playlist.min.js"></script>
-		<script type="text/javascript">
-		//<![CDATA[
-		$(document).ready(function(){		
-			new jPlayerPlaylist({
-				jPlayer: "#jquery_jplayer_1",
-				cssSelectorAncestor: "#jp_container_1"
-			}, [
-								{
-					title: "Zs - Corps",
-					free:true,
-                    mp3:"mp3/01 - Zs - Corps.mp3"
-				},
-                {
-					title: "David Bowie - Kooks",
-					free:true,
-                    mp3:"mp3/02 - David Bowie - Kooks.mp3"
-				},
-                {
-					title: "Tony Schwartz - Music In Marble Halls",
-					free:true,
-                    mp3:"mp3/03 - Tony Schwartz - Music In Marble Halls.mp3"
-				},
-                {
-					title: "Keith Petrower - Rachel",
-					free:true,
-                    mp3:"mp3/04 - Keith Petrower - Rachel.mp3"
-				},
-                {
-					title: "Grouper - Clearing",
-					free:true,
-                    mp3:"mp3/05 - Grouper - Clearing.mp3"
-				},
-                {
-					title: "Ninth Wonder and Nas - Second Childhood",
-					free:true,
-                    mp3:"mp3/06 - Ninth Wonder and Nas - Second Childhood.mp3"
-				},
-                {
-					title: "Perfect Pussy - Big Stars",
-					free:true,
-                    mp3:"mp3/07 - Perfect Pussy - Big Stars.mp3"
-				},
-                {
-					title: "David Byrne - Freeway Son",
-					free:true,
-                    mp3:"mp3/08 - David Byrne - Freeway Son.mp3"
-				},
-                {
-					title: "Le Loup - We are Gods! We Are Wolves!",
-					free:true,
-                    mp3:"mp3/09 - Le Loup - We are Gods! We Are Wolves!.mp3"
-				},
-                {
-					title: "Iggy and the Stooges - Raw Power",
-					free:true,
-                    mp3:"mp3/10 - Iggy and the Stooges - Raw Power.mp3"
-				},
-                {
-					title: "Joni Mitchell - Coyote",
-					free:true,
-                    mp3:"mp3/11 - Joni Mitchell - Coyote.mp3"
-				},
-                {
-					title: "Black Moth Super Rainbow - Jump Into My Mouth and Breathe in the Stardust",
-					free:true,
-                    mp3:"mp3/12 - Black Moth Super Rainbow - Jump Into My Mouth and Breathe in the Stardust.mp3"
-				}
-			], {
-				swfPath: "js",
-				supplied: "mp3",
-				wmode: "window"
-			});
-		});
-		//]]>
-       
-		</script>
+		<script src="js/main.js"></script>
 	</head>
 	
 	<body>
@@ -135,18 +60,7 @@
 						To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
 					</div>
 				</div>
-			</div><!-- .jp-audio -->
-						
+			</div><!-- .jp-audio -->						
 		</div><!-- .wrapper -->
-
-        <script>
-        var knockknock = ['Knock knock', 'Who\'s there?', 'Boo', 'Boo who?', 'Ha pls stop crying']
-        var counter = 0;
-    setInterval(function() {
-        var title = document.getElementsByTagName('title')[0];
-        title.innerHTML = knockknock[counter];
-        if (counter < knockknock.length) { counter = counter + 1 } else { counter = 0; title.innerHTML = 'Knock knock'; }
-    }, 1000);        
-        </script>
         </body>
 </html>
