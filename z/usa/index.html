@@ -18,66 +18,23 @@
             <span class="lentil" style="background:#ffff99; color:#000;">Lived</span>
             &emsp;
             <span class="lentil" style="background:#386cb0; color:#fff;">Visited</span>
-        </div>
-        <div>
-            <li class="selected">cody</li>
-            <li>laurel</li>
-            <li>julian</li>
-            <li>lucy</li>
-        </div>
-            <div id="cody" class="map">
-                <img src="cody_visit.png" />
+        </div>        
+        <script type="text/html" class="template">
+        <% _.each( maps.names, function( person ){ %>
+            <li<% if ( person.name === "cody" ) { %> class="selected"<% };%>><%= person.name %></li>
+            <% }); %>            
+        <% _.each( maps.names, function( person ){ %>
+        <div id="<%= person.name %>" class="map"<% if ( !person.name === "cody" ) { %> style="display:none;"<% };%>>
+                <img src="<%= person.name %>_visit.png" />
             </div>
+            <% }); %>
+            </script>
 
-            <div id="laurel" class="map" style="display:none;">
-                <img src="laurel_visit.png" />
-            </div>
-            
-            <div id="julian" class="map" style="display:none;">
-                <img src="julian_visit.png" />
-            </div>
-
-            <div id="lucy" class="map" style="display:none;">
-                <img src="lucy_visit.png" />
-            </div>
+           <div id="main"></div>
 </body>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
-<script>
-$( 'li' ).click(function() {
-  $( 'li' ).each(function() {
-    $( this ).removeClass( 'selected' );
-  });
-   $( this ).addClass( 'selected' );
-   var bananagram = $(this).text().toLowerCase();
-   $('.map').each(function() {
-        if ( $( this ).attr('id') === bananagram )
-            { $( this ).css('display', 'inline') }
-        else
-            { $( this ).css('display', 'none') }
-   });   
-   });
-   
-window.addEventListener("keyup", function() {
-    if (event.keyCode == 39) {
-        $( 'li' ).each(function() {
-            if ( $(this).hasClass('selected') ) {
-            var next = $(this).index() + 1
-                , target = $( "li" ).get( next );
-            
-             console.log($(this).index()) 
-            }
-            $( this ).removeClass( 'selected' );
-        })
-        
-        
-    }
-    else if ( event.keyCode == 37 ) {
-    console.log("left arrow");
-    }
-});   
-   
-</script>
+<script src="../../js/underscore-min.js"></script>
+<script src="js/main.js"></script>
 
 </html>
