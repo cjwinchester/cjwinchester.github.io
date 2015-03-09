@@ -59,6 +59,25 @@ $( 'li' ).click(function() {
    });   
    });
    
+window.addEventListener("keyup", function() {
+    if (event.keyCode == 39) {
+        $( 'li' ).each(function() {
+            if ( $(this).hasClass('selected') ) {
+            var next = $(this).index() + 1
+                , target = $( "li" ).get( next );
+            
+             console.log($(this).index()) 
+            }
+            $( this ).removeClass( 'selected' );
+        })
+        
+        
+    }
+    else if ( event.keyCode == 37 ) {
+    console.log("left arrow");
+    }
+});   
+   
 </script>
 
 </html>
