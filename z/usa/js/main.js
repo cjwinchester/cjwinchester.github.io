@@ -5,13 +5,15 @@ var template = _.template($( "script.template" ).html());
 $('#main').html(template( data ));
 
 
-function getIt() {
-    $('li').removeClass('selected');
+window.onload = function() {
     $('div.map').hide();
+    $('li').eq(0).addClass('selected');
+    $('div.map').eq(0).show();
 }
 
 $('li').click(function() {
-  getIt();
+  $( 'li' ).removeClass('selected');
+  $('div.map').hide();
   $( this ).addClass( 'selected' );
   var num = $( this ).index();
   $('div.map').eq(num).show();
@@ -24,7 +26,8 @@ $( window ).keyup(function() {
         { curr = this; }
     });    
     if ( event.keyCode === 39 ) {
-        getIt();
+      $( 'li' ).removeClass('selected');
+      $('div.map').hide();
         if ( $(curr).index() + 1 > $('li').length -1 ) {
             next = 0;
             }
@@ -33,7 +36,8 @@ $( window ).keyup(function() {
         $('div.map').eq(next).show();
     }
     else if ( event.keyCode === 37 ) {
-        getIt();
+        $( 'li' ).removeClass('selected');
+        $('div.map').hide();
         if ( typeof $(curr).index() - 1 === "undefined" ) {
             previous = $('li').length;
             }

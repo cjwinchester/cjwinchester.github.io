@@ -21,10 +21,10 @@
         </div>        
         <script type="text/html" class="template">
         <% _.each( maps.names, function( person ){ %>
-            <li<% if ( person.name === "cody" ) { %> class="selected"<% };%>><%= person.name %></li>
+            <li><%= person.name %></li>
             <% }); %>            
         <% _.each( maps.names, function( person ){ %>
-        <div id="<%= person.name %>" class="map"<% if ( !person.name === "cody" ) { %> style="display:none;"<% };%>>
+        <div id="<%= person.name %>" class="map">
                 <img src="<%= person.name %>_visit.png" />
             </div>
             <% }); %>
