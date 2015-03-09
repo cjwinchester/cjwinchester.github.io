@@ -1,9 +1,6 @@
-var data = { names: [{name: 'cody'},{name: 'laurel'},{name:'julian'},{name: 'lucy'}]};
-
-_.templateSettings.variable = "maps";
+var data = ['cody', 'laurel', 'julian', 'lucy'];
 var template = _.template($( "script.template" ).html());
 $('#main').html(template( data ));
-
 
 window.onload = function() {
     $('div.map').hide();

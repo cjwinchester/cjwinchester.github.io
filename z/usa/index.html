@@ -1,16 +1,9 @@
 <!doctype html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>USA! USA! USA!</title>
-    <style>
-    * { margin:0; padding:0; font-family: 'Helvetica Neue', Arial, sans-serif; text-align:center; text-transform:uppercase; }
-    .container { margin:20px; }
-    .lentil { font-size:1.3em; font-weight:bold; padding:5px; }
-    img { max-width:100%; margin-top:40px; }
-    li { color:#aaa; cursor:hand; cursor:pointer; display: inline; list-style-type: none; margin-right: 6px; font-size:90%;}
-    .selected { font-weight:bold; border-bottom: 3px solid #aaa; }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USA! USA! USA!</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
     <div class="container">
@@ -19,13 +12,14 @@
             &emsp;
             <span class="lentil" style="background:#386cb0; color:#fff;">Visited</span>
         </div>        
+        
         <script type="text/html" class="template">
-        <% _.each( maps.names, function( person ){ %>
-            <li><%= person.name %></li>
+        <% _.each( data, function( person ){ %>
+            <li><%= person %></li>
             <% }); %>            
-        <% _.each( maps.names, function( person ){ %>
-        <div id="<%= person.name %>" class="map">
-                <img src="<%= person.name %>_visit.png" />
+        <% _.each( data, function( person ){ %>
+        <div id="<%= person %>" class="map">
+                <img src="<%= person %>_visit.png" />
             </div>
             <% }); %>
             </script>
