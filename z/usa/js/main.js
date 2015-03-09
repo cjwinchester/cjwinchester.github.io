@@ -11,8 +11,7 @@ function getIt() {
 }
 
 $('li').click(function() {
-  $( 'li' ).removeClass( 'selected' );
-  $('div.map').hide();
+  getIt();
   $( this ).addClass( 'selected' );
   var num = $( this ).index();
   $('div.map').eq(num).show();
