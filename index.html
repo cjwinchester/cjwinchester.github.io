@@ -76,6 +76,30 @@
                 "color:#4393c3; width:48%; float:right;" type=
                 "button"><i class="fa fa-check-circle-o"></i> Web</button>
             </div>
+            
+            <script type="text/html" class="template">            
+            <% _.each( banana.projects, function( project ){ %>
+                <div class="col-md-7 item searchable <%- project.type %>" data-index="<%- project.hed.toLowerCase() %><% if ( project.tools ){ %> <%- project.tools.join(' ') %><% } %>" style="border-left:6px solid <% if ( project.type === "web" ) { %>#4393c3<% } else { %>#de2d26<%} %>;">
+                    <p class="smallblock bold" style="margin-bottom:-15px;">
+                    <%- apDate(project.date) %>           
+                    </p>
+                    <a href="<%- project.url %>" target="_blank">
+                    <h3 class="bold" style="color: <% if ( project.type === "web" ) { %>#4393c3<% } else { %>#de2d26<%} %>"><%- project.hed %>
+                    </h3>
+                    </a>
+                    <p>
+                        <%= project.desc %> 
+                        <% if ( project.collab ){ %> With
+                           <%= collab(project.collab) %>.
+                           <% }; %>
+                    </p>
+                    <% if ( project.tools ){ %>           
+                    <p class="smallblock italic"><%= tools(project.tools) %></p>
+                    <% }; %>
+            </div>
+            
+            <% }); %>            
+            </script>
 
             <div class="col-md-8 col-md-offset-1" id="projects" style=
             "margin-top:50px; display:none;"></div>
@@ -83,6 +107,7 @@
     </div><!-- /container -->
     <script src=
     "http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/underscore-min.js"></script>
     <script src="js/projects.js"></script>
     <script src="js/main.js"></script>
 </body>
