@@ -880,14 +880,6 @@ var books = [
         "stars": null
     },
     {
-        "title": "Herzog",
-        "author": "Saul Bellow",
-        "url": "http://www.goodreads.com/book/show/6551.Herzog",
-        "done": 0,
-        "total": 371,
-        "stars": null
-    },
-    {
         "title": "The Storyteller",
         "author": "Mario Vargas Llosa",
         "url": "http://www.goodreads.com/book/show/53931.The_Storyteller",
@@ -1030,5 +1022,20 @@ var books = [
         "done": 239,
         "total": 239,
         "stars": 4
-    }
+    },
+    {
+        "title": "A Shadow in the City",
+        "author": "Charles Bowden",
+        "url": "http://www.goodreads.com/book/show/297927.A_Shadow_in_the_City",
+        "done": 309,
+        "total": 309,
+        "stars": 5
+    },
+    {
+        "title": "Murder City",
+        "author": "Charles Bowden",
+        "url": "http://www.goodreads.com/book/show/7654275-murder-city",
+        "done": 320,
+        "total": 320,
+        "stars": 4
 ]
