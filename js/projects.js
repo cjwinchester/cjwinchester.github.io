@@ -79,7 +79,7 @@ var data = {
         'hed': 'Nuke plant costs',
         'date': '2014-05-07',
         'type': 'web',
-        'url': 'http://dataomaha.com/media/exelon',
+        'url': 'http://dataomaha.com/media/oppd/exelon',
         'desc': 'Tracking contractor invoices for the manager of OPPD\'s nuclear plant.',
         'tools': ['javascript']
     },
