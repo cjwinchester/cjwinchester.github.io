@@ -1,73 +1,33 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
-
-    <title>What am I reading? - Cody Winchester - codywinchester.com</title> 
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    
-    <style>
-    div.bookchart { height:15px; width:150px; background:#f8ebee; margin: 0; padding:0; }
-    .bold {font-weight:bold;}
-    td {color:#aaa;}
-    a, a:hover {color: #9a3950;}
-    </style>
-        
-	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-
-	</head>
-
-  <body>
-    
-    <img src="../img/topper-red.png" style="width:100%;" />
-    
-    <div class="container">
-        <div class="col-sm-12" style="background:#fff; padding:15px;">
-            <table class="table" id="booktable"></table>
-        </div>
-    </div>
-    
-	</body>
-
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-    <script src="js/books.js"></script>
-
-    <script>
-    String.prototype.repeat = function(n){return new Array(isNaN(n) ? 1 : ++n).join(this);}
-    
-    for (i=0;i<books.length;i++) {
-        var width = (books[i].done / books[i].total) * 100
-        var stars = "<i class='fa fa-star'></i>";
-        var empty = "<i class='fa fa-star-o'></i>";
-        var rating = '';
-        if (books[i].stars) {rating = stars.repeat(books[i].stars) + empty.repeat(5 - books[i].stars)}
-
-        var booktable = document.getElementById("booktable");
-        var row = booktable.insertRow(i);
-
-        var bookcell = row.insertCell(0);
-        bookcell.className = "bold noborder"; 
-        bookcell.innerHTML = "<a href='" + books[i].url + "' target='_blank'>" + books[i].title + "</a>, by " + books[i].author;
-
-        var graphcell = row.insertCell(1);
-        graphcell.className = "hidden-sm hidden-xs";
-        graphcell.innerHTML = "<div class='bookchart'><div style='background:#9a3950; width:" + width + "%; height:100%;'></div></div>";
-
-        var starcell = row.insertCell(2);
-        starcell.style.width = "90px";
-        starcell.innerHTML = rating;    
-    }
-        
-        $('.table>tbody>tr>td:eq(0), .table>tbody>tr>td:eq(1), .table>tbody>tr>td:eq(2)').css('border-top', 'none');
-        
-    </script>
-       
-  </html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>What am I reading? - Cody Winchester - codywinchester.com</title>    
+        <style>
+            html, body { font-family: Verdana, Arial, sans-serif; background:#fafafa; }
+            h1 { margin-bottom:30px; }
+            a { color:#9a3950; text-decoration:none;}
+            a:hover { color:#fff; background:#9a3950; }
+        </style>
+    </head>
+    <body>
+        <div id="output"></div>
+        <script type="text/html" id="template">
+        <% _.each( books, function( book ){ %>
+            <h1><a href="<%= book.url %>" target="_blank"><%= book.title %></a>, by <%= book.author %><% if ( book.stars ) { %> <br><%= womp(book.stars) %><% }; %></h1>
+        <% }); %>
+        </script>
+        <script src="../js/underscore-min.js"></script>
+        <script src="js/books.js"></script>
+        <script>
+            function womp(full) {
+                var f = _(full).times(function() { return "&starf;" }).join('')
+                    , e = _(5-full).times(function() { return "&star;" }).join('');
+                return f+e;
+            }    
+            var template = _.template(document.getElementById('template').innerHTML);            
+            document.getElementById('output').innerHTML = template(books);
+        </script>
+    </body>
+</html>
