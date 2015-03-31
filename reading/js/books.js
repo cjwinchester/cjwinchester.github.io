@@ -778,5 +778,11 @@ var books = [
         "author": "Charles Bowden",
         "url": "http://www.goodreads.com/book/show/7654275-murder-city",
         "stars": 4
+    },
+    {
+        "title": "Theater of Cruelty",
+        "author": "Ian Buruma",
+        "url": "http://www.goodreads.com/book/show/20697541-theater-of-cruelty",
+        "stars": 3
     }
 ]
