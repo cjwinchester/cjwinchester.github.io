@@ -784,5 +784,17 @@ var books = [
         "author": "Ian Buruma",
         "url": "http://www.goodreads.com/book/show/20697541-theater-of-cruelty",
         "stars": 3
+    },
+    {
+        "title": "The Warsaw Ghetto: A Photographic Record",
+        "author": "Joe Heydecker",
+        "url": "http://www.goodreads.com/book/show/3535499-the-warsaw-ghetto",
+        "stars": 3
+    },
+    {
+        "title": "The Secret Brotherhood",
+        "author": "Karl May",
+        "url": "http://www.goodreads.com/book/show/768698.The_Secret_Brotherhood",
+        "stars": null
     }
 ]
