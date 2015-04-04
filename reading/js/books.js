@@ -796,5 +796,11 @@ var books = [
         "author": "Karl May",
         "url": "http://www.goodreads.com/book/show/768698.The_Secret_Brotherhood",
         "stars": null
+    },
+    {
+        "title": "On the Natural History of Destruction",
+        "author": "W.G. Sebald",
+        "url": "http://www.goodreads.com/book/show/183922.On_the_Natural_History_of_Destruction",
+        "stars": 4
     }
 ]

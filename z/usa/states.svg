@@ -5,21 +5,11 @@
 <style type="text/css">
 .state 
 {
-	fill:#fff;
+	fill:#ffffff;
 	stroke:#aaa;
 	stroke-width:1;
 	stroke-opacity:1;
 }
-
-.tx, .wy, .sd, .ne {
-fill:#ffff99;
-}
-
-.mn, .ok, .ia, .nm, .co, .ks {
-fill:#386cb0;
-}
-
-
 </style>
 
 <g id="hi">
