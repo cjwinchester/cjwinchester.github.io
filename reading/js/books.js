@@ -411,7 +411,7 @@ var books = [
         "title": "Inklings",
         "author": "Jeff Koterba",
         "url": "http://www.goodreads.com/book/show/6793182-inklings",
-        "stars": 5
+        "stars": 3
     },
     {
         "title": "Matterhorn",
@@ -795,7 +795,13 @@ var books = [
         "title": "The Secret Brotherhood",
         "author": "Karl May",
         "url": "http://www.goodreads.com/book/show/768698.The_Secret_Brotherhood",
-        "stars": null
+        "stars": 3
+    },
+    {
+        "title": "The Black Persian",
+        "author": "Karl May",
+        "url": "http://www.goodreads.com/book/show/1534779.The_Black_Persian",
+        "stars": 3
     },
     {
         "title": "On the Natural History of Destruction",

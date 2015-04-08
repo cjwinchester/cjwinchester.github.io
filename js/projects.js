@@ -1,12 +1,11 @@
-var data = {
-    projects: [
+var data = [
    {
         'hed': 'Election results',
         'type': 'web',
         'date': '2014-11-04',
         'url': 'http://dataomaha.com/media/election2014/general/',
         'desc': 'Nebraska 2014 general election returns (<a href="http://blog.dataomaha.com/tarbelling-the-election/">writeup</a>).',
-        'collab': [ 'bvankat' ],
+        'collab': ['bvankat'],
         'tools': ['tarbell', 'd3']
     },
     {
@@ -130,7 +129,7 @@ var data = {
         'type': 'web',
         'url': '/z/usa',
         'desc': 'A running tally of where we\'ve lived and visited.',
-        'tools': ['inkscape', 'javascript']
+        'tools': ['inkscape', 'python']
     },
     {
         'hed': 'Battling mental illness',
@@ -156,4 +155,4 @@ var data = {
         'desc': 'My dummy text generator.',
         'tools': ['javascript']
     }
-]};
+];

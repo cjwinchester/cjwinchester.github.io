@@ -6,7 +6,7 @@ window.onload = function() {
     $('div.map').hide();
     $('li').eq(0).addClass('selected');
     $('div.map').eq(0).show();
-}
+};
 
 $('li').click(function() {
   $( 'li' ).removeClass('selected');

@@ -22,9 +22,7 @@ function tools(arr) {
 };
 
 _.templateSettings.variable = "banana";
-
 var template = _.template($( "script.template" ).html());            
-
 $('#projects').html(template( data ));
 
 $('#projects > div > p > a').each(function() {

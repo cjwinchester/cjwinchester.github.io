@@ -1,41 +1,44 @@
 <!doctype html>
-<html>
-
+<html lang="en">
 <head>
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What am I reading? - Cody Winchester - codywinchester.com</title>
 <style>
-body, html {overflow:hidden; font-family:HelveticaNeue, Arial, sans-serif;}
-.centered {text-align:center; width:100%;}
+body, html {overflow-x:hidden; font-family:Verdana, Arial, sans-serif;}
+.centered {text-align:center;}
 </style>
-
 </head>
 
 <body>
-
 <div class='centered'>
-<button onclick="randomize()">beer me</button>
+<button id="beerme">beer me</button>
 <h1>
-<span id='adjec'></span> <span id='noun' style="color:red;"></span>
+<span id='adjec'></span><span id='noun' style="color:red;"></span>
 </h1>
-
 
 </div>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script type='text/javascript'>
 
-var adj = ['fearful', 'stinky', 'sneaky', 'angry', 'arrogant', 'shameful', 'beautiful', 'better', 'big', 'bitter', 'black', 'blue', 'boiling', 'brave', 'breezy', 'bright', 'broad', 'broken', 'bumpy', 'charming', 'cheerful', 'chilly', 'clumsy', 'cold', 'combative', 'slick', 'creeping', 'cruel', 'curly', 'curved', 'damp', 'deaf', 'deep', 'derpy', 'depressed', 'dirty', 'dizzy', 'dry', 'dull', 'dusty', 'eager', 'early', 'empty', 'envy', 'evil', 'faint', 'fair', 'cheating', 'fast', 'fat', 'fierce', 'filthy', 'flaky', 'flat', 'frail', 'frantic', 'fresh', 'friendly', 'fuzzy', 'gentle', 'giant', 'good', 'greasy', 'green', 'grieving', 'grubby', 'grumpy', 'happy', 'hard', 'harsh', 'heavy', 'helpless', 'high', 'hissing', 'hollow', 'homeless', 'hot', 'huge', 'hungry', 'hurt', 'husky', 'icy', 'illmatic', 'itchy', 'jealous', 'jolly', 'juicy', 'late', 'lazy', 'light', 'little', 'lonely', 'long', 'loose', 'loud', 'lovely', 'lucky','many', 'massive', 'melodic', 'melty', 'mighty', 'mini', 'moaning', 'nasty', 'naughty', 'nervous', 'nosy', 'nutty', 'old', 'orange', 'panicked', 'perfect', 'plastic', 'pleasant', 'precious', 'pretty', 'prickly', 'proud', 'puny', 'purple', 'quaint', 'quick', 'quiet', 'rainy', 'rapid', 'rare', 'ratty', 'red', 'scary', 'selfish', 'sore', 'tense', 'testy', 'tired', 'troubled', 'uptight', 'wicked', 'sloppy']
+var adj = ['fearful', 'stinky', 'sneaky', 'angry', 'arrogant', 'shameful', 'beautiful', 'better', 'big', 'bitter', 'black', 'blue', 'boiling', 'brave', 'breezy', 'bright', 'broad', 'broken', 'bumpy', 'charming', 'cheerful', 'chilly', 'clumsy', 'cold', 'combative', 'slick', 'creeping', 'cruel', 'curly', 'curved', 'damp', 'deaf', 'deep', 'derpy', 'depressed', 'dirty', 'dizzy', 'dry', 'dull', 'dusty', 'eager', 'early', 'empty', 'envy', 'evil', 'faint', 'fair', 'cheating', 'fast', 'fat', 'fierce', 'filthy', 'flaky', 'flat', 'frail', 'frantic', 'fresh', 'friendly', 'fuzzy', 'gentle', 'giant', 'good', 'greasy', 'green', 'grieving', 'grubby', 'grumpy', 'happy', 'hard', 'harsh', 'heavy', 'helpless', 'high', 'hissing', 'hollow', 'homeless', 'hot', 'huge', 'hungry', 'hurt', 'husky', 'icy', 'illmatic', 'itchy', 'jealous', 'jolly', 'juicy', 'late', 'lazy', 'light', 'little', 'lonely', 'long', 'loose', 'loud', 'lovely', 'lucky','many', 'massive', 'melodic', 'melty', 'mighty', 'mini', 'moaning', 'nasty', 'naughty', 'nervous', 'nosy', 'nutty', 'old', 'orange', 'panicked', 'perfect', 'plastic', 'pleasant', 'precious', 'pretty', 'prickly', 'proud', 'puny', 'purple', 'quaint', 'quick', 'quiet', 'rainy', 'rapid', 'rare', 'ratty', 'red', 'scary', 'selfish', 'sore', 'tense', 'testy', 'tired', 'troubled', 'uptight', 'wicked', 'sloppy'];
 
-var nouns = ['apple', 'badge', 'basket', 'beast', 'beetle', 'cigar', 'implant', 'curio', 'hobo', 'salami', 'weasel', 'juicer', 'hatband', 'paintpot', 'tendon', 'soupspoon', 'artery', 'heartattack', 'rainbow', 'firefly', 'chillbot', 'mother', 'jitters', 'pig', 'purr', 'brain', 'bucket', 'cannon', 'cow', 'carrot', 'rapper', 'cream', 'donkey', 'drug', 'earthquake', 'ginshake', 'bucket', 'finger', 'changeling', 'goose', 'ghost', 'cougar', 'heart', 'honey', 'hope', 'fire', 'ice', 'potato', 'jeans', 'lamp', 'lettuce', 'marble', 'map', 'seacow', 'horsehead', 'fleshbug', 'killbot', 'motorboat', 'roachclip', 'poison', 'riddle', 'mask', 'rifleshot', 'chop', 'quince', 'sheetface', 'sidewalk', 'skateclub', 'slave', 'sleetsmoke', 'friction', 'thrillride', 'throat', 'throne', 'tromboner', 'toothbrush', 'turk', 'jockstrap', 'stroke', 'pervert', 'cummerbund', 'banana', 'cakefist']
+var nouns = ['apple', 'badge', 'basket', 'beast', 'beetle', 'cigar', 'implant', 'curio', 'hobo', 'salami', 'weasel', 'juicer', 'hatband', 'paintpot', 'tendon', 'soupspoon', 'artery', 'heartattack', 'rainbow', 'firefly', 'chillbot', 'mother', 'jitters', 'pig', 'purr', 'brain', 'bucket', 'cannon', 'cow', 'carrot', 'rapper', 'cream', 'donkey', 'drug', 'earthquake', 'ginshake', 'bucket', 'finger', 'changeling', 'goose', 'ghost', 'cougar', 'heart', 'honey', 'hope', 'fire', 'ice', 'potato', 'jeans', 'lamp', 'lettuce', 'marble', 'map', 'seacow', 'horsehead', 'fleshbug', 'killbot', 'motorboat', 'roachclip', 'poison', 'riddle', 'mask', 'rifleshot', 'chop', 'quince', 'sheetface', 'sidewalk', 'skateclub', 'slave', 'sleetsmoke', 'friction', 'thrillride', 'throat', 'throne', 'tromboner', 'toothbrush', 'turk', 'jockstrap', 'stroke', 'pervert', 'cummerbund', 'banana', 'cakefist'];
 
 function randomize() {
-var randadj = adj[Math.floor(Math.random() * adj.length)].toUpperCase();
-$('#adjec').html(randadj);
-var randnoun = nouns[Math.floor(Math.random() * nouns.length)].toUpperCase();
-$('#noun').html(randnoun);
+    var randadj = adj[Math.floor(Math.random() * adj.length)].toUpperCase()
+        , randnoun = nouns[Math.floor(Math.random() * nouns.length)].toUpperCase();
+    document.getElementById('adjec').innerHTML = randadj;
+    document.getElementById('noun').innerHTML = randnoun;
 }
 
-$(document).ready(doCenter);
+document.getElementById('beerme').addEventListener('click', function() {
+    randomize();
+});
+
+window.onload = doCenter;
+
 $(window).on('resize', doCenter);
 
 function doCenter() {
