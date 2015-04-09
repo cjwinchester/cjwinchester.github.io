@@ -58,6 +58,13 @@ var data = [
         'tools': ['django']
     },
     {
+        'hed': 'Accused coach',
+        'date': '2015-04-09',
+        'type': 'print',
+        'url': 'http://www.omaha.com/news/crime/ex-south-high-coach-s-job-dispute-with-douglas-county/article_de12fada-be3e-5c7a-87ed-26e6275d7847.html',
+        'desc': 'Documents from a teacher\'s employment dispute unearth old allegations of sexual misconduct.'
+    },
+    {
         'hed': 'Dutch World-Herald',
         'date': '2014-01-06',
         'type': 'web',
