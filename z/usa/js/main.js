@@ -3,7 +3,6 @@ var template = _.template($( "script.template" ).html());
 $('#main').html(template( data ));
 
 window.onload = function() {
-    $('div.map').hide();
     $('li').eq(0).addClass('selected');
     $('div.map').eq(0).show();
     $('.container').fadeIn('fast')

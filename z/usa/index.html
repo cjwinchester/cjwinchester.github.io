@@ -18,7 +18,7 @@
             <li><%= person %></li>
             <% }); %>            
         <% _.each( data, function( person ){ %>
-        <div id="<%= person %>" class="map">
+        <div id="<%= person %>" class="map" style="display:none;">
                 <img src="<%= person %>_visit.png" />
             </div>
             <% }); %>
