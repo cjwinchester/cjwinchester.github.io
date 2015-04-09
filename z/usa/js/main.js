@@ -6,6 +6,7 @@ window.onload = function() {
     $('div.map').hide();
     $('li').eq(0).addClass('selected');
     $('div.map').eq(0).show();
+    $('.container').fadeIn('fast')
 };
 
 $('li').click(function() {
