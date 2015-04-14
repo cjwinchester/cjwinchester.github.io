@@ -1,4 +1,4 @@
-html, body { background:#f6f6f6; margin:0; }
+html, body { background:#f6f6f6; margin:0; overflow-x:hidden; }
 a, a:hover { font-weight:bold; color:inherit;}
 .bold { font-weight:bold }
 .italic { font-style:italic }
