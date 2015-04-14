@@ -59,8 +59,7 @@ $('#projects > div > p > a').each(function() {
 function displayContent(json) {
     var list = ''
         , len = json.feed.entry.length
-        , i = 0
-        , arts = '';
+        , i = 0;
     while ( i < 5 ) {
         var title = json.feed.entry[i].gsx$title.$t
             , url = json.feed.entry[i].gsx$url.$t
