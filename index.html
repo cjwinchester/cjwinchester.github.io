@@ -21,28 +21,18 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-md-4" style="margin-top:50px;">
+            <div class="col-md-4" style="margin-top:50px; background:#fff; padding:30px;">
                 <h3 class="bold fancy" style="margin-top:0; font-size:3.7em;">
                 Winchester!</h3>
 
-                <p>I cover local government for the Omaha World-Herald.</p>
+                <p class="lead">I cover local government for the Omaha World-Herald.</p>
 
-                <input class="form-control" id="search" placeholder="Filter articles and web projects ..." style="margin-bottom:10px;" type="text">
-                
-                <style id="search_style"></style>
-
-                <button class="btn btn-default clicker bold" id="print"
-                style="color:#de2d26; width:48%;" type="button"><i class=
-                "fa fa-check-circle-o"></i> Print</button>
-                
-                <button class=
-                "btn btn-default clicker bold" id="web" style=
-                "color:#4393c3; width:48%; float:right;" type=
-                "button"><i class="fa fa-check-circle-o"></i> Web</button>
             <h2><a href="http://blog.dataomaha.com" target="_blank">Nerd blog</a></h2>
             <div id="nerd"></div>
+
             <h2><a href="http://cjwinchester.tumblr.com" target="_blank">Tumblr</a></h2>
-            <div id="nonnerd"></div>                
+            <div id="nonnerd"></div>
+
             <h2 class="bold">Contact</h2>
                 <table class="table">
                     <tr>
@@ -64,6 +54,21 @@
                         </td>
                     </tr>
                 </table>
+                
+                <h2 class="bold">Filter</h2>
+                
+                <input class="form-control" id="search" placeholder="Search articles and web projects ..." style="margin-bottom:10px;" type="text">
+                
+                <style id="search_style"></style>
+
+                <button class="btn btn-default clicker bold" id="print"
+                style="color:#de2d26; width:48%;" type="button"><i class=
+                "fa fa-check-circle-o"></i> Print</button>
+                
+                <button class=
+                "btn btn-default clicker bold" id="web" style=
+                "color:#4393c3; width:48%; float:right;" type=
+                "button"><i class="fa fa-check-circle-o"></i> Web</button>
             
             </div>     
             <script type="text/html" class="template">            

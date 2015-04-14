@@ -59,7 +59,8 @@ $('#projects > div > p > a').each(function() {
 function displayContent(json) {
     var list = ''
         , len = json.feed.entry.length
-        , i = 0;
+        , i = 0
+        , arts = '';
     while ( i < 5 ) {
         var title = json.feed.entry[i].gsx$title.$t
             , url = json.feed.entry[i].gsx$url.$t
@@ -70,13 +71,12 @@ function displayContent(json) {
             i++
             }
         }
-    $('#nerd').html('<table class="table">' + list + '</table>')
-};
+    $('#nerd').html('<table class="table">' + list + '</table>');
+    };
 
 $.getJSON( "http://cjwinchester.tumblr.com/api/read/json?callback=?", function( data ) {
     var list = '';
     for (i=0; i<5; i++) {
-    console.log(data.posts[i]);
         var url = data.posts[i]['url']
             , title = data.posts[i]['regular-title']
             , date = data.posts[i]['date']
