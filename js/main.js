@@ -55,3 +55,46 @@ $('#projects > div > p > a').each(function() {
 		}
 			searchStyle.innerHTML = ".searchable:not([data-index*=\"" + this.value.toLowerCase() + "\"]) { display: none; }";
     });
+        
+function displayContent(json) {
+    var list = ''
+        , len = json.feed.entry.length
+        , i = 0;
+    while ( i < 5 ) {
+        var title = json.feed.entry[i].gsx$title.$t
+            , url = json.feed.entry[i].gsx$url.$t
+            , byline = json.feed.entry[i].gsx$byline.$t
+            , date = json.feed.entry[i].gsx$date.$t;
+        if ( byline === "Cody Winchester" ) {
+            list += '<tr><td><div class="smallblock bold">' + apDate(date) + '</div><a href="' + url + '" target="_blank">' + title + '</a></td></tr>';
+            i++
+            }
+        }
+    $('#nerd').html('<table class="table">' + list + '</table>')
+};
+
+$.getJSON( "http://cjwinchester.tumblr.com/api/read/json?callback=?", function( data ) {
+    var list = '';
+    for (i=0; i<5; i++) {
+    console.log(data.posts[i]);
+        var url = data.posts[i]['url']
+            , title = data.posts[i]['regular-title']
+            , date = data.posts[i]['date']
+            , type = data.posts[i]['type']
+            , content;
+        if (title && url && type === "regular")
+            { content = '<a href="' + url + '" target="_blank">' + title + '</a>'; }
+        else if (type === "video")
+            { content = data.posts[i]['video-player']; }
+        else if (type === "link")
+            { content = '<a href="' + data.posts[i]['link-url'] + '" target="_blank">' + data.posts[i]['link-text'] + '</a>';}
+        else if (type === "audio") 
+            { content = data.posts[i]['audio-player'];}
+        else if (type === "photo") 
+            { content = '<a href="' + url + '" target="_blank">' + '<img style="max-width:100%;" src="' + data.posts[i]['photo-url-400'] + '" /></a><div class="caption"><p>' + data.posts[i]['photo-caption'] + '</p>' }
+        else if (type === "quote") 
+            { content = "<blockquote class='small'>" + data.posts[i]['quote-text'] + "</blockquote><p class='small pull-right'>&mdash; " + data.posts[i]['quote-source'] + "</p>"};  
+        list += '<tr><td style="padding-top:15px; padding-bottom:10px;"><div class="smallblock bold">' + apDate(date) + '</div>' + content + '</td></tr>';
+    }
+    $('#nonnerd').html('<table class="table">' + list + '</table>');
+});

@@ -21,48 +21,12 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-md-3" style="margin-top:50px;">
+            <div class="col-md-4" style="margin-top:50px;">
                 <h3 class="bold fancy" style="margin-top:0; font-size:3.7em;">
                 Winchester!</h3>
 
                 <p>I cover local government for the Omaha World-Herald.</p>
 
-                <table class="table" style="margin-top:30px;">
-                    <tr>
-                        <td>
-                            <i class="fa fa-twitter"></i> <a href=
-                            "http://www.twitter.com/cody_winchester">Twitter</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <i class="fa fa-github-alt"></i> <a href=
-                            "http://www.github.com/cjwinchester" target=
-                            "_blank">GitHub</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="mailto:cjwinchester@gmail.com"><i class=
-                            "fa fa-envelope-o"></i> Email</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <i class="fa fa-code"></i> <a href=
-                            "http://blog.dataomaha.com" target="_blank">Nerd
-                            blog</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <i class="fa fa-bookmark-o"></i> <a href=
-                            "http://cjwinchester.tumblr.com/" target=
-                            "_blank">Non-nerd blog</a>
-                        </td>
-                    </tr>
-                </table>
-                
                 <input class="form-control" id="search" placeholder="Filter articles and web projects ..." style="margin-bottom:10px;" type="text">
                 
                 <style id="search_style"></style>
@@ -75,11 +39,36 @@
                 "btn btn-default clicker bold" id="web" style=
                 "color:#4393c3; width:48%; float:right;" type=
                 "button"><i class="fa fa-check-circle-o"></i> Web</button>
-            </div>
+            <h2><a href="http://blog.dataomaha.com" target="_blank">Nerd blog</a></h2>
+            <div id="nerd"></div>
+            <h2><a href="http://cjwinchester.tumblr.com" target="_blank">Tumblr</a></h2>
+            <div id="nonnerd"></div>                
+            <h2 class="bold">Contact</h2>
+                <table class="table">
+                    <tr>
+                        <td>
+                            <i class="fa fa-twitter"></i>&emsp;<a href=
+                            "http://www.twitter.com/cody_winchester" target="_blank">Twitter</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i class="fa fa-github-alt"></i>&emsp;<a href=
+                            "http://www.github.com/cjwinchester" target="_blank">GitHub</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i class=
+                            "fa fa-envelope-o"></i>&emsp;<a href="mailto:cjwinchester@gmail.com">Email</a>
+                        </td>
+                    </tr>
+                </table>
             
+            </div>     
             <script type="text/html" class="template">            
             <% _.each( banana, function( project ){ %>
-                <div class="col-md-7 item searchable <%- project.type %>" data-index="<%- project.hed.toLowerCase() %><% if ( project.tools ){ %> <%- project.tools.join(' ') %><% } %>" style="border-left:6px solid <% if ( project.type === "web" ) { %>#4393c3<% } else { %>#de2d26<%} %>;">
+                <div class="col-md-12 item searchable <%- project.type %>" data-index="<%- project.hed.toLowerCase() %><% if ( project.tools ){ %> <%- project.tools.join(' ') %><% } %>" style="border-left:6px solid <% if ( project.type === "web" ) { %>#4393c3<% } else { %>#de2d26<%} %>;">
                     <p class="smallblock bold" style="margin-bottom:-15px;">
                     <%- apDate(project.date) %>           
                     </p>
@@ -102,14 +91,16 @@
             <% }); %>            
             </script>
 
-            <div class="col-md-8 col-md-offset-1" id="projects" style=
+            <div class="col-md-7 col-md-offset-1" id="projects" style=
             "margin-top:50px; display:none;"></div>
         </div>
     </div><!-- /container -->
+
     <script src=
     "http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/underscore-min.js"></script>
     <script src="js/projects.js"></script>
     <script src="js/main.js"></script>
+    <script src="http://spreadsheets.google.com/feeds/list/1_3PoM7f6XIyKNbqTwgwUJK9HtjueappbJ73csuzHKdI/od6/public/values?alt=json-in-script&amp;callback=displayContent" type="text/javascript"></script>
 </body>
 </html>
