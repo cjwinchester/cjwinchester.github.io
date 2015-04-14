@@ -19,14 +19,27 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4" style="margin-top:50px; background:#fff; padding:30px;">
-                <h3 class="bold fancy" style="margin-top:0; font-size:3.7em;">
-                Winchester!</h3>
+        <div class="row" style="margin:0;">
+            <div class="col-md-4" style="background:#fff; padding:50px; margin:0;">
+                <h1 class="bold fancy" style="font-size:400%;">Winchester!</h1>
 
                 <p class="lead">I cover local government for the Omaha World-Herald.</p>
 
+                                <h2 class="bold">Filter</h2>
+                
+                <input class="form-control" id="search" placeholder="Search articles and web projects ..." style="margin-bottom:10px;" type="text">
+                
+                <style id="search_style"></style>
+
+                <button class="btn btn-default clicker bold" id="print"
+                style="color:#de2d26; width:48%;" type="button"><i class=
+                "fa fa-check-circle-o"></i> Print</button>
+                
+                <button class=
+                "btn btn-default clicker bold" id="web" style=
+                "color:#4393c3; width:48%; float:right;" type=
+                "button"><i class="fa fa-check-circle-o"></i> Web</button>
+                
             <h2><a href="http://blog.dataomaha.com" target="_blank">Nerd blog</a></h2>
             <div id="nerd"></div>
 
@@ -54,26 +67,11 @@
                         </td>
                     </tr>
                 </table>
-                
-                <h2 class="bold">Filter</h2>
-                
-                <input class="form-control" id="search" placeholder="Search articles and web projects ..." style="margin-bottom:10px;" type="text">
-                
-                <style id="search_style"></style>
-
-                <button class="btn btn-default clicker bold" id="print"
-                style="color:#de2d26; width:48%;" type="button"><i class=
-                "fa fa-check-circle-o"></i> Print</button>
-                
-                <button class=
-                "btn btn-default clicker bold" id="web" style=
-                "color:#4393c3; width:48%; float:right;" type=
-                "button"><i class="fa fa-check-circle-o"></i> Web</button>
             
             </div>     
             <script type="text/html" class="template">            
             <% _.each( banana, function( project ){ %>
-                <div class="col-md-12 item searchable <%- project.type %>" data-index="<%- project.hed.toLowerCase() %><% if ( project.tools ){ %> <%- project.tools.join(' ') %><% } %>" style="border-left:6px solid <% if ( project.type === "web" ) { %>#4393c3<% } else { %>#de2d26<%} %>;">
+                <div class="item searchable <%- project.type %>" data-index="<%- project.hed.toLowerCase() %><% if ( project.tools ){ %> <%- project.tools.join(' ') %><% } %>" style="border-left:6px solid <% if ( project.type === "web" ) { %>#4393c3<% } else { %>#de2d26<%} %>;">
                     <p class="smallblock bold" style="margin-bottom:-15px;">
                     <%- apDate(project.date) %>           
                     </p>
@@ -96,10 +94,9 @@
             <% }); %>            
             </script>
 
-            <div class="col-md-7 col-md-offset-1" id="projects" style=
-            "margin-top:50px; display:none;"></div>
+            <div class="col-md-8" id="projects" style=
+            "display:none;"></div>
         </div>
-    </div><!-- /container -->
 
     <script src=
     "http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
