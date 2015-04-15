@@ -419,12 +419,6 @@ var books = [
         "url": "http://www.goodreads.com/book/show/6411016-matterhorn",
         "stars": 5
     },
-/*    {
-        "title": "Texasville",
-        "author": "Larry McMurtry",
-        "url": "http://www.goodreads.com/book/show/54814.Texasville",
-        "stars":
-    },*/
     {
         "title": "Little Big Man",
         "author": "Thomas Berger",
@@ -808,5 +802,16 @@ var books = [
         "author": "W.G. Sebald",
         "url": "http://www.goodreads.com/book/show/183922.On_the_Natural_History_of_Destruction",
         "stars": 4
+    },
+    {
+        "title": "Invisible",
+        "author": "Paul Auster",
+        "url": "http://www.goodreads.com/book/show/6345193-invisible",
+        "stars": 3
+    },
+    {
+        "title": "The Heart is a Lonely Hunter",
+        "author": "Carson McCullers",
+        "url": "http://www.goodreads.com/book/show/37380.The_Heart_is_a_Lonely_Hunter"
     }
 ]
