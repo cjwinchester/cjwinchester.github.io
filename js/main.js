@@ -25,8 +25,17 @@ _.templateSettings.variable = "banana";
 var template = _.template($( "script.template" ).html());            
 $('#projects').html(template( data ));
 
+var container = document.querySelector('#projects');
+var msnry;
+imagesLoaded( container, function() {
+  msnry = new Masonry( container, {
+          columnWidth: 100,
+          itemSelector: '.item'
+        });
+});
+
 $('#projects > div > p > a').each(function() {
-    var acol = $(this).parent().parent().css("border-left-color");
+    var acol = $(this).parent().parent().css("border-top-color");
     $(this).css('color', acol);        
 });
 

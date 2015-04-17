@@ -21,7 +21,7 @@
 <body>
         <div class="row" style="margin:0;">
             <div class="col-md-4" style="background:#fff; padding:50px; margin:0;" id="side">
-                <h1 class="bold fancy" style="font-size:3em;">Winchester!</h1>
+                <h1 class="bold fancy" style="font-size:3.5em;">Winchester!</h1>
 
                 <p class="lead">I cover local government for the Omaha World-Herald.</p>
 
@@ -73,15 +73,15 @@
             </div>     
             <script type="text/html" class="template">            
             <% _.each( banana, function( project ){ %>
-                <div class="item searchable <%- project.type %>" data-index="<%= project.hed.toLowerCase() %><% if ( project.tools ){ %> <%= project.tools.join(' ') %><% } %>" style="border-left:6px solid <% if ( project.type === "web" ) { %>#4393c3<% } else { %>#de2d26<%} %>;">
+                <div class="item searchable <%- project.type %>" data-index="<%= project.hed.toLowerCase() %><% if ( project.tools ){ %> <%= project.tools.join(' ') %><% } %>" style="border-top:6px solid <% if ( project.type === "web" ) { %>#4393c3<% } else { %>#de2d26<%} %>;">
                     <p class="smallblock bold" style="margin-bottom:-15px;">
                     <%- apDate(project.date) %>           
                     </p>
-                    <h2 class="bold" style="color: <% if ( project.type === "web" ) { %>#4393c3<% } else { %>#de2d26<%} %>">
+                    <h3 class="bold" style="color: <% if ( project.type === "web" ) { %>#4393c3<% } else { %>#de2d26<%} %>">
                     <a href="<%- project.url %>" target="_blank">
                     <%- project.hed %>
                     </a>
-                    </h2>
+                    </h3>
                     <p>
                         <%= project.desc %> 
                         <% if ( project.collab ){ %> With
@@ -104,7 +104,10 @@
     "http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/underscore-min.js"></script>
     <script src="js/projects.js"></script>
+    <script src='js/masonry.pkgd.min.js'></script>
+    <script src='js/imagesloaded.pkgd.min.js'></script>
     <script src="js/main.js"></script>
     <script src="http://spreadsheets.google.com/feeds/list/1_3PoM7f6XIyKNbqTwgwUJK9HtjueappbJ73csuzHKdI/od6/public/values?alt=json-in-script&amp;callback=displayContent" type="text/javascript"></script>
+    
 </body>
 </html>
