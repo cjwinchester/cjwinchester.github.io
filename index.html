@@ -20,36 +20,12 @@
 
 <body>
         <div class="row" style="margin:0;">
-            <div class="col-md-4" style="background:#fff; padding:50px; margin:0;" id="side">
+            <div class="col-md-4" style="background:#fff; padding:30px; margin:0;" id="side">
                 <h1 class="bold fancy" style="font-size:3.5em;">Winchester!</h1>
 
-                <p class="lead">I cover local government for the Omaha World-Herald.</p>
-
-                <div id="filter" class="hidden-sm hidden-xs">
-                <h3 class="bold">Filter</h3>
-                
-                <input class="form-control" id="search" placeholder="Search articles and web projects ..." style="margin-bottom:10px;" type="text">
-                
-                <style id="search_style"></style>
-
-                <button class="btn btn-default clicker bold" id="print"
-                style="color:#de2d26; width:48%;" type="button"><i class=
-                "fa fa-check-circle-o"></i> Print</button>
-                
-                <button class=
-                "btn btn-default clicker bold" id="web" style=
-                "color:#4393c3; width:48%; float:right;" type=
-                "button"><i class="fa fa-check-circle-o"></i> Web</button>
-                </div>
-                
-            <h3><a href="http://blog.dataomaha.com" target="_blank">Nerd blog</a></h3>
-            <div id="nerd"></div>
-
-            <h3><a href="http://cjwinchester.tumblr.com" target="_blank">Tumblr</a></h3>
-            <div id="nonnerd"></div>
-
-            <h3 class="bold">Contact</h3>
-                <table class="table">
+                <p class="lead bold">I cover local government for the Omaha World-Herald.</p>
+             
+                <table class="table lead" style="margin-top:20px;">
                     <tr>
                         <td>
                             <i class="fa fa-twitter"></i>&emsp;<a href=
@@ -65,19 +41,31 @@
                     <tr>
                         <td>
                             <i class=
+                            "fa fa-keyboard-o"></i>&emsp;<a href="http://blog.dataomaha.com" target="_blank">Nerd blog</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i class=
+                            "fa fa-tumblr-square"></i>&emsp;<a href="http://cjwinchester.tumblr.com" target="_blank">Tumblr</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i class=
                             "fa fa-envelope-o"></i>&emsp;<a href="mailto:cjwinchester@gmail.com">Email</a>
                         </td>
                     </tr>
-                </table>
+                    </table>
             
             </div>     
             <script type="text/html" class="template">            
             <% _.each( banana, function( project ){ %>
-                <div class="item searchable <%- project.type %>" data-index="<%= project.hed.toLowerCase() %><% if ( project.tools ){ %> <%= project.tools.join(' ') %><% } %>" style="border-top:6px solid <% if ( project.type === "web" ) { %>#4393c3<% } else { %>#de2d26<%} %>;">
+                <div class="item <%- project.type %>" style="border-top:6px solid #337ab7;">
                     <p class="smallblock bold" style="margin-bottom:-15px;">
                     <%- apDate(project.date) %>           
                     </p>
-                    <h3 class="bold" style="color: <% if ( project.type === "web" ) { %>#4393c3<% } else { %>#de2d26<%} %>">
+                    <h3 class="bold">
                     <a href="<%- project.url %>" target="_blank">
                     <%- project.hed %>
                     </a>
@@ -97,7 +85,7 @@
             </script>
 
             <div class="col-md-8" id="projects" style=
-            "display:none;"></div>
+            "display:none; padding-top:20px; background:url('http://media.giphy.com/media/aT6DAGys8Rt2U/giphy.gif'); background-size:100%;"></div>
         </div>
 
     <script src=
@@ -107,7 +95,6 @@
     <script src='js/masonry.pkgd.min.js'></script>
     <script src='js/imagesloaded.pkgd.min.js'></script>
     <script src="js/main.js"></script>
-    <script src="http://spreadsheets.google.com/feeds/list/1_3PoM7f6XIyKNbqTwgwUJK9HtjueappbJ73csuzHKdI/od6/public/values?alt=json-in-script&amp;callback=displayContent" type="text/javascript"></script>
     
 </body>
 </html>
