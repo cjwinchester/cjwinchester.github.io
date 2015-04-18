@@ -812,6 +812,7 @@ var books = [
     {
         "title": "The Heart is a Lonely Hunter",
         "author": "Carson McCullers",
-        "url": "http://www.goodreads.com/book/show/37380.The_Heart_is_a_Lonely_Hunter"
+        "url": "http://www.goodreads.com/book/show/37380.The_Heart_is_a_Lonely_Hunter",
+        "stars": 4
     }
 ]

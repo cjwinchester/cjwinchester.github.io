@@ -25,6 +25,19 @@
 
                 <p class="lead bold">I cover local government for the Omaha World-Herald.</p>
              
+                             <div class="row">
+                <div class="col-md-6">
+                <button class="btn btn-primary btn-lg btn-block clicker bold" id="print" type="button"><i class=
+                "fa fa-check-circle-o"></i> Print</button>
+                </div>
+                
+                <div class="col-md-6">
+                <button class=
+                "btn btn-danger btn-lg btn-block clicker bold" id="web" type=
+                "button"><i class="fa fa-check-circle-o"></i> Web</button>
+                </div>
+                </div>
+             
                 <table class="table lead" style="margin-top:20px;">
                     <tr>
                         <td>
@@ -57,20 +70,22 @@
                         </td>
                     </tr>
                     </table>
-            
+                    
             </div>     
             <script type="text/html" class="template">            
             <% _.each( banana, function( project ){ %>
-                <div class="item <%- project.type %>" style="border-top:6px solid #337ab7;">
-                    <p class="smallblock bold" style="margin-bottom:-15px;">
-                    <%- apDate(project.date) %>           
+
+            <div class="col-md-12 searchable item <%= project.type %>" data-index="<%= project.hed.toLowerCase() %><% if ( project.tools ){ %> <%= project.tools.join(' ') %><% } %>" style="border-top:10px solid <% if ( project.type === "web" ) { %>#4393c3<% } else { %>#de2d26<%} %>;">
+
+            <p class="smallblock bold" style="margin-bottom:-15px;">
+            <%= apDate(project.date) %>           
                     </p>
-                    <h3 class="bold">
-                    <a href="<%- project.url %>" target="_blank">
-                    <%- project.hed %>
+                    <h2 class="bold" style="color: <% if ( project.type === "web" ) { %>#4393c3<% } else { %>#de2d26<%} %>">
+                    <a href="<%= project.url %>" target="_blank">
+                    <%= project.hed %>
                     </a>
-                    </h3>
-                    <p>
+                    </h2>
+                    <p class="lead">
                         <%= project.desc %> 
                         <% if ( project.collab ){ %> With
                            <%= collab(project.collab) %>.
@@ -84,11 +99,11 @@
             <% }); %>            
             </script>
 
-            <div class="col-md-8" id="projects"></div>
+            <div class="col-md-8" style="padding:50px;" id="projects"></div>
         </div>
 
     <script src=
-    "http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    "js/jquery.min.js"></script>
     <script src="js/underscore-min.js"></script>
     <script src="js/projects.js"></script>
     <script src='js/masonry.pkgd.min.js'></script>

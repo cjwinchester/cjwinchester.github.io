@@ -25,13 +25,24 @@ _.templateSettings.variable = "banana";
 var template = _.template($( "script.template" ).html());            
 $('#projects').html(template( data ));
 
-var container = document.querySelector('#projects');
-var msnry;
-imagesLoaded( container, function() {
-  msnry = new Masonry( container, {
-          columnWidth: 100,
-          itemSelector: '.item'
-        });
+$('#projects > div > p > a').each(function() {
+    var acol = $(this).parent().parent().css("border-top-color");
+    $(this).css('color', acol);        
 });
 
-$('#projects').fadeIn();   
+$('#projects').fadeIn();
+
+$('.clicker').click(function() {
+    var buttclass = ($(this).children('i').attr('class'));
+    var ent = $(this).attr('id');
+        if (buttclass.indexOf("check") > -1 == true)
+            { $(this).children('i').attr('class', 'fa fa-circle-o') 
+            $('.' + ent).fadeOut(200);
+            $(this).css('opacity', 0.6);
+            }
+        else
+            { $(this).children('i').attr('class', 'fa fa-check-circle-o');
+            $('.' + ent).fadeIn(200);
+            $(this).css('opacity', 1.0);
+            }
+});
