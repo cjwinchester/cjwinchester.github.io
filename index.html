@@ -1,112 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport">
+    <head>
+        <meta charset="utf-8">
+        <meta content="IE=edge" http-equiv="X-UA-Compatible">
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport">
+        <title>Cody Winchester - codywinchester.com</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="http://fonts.googleapis.com/css?family=Lobster" rel=
+        "stylesheet" type="text/css">
+        <link href="css/main.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+    </head>
 
-    <title>Cody Winchester - codywinchester.com</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="http://fonts.googleapis.com/css?family=Lobster" rel=
-    "stylesheet" type="text/css">
-    <link href="css/main.css" rel="stylesheet">
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-</head>
-
-<body>
+    <body>
         <div class="row" style="margin:0;">
-            <div class="col-md-4" style="background:#fff; padding:30px; margin:0;" id="side">
-                <h1 class="bold fancy" style="font-size:3.5em;">Winchester!</h1>
+        <div class="col-md-4" style="background:#fff; padding:30px; margin:0;" id="side">
+        <h1 class="bold fancy" style="font-size:3.5em;">Winchester!</h1>
+        <p class="lead bold">I cover local government for the Omaha World-Herald.</p>
+        <div class="row">
+        <div class="col-md-6">
+        <button class="btn btn-primary btn-lg btn-block clicker bold" id="print" type="button"><i class=
+        "fa fa-check-circle-o"></i> Print</button>
+        </div>
+        <div class="col-md-6">
+        <button class=
+        "btn btn-danger btn-lg btn-block clicker bold" id="web" type=
+        "button"><i class="fa fa-check-circle-o"></i> Web</button>
+        </div>
+        </div>
 
-                <p class="lead bold">I cover local government for the Omaha World-Herald.</p>
-             
-                <div class="row">
-                <div class="col-md-6">
-                <button class="btn btn-primary btn-lg btn-block clicker bold" id="print" type="button"><i class=
-                "fa fa-check-circle-o"></i> Print</button>
-                </div>
-                
-                <div class="col-md-6">
-                <button class=
-                "btn btn-danger btn-lg btn-block clicker bold" id="web" type=
-                "button"><i class="fa fa-check-circle-o"></i> Web</button>
-                </div>
-                </div>
-             
-                <table class="table lead" style="margin-top:20px;">
-                    <tr>
-                        <td>
-                            <i class="fa fa-twitter"></i>&emsp;<a href=
-                            "http://www.twitter.com/cody_winchester" target="_blank">Twitter</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <i class="fa fa-github-alt"></i>&emsp;<a href=
-                            "http://www.github.com/cjwinchester" target="_blank">GitHub</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <i class=
-                            "fa fa-keyboard-o"></i>&emsp;<a href="http://blog.dataomaha.com" target="_blank">Nerd blog</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <i class=
-                            "fa fa-tumblr-square"></i>&emsp;<a href="http://cjwinchester.tumblr.com" target="_blank">Tumblr</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <i class=
-                            "fa fa-envelope-o"></i>&emsp;<a href="mailto:cjwinchester@gmail.com">Email</a>
-                        </td>
-                    </tr>
-                    </table>
-                    
-            </div>     
-            <script type="text/html" class="template">            
-            <% _.each( banana, function( project ){ %>
-
+        <table class="table lead" style="margin-top:20px;">
+        <tr><td><i class="fa fa-twitter"></i>&emsp;<a href=
+        "http://www.twitter.com/cody_winchester" target="_blank">Twitter</a></td></tr>
+        <tr><td><i class="fa fa-github-alt"></i>&emsp;<a href=
+        "http://www.github.com/cjwinchester" target="_blank">GitHub</a></td></tr>
+        <tr><td><i class=
+        "fa fa-keyboard-o"></i>&emsp;<a href="http://blog.dataomaha.com" target="_blank">Nerd blog</a></td></tr>
+        <tr><td><i class=
+        "fa fa-tumblr-square"></i>&emsp;<a href="http://cjwinchester.tumblr.com" target="_blank">Tumblr</a></td></tr>
+        <tr><td><i class=
+        "fa fa-envelope-o"></i>&emsp;<a href="mailto:cjwinchester@gmail.com">Email</a></td></tr>
+        </table>
+        </div>
+        <script type="text/html" class="template">            
+        <% _.each( banana, function( project ){ %>
             <div class="col-md-12 searchable item <%= project.type %>" data-index="<%= project.hed.toLowerCase() %><% if ( project.tools ){ %> <%= project.tools.join(' ') %><% } %>" style="border-top:10px solid <% if ( project.type === "web" ) { %>#4393c3<% } else { %>#de2d26<%} %>;">
 
             <p class="smallblock bold" style="margin-bottom:-15px;">
             <%= apDate(project.date) %>           
-                    </p>
-                    <h2 class="bold" style="color: <% if ( project.type === "web" ) { %>#4393c3<% } else { %>#de2d26<%} %>">
-                    <a href="<%= project.url %>" target="_blank">
-                    <%= project.hed %>
-                    </a>
-                    </h2>
-                    <p class="lead">
-                        <%= project.desc %> 
-                        <% if ( project.collab ){ %> With
-                           <%= collab(project.collab) %>.
-                           <% }; %>
-                    </p>
-                    <% if ( project.tools ){ %>           
-                    <p class="smallblock italic"><%= tools(project.tools) %></p>
-                    <% }; %>
+            </p>
+            <h2 class="bold" style="color: <% if ( project.type === "web" ) { %>#4393c3<% } else { %>#de2d26<%} %>">
+            <a href="<%= project.url %>" target="_blank">
+            <%= project.hed %>
+            </a>
+            </h2>
+            <p class="lead">
+            <%= project.desc %> 
+            <% if ( project.collab ){ %> With
+            <%= collab(project.collab) %>.
+            <% }; %>
+            </p>
+            <% if ( project.tools ){ %>           
+            <p class="smallblock italic"><%= tools(project.tools) %></p>
+            <% }; %>
             </div>
-            
-            <% }); %>            
-            </script>
-
-            <div class="col-md-8" style="padding:50px;" id="projects"></div>
+        <% }); %>            
+        </script>
+        <div class="col-md-8" style="padding:50px;" id="projects"></div>
         </div>
-
-    <script src=
-    "js/jquery.min.js"></script>
-    <script src="js/underscore-min.js"></script>
-    <script src="js/projects.js"></script>
-    <script src="js/main.js"></script>
-    
-</body>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/underscore-min.js"></script>
+        <script src="js/projects.js"></script>
+        <script src="js/main.js"></script>
+    </body>
 </html>
