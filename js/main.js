@@ -21,6 +21,8 @@ function tools(arr) {
     return formatted.join('&emsp;');
 };
 
+$('#namehed').bigtext();
+
 _.templateSettings.variable = "banana";
 var template = _.template($( "script.template" ).html());            
 $('#projects').html(template( data ));
