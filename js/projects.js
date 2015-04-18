@@ -90,11 +90,11 @@ var data = [
         'tools': ['javascript']
     },
     {
-        'hed': 'Nebraska choroplethinator',
+        'hed': 'Choropleths!',
         'date': '2014-11-17',
         'type': 'web',
         'url': 'https://github.com/cjwinchester/ne-county-choropleth',
-        'desc': 'Shade a county map based on csv data.',
+        'desc': 'Shade a Nebraska county map based on csv data.',
         'tools': ['python', 'inkscape']
     },
     {
