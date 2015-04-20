@@ -814,5 +814,11 @@ var books = [
         "author": "Carson McCullers",
         "url": "http://www.goodreads.com/book/show/37380.The_Heart_is_a_Lonely_Hunter",
         "stars": 4
+    },
+    {
+        "title": "The Pun Also Rises",
+        "author": "John Pollack",
+        "url": "http://www.goodreads.com/book/show/10115296-the-pun-also-rises",
+        "stars": 3
     }
 ]
