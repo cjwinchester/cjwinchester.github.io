@@ -820,5 +820,17 @@ var books = [
         "author": "John Pollack",
         "url": "http://www.goodreads.com/book/show/10115296-the-pun-also-rises",
         "stars": 3
+    },
+    {
+        "title": "The Left Hand of Darkness",
+        "author": "Ursula Le Guin",
+        "url": "http://www.goodreads.com/book/show/18423.The_Left_Hand_of_Darkness",
+        "stars": 3
+    },
+    {
+        "title": "Stiff",
+        "author": "Mary Roach",
+        "url": "http://www.goodreads.com/book/show/32145.Stiff",
+        "stars": 5
     }
 ]
