@@ -76,10 +76,6 @@ var onTimeupdate = function(e) {
         $('#progress').css('width', pctDone + "%");
 }
 
-var stillWaiting = function() {
-    $('title').text('Waiting ...');
-}
-
 $(document).ready(function() {
     $('#top').affix();
     $('#audio-player').jPlayer({
