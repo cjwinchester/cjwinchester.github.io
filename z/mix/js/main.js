@@ -82,13 +82,23 @@ var onTimeupdate = function(e) {
     progress.style.background = "linear-gradient(to right,"+col1+" "+pctDone+"%, "+col2+" "+pctDone+"%)";
 }
 
+var stillWaiting = function() {
+    $('title').text('Waiting ...');
+}
+
 $(document).ready(function() {
     $('#top').affix();
     $('#audio-player').jPlayer({
         supplied: 'mp3',
         swfPath: 'js/swf',
         timeupdate: onTimeupdate,
-        ended: advanceMedia
+        ended: advanceMedia,
+        waiting: function() {
+            $('#waiting').html('<i class="fa fa-spinner fa-spin"></i> Loading ...');
+        },
+        canplay: function() {
+            $('#waiting').html('');
+        }
     });
     setAudioMedia(0);
     boldList(0);
