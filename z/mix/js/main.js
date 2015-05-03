@@ -1,1 +1,114 @@
-$(document).ready(function(){new jPlayerPlaylist({jPlayer: "#jquery_jplayer_1", cssSelectorAncestor: "#jp_container_1"}, [{title: "Bobby Bare Jr - Don't Go To Chattanooga", free:true, mp3:"mp3/01 - Bobby Bare Jr - Don't Go To Chattanooga.mp3"},{title: "Saintseneca - Happy Alone", free:true, mp3:"mp3/02 - Saintseneca - Happy Alone.mp3"},{title: "Fiery Furnaces - Rub Alcohol Blues", free:true, mp3:"mp3/03 - Fiery Furnaces - Rub Alcohol Blues.mp3"},{title: "Ramblin' Jack Elliott - Arthritis Blues", free:true, mp3:"mp3/04 - Ramblin' Jack Elliott - Arthritis Blues.mp3"},{title: "Rabbit - Good Morning You", free:true, mp3:"mp3/05 - Rabbit - Good Morning You.mp3"},{title: "Dresden Dolls - Pretty in Pink", free:true, mp3:"mp3/06 - Dresden Dolls - Pretty in Pink.mp3"},{title: "The Paula Kelly Orchestra - Life for Life", free:true, mp3:"mp3/07 - The Paula Kelly Orchestra - Life for Life.mp3"},{title: "Beth Orton - Rectify", free:true, mp3:"mp3/08 - Beth Orton - Rectify.mp3"},{title: "Quasi - It Don't Mean Nothing", free:true, mp3:"mp3/09 - Quasi - It Don't Mean Nothing.mp3"},{title: "The Antlers - Bear", free:true, mp3:"mp3/10 - The Antlers - Bear.mp3"},{title: "Ralph Lundsten - Alpha Ralpha Boulevard", free:true, mp3:"mp3/11 - Ralph Lundsten - Alpha Ralpha Boulevard.mp3"},{title: "Yo La Tengo - How To Make A Baby Elephant Float", free:true, mp3:"mp3/12 - Yo La Tengo - How To Make A Baby Elephant Float.mp3"},{title: "Van Morrison - Jackie Wilson Said (I'm in Heaven When You Smile)", free:true, mp3:"mp3/13 - Van Morrison - Jackie Wilson Said (I'm in Heaven When You Smile).mp3"},{title: "The Reverend Horton Heat - Bales of Cocaine", free:true, mp3:"mp3/14 - The Reverend Horton Heat - Bales of Cocaine.mp3"},{title: "Rivulets - Greenhouse", free:true, mp3:"mp3/15 - Rivulets - Greenhouse.mp3"},{title: "88 Fingers Louie - I Don't Want To Hear It", free:true, mp3:"mp3/16 - 88 Fingers Louie - I Don't Want To Hear It.mp3"},{title: "The Legendary Stardust Cowboy - Standing in a Trash Can (Thinking About You)", free:true, mp3:"mp3/17 - The Legendary Stardust Cowboy - Standing in a Trash Can (Thinking About You).mp3"},{title: "Raymond Listen - Lemon Peel Medallion", free:true, mp3:"mp3/18 - Raymond Listen - Lemon Peel Medallion.mp3"},{title: "Wolf Parade - Dinner Bells", free:true, mp3:"mp3/19 - Wolf Parade - Dinner Bells.mp3"},{title: "Acid Mothers Temple and Kinski - Planet Crazy Gold", free:true, mp3:"mp3/20 - Acid Mothers Temple and Kinski - Planet Crazy Gold.mp3"}], {swfPath: "js",supplied: "mp3",wmode: "window"});});
+var template = _.template($( "script.template" ).html());            
+$('#playlist').html(template( songs ));
+
+var playPauseAudio = function(e) {
+    var jPd = $('#audio-player').data('jPlayer');
+    if ( jPd.status.currentTime > 0 && jPd.status.paused === false ) {
+        $('#audio-player').jPlayer('pause');
+        $('#playpauseicon').removeClass('fa fa-pause').addClass('fa fa-play');
+     }
+    else {
+    $('#audio-player').jPlayer('play');
+    $('#playpauseicon').removeClass('fa fa-play').addClass('fa fa-pause');
+    }
+}
+
+var setAudioMedia = function(x) {
+    $('title').html("&#9835; " + songs[x].name + " &#9835;");
+    $('#audio-player').jPlayer('setMedia', {
+        mp3: songs[x].file
+        });
+    };
+
+var boldList = function(x) {
+    $('td').each(function() {
+        $(this).removeClass('bold');
+    });
+    $('td').eq(x).addClass('bold');
+}
+
+var getCurrent = function() {
+    var now = 0;
+    $('td').each(function() {
+        if ($(this).hasClass('bold')) {
+            now = this.id;
+        }
+    });
+    return Number(now);
+}
+   
+var advanceMedia = function() {
+    var now = getCurrent();
+    try { 
+        setAudioMedia(now+1);
+        $('#audio-player').jPlayer('play');
+        $('#playpauseicon').removeClass('fa fa-pause').addClass('fa fa-pause');
+        boldList(now+1);
+        }
+    catch(err) {
+        setAudioMedia(0);
+        $('#audio-player').jPlayer('play');
+        $('#playpauseicon').removeClass('fa fa-pause').addClass('fa fa-pause');
+        boldList(0);
+    }
+}
+
+var rewindMedia = function() {
+    var len = songs.length, now = getCurrent();
+    try {
+        setAudioMedia(now-1);
+        $('#audio-player').jPlayer('play');
+        $('#playpauseicon').removeClass('fa fa-pause').addClass('fa fa-pause');
+        boldList(now-1);
+        }
+    catch(err) {
+        setAudioMedia(len-1);
+        $('#audio-player').jPlayer('play');
+        $('#playpauseicon').removeClass('fa fa-pause').addClass('fa fa-pause');
+        boldList(len-1);
+        }
+};
+
+var onTimeupdate = function(e) {
+    var timeNow = e.jPlayer.status.currentTime
+        , timeLeft = e.jPlayer.status.duration
+        , pctDone = (timeNow / timeLeft) * 100
+        , progress = document.getElementById('progress')
+        , col1 = "#aaa"
+        , col2 = "#fff";
+    progress.style.background = "-webkit-gradient(linear, left top,right top, color-stop("+pctDone+"%,"+col1+"), color-stop("+pctDone+"%,"+col2+"))";
+    progress.style.background = "-moz-linear-gradient(left center,"+col1+" "+pctDone+"%, "+col2+" "+pctDone+"%)" ;
+    progress.style.background = "-o-linear-gradient(left,"+col1+" "+pctDone+"%, "+col2+" "+pctDone+"%)";
+    progress.style.background = "linear-gradient(to right,"+col1+" "+pctDone+"%, "+col2+" "+pctDone+"%)";
+}
+
+$(document).ready(function() {
+    $('#top').affix();
+    $('#audio-player').jPlayer({
+        supplied: 'mp3',
+        swfPath: 'js/swf',
+        timeupdate: onTimeupdate,
+        ended: advanceMedia
+    });
+    setAudioMedia(0);
+    boldList(0);
+    $('.playpause').on('click', playPauseAudio);
+    $('.next').on('click', advanceMedia);
+    $('.prev').on('click', rewindMedia);
+    
+});
+
+$( ".button" ).hover(
+  function() {
+    $( this ).addClass( "hover" );
+  }, function() {
+    $( this ).removeClass( "hover" );
+  }
+);
+
+$('td').on('click', function() {
+    boldList(this.id);
+    setAudioMedia(this.id);    
+    $('#audio-player').jPlayer('play');
+    $('#playpauseicon').removeClass('fa fa-pause').addClass('fa fa-pause');
+});

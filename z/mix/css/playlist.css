@@ -1,0 +1,11 @@
+html, body { margin:0; padding:0;}
+.button { background:#aaa; width:33.33333%; color:#fff; text-align:center; border-right:2px solid #fff; float:left; padding:20px; cursor:pointer;}
+#top.affix { position: fixed; top: 0; width: 100%; }
+#top { position: relative; z-index: 999 !important;}
+#wrapper {min-height:100px;}
+.now-playing { background:#fff; height:20px; border-top:2px solid #fff;}
+.hover { background:#aaa; }
+.bold { font-style:bold; }
+.button h1, .now-playing h1 { margin:0; }
+.noselect { -webkit-touch-callout: none;  -webkit-user-select: none; -khtml-user-select: none;  -moz-user-select: none;  -ms-user-select: none; user-select: none; }
+td { cursor:pointer; }

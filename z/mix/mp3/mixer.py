@@ -1,15 +1,14 @@
 import glob
+import json
 
-f = open('../js/main.js', 'wb')
-
-pre = '$(document).ready(function(){new jPlayerPlaylist({jPlayer: "#jquery_jplayer_1", cssSelectorAncestor: "#jp_container_1"}, ['
-
-f.write(pre)
+f = open('../js/mix.js', 'wb')
+f.write('var songs = ')
 
 s = []
 
 for burrito in glob.glob("*.mp3"):
-    x = burrito.split(".")
+    dict = {}
+    x = burrito.split(".mp3")
     y = x[0]
     z = y.split(" - ")
     z = y.split(" - ")
@@ -17,14 +16,11 @@ for burrito in glob.glob("*.mp3"):
     artist = z[1]
     song = z[2]
     ext = x[1]
-    msg = '{title: "' + artist + " - " + song + '", free:true, mp3:"mp3/' + track + " - " + artist + " - " + song + "." + ext + '"}'
-    s.append(msg)
+    dict['name'] = artist + " - " + song
+    dict['file'] = "mp3/" + track + " - " + artist + " - " + song + ".mp3"
+    s.append(dict)
     
-f.write(",".join(s))
- 
-post = '], {swfPath: "js",supplied: "mp3",wmode: "window"});});' 
+f.write(json.dumps(s))
 
-f.write(post)
- 
 f.flush()
 f.close()
