@@ -72,14 +72,8 @@ var rewindMedia = function() {
 var onTimeupdate = function(e) {
     var timeNow = e.jPlayer.status.currentTime
         , timeLeft = e.jPlayer.status.duration
-        , pctDone = (timeNow / timeLeft) * 100
-        , progress = document.getElementById('progress')
-        , col1 = "#aaa"
-        , col2 = "#fff";
-    progress.style.background = "-webkit-gradient(linear, left top,right top, color-stop("+pctDone+"%,"+col1+"), color-stop("+pctDone+"%,"+col2+"))";
-    progress.style.background = "-moz-linear-gradient(left center,"+col1+" "+pctDone+"%, "+col2+" "+pctDone+"%)" ;
-    progress.style.background = "-o-linear-gradient(left,"+col1+" "+pctDone+"%, "+col2+" "+pctDone+"%)";
-    progress.style.background = "linear-gradient(to right,"+col1+" "+pctDone+"%, "+col2+" "+pctDone+"%)";
+        , pctDone = (timeNow / timeLeft) * 100;
+        $('#progress').css('width', pctDone + "%");
 }
 
 var stillWaiting = function() {
