@@ -94,10 +94,10 @@ $(document).ready(function() {
         timeupdate: onTimeupdate,
         ended: advanceMedia,
         waiting: function() {
-            $('#waiting').html('<i class="fa fa-spinner fa-spin"></i> Loading ...');
+            $('#waiting').show();
         },
         canplay: function() {
-            $('#waiting').html('');
+            $('#waiting').fadeOut('fast');
         }
     });
     setAudioMedia(0);
