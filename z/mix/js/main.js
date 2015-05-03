@@ -95,10 +95,12 @@ $(document).ready(function() {
         ended: advanceMedia,
         waiting: function() {
             $('#waiting').show();
+            $('#playlist').fadeTo('fast', 0.4);
         },
         canplay: function() {
             $('#waiting').fadeOut('fast');
-        }
+            $('#playlist').fadeTo('fast', 1.0);
+            }
     });
     setAudioMedia(0);
     boldList(0);
