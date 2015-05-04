@@ -20,6 +20,10 @@ var setAudioMedia = function(x) {
         });
     };
 
+var scrollToIt = function(x) {
+    $('html, body').animate({scrollTop: $('#' + x).offset().top-100 }, 'slow');
+}
+    
 var boldList = function(x) {
     $('td').each(function() {
         $(this).removeClass('bold');
@@ -44,13 +48,15 @@ var advanceMedia = function() {
         $('#audio-player').jPlayer('play');
         $('#playpauseicon').removeClass('fa fa-pause').addClass('fa fa-pause');
         boldList(now+1);
+        scrollToIt(now.toString());
         }
     catch(err) {
         setAudioMedia(0);
         $('#audio-player').jPlayer('play');
         $('#playpauseicon').removeClass('fa fa-pause').addClass('fa fa-pause');
         boldList(0);
-    }
+        scrollToIt("0");
+        }
 }
 
 var rewindMedia = function() {
@@ -60,12 +66,14 @@ var rewindMedia = function() {
         $('#audio-player').jPlayer('play');
         $('#playpauseicon').removeClass('fa fa-pause').addClass('fa fa-pause');
         boldList(now-1);
+        scrollToIt(now.toString());
         }
     catch(err) {
         setAudioMedia(len-1);
         $('#audio-player').jPlayer('play');
         $('#playpauseicon').removeClass('fa fa-pause').addClass('fa fa-pause');
         boldList(len-1);
+        scrollToIt((len-1).toString());
         }
 };
 
@@ -115,4 +123,5 @@ $('td').on('click', function() {
     setAudioMedia(this.id);    
     $('#audio-player').jPlayer('play');
     $('#playpauseicon').removeClass('fa fa-pause').addClass('fa fa-pause');
+    scrollToIt(this.id);
 });
