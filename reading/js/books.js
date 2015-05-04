@@ -832,5 +832,77 @@ var books = [
         "author": "Mary Roach",
         "url": "http://www.goodreads.com/book/show/32145.Stiff",
         "stars": 5
+    },
+    {
+        "title": "The Warmth of Other Suns",
+        "author": "Isabel Wilkerson",
+        "url": "http://www.goodreads.com/book/show/8171378-the-warmth-of-other-suns",
+        "stars": 4
+    },
+    {
+        "title": "Buried Alive: The Terrifying History of Our Most Primal Fear",
+        "author": "Jan Bondeson",
+        "url": "http://www.goodreads.com/book/show/870544.Buried_Alive",
+        "stars": 4
+    },
+    {
+        "title": "Alone Together",
+        "author": "Sherry Turkle",
+        "url": "http://www.goodreads.com/book/show/8694125-alone-together",
+        "stars": null
+    },
+    {
+        "title": "Bonk",
+        "author": "Mary Roach",
+        "url": "http://www.goodreads.com/book/show/2082136.Bonk",
+        "stars": null
+    },
+    {
+        "title": "Purified By Fire: A History of Cremation in America",
+        "author": "Stephen Prothero",
+        "url": "http://www.goodreads.com/book/show/145958.Purified_By_Fire",
+        "stars": null
+    },
+    {
+        "title": "Spook",
+        "author": "Mary Roach",
+        "url": "http://www.goodreads.com/book/show/14990.Spook",
+        "stars": null
+    },
+    {
+        "title": "The American Way of Death",
+        "author": "Jessica Mitford",
+        "url": "http://www.goodreads.com/book/show/525561.The_American_Way_of_Death",
+        "stars": null
+    },
+    {
+        "title": "So You've Been Publicly Shamed",
+        "author": "Jon Ronson",
+        "url": "http://www.goodreads.com/book/show/22571552-so-you-ve-been-publicly-shamed",
+        "stars": null
+    },
+    {
+        "title": "The Lives of Dwarfs",
+        "author": "Betty Adelson",
+        "url": "http://www.goodreads.com/book/show/1386234.The_Lives_of_Dwarfs",
+        "stars": null
+    },
+    {
+        "title": "First, Second",
+        "author": "Daniil Kharms",
+        "url": "http://www.goodreads.com/book/show/224197.First_Second",
+        "stars": null
+    },
+    {
+        "title": "Oracle Night",
+        "author": "Paul Auster",
+        "url": "http://www.goodreads.com/book/show/10006.Oracle_Night",
+        "stars": null
+    },
+    {
+        "title": "The Woman in White",
+        "author": "Wilkie Collins",
+        "url": "http://www.goodreads.com/book/show/5890.The_Woman_in_White",
+        "stars": null
     }
 ]

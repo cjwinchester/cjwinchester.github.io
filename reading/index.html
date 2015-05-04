@@ -16,7 +16,7 @@
     <body>
         <div id="output"></div>
         <script type="text/html" id="template">
-        <% _.each( books, function( book, iterator ){ %>
+        <% _.each( books.reverse(), function( book, iterator ){ %>
             <div class="book <% if ( iterator % 2 === 0 ) { %>even<% } else { %>odd<% }; %>">
             <h2><a href="<%= book.url %>" target="_blank"><%= book.title %></a>, by <%= book.author %><% if ( book.stars ) { %> <br><%= womp(book.stars) %><% }; %></h2>
             </div>

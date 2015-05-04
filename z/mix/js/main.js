@@ -84,10 +84,12 @@ $(document).ready(function() {
         timeupdate: onTimeupdate,
         ended: advanceMedia,
         waiting: function() {
+            $('#main').slideUp('fast');
             $('#waiting').show();
             $('#playlist').fadeTo('fast', 0.4);
         },
         canplay: function() {
+            $('#main').slideDown('fast');
             $('#waiting').fadeOut('fast');
             $('#playlist').fadeTo('fast', 1.0);
             }
