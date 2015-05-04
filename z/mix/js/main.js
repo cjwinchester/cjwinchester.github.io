@@ -92,13 +92,13 @@ $(document).ready(function() {
         timeupdate: onTimeupdate,
         ended: advanceMedia,
         waiting: function() {
-            $('#main').slideUp('fast');
+            $('#main').hide();
             $('#waiting').show();
             $('#playlist').fadeTo('fast', 0.4);
         },
         canplay: function() {
-            $('#main').slideDown('fast');
-            $('#waiting').fadeOut('fast');
+            $('#main').show();
+            $('#waiting').hide();
             $('#playlist').fadeTo('fast', 1.0);
             }
     });
