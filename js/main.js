@@ -1,6 +1,6 @@
 var apmonths = [ "Jan.", "Feb.", "March", "April", "May", "June", "July", "Aug.", "Sept.", "Oct.", "Nov.", "Dec." ];
 
-var backs = ['waves.gif','feet.gif','lines.gif'];
+var backs = ['waves.gif','dino.gif','wut.gif','lines.gif','x.gif','dorothy.gif','snow.gif'];
 
 var x = backs[Math.floor(Math.random() * backs.length)];
 
