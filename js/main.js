@@ -2,11 +2,12 @@ var apmonths = [ "Jan.", "Feb.", "March", "April", "May", "June", "July", "Aug."
 
 var backs = ['waves.gif','feet.gif','lines.gif'];
 
+var x = backs[Math.floor(Math.random() * backs.length)];
+
 $('#projects').css({
-    'background': 'url("../img/waves.gif")',
+    'background': 'url("../img/' + x + 'waves.gif")',
     'background-size': '100% 100%'
-    }
-    );
+    });
 
 function apDate(dateobj) {
     var d = new Date(dateobj), thisdate = apmonths[d.getMonth()] + " " + d.getUTCDate() + ", " + d.getFullYear();
