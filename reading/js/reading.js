@@ -9,6 +9,7 @@ var eldudebros = setInterval(function() {
     var el = document.getElementById('ellipses'),
         pses = ellipses(el.innerHTML.length);
     el.innerHTML = pses;
+    console.log('derp');
 }, 200);
 
 window.onload = eldudebros;
