@@ -19,7 +19,7 @@ $(document).ready(function() {
     }).then(function() {
         $('#loading').fadeOut('fast');
         $('#output').fadeIn('fast');
-        clearInterval(eldudebros);
+        clearInterval(eldudebros());
     }).fail(function() { alert("Sorry, something went wrong. Try reloading the page."); });
 });
 
