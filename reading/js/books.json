@@ -1,4 +1,4 @@
-var books = [
+{ "books": [
     {
         "title": "Angle of Repose",
         "author": "Wallace Stegner",
@@ -886,7 +886,7 @@ var books = [
         "author": "Betty Adelson",
         "url": "http://www.goodreads.com/book/show/1386234.The_Lives_of_Dwarfs",
         "stars": null
-    },s
+    },
     {
         "title": "Oracle Night",
         "author": "Paul Auster",
@@ -900,3 +900,4 @@ var books = [
         "stars": null
     }
 ]
+}
