@@ -7,7 +7,7 @@
         <link href="css/reading.css" rel="stylesheet">
     </head>
     <body>
-        <div id="loading"><h1>Loading ...</h1></div>
+        <div id="loading"><h1>Loading <span id="ellipses">...</span></h1></div>
         <div id="output" style="display:none;"></div>
         <script type="text/html" id="template">
         <% _.each( books.reverse(), function( book, iterator ){ %>
