@@ -1,5 +1,9 @@
 var apmonths = [ "Jan.", "Feb.", "March", "April", "May", "June", "July", "Aug.", "Sept.", "Oct.", "Nov.", "Dec." ];
 
+var backs = ['waves.gif','feet.gif','lines.gif'];
+
+$('#projects').css('background', 'url("../img/waves.gif")');
+
 function apDate(dateobj) {
     var d = new Date(dateobj), thisdate = apmonths[d.getMonth()] + " " + d.getUTCDate() + ", " + d.getFullYear();
     return thisdate;
