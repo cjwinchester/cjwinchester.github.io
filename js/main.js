@@ -5,7 +5,7 @@ var backs = ['waves.gif','feet.gif','lines.gif'];
 var x = backs[Math.floor(Math.random() * backs.length)];
 
 $('#projects').css({
-    'background': 'url("../img/' + x + 'waves.gif")',
+    'background': 'url("../img/' + x + '")',
     'background-size': '100% 100%'
     });
 
