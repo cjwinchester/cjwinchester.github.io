@@ -12,7 +12,7 @@ var eldudebros = setInterval(function() {
 }, 200);
 
 $(document).ready(function() {
-    eldudebros;
+    eldudebros();
     $.getJSON('js/books.json').success(function(data) {
         var template = _.template(document.getElementById('template').innerHTML);            
         document.getElementById('output').innerHTML = template(data);
