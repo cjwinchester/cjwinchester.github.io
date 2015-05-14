@@ -4,4 +4,4 @@ html, body { font-family: Verdana, Arial, sans-serif;  overflow-x:hidden; margin
 .even { background: #fffff; }
 a { color:#9a3950; text-decoration:none;}
 a:hover { color:#fff; background:#9a3950; }
-#loading { margin:30px auto auto auto; }
+#loading { margin:50px; }
