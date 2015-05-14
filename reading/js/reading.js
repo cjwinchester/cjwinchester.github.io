@@ -5,7 +5,7 @@ $(document).ready(function() {
     }).then(function() {
         $('#loading').fadeOut('fast');
         $('#output').fadeIn('fast');
-    }).fail(function() { alert("Sorry, something went wrong. Try reloading the page."); });;
+    }).fail(function() { alert("Sorry, something went wrong. Try reloading the page."); });
 });
 
 function womp(full) {
