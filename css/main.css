@@ -4,7 +4,7 @@ a, a:hover { color:inherit; font-weight:bold;}
 .italic { font-style:italic }
 .item { padding: 20px; margin-bottom:50px; background:#fff;} 
 .smallblock { text-transform:uppercase; color:#999; }
-#projects {display:none; padding-top:20px; background:url('../img/waves.gif'); background-size:100% 100%; min-height:600px;}
+#projects {display:none; padding-top:20px; background-size:100% 100%; min-height:600px;}
 .fancy { font-family: 'Lobster', 'Helvetica Neue', Arial, sans-serif; color:#4393c3; -webkit-animation-name: pulse; -webkit-animation-duration: 5s; -webkit-animation-timing-function: ease; -webkit-animation-iteration-count: infinite; -webkit-animation-direction: alternate; -webkit-animation-play-state: running; -moz-animation-name: pulse; -moz-animation-duration: 5s; -moz-animation-timing-function: ease; -moz-animation-iteration-count: infinite; -moz-animation-direction: alternate; -moz-animation-play-state: running; animation-name: pulse; animation-duration: 5s; animation-timing-function: ease; animation-iteration-count: infinite; animation-direction: alternate; animation-play-state: running; }
 @-webkit-keyframes pulse { from { color:#4393c3;} to { color:#de2d26; } }
 @-moz-keyframes pulse { from { color:#4393c3;} to { color:#de2d26; } }
