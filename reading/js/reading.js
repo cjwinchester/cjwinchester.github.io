@@ -3,7 +3,7 @@ function ellipses(d) {
            d === 2 ? '...' :
            d === 3 ? '' :
                      '.';
-}
+};
 
 var eldudebros = setInterval(function() {
     var el = document.getElementById('ellipses'),

@@ -1,8 +1,6 @@
-var apmonths = [ "Jan.", "Feb.", "March", "April", "May", "June", "July", "Aug.", "Sept.", "Oct.", "Nov.", "Dec." ];
-
-var backs = ['waves.gif','dino.gif','wut.gif','lines.gif','x.gif','dorothy.gif','snow.gif','giraffe.gif'];
-
-var x = backs[Math.floor(Math.random() * backs.length)];
+var apmonths = [ "Jan.", "Feb.", "March", "April", "May", "June", "July", "Aug.", "Sept.", "Oct.", "Nov.", "Dec." ],
+    backs = ['waves.gif','dino.gif','wut.gif','lines.gif','x.gif','dorothy.gif','snow.gif','giraffe.gif'],
+    x = backs[Math.floor(Math.random() * backs.length)];
 
 $('#projects').css({
     'background': 'url("../img/' + x + '")',
@@ -20,7 +18,7 @@ function collab(arr) {
         linkAdd.push('<a href="http://www.twitter.com/' + value + '">@' + value + "</a>")
     });
     return linkAdd.join(" and ");
-}
+};
 
 function tools(arr) {
     var formatted = [];
