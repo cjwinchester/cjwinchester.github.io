@@ -26,7 +26,8 @@
             $.each(data.features, function(e) {
                 var pop = "<div style='text-align:center;'><b>Magnitude: " + this.properties.mag + "</b><br><a href='" + this.properties.url + "' target='_blank'>" + this.properties.place + "</a></div>";
                 L.marker([this.geometry.coordinates[1], this.geometry.coordinates[0]]).addTo(map).bindPopup(pop);
+                });
             });
-    });
+         });
     </script>
 </html>
