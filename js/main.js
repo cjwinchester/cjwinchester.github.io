@@ -4,7 +4,7 @@ var apmonths = [ "Jan.", "Feb.", "March", "April", "May", "June", "July", "Aug."
 
 $('#projects').css({
     'background': 'url("../img/' + x + '")',
-    'background-size': '100% 100%'
+    'background-size': '100%'
     });
 
 function apDate(dateobj) {
