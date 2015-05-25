@@ -10,8 +10,8 @@ function slugify(text) {
 }
 
 function womp(full) {
-    var f = _(full).times(function() { return "&starf;" }).join('')
-        , e = _(5-full).times(function() { return "&star;" }).join('');
+    var f = _(full).times(function() { return "<i class='fa fa-star'></i>" }).join('')
+        , e = _(5-full).times(function() { return "<i class='fa fa-star-o'></i>" }).join('');
     return f+e;
 };
 
