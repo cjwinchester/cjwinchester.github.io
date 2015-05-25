@@ -14,7 +14,7 @@
         <script type="text/html" id="template">
         <% _.each( books.reverse(), function( book, iterator ){ %>
             <div class="book <% if ( iterator % 2 === 0 ) { %>even<% } else { %>odd<% }; %>" id="<%= slugify(book.title) %>">
-            <h2><a class="booklink" href="<%= book.url %>" target="_blank"><%= book.title %></a>, by <%= book.author %>&emsp;<a href="#<%= slugify(book.title) %>" class="gray"><i class="fa fa-link"></i></a><% if ( book.stars ) { %> <br><%= womp(book.stars) %><% }; %></h2>
+            <h2><a class="booklink" href="<%= book.url %>" target="_blank"><%= book.title %></a>, by <%= book.author %><% if ( book.stars ) { %> <br><%= womp(book.stars) %><% }; %>&emsp;<a href="#<%= slugify(book.title) %>" class="gray"><i class="fa fa-link"></i></a></h2>
             </div>
         <% }); %>
         </script>
