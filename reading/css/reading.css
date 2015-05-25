@@ -1,6 +1,6 @@
 html, body { font-family: "Roboto", Verdana, Arial, sans-serif;  overflow-x:hidden; margin:0; }
-.gray { #fafafa; }
-.gray:hover { #ccc; }
+.gray { color:#fafafa; }
+.gray:hover { color:#ccc; }
 .book { margin:0; padding:30px; }
 .odd { background:#fcf7f9; }
 .even { background: #fffff; }
