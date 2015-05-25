@@ -5,6 +5,10 @@ function ellipses(d) {
                      '.';
 };
 
+function slugify(text) {
+  return text.toString().toLowerCase().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '').replace(/\-\-+/g, '-').replace(/^-+/, '').replace(/-+$/, '');
+}
+
 function womp(full) {
     var f = _(full).times(function() { return "&starf;" }).join('')
         , e = _(5-full).times(function() { return "&star;" }).join('');
