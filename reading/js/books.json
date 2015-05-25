@@ -861,13 +861,13 @@
         "title": "Purified By Fire: A History of Cremation in America",
         "author": "Stephen Prothero",
         "url": "http://www.goodreads.com/book/show/145958.Purified_By_Fire",
-        "stars": null
+        "stars": 4
     },
     {
         "title": "Spook",
         "author": "Mary Roach",
         "url": "http://www.goodreads.com/book/show/14990.Spook",
-        "stars": null
+        "stars": 3
     },
     {
         "title": "The American Way of Death",
@@ -885,7 +885,7 @@
         "title": "The Lives of Dwarfs",
         "author": "Betty Adelson",
         "url": "http://www.goodreads.com/book/show/1386234.The_Lives_of_Dwarfs",
-        "stars": null
+        "stars": 2
     },
     {
         "title": "Oracle Night",
@@ -898,6 +898,12 @@
         "author": "Wilkie Collins",
         "url": "http://www.goodreads.com/book/show/5890.The_Woman_in_White",
         "stars": null
+    },
+    {
+        "title": "The Lion of Boaz-Jachin and Jachin-Boaz",
+        "author": "Russell Hoban",
+        "url": "http://www.goodreads.com/book/show/263720.The_Lion_of_Boaz_Jachin_and_Jachin_Boaz",
+        "stars": 4
     }
 ]
 }
