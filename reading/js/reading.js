@@ -20,7 +20,7 @@ var eldudebros = setInterval(function() {
 $(document).ready(function() {
     eldudebros;
     $.getJSON('js/books.json').success(function(data) {
-        var template = _.template($('#template').html();
+        var template = _.template($('#template').html());
         $('#output').html(template(data));
     }).then(function() {
         $('#loading').fadeOut('fast');
