@@ -27,7 +27,7 @@ $(document).ready(function() {
         var template = _.template($('#template').html());
         $('#output').html(template(data));
     }).then(function() {
-        $('#loading').fadeOut('fast');
+        $('#loading').hide();
         $('#output').fadeIn('fast');
         clearInterval(eldudebros);
     }).fail(function() { alert("Sorry, something went wrong. Try reloading the page."); });
