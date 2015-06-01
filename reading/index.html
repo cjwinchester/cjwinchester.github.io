@@ -4,12 +4,14 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>What am I reading? - Cody Winchester - codywinchester.com</title>
-        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+        <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <link href="css/reading.css" rel="stylesheet">
     </head>
     <body>
-        <div id="loading"><h1>Loading <span id="ellipses">...</span></h1></div>
+        <div id="loading">
+            <h1><i class="fa fa-spinner fa-pulse"></i></h1>
+        </div>
         <div id="output" style="display:none;"></div>
         <script type="text/html" id="template">
         <% _.each( books.reverse(), function( book, iterator ){ %>
