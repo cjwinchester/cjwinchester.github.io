@@ -1,5 +1,5 @@
 var apmonths = [ "Jan.", "Feb.", "March", "April", "May", "June", "July", "Aug.", "Sept.", "Oct.", "Nov.", "Dec." ],
-    backs = ['waves.gif','dino.gif','wut.gif','lines.gif','x.gif','dorothy.gif','snow.gif','giraffe.gif'],
+    backs = ['waves.gif','dino.gif','wut.gif','lines.gif','hands.gif','blur.gif','horizon.gif','x.gif','dorothy.gif','snow.gif','giraffe.gif'],
     x = backs[Math.floor(Math.random() * backs.length)];
 
 function apDate(dateobj) {
@@ -25,7 +25,6 @@ function tools(arr) {
 
 $(document).ready(function() {
     $.getJSON('js/projects.json').success(function(data) {
-            console.log(data);
             _.templateSettings.variable = "banana";
             var template = _.template($( "script.template" ).html());
             $('#projects').html(template( data ));
