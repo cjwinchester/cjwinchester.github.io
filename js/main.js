@@ -30,7 +30,6 @@ $(document).ready(function() {
             var template = _.template($( "script.template" ).html());
             $('#projects').html(template( data ));
         }).then(function() {
-            $('#loading').hide();
             $('#projects > div > p > a').each(function() {
             var acol = $(this).parent().parent().css("border-top-color");
                 $(this).css('color', acol);        
@@ -39,6 +38,7 @@ $(document).ready(function() {
                 'background': 'url("../img/' + x + '")',
                 'background-size': '100%'
                 });
+            $('#loading').hide();
             $('#namehed').bigtext().css('opacity',1.0);
             $('#projects').fadeIn('fast');
         }).fail(function() {
