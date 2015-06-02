@@ -1,5 +1,5 @@
 var apmonths = [ "Jan.", "Feb.", "March", "April", "May", "June", "July", "Aug.", "Sept.", "Oct.", "Nov.", "Dec." ],
-    backs = ['waves.gif','dino.gif','wut.gif','lines.gif','hands.gif','blur.gif','horizon.gif','x.gif','dorothy.gif','snow.gif','giraffe.gif'],
+    backs = ['waves.gif','dino.gif','wut.gif','lines.gif','hand.gif','blur.gif','horizon.gif','x.gif','dorothy.gif','snow.gif','giraffe.gif'],
     x = backs[Math.floor(Math.random() * backs.length)];
 
 function apDate(dateobj) {
