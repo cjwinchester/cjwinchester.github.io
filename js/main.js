@@ -3,7 +3,7 @@ var apmonths = [ "Jan.", "Feb.", "March", "April", "May", "June", "July", "Aug."
     x = backs[Math.floor(Math.random() * backs.length)];
 
 function apDate(dateobj) {
-    var d = new Date(dateobj), thisdate = apmonths[d.getMonth()] + " " + d.getUTCDate() + ", " + d.getFullYear();
+    var d = new Date(dateobj), thisdate = apmonths[d.getUTCMonth()] + " " + d.getUTCDate() + ", " + d.getUTCFullYear();
     return thisdate;
   };
   
