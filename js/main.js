@@ -2,11 +2,6 @@ var apmonths = [ "Jan.", "Feb.", "March", "April", "May", "June", "July", "Aug."
     backs = ['waves.gif','dino.gif','wut.gif','lines.gif','x.gif','dorothy.gif','snow.gif','giraffe.gif'],
     x = backs[Math.floor(Math.random() * backs.length)];
 
-$('#projects').css({
-    'background': 'url("../img/' + x + '")',
-    'background-size': '100%'
-    });
-
 function apDate(dateobj) {
     var d = new Date(dateobj), thisdate = apmonths[d.getMonth()] + " " + d.getUTCDate() + ", " + d.getFullYear();
     return thisdate;
@@ -40,6 +35,10 @@ $(document).ready(function() {
             var acol = $(this).parent().parent().css("border-top-color");
                 $(this).css('color', acol);        
             });
+            $('#projects').css({
+                'background': 'url("../img/' + x + '")',
+                'background-size': '100%'
+                });
             $('#namehed').bigtext().css('opacity',1.0);
             $('#projects').fadeIn('fast');
         }).fail(function() {
