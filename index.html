@@ -54,7 +54,7 @@
         
         </div>
         <script type="text/html" class="template">            
-        <% _.each( banana, function( project ){ %>
+        <% _.each( banana.proj, function( project ){ %>
             <div class="col-md-12 searchable item <%= project.type %>" data-index="<%= project.hed.toLowerCase() %><% if ( project.tools ){ %> <%= project.tools.join(' ') %><% } %>" style="border-top:10px solid <% if ( project.type === "web" ) { %>#4393c3<% } else { %>#de2d26<%} %>;">
 
             <p class="smallblock bold" style="margin-bottom:-15px;">

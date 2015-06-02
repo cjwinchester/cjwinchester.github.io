@@ -28,9 +28,9 @@ function tools(arr) {
     return formatted.join('&emsp;');
 };
 
-$('#namehed').bigtext();
 $(document).ready(function() {
     $.getJSON('js/projects.json').success(function(data) {
+            console.log(data);
             _.templateSettings.variable = "banana";
             var template = _.template($( "script.template" ).html());
             $('#projects').html(template( data ));
@@ -40,6 +40,7 @@ $(document).ready(function() {
             var acol = $(this).parent().parent().css("border-top-color");
                 $(this).css('color', acol);        
             });
+            $('#namehed').bigtext().css('opacity',1.0);
             $('#projects').fadeIn('fast');
         }).fail(function() {
             alert("Sorry, something went wrong. Try reloading the page.");

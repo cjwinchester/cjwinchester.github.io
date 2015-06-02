@@ -1,4 +1,4 @@
-{ "data": [
+{ "proj": [
    {
         "hed": "Election results",
         "type": "web",
@@ -160,7 +160,7 @@
         "type": "print",
         "url": "http://www.omaha.com/news/vital-time-lost-in-calls-to-sarpy-county-s-center/article_4773a77a-860f-540f-9c6b-766256873340.html?mode=jqm",
         "desc": "Dispatch times for fire and medical calls lagged in one county we examined.",
-        "collab": [ "roseannmoring" ],
+        "collab": [ "roseannmoring" ]
     },
     {
         "hed": "Battling mental illness",

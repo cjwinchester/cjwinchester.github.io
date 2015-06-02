@@ -1,5 +1,7 @@
 html, body { background:#fff; margin:0; overflow-x:hidden; }
 a, a:hover { color:inherit; font-weight:bold;}
+#namehed { opacity:0.0 }
+#loading { text-align:center; }
 .bold { font-weight:bold }
 .italic { font-style:italic }
 .item { padding: 20px; margin-bottom:50px; background:#fff;} 
