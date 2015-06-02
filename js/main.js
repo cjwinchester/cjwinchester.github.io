@@ -29,17 +29,22 @@ function tools(arr) {
 };
 
 $('#namehed').bigtext();
-
-_.templateSettings.variable = "banana";
-var template = _.template($( "script.template" ).html());            
-$('#projects').html(template( data ));
-
-$('#projects > div > p > a').each(function() {
-    var acol = $(this).parent().parent().css("border-top-color");
-    $(this).css('color', acol);        
+$(document).ready(function() {
+    $.getJSON('js/projects.json').success(function(data) {
+            _.templateSettings.variable = "banana";
+            var template = _.template($( "script.template" ).html());
+            $('#projects').html(template( data ));
+        }).then(function() {
+            $('#loading').hide();
+            $('#projects > div > p > a').each(function() {
+            var acol = $(this).parent().parent().css("border-top-color");
+                $(this).css('color', acol);        
+            });
+            $('#projects').fadeIn('fast');
+        }).fail(function() {
+            alert("Sorry, something went wrong. Try reloading the page.");
+        });
 });
-
-$('#projects').fadeIn();
 
 $('.clicker').click(function() {
     var buttclass = ($(this).children('i').attr('class'));
