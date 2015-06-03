@@ -1,0 +1,155 @@
+{
+    "meta": {
+        "json": "http://www.codywinchester.com/resume/js/winchester-resume.json",
+        "pdf": "http://www.codywinchester.com/resume/winchester-resume.pdf"
+        },
+    "basics": {
+        "name": "Cody Winchester",
+        "keywords": [
+            "Journalist? Journalist!",
+            "Reporting",
+            "Writing",
+            "Research",
+            "Editing",            
+            "Dataviz",
+            "Shell scripting",
+            "HTML/CSS",
+            "Javascript",
+            "Python",
+            "Django",
+            "GIS",
+            "SQL",
+            "LOL",
+            "WUT"
+        ],
+        "email": "cjwinchester@gmail.com",
+        "phone": "605-645-1561",
+        "website": "http://www.codywinchester.com",
+        "location": {
+          "address": "7883 S. 151st Circle",
+          "city": "Omaha",
+          "state": "NE",
+          "zip": "68138"
+        },
+        "twitter": "cody_winchester",
+        "github": "cjwinchester",
+        "blog": [
+            {
+                "blog_type": "Nerd blog",
+                "url": "http://blog.dataomaha.com"
+            },
+            {
+                "blog_type": "Tumblr",
+                "url": "http://cjwinchester.tumblr.com"
+            }
+        ]
+  },
+  "work": [
+    {
+      "company": "Omaha World-Herald",
+      "position": "Reporter and web developer",
+      "location": "Omaha, Nebraska",
+      "website": "http://www.omaha.com",
+      "startDate": "2013-03-15",
+      "endDate": null,
+      "summary": "blah blah blah <a href='http://www.dataomaha.com' target='_blank'>dataomaha.com</a>"
+    },
+    {
+      "company": "Sioux Falls Argus Leader",
+      "position": "Reporter",
+      "location": "Sioux Falls, South Dakota",
+      "website": "http://www.argusleader.com",
+      "startDate": "2011-11-15",
+      "endDate": "2013-03-01",
+      "summary": "blah blah blah"      
+    },
+    {
+      "company": "National Post",
+      "position": "Editorial Intern",
+      "location": "Toronto, Ontario",
+      "website": "http://www.nationalpost.com",
+      "startDate": "2010-05-15",
+      "endDate": "2010-08-15",
+      "summary": "blah blah blah"      
+    },
+    {
+      "company": "Waco Tribune-Herald",
+      "position": "Reporter",
+      "location": "Waco, Texas",
+      "website": "http://www.nationalpost.com",
+      "startDate": "2008-09-15",
+      "endDate": "2010-05-15",
+      "summary": "blah blah blah"      
+    },
+    {
+      "company": "Baylor University",
+      "position": "Instructor, teaching assistant",
+      "location": "Waco, Texas",
+      "website": "http://www.baylor.edu/journalism/",
+      "startDate": "2008-08-15",
+      "endDate": "2010-05-15",
+      "summary": "blah blah blah"      
+    },
+    {
+      "company": "ACM-ICPC",
+      "position": "Writer and editor",
+      "location": "Waco, Texas",
+      "website": "http://icpc.baylor.edu",
+      "startDate": "2009-11-15",
+      "endDate": "2010-02-15",
+      "summary": "blah blah blah"      
+    },
+    {
+      "company": "Maverick Publishing",
+      "position": "Copy editor",
+      "location": "Spearfish, South Dakota",
+      "website": "http://www.americanbagger.com",
+      "startDate": "2007-08-15",
+      "endDate": "2008-08-15",
+      "summary": "blah blah blah"      
+    },
+    {
+      "company": "Fort Collins Weekly",
+      "position": "Editorial Intern",
+      "location": "Fort Collins, Colorado",
+      "website": "http://www.en.wikipedia.org/wiki/Fort_Collins_Weekly",
+      "startDate": "2006-05-15",
+      "endDate": "2006-08-15",
+      "summary": "blah blah blah"      
+    }
+    ],
+  "education": [
+    {
+      "institution": "Baylor University",
+      "area": "International Journalism",
+      "studyType": "Masters",
+      "startDate": "2008-08-15",
+      "endDate": "2010-12-20"
+    },
+    {
+      "institution": "Black Hills State University",
+      "area": "Mass Communication - Journalism",
+      "studyType": "Bachelor of Science",
+      "startDate": "2003-09-15",
+      "endDate": "2007-05-15"
+    }
+  ],
+  "awardsAffil": [
+    {
+      "title": "Member, IRE",
+      "descrip": "Joined June 2011."
+    },
+    {
+      "title": "Fellow, Knight Journalism Poverty Conference",
+      "descrip": "September 2012 event held at Washington and Lee University."
+    },
+    {
+      "title": "Flood series",
+      "descrip": "Awards from the Associated Press, Gannett, the South Dakota Newspaper Association and the Great Plains Journalism Awards for a series on Missouri River flooding."
+    },
+    {
+      "title": "Dow Jones Newspaper Fund intern",
+      "descrip": "During 2009 session in Austin, Texas."
+    }
+    ]
+}
