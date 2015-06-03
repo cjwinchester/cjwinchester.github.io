@@ -20,7 +20,8 @@
             "GIS",
             "SQL",
             "LOL",
-            "WUT"
+            "WUT",
+            "<i class='fa fa-bomb'></i>"
         ],
         "email": "cjwinchester@gmail.com",
         "phone": "605-645-1561",
@@ -52,7 +53,7 @@
       "website": "http://www.omaha.com",
       "startDate": "2013-03-15",
       "endDate": null,
-      "summary": "blah blah blah <a href='http://www.dataomaha.com' target='_blank'>dataomaha.com</a>"
+      "summary": "Daily, enterprise and watchdog coverage of local governments. (Primary beat includes five agencies.) Partner with other journalists to analyze and visualize data. Develop online tools and full-blown web applications on <a href='http://www.dataomaha.com' target='_blank'>dataomaha.com</a>. Help organize and lead <a href='http://owh-projects.github.io/training' target='_blank'> internal training sessions</a>."
     },
     {
       "company": "Sioux Falls Argus Leader",
@@ -61,7 +62,7 @@
       "website": "http://www.argusleader.com",
       "startDate": "2011-11-15",
       "endDate": "2013-03-01",
-      "summary": "blah blah blah"      
+      "summary": "Cover environment, outdoors, energy and other topics. Lead newsroom workshops on computer-assisted reporting."
     },
     {
       "company": "National Post",
@@ -70,16 +71,16 @@
       "website": "http://www.nationalpost.com",
       "startDate": "2010-05-15",
       "endDate": "2010-08-15",
-      "summary": "blah blah blah"      
+      "summary": "Write feature stories for homes section. Edit freelance submissions."
     },
     {
       "company": "Waco Tribune-Herald",
       "position": "Reporter",
       "location": "Waco, Texas",
-      "website": "http://www.nationalpost.com",
+      "website": "http://www.wacotrib.com",
       "startDate": "2008-09-15",
       "endDate": "2010-05-15",
-      "summary": "blah blah blah"      
+      "summary": "Write daily crime and weekend events stories."
     },
     {
       "company": "Baylor University",
@@ -88,7 +89,7 @@
       "website": "http://www.baylor.edu/journalism/",
       "startDate": "2008-08-15",
       "endDate": "2010-05-15",
-      "summary": "blah blah blah"      
+      "summary": "Teach media writing class, grade papers, assist with research."
     },
     {
       "company": "ACM-ICPC",
@@ -97,7 +98,7 @@
       "website": "http://icpc.baylor.edu",
       "startDate": "2009-11-15",
       "endDate": "2010-02-15",
-      "summary": "blah blah blah"      
+      "summary": "Write and edit promotional stories and blog posts and shoot photos for international computer-programming competitions."      
     },
     {
       "company": "Maverick Publishing",
@@ -106,7 +107,7 @@
       "website": "http://www.americanbagger.com",
       "startDate": "2007-08-15",
       "endDate": "2008-08-15",
-      "summary": "blah blah blah"      
+      "summary": "Edit copy and photos in two nationally distributed trade magazines. Create style guide."
     },
     {
       "company": "Fort Collins Weekly",
@@ -115,7 +116,7 @@
       "website": "http://www.en.wikipedia.org/wiki/Fort_Collins_Weekly",
       "startDate": "2006-05-15",
       "endDate": "2006-08-15",
-      "summary": "blah blah blah"      
+      "summary": "Write business, news and feature stories."
     }
     ],
   "education": [
