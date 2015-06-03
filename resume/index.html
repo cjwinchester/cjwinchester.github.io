@@ -55,7 +55,12 @@
         <h1 class="sub"><i class="fa fa-briefcase"></i> Employment</h1>
         <hr>
         <% _.each( bananagram.work, function( job ){ %>
-            <p class="lead"><strong><%= getDate(job.startDate) %> &ndash; <%= getDate(job.endDate) %></strong>: <a href="<%= job.website %>" target="_blank"><%= job.company %></a>, <%= job.location %>. <em><%= job.position %></em>. <%= job.summary %></p>
+            <p class="lead"><strong><%= getDate(job.startDate) %> &ndash; <%= getDate(job.endDate) %></strong>: <%= job.position %>, <a href="<%= job.website %>" target="_blank"><%= job.company %></a>.</p>           
+            <ul class="fa-ul">
+                <li><i class="fa-li fa fa-map-marker"></i><%= job.location %></li>
+                <li><i class="fa-li fa fa-folder-open-o"></i><%= job.summary %></li>
+            </ul>
+            
         <% }); %>
         </div>
         <div class="col-md-5 col-md-offset-1">
