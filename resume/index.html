@@ -40,9 +40,9 @@
         <div class="jumbotron">
             <div class="container">
                 <div id="namehed" style="opacity:0.0;">
-                <h1 class="slab center" style="margin-bottom:50px;"><%= bananagram.basics.name %></h1>
+                <h1 class="slab center"><%= bananagram.basics.name %></h1>
                 </div>
-                    <p class="lead">
+                    <p class="lead" style="margin-top:40px;">
                     <% _.each( bananagram.basics.keywords, function( k ){ %>
                         <span class="label label-info"><%= k %></span>
                     <% }); %>
