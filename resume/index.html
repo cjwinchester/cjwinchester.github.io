@@ -17,6 +17,7 @@
     .jumbotron { background:#edf7fe; }
     .gray { background:#edf7fe; padding-top: 30px; padding-bottom: 30px; }
     .sub { margin-top:50px; }
+    
     </style>
         
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -54,13 +55,12 @@
         <div class="col-md-6">
         <h1 class="sub"><i class="fa fa-briefcase"></i> Employment</h1>
         <hr>
-        <% _.each( bananagram.work, function( job ){ %>
-            <p class="lead" style="margin-bottom:0; margin-top:30px;"><strong><%= getDate(job.startDate) %> &ndash; <%= getDate(job.endDate) %></strong>: <%= job.position %>, <a href="<%= job.website %>" target="_blank"><%= job.company %></a>.</p>           
-            <ul class="fa-ul lead">
-                <li><i class="fa-li fa fa-map-marker"></i><%= job.location %></li>
-                <li><i class="fa-li fa fa-folder-open-o"></i><%= job.summary %></li>
-            </ul>
-            
+        <% _.each( bananagram.work, function( job, i ){ %>
+            <div class="jerb <% if (i%2 !== 0) { %>gray<% }; %>">
+            <p class="lead">
+            <span class="label label-warning"><i class="fa-li fa fa-map-marker"></i><%= job.location %></span><br>
+            <strong><%= getDate(job.startDate) %> &ndash; <%= getDate(job.endDate) %></strong>: <%= job.position %>, <a href="<%= job.website %>" target="_blank"><%= job.company %></a>. <%= job.summary %></p>
+            </div>
         <% }); %>
         </div>
         <div class="col-md-5 col-md-offset-1">
