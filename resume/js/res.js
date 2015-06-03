@@ -18,6 +18,7 @@ $(document).ready(function() {
     }).then(function() {
         $('#loading').hide();
         $('#main').fadeIn('fast');
+        $('#namehed').bigtext().css('opacity',1.0);
     }).fail(function() {
         alert('Sorry, something went wrong. Try reloading the page.');
     });
