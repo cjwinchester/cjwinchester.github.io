@@ -17,7 +17,7 @@
     #loading { text-align:center; margin-top:150px; }
     .jumbotron { background:#edf7fe; }
     .gray { background:#edf7fe; padding-top: 30px; padding-bottom: 30px; }
-    h1 { margin-top:50px; }
+    .sub { margin-top:50px; }
     </style>
         
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -40,7 +40,7 @@
         <div class="jumbotron">
             <div class="container">
                 <div id="namehed" style="opacity:0.0;">
-                <h1 class="slab center" style="margin-bottom:30px;"><%= bananagram.basics.name %></h1>
+                <h1 class="slab center" style="margin-bottom:50px;"><%= bananagram.basics.name %></h1>
                 </div>
                     <p class="lead">
                     <% _.each( bananagram.basics.keywords, function( k ){ %>
@@ -53,20 +53,20 @@
         <div class="container" style="margin-bottom:30px;">
         <div class="row">
         <div class="col-md-6">
-        <h1><i class="fa fa-briefcase"></i> Employment</h1>
+        <h1 class="sub"><i class="fa fa-briefcase"></i> Employment</h1>
         <hr>
         <% _.each( bananagram.work, function( job ){ %>
             <p class="lead"><strong><%= getDate(job.startDate) %> &ndash; <%= getDate(job.endDate) %></strong>: <a href="<%= job.website %>" target="_blank"><%= job.company %></a>, <%= job.location %>. <em><%= job.position %></em>. <%= job.summary %></p>
         <% }); %>
         </div>
         <div class="col-md-5 col-md-offset-1">
-        <h1><i class="fa fa-mortar-board"></i> Education</h1>
+        <h1 class="sub"><i class="fa fa-mortar-board"></i> Education</h1>
         <hr>
         <% _.each( bananagram.education, function( school ){ %>
             <p class="lead"><strong><%= school.institution %></strong>: <%= school.studyType %>, <%= school.area %> (<%= getDate(school.endDate) %>)</p>
         <% }); %>
         
-        <h1><i class="fa fa-star fa-spin"></i> Awards &amp; Affiliations</h1>
+        <h1 class="sub"><i class="fa fa-star fa-spin"></i> Awards &amp; Affiliations</h1>
         <hr>
         <% _.each( bananagram.awardsAffil, function( aw ){ %>
             <p class="lead"><strong><%= aw.title %></strong>. <%= aw.descrip %></p>
