@@ -16,7 +16,6 @@
     #loading { text-align:center; margin-top:150px; }
     .jumbotron { background:#edf7fe; }
     .gray { background:#edf7fe; padding-top: 30px; padding-bottom: 30px; }
-    .odd { background:#edf7fe; padding:30px; }
     .sub { margin-top:50px; }
     
     </style>
@@ -56,12 +55,10 @@
         <div class="col-md-6">
         <h1 class="sub"><i class="fa fa-briefcase"></i> Employment</h1>
         <hr>
-        <% _.each( bananagram.work, function( job, i ){ %>
-            <div class="jerb <% if (i%2 !== 0) { %>odd<% }; %>">
+        <% _.each( bananagram.work, function( job){ %>
             <p class="lead">
-            <span class="label label-danger"><i class="fa fa-map-marker"></i><%= job.location %></span><br>
+            <span class="label label-danger"><%= job.location %></span><br><br>s
             <strong><%= getDate(job.startDate) %> &ndash; <%= getDate(job.endDate) %></strong>: <%= job.position %>, <a href="<%= job.website %>" target="_blank"><%= job.company %></a>. <%= job.summary %></p>
-            </div>
         <% }); %>
         </div>
         <div class="col-md-5 col-md-offset-1">
