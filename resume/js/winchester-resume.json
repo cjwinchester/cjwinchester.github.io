@@ -133,8 +133,17 @@
     }
   ],
   "affil": [
-      "title": "Member, IRE",
-      "title": "Fellow, Knight Journalism Poverty Conference"
-      "title": "Dow Jones Newspaper Fund intern, 2009"
+    {
+      "title": "Member",
+      "descrip": "Investigative Reporters and Editors"
+    },
+    {
+      "title": "Fellow",
+      "descrip": "Knight Journalism Poverty Conference, September 2012"
+    },
+    {
+      "title": "Intern",
+      "descrip": "Dow Jones Newspaper Fund 2009"
+    }
     ]
 }
