@@ -4,4 +4,4 @@ html, body { font-family: "Roboto", Verdana, Arial, sans-serif;  overflow-x:hidd
 .even { background: #fffff; }
 .booklink { color:#9a3950; text-decoration:none;}
 .booklink:hover { color:#fff; background:#9a3950; }
-#loading { text-align:center; margin:50px; }
+#loading { text-align:center; margin-top:100px; }
