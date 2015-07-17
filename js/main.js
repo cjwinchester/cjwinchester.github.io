@@ -38,7 +38,7 @@ $(document).ready(function() {
                 $(this).css('color', acol);        
             });
             $('#projects').css({
-                'background': 'url("../img/' + x + '")',
+                'background': 'url("' + x + '")',
                 'background-size': '100%'
                 });
             $('#loading').hide();
