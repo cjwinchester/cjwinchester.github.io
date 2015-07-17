@@ -1,3 +1,7 @@
+var con = "        .__              .__                     __                \n" + "__  _  _|__| ____   ____ |  |__   ____   _______/  |_  ___________ \n" + "\\ \\/ \\/ /  |/    \\_/ ___\\|  |  \\_/ __ \\ /  ___/\\   __\\/ __ \\_  __ \\\n" + " \\     /|  |   |  \\  \\___|   |  \\  ___/ \\___ \\  |  | \\  ___/|  | \\/\n" + "  \\/\\_/ |__|___|  /\\___  >___|  /\\___  >____  > |__|  \\___  >__|   \n" + "                \\/     \\/     \\/     \\/     \\/            \\/       ";
+
+console.log(con);
+
 var apmonths = [ "Jan.", "Feb.", "March", "April", "May", "June", "July", "Aug.", "Sept.", "Oct.", "Nov.", "Dec." ],
     backs = ['waves.gif','dino.gif','wut.gif','lines.gif','hand.gif','blur.gif','horizon.gif','x.gif','dorothy.gif','snow.gif','giraffe.gif'],
     x = backs[Math.floor(Math.random() * backs.length)];
