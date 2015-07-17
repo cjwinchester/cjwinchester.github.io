@@ -3,7 +3,7 @@ var con = "                                 .__                              \n"
 console.log(con);
 
 var apmonths = [ "Jan.", "Feb.", "March", "April", "May", "June", "July", "Aug.", "Sept.", "Oct.", "Nov.", "Dec." ],
-    backs = ['waves.gif','dino.gif','wut.gif','lines.gif','hand.gif','blur.gif','horizon.gif','x.gif','dorothy.gif','snow.gif','giraffe.gif'],
+    backs = ['http://media.giphy.com/media/ToMjGpjvtPpCjbKjI2I/giphy.gif', 'http://media.giphy.com/media/UOFI4WxlLXVmg/giphy.gif', 'http://media.giphy.com/media/13PHkXLqgibfRC/giphy.gif', 'http://media.giphy.com/media/ToMjGplujsIS6kHzUPK/giphy.gif', 'http://media.giphy.com/media/aT6DAGys8Rt2U/giphy.gif', 'http://media.giphy.com/media/ToMjGpsUIlXEkRCmDdK/giphy.gif', 'http://media.giphy.com/media/5xtDarsbK3xLOABUFOM/giphy.gif', 'http://media.giphy.com/media/319NQsKn6ij16/giphy.gif', 'http://media.giphy.com/media/qcksgcyfZGWNq/giphy.gif'],    
     x = backs[Math.floor(Math.random() * backs.length)];
 
 function apDate(dateobj) {
