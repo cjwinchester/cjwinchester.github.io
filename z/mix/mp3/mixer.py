@@ -11,7 +11,6 @@ for burrito in glob.glob("*.mp3"):
     x = burrito.split(".mp3")
     y = x[0]
     z = y.split(" - ")
-    z = y.split(" - ")
     track = z[0]
     artist = z[1]
     song = z[2]
