@@ -7,4 +7,4 @@ html, body { margin:0; padding:0; font-family: "Roboto", "Helvetica Neue", Helve
 .bold { font-weight:bold; }
 .button h1, .now-playing h1 { margin:0; }
 .noselect { -webkit-touch-callout: none;  -webkit-user-select: none; -khtml-user-select: none;  -moz-user-select: none;  -ms-user-select: none; user-select: none; }
-td { cursor:pointer; }
+.cl { cursor:pointer; }
