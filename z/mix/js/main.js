@@ -99,10 +99,10 @@ $(document).ready(function() {
         timeupdate: onTimeupdate,
         ended: advanceMedia,
         waiting: function() {
-            $('#main').fadeTo('fast', 0.4);
+            $('.container').fadeTo('fast', 0.4);
         },
         canplay: function() {
-            $('#main').fadeTo('fast', 1.0);            
+            $('.container').fadeTo('fast', 1.0);
             }
     });
     setAudioMedia(0);
