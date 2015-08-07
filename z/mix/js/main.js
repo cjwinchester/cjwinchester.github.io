@@ -25,15 +25,16 @@ var scrollToIt = function(x) {
 }
     
 var boldList = function(x) {
-    $('td').each(function() {
+    $('.cl').each(function() {
         $(this).removeClass('bold');
+        $(this).parent().css('background', '#fff');
     });
-    $('td').eq(x).addClass('bold');
+    $('.cl').eq(x).addClass('bold');
 }
 
 var getCurrent = function() {
     var now = 0;
-    $('td').each(function() {
+    $('.cl').each(function() {
         if ($(this).hasClass('bold')) {
             now = this.id;
         }
@@ -81,8 +82,14 @@ var onTimeupdate = function(e) {
     var timeNow = e.jPlayer.status.currentTime
         , timeLeft = e.jPlayer.status.duration
         , pctDone = (timeNow / timeLeft) * 100;
-        $('#progress').css('width', pctDone + "%");
-}
+        var now = getCurrent();
+        var col1="#eee", col2="#fff";
+        var topper = document.getElementById(now).parentNode;
+        topper.style.background = "-webkit-gradient(linear, left top,right top, color-stop("+pctDone+"%,"+col1+"), color-stop("+pctDone+"%,"+col2+"))";
+        topper.style.background = "-moz-linear-gradient(left center,"+col1+" "+pctDone+"%, "+col2+" "+pctDone+"%)" ;
+        topper.style.background = "-o-linear-gradient(left,"+col1+" "+pctDone+"%, "+col2+" "+pctDone+"%)";
+        topper.style.background = "linear-gradient(to right,"+col1+" "+pctDone+"%, "+col2+" "+pctDone+"%)";        
+};
 
 $(document).ready(function() {
     $('#top').affix();
@@ -92,14 +99,10 @@ $(document).ready(function() {
         timeupdate: onTimeupdate,
         ended: advanceMedia,
         waiting: function() {
-            $('#main').hide();
-            $('#waiting').show();
-            $('#playlist').fadeTo('fast', 0.4);
+            $('#main').fadeTo('fast', 0.4);
         },
         canplay: function() {
-            $('#main').show();
-            $('#waiting').hide();
-            $('#playlist').fadeTo('fast', 1.0);
+            $('#main').fadeTo('fast', 1.0);            
             }
     });
     setAudioMedia(0);
@@ -118,10 +121,10 @@ $( ".button" ).hover(
   }
 );
 
-$('td').on('click', function() {
+$('.cl').on('click', function() {
     boldList(this.id);
     setAudioMedia(this.id);    
     $('#audio-player').jPlayer('play');
-    $('#playpauseicon').removeClass('fa fa-pause').addClass('fa fa-pause');
+    $('#playpauseicon').removeClass('fa fa-play').addClass('fa fa-pause');
     scrollToIt(this.id);
 });

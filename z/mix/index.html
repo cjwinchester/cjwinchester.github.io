@@ -7,6 +7,7 @@
         <title>&#9835; Mixtape &#9835;</title>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
         <link href="css/playlist.css" rel="stylesheet">
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -23,10 +24,7 @@
         <div class="button playpause noselect"><h1><i id="playpauseicon" class="fa fa-play"></i></h1></div>
         <div class="button prev noselect"><h1><i class="fa fa-fast-backward"></i></h1></div>
         <div class="button next noselect" style="border:none;"><h1><i class="fa fa-fast-forward"></i></h1></div>
-        <div class="clearfix"></div>
-        <div class="now-playing" id="progress"></div>
         </div>
-        <div class="alert alert-info" role="alert" id="waiting" style="display:none;"><h3 class="bold" style="margin:0; text-align:center;"><i class="fa fa-spinner fa-spin"></i></h3></div>
     </div>
     </div>
     
@@ -38,8 +36,7 @@
     <tbody>
     <% _.each( songs, function( song, i ){ %>
     <tr>
-        <td id="<%= i %>"<% if (i===0) { %> style="border-top:0;"<% }; %>>
-        <%= i+1 %>. <%= song.name %>&ensp;<a href="<%= song.file %>"><i class="fa fa-arrow-circle-down"></i></a>
+        <td <% if (i===0) { %> style="border-top:0;"<% }; %>><span class="cl" id="<%= i %>"><%= i+1 %>. <%= song.name %>
         </td>
     </tr>
     <% }); %>
