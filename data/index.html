@@ -17,6 +17,7 @@
         .center { text-align:center; }
         #loading { color:#ccc; text-align:center; }
         #mainthing { display:none; }
+        .note { font-size:60%; }
         </style>
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -43,19 +44,19 @@
         
         <script type="text/html" class="template">
         <table class="table lead">
-        <% _.each( papaya, function( dataset, iter ){ %>
+        <% _.each( papaya.data, function( dataset, iter ){ %>
             <tr class="searchable" data-index="<%= dataset.name.toLowerCase() %>">
-            <td class="bold"<% if (iter===0) { %> style="border-top:none;"<% }; %>>
+            <td class="bold">
             <a href="<%= dataset.url %>" target="_blank">
             <%= dataset.name %>
             </a>
             </td>
-            <td<% if (iter===0) { %> style="border-top:none;"<% }; %>>
+            <td>
             <%= dataset.desc %>
             </td>
             </tr>
         <% }); %>
-</table>       
+    </table>       
         </script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="http://www.codywinchester.com/js/underscore-min.js"></script>
