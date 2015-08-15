@@ -1,0 +1,67 @@
+<html>
+
+    <style>
+        h2 { margin-top:40px; margin-bottom:2px;
+    </style>
+
+    <h2>Addition</h2>
+    <input type="number" class="addition" id="a1" />&emsp;+&emsp;<input type="number" class="addition" id="a2" />&emsp;=&emsp;<span id="aanswer"></span>
+
+    <h2>Subtraction</h2>
+    <input type="number" class="subtraction" id="s1" />&emsp;-&emsp;<input type="number" class="subtraction" id="s2" />&emsp;=&emsp;<span id="sanswer"></span>
+    
+    <h2>Multiplication</h2>
+    <input type="number" class="multiplication" id="m1" />&emsp;*&emsp;<input type="number" class="multiplication" id="m2" />&emsp;=&emsp;<span id="manswer"></span>
+
+    <h2>Division</h2>
+    <input type="number" class="division" id="d1" />&emsp;/&emsp;<input type="number" class="division" id="d2" />&emsp;=&emsp;<span id="danswer"></span>
+    
+    <script src="../../js/jquery.min.js"></script>
+    <script>
+    
+    var addCommas = function(nStr) {
+        nStr += '';
+        x = nStr.split('.');
+        x1 = x[0];
+        x2 = x.length > 1 ? '.' + x[1] : '';
+        var rgx = /(\d+)(\d{3})/;
+        while (rgx.test(x1)) {
+            x1 = x1.replace(rgx, '$1' + ',' + '$2');
+            }
+        return x1 + x2;
+    };
+    
+    $('.addition').change(function(d) {
+        if (+$('#a1').val() && +$('#a2').val()) {
+            var sum = +$('#a1').val() + +$('#a2').val();
+            $('#aanswer').html(addCommas(sum));
+        };
+    });
+    
+    $('.subtraction').change(function(d) {
+        if (+$('#s1').val() && +$('#s2').val()) {
+            var sum = +$('#s1').val() - +$('#s2').val();
+            $('#sanswer').html(addCommas(sum));
+        };
+    });
+    
+    $('.multiplication').change(function(d) {
+        if (+$('#m1').val() && +$('#m2').val()) {
+            var product = +$('#m1').val() * +$('#m2').val();
+            $('#manswer').html(addCommas(product));
+        };
+    });
+    
+    $('.division').change(function(d) {
+        if (+$('#d1').val() && $('#d2').val()) {
+            if ($('#d2').val() == 0) {
+                $('#danswer').html("<a href='https://www.mathsisfun.com/numbers/dividing-by-zero.html' target='_blank'>You can't divide by zero, yo</a>.");
+            } else {
+                var quotient = +$('#d1').val() / +$('#d2').val();
+                $('#danswer').html(addCommas(quotient));
+            };
+        };
+    });
+    
+    </script>
+</html>
