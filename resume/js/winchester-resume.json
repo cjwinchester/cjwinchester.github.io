@@ -16,18 +16,14 @@
             "Python/Django",
             "Shell scripting",
             "GIS",
-            "SQL",
-            "LOL",
-            "WUT"
+            "SQL"
             ],
         "email": "cjwinchester@gmail.com",
         "phone": "605-645-1561",
         "website": "http://www.codywinchester.com",
         "location": {
-          "address": "7883 S. 151st Circle",
           "city": "Omaha",
           "state": "Nebraska",
-          "zip": "68138"
         },
         "twitter": "cody_winchester",
         "github": "cjwinchester",
@@ -47,10 +43,9 @@
       "company": "Omaha World-Herald",
       "position": "Reporter and web developer",
       "location": "Omaha, Nebraska",
-      "website": "http://www.omaha.com",
+      "website": ["http://omaha.com","http://dataomaha.com"],
       "startDate": "2013-03-15",
-      "endDate": null,
-      "summary": "Daily, enterprise and watchdog coverage of local governments. Partner with other journalists to analyze and visualize data. Develop online tools and web applications for <a href='http://omaha.com'>omaha.com</a>, <a href='http://www.dataomaha.com' target='_blank'>dataomaha.com</a> and a World-Herald intranet. Help organize <a href='http://owh-projects.github.io/training' target='_blank'> newsroom training sessions</a>."
+      "summary": "Daily, enterprise and watchdog coverage of local governments. Partner with other journalists to obtain, clean, analyze and visualize data. Develop tools and web applications for <a href='http://omaha.com'>omaha.com</a>, <a href='http://www.dataomaha.com' target='_blank'>dataomaha.com</a> and a World-Herald intranet. Help organize <a href='http://owh-projects.github.io/training' target='_blank'> newsroom training sessions</a>."
     },
     {
       "company": "Sioux Falls Argus Leader",
@@ -95,7 +90,7 @@
       "website": "http://icpc.baylor.edu",
       "startDate": "2009-11-15",
       "endDate": "2010-02-15",
-      "summary": "Write and edit promotional stories and blog posts and shoot photos for international computer-programming competitions."      
+      "summary": "Write and edit promotional stories and blog posts and shoot photos for international computer-programming competitions."
     },
     {
       "company": "Maverick Publishing",
@@ -132,7 +127,7 @@
       "endDate": "2007-05-15"
     }
   ],
-  "affil": [
+  "affiliations": [
     {
       "title": "Member",
       "descrip": "Investigative Reporters and Editors"

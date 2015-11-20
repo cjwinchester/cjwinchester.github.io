@@ -1,4 +1,4 @@
-html, body { background:#fffff8; margin:0; overflow-x:hidden; color: #111111; }
+html, body { background:#fff; margin:0; overflow-x:hidden; color: #000; }
 a, a:hover { color:inherit; font-weight:bold;}
 #namehed { opacity:0.0 }
 #loading { text-align:center; }
