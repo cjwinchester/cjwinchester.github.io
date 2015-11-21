@@ -1,6 +1,6 @@
 {
     "meta": {
-        "json": "http://www.codywinchester.com/resume/js/winchester-resume.json",
+        "json": "http://www.codywinchester.com/resume/winchester-resume.json",
         "pdf": "http://www.codywinchester.com/resume/winchester-resume.pdf",
         "doc": "http://www.codywinchester.com/resume/winchester-resume.doc"
         },
@@ -14,13 +14,13 @@
             "Dataviz",
             "HTML/CSS/JS",
             "Python/Django",
-            "Shell scripting",
+            "Shell scripts",
             "GIS",
             "SQL"
             ],
         "email": "cjwinchester@gmail.com",
         "phone": "605-645-1561",
-        "website": "http://www.codywinchester.com",
+        "website": "http://codywinchester.com",
         "location": {
           "city": "Omaha",
           "state": "Nebraska",
@@ -43,9 +43,9 @@
       "company": "Omaha World-Herald",
       "position": "Reporter and web developer",
       "location": "Omaha, Nebraska",
-      "website": ["http://omaha.com","http://dataomaha.com"],
+      "website": ["http://omaha.com","http://dataomaha.com", "http://owh-projects.github.io/training"],
       "startDate": "2013-03-15",
-      "summary": "Daily, enterprise and watchdog coverage of local governments. Partner with other journalists to obtain, clean, analyze and visualize data. Develop tools and web applications for <a href='http://omaha.com'>omaha.com</a>, <a href='http://www.dataomaha.com' target='_blank'>dataomaha.com</a> and a World-Herald intranet. Help organize <a href='http://owh-projects.github.io/training' target='_blank'> newsroom training sessions</a>."
+      "summary": "Provide daily, enterprise and watchdog coverage of local governments. Partner with other journalists to obtain, clean, analyze and visualize data. Develop tools and web applications for omaha.com and dataomaha.com. Help organize a series of newsroom training sessions."
     },
     {
       "company": "Sioux Falls Argus Leader",
@@ -54,13 +54,13 @@
       "website": "http://www.argusleader.com",
       "startDate": "2011-11-15",
       "endDate": "2013-03-01",
-      "summary": "Cover environment, outdoors, energy and other topics. Lead newsroom workshops on computer-assisted reporting."
+      "summary": "Cover environment, outdoors, energy and other topics. Lead newsroom workshops on computer-assisted reporting. Create charts, graphs and maps for argusleader.com."
     },
     {
       "company": "National Post",
       "position": "Editorial Intern",
       "location": "Toronto, Ontario",
-      "website": "http://www.nationalpost.com",
+      "website": "http://nationalpost.com",
       "startDate": "2010-05-15",
       "endDate": "2010-08-15",
       "summary": "Write feature stories for homes section. Edit freelance submissions."
@@ -69,7 +69,7 @@
       "company": "Waco Tribune-Herald",
       "position": "Reporter",
       "location": "Waco, Texas",
-      "website": "http://www.wacotrib.com",
+      "website": "http://wacotrib.com",
       "startDate": "2008-09-15",
       "endDate": "2010-05-15",
       "summary": "Write daily crime and weekend events stories."
@@ -78,7 +78,7 @@
       "company": "Baylor University",
       "position": "Instructor, teaching assistant",
       "location": "Waco, Texas",
-      "website": "http://www.baylor.edu/journalism/",
+      "website": "http://baylor.edu/journalism/",
       "startDate": "2008-08-15",
       "endDate": "2010-05-15",
       "summary": "Teach media writing class, grade papers, assist with research."
@@ -96,7 +96,7 @@
       "company": "Maverick Publishing",
       "position": "Copy editor, editorial assistant",
       "location": "Spearfish, South Dakota",
-      "website": "http://www.americanbagger.com",
+      "website": "http://americanbagger.com",
       "startDate": "2007-08-15",
       "endDate": "2008-08-15",
       "summary": "Edit copy and photos in two nationally distributed trade magazines. Create style guide."

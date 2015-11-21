@@ -2,7 +2,7 @@ var l = [];
 
 var labels = ["default", "primary", "success", "info", "warning", "danger"];
 
-var kw = ["Reporting", "Writing", "Research", "Editing", "Maps", "Charts", "Dataviz", "HTML/CSS/JS", "Python/Django", "Shell scripts", "GIS", "SQL", "spinning divs!"];
+var kw = ["Reporting", "Writing", "Research", "Editing", "Dataviz", "HTML/CSS/JS", "Python/Django", "Shell scripts", "GIS", "SQL"];
 
 var getLabel = function() {
     return _.sample(labels);
