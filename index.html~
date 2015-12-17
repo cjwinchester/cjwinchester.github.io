@@ -87,6 +87,5 @@
         <script src="js/underscore-min.js"></script>
         <script src="js/bigtext.js"></script>
         <script src="js/main.js"></script>
-<!-- -->
     </body>
 </html>
