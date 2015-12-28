@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <link href="css/main.css" rel="stylesheet">
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -16,10 +17,39 @@
         <![endif]-->
     </head>
     <body>
-        <div class="container" style="margin: 50px auto 50px auto;"></div>
+        <div class="container" style="margin: 50px auto 50px auto;">           
+            <div class="col-md-6 col-md-offset-3">
+                <h1 class="bold">All I Want For Christmas is a Goat</h1>
+                <img id="topimg" src="https://media.giphy.com/media/pVzsTjOxp1qKc/giphy.gif" />
+                <div id="audio-player"></div>
+                <div id="player">
+                    <h2>
+                        <i class="fa fa-play playpause noselect" id="playpauseicon"></i>&ensp;
+                        <i class="fa fa-fast-backward prev noselect"></i>&ensp; 
+                        <i class="fa fa-fast-forward next noselect"></i>&emsp;&emsp;
+                        <a href="mp3/goat_christmas.zip"><i class="fa fa-arrow-circle-down noselect" id="dl"></i></a>
+                    </h2>
+                </div>
+                <div id="playlist"></div>
+            </div>
+        </div>
+            <script type="text/html" class="template">
+                <table class="table lead">
+                    <tbody>
+                        <% _.each( songs, function( song, i ){ %>
+                        <tr>
+                            <td <% if (i===0) { %> style="border-top:0;"<% }; %>><span class="cl" id="<%= i %>"><%= i+1 %>. <%= song.name %>
+                            </td>
+                        </tr>
+                        <% }); %>
+                    </tbody>
+                </table>
+                </script>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-        <script src="http://www.codywinchester.com/js/underscore-min.js"></script>   
+        <script src="http://www.codywinchester.com/js/underscore-min.js"></script>
+        <script src="http://www.codywinchester.com/js/jquery.jplayer.min.js"></script>
+        <script src="js/mix.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>
