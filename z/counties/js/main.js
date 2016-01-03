@@ -1,7 +1,8 @@
 var map = $("#map");
 var targetWidth = $('#mapcontainer').width();
+var targetHeight = $('#mapcontainer').height();
 map.attr("width", targetWidth);
-map.attr("height", targetWidth);
+map.attr("height", targetHeight);
 
 var width = 960;
 var height = 600;
