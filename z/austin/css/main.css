@@ -1,0 +1,7 @@
+html, body {font-family:'Roboto', 'Helvetica Neue', Arial, sans-serif; margin:0; padding:0;}
+.bold {font-weight:bold;}
+#player { text-align:center; margin-bottom:30px; }
+.playpause, .prev, .next, tr { cursor:pointer;}
+.playpause, .prev, .next {color:#bababa;}
+.fa:hover {color: #999;}
+.noselect { -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
