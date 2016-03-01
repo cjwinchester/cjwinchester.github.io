@@ -1,8 +1,0 @@
-.mapcontainer { margin-bottom:30px;}
-.counties { fill: #ccc; stroke: #fff; stroke-width:1; stroke-linejoin: round; }
-.highlight { fill: red; }
-.states { fill: none; stroke: #fff; stroke-width:2; stroke-linejoin: round; }
-#county_names { overflow-y: scroll; height:400px; }
-.click { color:blue; cursor:pointer; }
-.click:hover { text-decoration:underline; }
-#search { margin-bottom:15px; }
