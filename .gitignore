@@ -1,0 +1,17 @@
+_site
+.sass-cache
+.jekyll-metadata
+
+logs
+*.log
+npm-debug.log*
+
+.npm
+.grunt
+.lock-wscript
+
+node_modules
+
+
+.node_repl_history
+.tmp/

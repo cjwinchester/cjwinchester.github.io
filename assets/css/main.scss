@@ -1,0 +1,159 @@
+---
+---
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700);
+
+@import 'syntax-highlighting';
+
+$primary-color: #337ab7;
+$highlight-color: #eaf2f7;
+$bg-color: #fffff8;
+$text-black: #111;
+$text-muted: #aaa;
+$lite-grey: #eee;
+
+html, body {
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    background-color: $bg-color;
+    color: $text-black;
+    margin:0;
+    padding: 0;
+    overflow-x: hidden;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.no-touchy {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;    
+}
+
+.container {
+    padding:40px;
+    @media (max-width: 600px) {
+        padding: 20px 20px 20px 40px;
+    }
+}
+
+div.cromulent {
+    width: 100%;
+    max-width: 600px;
+    h1 {
+        margin-bottom:30px;
+    }
+}
+
+p, ul, td {
+    font-size: 20px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+a {
+    @extend .bold;
+    color: $primary-color;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+img, iframe {
+    max-width: 100%;
+}
+
+.italic {
+    font-style:italic;
+}
+
+.note {
+    color: $text-muted;
+    font-size: 10px;
+}
+
+.homer {
+    top:8px;
+    left: 8px;
+    position: fixed;
+}
+
+#player {
+    background: $highlight-color;
+    border-radius:3px;
+    cursor:pointer;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top:10px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    td, th {
+        vertical-align: top;
+        padding:10px;
+        border-top: 1px solid $lite-grey;
+        position: static;
+        float: none;
+        display: table-cell;
+    }
+}
+
+.project-div {
+    margin-bottom: 60px;
+    border-top: 1px solid $lite-grey;
+    h2 {
+        margin: 5px auto 0 auto;
+    }
+    p.project-date {
+        margin: 0 auto 15px auto;
+    }
+}
+
+p.small {
+    font-size: 12px;
+}
+
+td.playlist-item {
+    cursor: pointer;
+    border-left: 4px solid $bg-color;
+    &:hover {
+        @extend td.playlist-item-active;
+    }
+}
+
+td.playlist-item-active {
+    border-left: 4px solid $primary-color;
+}
+
+.playlist-controls {
+    background: $highlight-color;
+    margin: auto auto 15px auto;
+    padding: 5px 10px 10px 10px;
+}
+
+.playlist-nowplaying {
+    margin-bottom: 10px;
+}
+
+.playlist-progress-bar {
+    width: 100%;
+    height: 5px;
+    background: $highlight-color;
+}
+
+.playlist-button {
+    cursor: pointer;
+    color: $primary-color;
+    @extend .no-touchy;
+    &:hover {
+        text-decoration: underline;
+    }
+}

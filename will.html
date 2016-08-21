@@ -1,0 +1,40 @@
+---
+layout: default
+title: ~ last will and testament ~ codywinchester.com ~
+permalink: /last-will-and-testament/
+---
+
+{% include home_link.html %}
+<div class="container">
+    <div class="cromulent">
+        <h1>The Last Will and Testament of Cody John Winchester</h1>
+            <p>This document is the legal will and testament of Cody John Winchester, currently of <span id="city"></span>. It was last updated <span id="updated"></span>.</p>
+            <p>My preferences for the disposition of my body are, in descending order:</p>
+            <ul>
+                <li>Bio-cremation via <a href="https://en.wikipedia.org/wiki/Alkaline_hydrolysis_(death_custom)" target="_blank">alkaline hydrolysis</a></li>
+                <li>Donation to the <a href="http://fac.utk.edu/body-donation/" target="_blank">University of Tennessee Knoxville's Anthropological Research Facility</a></li>
+                <li>Burial &mdash; <span class="italic">no embalming or coffin</span> &mdash; in a mycological "<a href="http://coeio.com/people-products/" target="_blank">infinity shroud</a>"</li>
+                <li>Cremation in a simple burial shroud</li> 
+            </ul>
+   
+            <p>If you go the cremation route, I'd ask that you scatter the ashes over a plot of wheat, then harvest the wheat and thresh it into flour, then bake the flour into bread and make me into sandwiches. If that's too much work, just scatter me in <a href="https://www.google.com/maps/place/Sinks+Canyon+State+Park/@42.7556797,-108.8041407,17z/data=!3m1!4b1!4m5!3m4!1s0x8759a9fbf960fe45:0x77108702f3c0631f!8m2!3d42.7556758!4d-108.801952" target="_blank">Sinks Canyon</a> somewhere.</p>
+            
+            <p>If my manner of death is such that it draws media attention &mdash; fingers crossed! &mdash; Samuel Harbert of Spearfish, South Dakota, is empowered to act as family spokesman. In all media appearances Mr. Harbert must wear a tank top featuring the insignia of a death-metal band and use the word "crapulence" at least once.</p>
+
+            <p>All money and personal property to my wife, Laurel, and to my children, Julian and Lucy. Donations to <a href="http://ire.org/donate/">Investigative Reporters and Editors</a> in lieu of flowers. <span id="obit"></span>.</p>
+
+            <p>cw</p>
+
+        <script>
+        var updated = "Aug. 4, 2016";
+        var city = "Austin, Texas";
+        var obit = {
+            link: "http://alt.coxnewsweb.com/statesman/pdf/obits/obits2010.pdf",
+            paper: "Austin American-Statesman"
+        };
+
+        document.getElementById("city").innerHTML = city;
+        document.getElementById("obit").innerHTML = "<a href='" + obit.link + "' target='_blank'>Obituary in the " + obit.paper + "</a>";
+        document.getElementById("updated").innerHTML = updated;
+
+        </script>

@@ -1,0 +1,20 @@
+---
+layout: default
+title: ~ projects ~ codywinchester.com ~
+permalink: /projects/
+---
+
+{% include home_link.html %}
+<div class="container">
+    <div class="cromulent">
+        <h1>Recent projects</h1>
+        {% for project in site.data.projects %}
+        <div class="project-div">
+            <h2><a href="{{ project.url }}" target="_blank">{{ project.hed }}</a></h2>
+            <p class="note project-date">{{ project.date }}</p>
+            <p>{{ project.desc }}{% if project.collab %} With {% for collab in project.collab %}<a href="https://twitter.com/{{ collab }}" target="_blank">@{{ collab }}</a>{% if forloop.last == false %}{% if forloop.rindex0 == 1 %} and {% else %}, {% endif %}{% endif %}{% endfor %}.{% endif %}</p>
+            {% if project.github %}<p class="small"><a href="https://github.com{{ project.github }}" target="_blank">See this project on Github &raquo;</a></p>{% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</div>

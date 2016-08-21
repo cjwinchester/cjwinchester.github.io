@@ -1,0 +1,37 @@
+{
+  "name": "cody-winchester-dot-com",
+  "version": "0.0.0",
+  "description": "website of cody j winchester",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cjwinchester/cjwinchester.github.io.git"
+  },
+  "keywords": [
+    "winchester",
+    "satellite",
+    "crapulence"
+  ],
+  "author": "cody j winchester",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cjwinchester/cjwinchester.github.io/issues"
+  },
+  "homepage": "https://github.com/cjwinchester/cjwinchester.github.io",
+  "dependencies": {
+    "d3": "^3.5.17",
+    "d3-queue": "^3.0.1",
+    "jplayer": "^2.9.2",
+    "jquery": "^3.0.0",
+    "topojson": "^1.6.26",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-uglify": "^2.0.0"
+  }
+}

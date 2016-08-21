@@ -1,0 +1,35 @@
+---
+layout: default
+script: mixtape.js
+fontawesome: true
+title: ~ mixtape ~ codywinchester.com ~
+permalink: /mixtape/
+---
+
+{% include home_link.html %}
+<div class="container">
+    <div class="cromulent">
+        <div id="audio-player-playlist"></div>
+        <div class="playlist-progress-bar"></div>
+        <div class="playlist-controls">
+            <div class="playlist-nowplaying">
+                <span class="playlist-nowplaying-pre bold"></span><span class="playlist-nowplaying-track"></span>
+            </div>
+            <span class="playlist-button prev">&laquo; Previous</span>&emsp;
+            <span class="playlist-button playpause">Play</span>&emsp;
+            <span class="playlist-button next">Next &raquo;</span>
+        </div>
+        <div id="playlist"></div>
+    </div>
+</div>
+
+<script type="text/html" class="template">
+    <table>
+        <% _.each( songs, function( song, i ){ %>
+        <tr>
+            <td id="<%= song.track %>" class="playlist-item" <% if (i===0) { %> style="border-top:0;"<% }; %>><%= +song.track %>. <%= song.artist %> - <%= song.title %>
+            </td>
+        </tr>
+        <% }); %>
+    </table>    
+</script>

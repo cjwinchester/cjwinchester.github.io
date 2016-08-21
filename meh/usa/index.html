@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>USA! USA! USA!</title>
+        <style>
+        html, body {
+            margin:0;
+            padding:0;
+            font-family: Verdana, Arial, sans-serif;
+            text-align:center;
+            text-transform:uppercase;
+        }
+        .container {
+            margin:20px;
+        }
+        .lentil {
+            font-size:18px;
+            font-weight:bold;
+            padding:5px;
+        }
+        img {
+            max-width:100%;
+            margin-top:40px;
+        }
+        li {
+            color:#aaa;
+            cursor:pointer;
+            display:inline;
+            list-style-type:none;
+            margin-right:6px;
+        }
+        .selected {
+            font-weight:bold;
+            border-bottom:3px solid #aaa;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="container" style="display:none;">
+            <div style="margin-bottom:30px;">
+                <span class="lentil" style="background:#ffff99; color:#000;">Lived</span>
+                &emsp;
+                <span class="lentil" style="background:#386cb0; color:#fff;">Visited</span>
+            </div>
+            <div id="main"></div>
+            <script type="text/html" class="template">
+                <% _.each( data, function( person ){ %>
+                    <li><%= person %></li>
+                <% }); %>
+                <% _.each( data, function( person ){ %>
+                    <div id="<%= person %>" class="map" style="display:none;">
+                        <img src="<%= person %>_visit.png" />
+                    </div>
+                <% }); %>
+            </script>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+        <script>
+            var data = ['cody', 'laurel', 'julian', 'lucy'];
+            var template = _.template($( "script.template" ).html());
+            $('#main').html(template(data));
+
+            window.onload = function() {
+                $('li').eq(0).addClass('selected');
+                $('div.map').eq(0).show();
+                $('.container').fadeIn('fast')
+            };
+
+            $('li').click(function() {
+              $('li').removeClass('selected');
+              $('div.map').hide();
+              $(this).addClass( 'selected' );
+              var num = $(this).index();
+              $('div.map').eq(num).show();
+            });
+
+            $(window).keyup(function() {
+                var curr;
+                var next;
+                var previous;
+
+                $('li').each(function() {
+                if ($(this).hasClass('selected')) {
+                    curr = this;
+                }
+                });
+                if (event.keyCode === 39) {
+                  $('li').removeClass('selected');
+                  $('div.map').hide();
+                    if ($(curr).index()+1 > $('li').length-1) {
+                        next = 0;
+                    } else {
+                        next = $(curr).index() + 1
+                    }
+                    $('li').eq(next).addClass('selected');
+                    $('div.map').eq(next).show();
+                } else if (event.keyCode === 37) {
+                    $('li').removeClass('selected');
+                    $('div.map').hide();
+                    if (typeof $(curr).index()-1 === "undefined" ) {
+                        previous = $('li').length;
+                    } else {
+                        previous = $(curr).index() - 1
+                    }
+                    $('li').eq(previous).addClass('selected');
+                    $('div.map').eq(previous).show();
+                }
+            });        
+        </script>
+    </body>
+</html>

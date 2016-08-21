@@ -1,0 +1,25 @@
+title: ~ codywinchester.com ~
+email: cjwinchester@gmail.com
+description: Hello, I'm a journalist and developer in Austin, Texas.
+url: "http://codywinchester.com"
+twitter_username: cody_winchester
+github_username: cjwinchester
+
+markdown: kramdown
+
+sass:
+    style: compressed
+
+future: true
+
+data_dir: data
+
+excerpt_separator: <!--more-->
+
+exclude:
+  - README.md
+  - node_modules
+  - gruntfile.js
+  - package.json
+  - params.json
+  - CNAME
