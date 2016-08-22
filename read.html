@@ -9,7 +9,7 @@ permalink: /read/
     <div class="cromulent">
         <h1>What am I reading?</h1>    
         <table>
-            {% for book in site.data.books.books reversed %}
+            {% for book in site.data.books.books %}
             {% assign st = 5 | minus: book.stars %}
             <tr>
             <td><a href="{{ book.url }}" target="_blank">{{ book.title }}</a>, by {{ book.author }}
