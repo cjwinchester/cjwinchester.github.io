@@ -1,4 +1,4 @@
-(function($, _) {
+(function($) {
 
     var artist = "Swans";
     var title = "Blind";
@@ -52,4 +52,4 @@
         setAudioMedia();
         $('#player').on('click', playPauseAudio);
     });
-})(jQuery, _);
+})(jQuery);
