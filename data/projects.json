@@ -3,7 +3,7 @@
         "hed": "Texas school ratings lookup",
         "date": "8/16/2016",
         "url": "http://projects.statesman.com/news/2016-08-16-tx-school-data/",
-        "desc": "Processing Texas school accountability data into a searchable database",
+        "desc": "Processing Texas school accountability data into a searchable database.",
         "github": "/statesman/tx-school-data",
         "collab": ["danhillreports", "humphrinator"],
         "tools":["javascript"]
