@@ -1,8 +1,8 @@
 (function($) {
 
-    var artist = "Noname";
-    var title = "Diddy Bop";
-    var url = "https://dl.dropboxusercontent.com/u/38884522/Noname%20ft.%20Raury%20%26%20Cam%20O'bi%20-%20Diddy%20Bop.mp3";
+    var artist = "Deru";
+    var title = "1979";
+    var url = "https://dl.dropboxusercontent.com/u/38884522/Deru%20-%201979.mp3";
 
     $("#player").html("listening to " + artist);
 
