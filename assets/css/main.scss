@@ -78,12 +78,6 @@ img, iframe {
     font-size: 10px;
 }
 
-.homer {
-    top:8px;
-    left: 8px;
-    position: fixed;
-}
-
 #player {
     background: $highlight-color;
     border-radius:3px;
@@ -107,10 +101,13 @@ table {
 }
 
 .project-div {
-    margin-bottom: 60px;
-    border-top: 1px solid $lite-grey;
+    hr {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-top: $lite-grey;
+    }
     h2 {
-        margin: 5px auto 0 auto;
+        margin: 0 auto;
     }
     p.project-date {
         margin: 0 auto 15px auto;
