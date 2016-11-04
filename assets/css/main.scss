@@ -9,7 +9,7 @@ $primary-color: #337ab7;
 $highlight-color: #eaf2f7;
 $bg-color: #fffff8;
 $text-black: #111;
-$text-muted: #aaa;
+$text-muted: #777;
 $lite-grey: #eee;
 
 html, body {
@@ -104,13 +104,13 @@ table {
     > hr {
     margin-top: 30px;
     margin-bottom: 30px;
-    border-top: $lite-grey;
+    border-top: 1px solid $primary-color;
     }
     h2 {
         margin: 0 auto;
     }
     p.project-date {
-        margin: 0 auto 15px auto;
+        margin: 0 auto 5px auto;
     }
 }
 
@@ -152,5 +152,33 @@ td.playlist-item-active {
     @extend .no-touchy;
     &:hover {
         text-decoration: underline;
+    }
+}
+
+div.book-review {
+    h2 {
+        font-weight: normal;
+    }
+    h3 {
+        margin:0;
+    }
+    div.review-detail {
+        margin-bottom: 30px;
+    }
+    img {
+        max-width: 150px;
+        display: inline-block;
+        float: right;
+        margin: 0 0 15px 15px;
+        border: 1px solid #ccc;
+      &:before,
+      &:after {
+        content: " ";
+        display: table;
+      }
+      &:after {
+        clear: both;
+      }
+
     }
 }

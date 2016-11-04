@@ -83,7 +83,7 @@
     - d3
 - hed: D3 &rarr; PNG
   date: 11/11/2015
-  url: http://codywinchester.com/meh/d3toimg/
+  url: /meh/d3toimg/
   desc: Convert a simple D3 locator map into a PNG.
   tools:
     - javascript
@@ -101,7 +101,7 @@
     - d3
 - hed: USA! USA! USA!
   date: 11/19/2014
-  url: http://codywinchester.com/meh/usa
+  url: /meh/usa
   desc: 'Maps: Where have we lived? Where have we visited?'
   tools:
     - inkscape
@@ -115,7 +115,7 @@
     - javascript
 - hed: What am I listening to?
   date: 7/8/2016
-  url: http://codywinchester.com/mixtape/
+  url: /mixtape/
   desc: Mixtape, yo.
   tools:
     - javascript

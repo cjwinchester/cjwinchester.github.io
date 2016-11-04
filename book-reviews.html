@@ -1,0 +1,24 @@
+---
+layout: default
+fontawesome: true
+title: ~ julian and cody review books ~ codywinchester.com ~
+permalink: /julian-and-cody-review-books/
+---
+
+<div class="container">
+    <div class="cromulent">
+        <h1>Julian and Cody review books</h1>
+        {% for item in site.data.reviews %}
+        <div class="book-review">
+            <h2><i>{{ item.book }}</i>, by {{ item.author }}</h2>
+            <img src="/assets/img/reviews/{{ item.img }}" />
+            {% for review in item.reviews %}
+                <div class="review-detail">
+                <p><b>{{ review.name }}</b>&ensp;{% if review.recommend %}<i class="fa fa-thumbs-o-up"></i>{% else %}<i class="fa fa-thumbs-o-down"></i>{% endif %}</p>
+                {{ review.comments|safe }}
+                </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
