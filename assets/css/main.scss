@@ -100,6 +100,10 @@ table {
     }
 }
 
+p.project-date {
+    margin: 0 auto 0 auto;
+}
+
 .project-div {
     > hr {
     margin-top: 30px;
@@ -108,9 +112,6 @@ table {
     }
     h2 {
         margin: 0 auto;
-    }
-    p.project-date {
-        margin: 0 auto 5px auto;
     }
 }
 
@@ -158,18 +159,25 @@ td.playlist-item-active {
 div.book-review {
     h2 {
         font-weight: normal;
+        margin: 0;
     }
     h3 {
         margin:0;
     }
     div.review-detail {
         margin-bottom: 30px;
+        p {
+            margin: 0;
+            &.author {
+                margin: 15px 0 0 0;
+            }
+        }
     }
     img {
         max-width: 150px;
         display: inline-block;
         float: right;
-        margin: 0 0 15px 15px;
+        margin: 25px 0 15px 15px;
         border: 1px solid #ccc;
       &:before,
       &:after {
