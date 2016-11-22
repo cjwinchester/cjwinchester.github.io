@@ -113,12 +113,6 @@
   desc: Using wherewolf.js to map new political boundaries for the Omaha Metropolitan Utilities District.
   tools:
     - javascript
-- hed: What am I listening to?
-  date: 7/8/2016
-  url: /mixtape/
-  desc: Mixtape, yo.
-  tools:
-    - javascript
 - hed: Public pay
   date: 2/3/2014
   url: http://dataomaha.com/salaries
