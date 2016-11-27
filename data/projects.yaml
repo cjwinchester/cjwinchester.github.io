@@ -1,7 +1,26 @@
+- hed: ICE detainee analysis
+  date: 10/13/2016
+  url: https://github.com/statesman/ice-travis-county/blob/master/ice-data-parser.ipynb
+  desc: A Jupyter notebook to crunch data on ICE detainees in Travis County, Texas.
+  tools:
+    - python
+    - jupyter
+    - agate
+    - bash
+  github: "/statesman/ice-travis-county"
+- hed: Latino representation in Texas
+  date: 10/21/2016
+  url: http://projects.statesman.com/news/latino-representation/
+  desc: An immersive layout and interactive for a bilingual analysis of Latino representation in Texas.
+  collab:
+    - danhillreports
+  tools:
+    - javascript
+    - d3
 - hed: Austin City Council candidates
   date: 10/6/2016
   url: http://apps.statesman.com/council-candidate-explorer/election/2016/
-  desc: An election guide.
+  desc: An election guide built in Django.
   collab:
     - humphrinator
   tools:
@@ -9,7 +28,7 @@
 - hed: Texas school ratings lookup
   date: 8/16/2016
   url: http://projects.statesman.com/news/2016-08-16-tx-school-data/
-  desc: Processing Texas school accountability data into a searchable database.
+  desc: A searchable database of Texas school accountability data.
   github: "/statesman/tx-school-data"
   collab:
     - danhillreports
@@ -19,14 +38,14 @@
 - hed: The Lockhart balloon crash victims
   date: 8/2/2016
   url: http://apps.statesman.com/lockhart-balloon-crash-victims/
-  desc: A microsite to collect information on the victims of a fatal balloon crash.
+  desc: A microsite that used a Django admin to collect information on victims of a fatal balloon crash.
   collab:
     - danhillreports
     - humphrinator
   tools:
     - django
     - javascript
-- hed: 'Immersive: 50 years after the UT Tower shooting'
+- hed: Tower shooting package
   date: 7/15/2016
   url: http://projects.statesman.com/news/ut-tower-shooting-50th-anniversary/
   desc: A video-heavy immersive project marking the 50th anniversary of the Charles Whitman massacre.
@@ -41,42 +60,44 @@
 - hed: '2015 Census population estimates'
   date: 6/23/2016
   url: http://projects.statesman.com/news/census/estimates-detail-2015/
-  desc: A D3 map exploring detailed population estimates in Texas.
+  desc: A D3 map for exploring population estimates in Texas.
   collab:
     - danhillreports
   tools:
     - javascript
     - d3
-- hed: SXSW 2016 parties
-  date: 3/12/2016
-  url: http://projects.statesman.com/sxsw/
-  desc: A party guide.
-  github: '/statesman/sxsw-parties'
-  tools:
-    - javascript
-    - django
+# - hed: SXSW 2016 parties
+#   date: 3/12/2016
+#   url: http://projects.statesman.com/sxsw/
+#   desc: A party guide.
+#   github: '/statesman/sxsw-parties'
+#   tools:
+#     - javascript
+#     - django
 - hed: Primary polling
   date: 3/20/2016
   url: http://projects.statesman.com/news/texas-pulse-statesman-poll/
-  desc: Charts and widgets summarizing a Statesman-sponsored presidential poll.
+  desc: Charts and widgets that summarize a Statesman-sponsored presidential poll.
   github: '/statesman/texas-pulse-statesman-poll'
   tools:
     - javascript
 - hed: Nebraska campaign finance
   date: 3/18/2016
   url: http://dataomaha.com/campaign-finance
-  desc: A Django app that displays Nebraska campaign finance data in a useful way for the first time in history.
+  desc: A <a href="https://github.com/OWH-projects/nadc_data" target="_blank">data pipeline</a> and Django app that extracts, parses, loads and displays Nebraska campaign finance data in a useful way for the first time in history.
   github: '/owh-projects/nadc/'
   collab:
     - bvankat
     - mattwynn
   tools:
+    - python
     - django
     - javascript
+    - bash
 - hed: Refugee resettlements
   date: 11/18/2015
   url: http://dataomaha.com/refugees
-  desc: A Django app visualizing U.S. refugee data by state of resettlement and country of origin.
+  desc: A Django app visualizing a snapshot of U.S. refugee data by state of resettlement and country of origin.
   github: '/owh-projects/refugees'
   tools:
     - django
@@ -84,14 +105,14 @@
 - hed: D3 &rarr; PNG
   date: 11/11/2015
   url: /meh/d3toimg/
-  desc: Convert a simple D3 locator map into a PNG.
+  desc: A tool to convert a D3 locator map into a PNG.
   tools:
     - javascript
     - d3
 - hed: Election results 2014
   date: 11/04/2014
   url: http://dataomaha.com/media/election2014/general/
-  desc: Landing page for Nebraska's 2014 general election returns.
+  desc: Landing page for live returns from Nebraska's 2014 general election. Built with <a href="http://www.tarbell.io/" target="_blank">Tarbell</a>.
   collab:
     - bvankat
   tools:
@@ -102,15 +123,15 @@
 - hed: USA! USA! USA!
   date: 11/19/2014
   url: /meh/usa
-  desc: 'Maps: Where have we lived? Where have we visited?'
+  desc: 'Map: Where have we lived? Where have we visited?'
   tools:
     - inkscape
     - python
-- hed: 'Map: MUD boundaries'
+- hed: Water district boundaries
   type: web
   date: 10/5/2015
   url: http://dataomaha.com/media/news/2015/mud-districts/
-  desc: Using wherewolf.js to map new political boundaries for the Omaha Metropolitan Utilities District.
+  desc: A map that uses <a href="https://github.com/veltman/wherewolf" target="_blank">wherewolf</a> to map new political boundaries of the Omaha Metropolitan Utilities District.
   tools:
     - javascript
 - hed: Public pay
@@ -125,7 +146,7 @@
 - hed: Prison scandal
   date: 9/28/2014
   url: http://dataomaha.com/prison
-  desc: A roundup of Nebraska prisoners whose sentences were mistakenly cut short.
+  desc: A Django app to highlight Nebraska prisoners whose sentences were mistakenly cut short.
   collab:
     - bvankat
     - mattwynn
@@ -140,13 +161,13 @@
 - hed: Nuke plant costs
   date: 5/17/2014
   url: http://dataomaha.com/media/oppd/exelon
-  desc: Tracking ongoing records requests for contractor invoices at the Fort Calhoun Nuclear Plant.
+  desc: A tool that kept track of a standing records request for contractor invoices at the Fort Calhoun Nuclear Plant.
   tools:
     - javascript
 - hed: Military surplus data
   date: 9/20/2014
   url: http://dataomaha.com/militarysurplus
-  desc: Categorizing surplus military items transferred to law enforcement agencies in Nebraska and Iowa.
+  desc: A Django app to categorize a snapshot of data on surplus military items transferred to law enforcement agencies in Nebraska and Iowa.
   collab:
     - leahbecerra
   tools:
@@ -154,7 +175,7 @@
 - hed: Dutch World-Herald
   date: 1/6/2014
   url: http://www.twitter.com/dutchowh
-  desc: A short-lived bot that retweeted the Omaha World-Herald's Twitter account &mdash; in Dutch!
+  desc: A short-lived bot that retweeted the Omaha World-Herald's Twitter account into Dutch.
   github: '/cjwinchester/dutchowh'
   tools:
     - python
