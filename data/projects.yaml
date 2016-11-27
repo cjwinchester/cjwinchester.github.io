@@ -175,7 +175,7 @@
 - hed: Dutch World-Herald
   date: 1/6/2014
   url: http://www.twitter.com/dutchowh
-  desc: A short-lived bot that retweeted the Omaha World-Herald's Twitter account into Dutch.
+  desc: A short-lived bot that retweeted the Omaha World-Herald's Twitter account in Dutch.
   github: '/cjwinchester/dutchowh'
   tools:
     - python
