@@ -1,8 +1,8 @@
 (function($) {
 
-    var artist = "Deru";
-    var title = "1979";
-    var url = "https://dl.dropboxusercontent.com/u/38884522/Deru%20-%201979.mp3";
+    var artist = "The Magnetic Fields";
+    var title = "Jeremy";
+    var url = "https://dl.dropboxusercontent.com/u/38884522/08%20-%20The%20Magnetic%20Fields%20-%20Jeremy.mp3";
 
     $("#player").html("listening to " + artist);
 
@@ -12,9 +12,11 @@
         e.preventDefault();
         var jPd = $player.data('jPlayer');
         if ( jPd.status.currentTime > 0 && jPd.status.paused === false ) {
+            $("#player").css('border', 'none');
             $player.jPlayer('pause');
         }
         else {
+            $("#player").css('border-bottom', '1px solid #96bed4');
             $player.jPlayer('play');
         }
     };
@@ -45,7 +47,10 @@
             timeupdate: onTimeupdate,
             loop: false,
             ended: function() {
-                $('#player').css('background', '#eaf2f7');
+                $('#player').css({
+                    'background': '#eaf2f7',
+                    'border': 'none'
+                });
                 setAudioMedia();
             }
         });

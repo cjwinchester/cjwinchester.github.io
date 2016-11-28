@@ -21,12 +21,6 @@ module.exports = function(grunt) {
             'node_modules/underscore/underscore-min.js',
             'node_modules/jplayer/dist/jplayer/jquery.jplayer.js',
             '_js/_front.js'
-          ],
-          'assets/js/mixtape.js': [
-            'node_modules/jquery/dist/jquery.js',
-            'node_modules/underscore/underscore-min.js',
-            'node_modules/jplayer/dist/jplayer/jquery.jplayer.js',
-            '_js/_mix.js'
           ]
         }
      }
