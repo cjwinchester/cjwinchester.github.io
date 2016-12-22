@@ -1,8 +1,8 @@
 (function($) {
 
-    var artist = "The Magnetic Fields";
-    var title = "Jeremy";
-    var url = "https://dl.dropboxusercontent.com/u/38884522/08%20-%20The%20Magnetic%20Fields%20-%20Jeremy.mp3";
+    var artist = "Smog";
+    var title = "Hit The Ground Running";
+    var url = encodeURIComponent('assets/music/Smog - Hit the Ground Running.mp3');
 
     $("#player").html("listening to " + artist);
 
