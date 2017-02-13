@@ -1,3 +1,19 @@
+- hed: Texas teacher impropriety
+  date: 2/5/2017
+  url: http://projects.statesman.com/news/20170205-texas-teacher-impropriety/
+  desc: A searchable database of Texas teachers who permanently lost their teaching licenses after allegations of impropriety with a student (powered by a Google spreadsheet).
+  tools:
+    - javascript
+    - node
+    - google
+- hed: Central Texas football recruits
+  date: 1/28/2017
+  url: http://projects.statesman.com/sports/central-texas-high-school-football-fbs-recruits/
+  desc: An interactive map with a rundown of Central Texas high school football recruits (powered by a Google spreadsheet and some ~fancy~ ES6 javascript).
+  tools:
+    - javascript
+    - node
+    - google
 - hed: ICE detainee analysis
   date: 10/13/2016
   url: https://github.com/statesman/ice-travis-county/blob/master/ice-data-parser.ipynb
