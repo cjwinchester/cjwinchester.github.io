@@ -1,8 +1,8 @@
 (function($) {
 
     var artist = "Smog";
-    var title = "Hit The Ground Running";
-    var url = encodeURIComponent('assets/music/Smog - Hit the Ground Running.mp3');
+    var title = "I Feel Like the Mother of the World";
+    var url = encodeURIComponent('assets/music/Smog - I Feel Like the Mother of the World.mp3');
 
     $("#player").html("listening to " + artist);
 
