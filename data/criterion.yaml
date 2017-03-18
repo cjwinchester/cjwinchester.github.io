@@ -13,6 +13,7 @@
   year: 1957
   country: United States
   url: https://www.criterion.com/films/27871-12-angry-men
+  watched: true
 - title: 2 or 3 Things I Know About Her
   director: Jean-Luc Godard
   year: 1967
@@ -98,7 +99,7 @@
   year: 1973
   country: Italy
   url: https://www.criterion.com/films/1025-the-age-of-the-medici
-- title: 
+- title: 25 Films By Akira Kurosawa
   director: Akira Kurosawa
   year: ''
   country: Japan
