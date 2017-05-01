@@ -10,10 +10,10 @@ permalink: /read/
           {% for book in site.data.books %}
           {% assign st = 5 | minus: book.stars %}
           <div class="row">
-            <div style="width: 50%; display: inline-block;">
+            <div class="reads">
               <a href="{{ book.url }}" target="_blank">{{ book.title }}</a>, by {{ book.author }}
             </div>
-            <div style="width: 50%; display: inline-block; float: right; text-align: right;">
+            <div class="reads-right">
               {% for num in (1...book.stars) %}&#9733;{% endfor %}{% for num in (1...st) %}&#9734;{% endfor %}
             </div>
           </div>
