@@ -17,6 +17,7 @@ html, body {
     background-color: $bg-color;
     color: $text-black;
     margin:0;
+    font-size: 20px;
     padding: 0;
     overflow-x: hidden;
     -webkit-box-sizing: border-box;
@@ -46,10 +47,6 @@ div.cromulent {
     h1 {
         margin-bottom:30px;
     }
-}
-
-p, ul, td {
-    font-size: 20px;
 }
 
 .bold {
