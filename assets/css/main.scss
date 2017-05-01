@@ -190,3 +190,16 @@ div.book-review {
 
     }
 }
+
+.row {
+    padding:10px;
+    border-top: 1px solid $lite-grey;
+    &:before,
+      &:after {
+        content: " ";
+        display: table;
+      }
+      &:after {
+        clear: both;
+      }
+}
