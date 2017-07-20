@@ -58,7 +58,8 @@
     "lived":[
       "NE",
       "SD",
-      "TX"
+      "TX",
+      "CO"
     ],
     "visited":[
       "AR",
@@ -75,11 +76,11 @@
       "NE",
       "SD",
       "TX",
-      "WY"
+      "WY",
+      "CO"
     ],
     "visited":[
       "AR",
-      "CO",
       "IA",
       "KS",
       "MO",

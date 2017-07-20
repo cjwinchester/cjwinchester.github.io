@@ -3,12 +3,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="959" height="593">
 
 <style type="text/css">
-.state 
-{
-	fill:#ffffff;
-	stroke:#aaa;
-	stroke-width:1;
-	stroke-opacity:1;
+.state {
+	fill: #ffffff;
+	stroke: #aaa;
+	stroke-width: 1;
+	stroke-opacity: 1;
 }
 </style>
 
