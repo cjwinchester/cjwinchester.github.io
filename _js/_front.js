@@ -1,8 +1,8 @@
 (function($) {
 
-    var artist = "Smog";
-    var title = "I Feel Like the Mother of the World";
-    var url = encodeURIComponent('assets/music/Smog - I Feel Like the Mother of the World.mp3');
+    var artist = "Beauty Pill";
+    var title = "Dog With Rabbit In Mouth, Unharmed";
+    var url = encodeURIComponent('assets/music/Beauty Pill - Dog With Rabbit In Mouth, Unharmed.mp3');
 
     $("#player").html("listening to " + artist);
 
