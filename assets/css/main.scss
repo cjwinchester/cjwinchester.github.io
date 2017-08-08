@@ -201,24 +201,7 @@ div.book-review {
       }
 }
 
-.reads {
-    width: 50%;
-    display: inline-block;
-  @media screen and (max-width: 500px) {
-    width: 100%;
-    display:block;
-  }
-}
-
-.reads-right {
-    width: 50%;
-    display: inline-block;
-    float: right;
-    text-align: right;
-  @media screen and (max-width: 500px) {
-    width: 100%;
-    display:block;
-    float: none;
-    text-align: left;
-  }
+div.books {
+  margin: 10px;
+  font-size: 24px;
 }
