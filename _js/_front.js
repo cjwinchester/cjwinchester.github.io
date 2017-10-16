@@ -1,8 +1,8 @@
 (function($) {
 
-    var artist = "Beauty Pill";
-    var title = "Dog With Rabbit In Mouth, Unharmed";
-    var url = encodeURIComponent('assets/music/Beauty Pill - Dog With Rabbit In Mouth, Unharmed.mp3');
+    var artist = "STRFKR";
+    var title = "Basically";
+    var url = encodeURIComponent('assets/music/strfkr_basically.mp3');
 
     $("#player").html("listening to " + artist);
 
