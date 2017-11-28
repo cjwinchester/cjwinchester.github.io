@@ -1,8 +1,8 @@
 (function($) {
 
-    var artist = "STRFKR";
-    var title = "Basically";
-    var url = encodeURIComponent('assets/music/strfkr_basically.mp3');
+    var artist = "Grouper";
+    var title = "Living Room";
+    var url = encodeURIComponent('assets/music/grouper_living_room.mp3');
 
     $("#player").html("listening to " + artist);
 
