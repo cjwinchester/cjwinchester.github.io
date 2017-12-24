@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#a { display:none; }
+
+#px {
+  object-fit: fill;
+}
