@@ -859,37 +859,21 @@ window.BreathingHalftone = Halftone;
   console.log('🎄🎄🎄 bonus! 🎄🎄🎄 https://drive.google.com/open?id=1kebO6LiqM-9oMYlAoveXYIPLbwrMbFjS')
 
   window.setInterval(function () {
-      if (document.title == "volume up")
-          {document.title = "click the dots"}
-      else {document.title = "volume up"}
+      if (document.title == "🔈 volume up 🔈")
+          {document.title = "👆 click the dots 👆"}
+      else {document.title = "🔈 volume up 🔈"}
   }, 1500);
 
   var audio = document.getElementById('a');
 
-  var isPlaying = false;
-
-  function togglePlay() {
-    if (isPlaying) {
-      audio.pause()
-    } else {
-      audio.play();
-    }
-  };
-  
-  audio.onplaying = function() {
-    isPlaying = true;
-  };
-
-  audio.onpause = function() {
-    isPlaying = false;
-  };
-
   document.body.addEventListener('click', function() {
-    togglePlay();
+    audio.play();
+    document.body.removeEventListener('click', arguments.callee);
   });
 
   document.body.addEventListener('touchstart', function() {
-    togglePlay();
+    audio.play();
+    document.body.removeEventListener('touchstart', arguments.callee);
   });
 
 })();
