@@ -1,8 +1,8 @@
 (function($) {
 
-    var artist = "Grouper";
-    var title = "Living Room";
-    var url = encodeURIComponent('assets/music/grouper_living_room.mp3');
+    var artist = "Deerhoof";
+    var title = "Top Tim Rubies";
+    var url = encodeURIComponent('assets/music/ttr.mp3');
 
     $("#player").html("listening to " + artist);
 
