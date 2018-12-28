@@ -1,4 +1,0 @@
-codywinchester.com
-======================
-
-Home page.
