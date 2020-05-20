@@ -1,0 +1,230 @@
+number,title
+0110,Emergency Notification
+0112,Emergency Relief Plans
+0120,Communications Protocols
+0150,Offense Reports
+0151,Reporting of Suspicious Activity or Terrorist Information - Communications and Reports
+0155,Missing Persons Reports
+0160,Motor Vehicle Thefts
+0170,Citations
+0180,Emergency Notification System
+0190,Direct Line Reporting (DLR) & Internet Crime Report (ICR)
+0210,Traffic Law Enforcement
+0215,Delayed Enforcement Action
+0230,Traffic Accident Investigations
+0231,Counter Reports
+0232,Hit and Run Accident Investigations
+0234,Fatal or Serious Injury Accidents
+0250,Accidents Involving City Employees or Vehicles
+0290,Towing and Impound Procedures
+0310,Routine Patrol Functions
+0312,Deployment-Response Priorities
+0315,Response to Crimes in Progress
+0330,Damage to Non - Police Property
+0350,Death Notifications
+0355,Organ Donor Programs
+0360,CJIS Information Request
+0420,Airport Security
+0435,Canine (K-9) Unit
+0450,Tactical Enforcement Unit
+0454,Incident Command System
+0455,Bomb Threats and Explosive Incidents
+0458,Hazardous Material Incidents
+0459,CBRN Awareness
+0460,Barricaded Suspects
+0465,Hostage Situations
+0470,Special Events
+0471,Handling High Profile Events
+0473,Checkpoint Procedures
+0475,VIP Security
+0480,Civil Disturbances and Demonstrations
+0505,Administration of Opioid Antagonist (Narcan)
+0510,Domestic Disturbances
+0520,Juveniles: General Applicability
+0524,Juvenile Offenders
+0526,Juvenile Victims
+0527,Amber Alert
+0530,Intoxicated Persons
+0540,Mentally Ill Persons
+0545,Extreme Risk Protection Orders
+0550,Deaf or Hard of Hearing Persons
+0555,At-Risk Adults
+0560,Diplomatic and Legislative Immunity
+0570,Immigration and Foreign Nationals
+0580,Treatment Of Transgender Community
+0590,Persons with Limited English Proficiency
+0601,Enforcement Guidelines
+0602,Off-Duty Enforcement Action
+0612,Protective Orders
+0614,Request for Assistance by Bail Bondsman
+0660,Controlled Substance Violations
+0701,First Amendment Rights
+0703,Public Surveillance Cameras
+0704,Body Worn Cameras (BWC)
+0705,Use of Force
+0710,Reporting Use of Force
+0720,Deadly Force Guidelines
+0740,Determining Probable Cause
+0743,Search Warrants
+0750,Citizen Contacts
+0755,Field Interviews
+0758,Handling of Street Gang Contacts
+0760,Physical Arrest
+0762,Mass Arrests
+0770,Prisoner Processing
+0771,Municipal Court Arrest Warrants
+0773,Sick or Injured Prisoners
+0775,Searching of Prisoners
+0785,Holding Cell Guidelines
+0805,Child Pornography And Digital Contraband
+0810,Investigative Procedures
+0811,Case Management and Discovery Procedures
+0812,Pawnshop Evidence
+0815,Deadly Force Investigations
+0816,Death or Life Threatening Injury Incidents
+0820,Initial Investigation Procedures
+0830,Crime Scene Assessment
+0831,Collection of Physical Evidence
+0832,Vehicle for Administrative Hold and Evidence
+0833,Evidence Office Procedures
+0834,Submitting DNA Requests To The Metro Crime Laboratory
+0835,Evidence Disposition Process
+0836,Visual Recording Of Evidence
+0837,Electronic Monitoring Devices GPS Trackers
+0838,National Integrated Ballistic Information Network  (NIBIN) Program
+0839,Collection and Handling of Digital Devices
+0840,Identifications
+0844,Live Identifications
+0850,Sequential Photographic Identifications
+0860,Interviews and Interrogations
+0870,Blood Alcohol Procedures
+0880,Deconfliction Program
+0885,Operation of Strategic Information Center (STIC)
+0891,Procedures for Identity Theft - Criminal Impersonation Resulting In False Prosecutions
+0920,Firearm Regulations
+0930,Soft Body Armor
+0955,Take-Home Vehicles
+0960,Vehicles Normal Operation
+0962,Vehicles: Emergency Operation
+0965,Vehicle Pursuits
+0975,Mobile Computer Procedures
+0985,800 Megahertz Trunked Radio
+0990,Cellular Telephone And Computer Use
+0995,Police Operations Center Parking Procedures
+1000,Mission of the Department
+1001,Department Organization
+1002,Office of the Chief
+1004,Operations Support Bureau
+1006,Investigative and Special Operations Bureau
+1008,Patrol Bureau
+1020,Principles of Command
+1030,Rank and Responsibility
+1040,Principles of Supervision
+1103,Information Technology Project Review Processes
+1105,Staff Duty Officer
+1107,Corporal Duties and Responsibilities
+1110,Critical Incident Review Committee
+1120,Staff Review
+1125,Line Inspections
+1130,Department Serial Numbers
+1131,Enhanced Tactical Communications System
+1140,Forms Control
+1145,Monthly Reports
+1147,Records Retention Schedule
+1150,Goals and Objectives
+1160,CALEA Accreditation Management
+1180,Written Directives
+1181,General Orders and Operations Manual
+1183,Standard Operating Procedures
+1188,Civilian Advisory Committee
+1190,Uniform and Equipment Standards
+1195,Officer Advisory Committee
+1210,Manpower Availability
+1240,Grants
+1245,Monitoring Grant Subrecipients
+1250,Use of Cash Funds
+1260,Buy Fund Accountability
+1265,Private Vehicle Use for City Business
+1267,Use of CSPD Logo or Name
+1280,Building Security
+1285,Restricted Building Access
+1290,Fire Plan Procedures And Fire Alarm System
+1301,Treatment of the Public
+1302,Community Relations
+1303,Fair and Impartial Policing
+1304,Crime Prevention Activities
+1306,Crime Stoppers
+1311,Volunteers: Security Clearance
+1317,Chaplaincy Corps
+1318,Espanol Service Program
+1320,Senior Victim Assistance Team (SVAT)
+1322,Handicap Parking Enforcement Team
+1325,Police Cadet Program
+1330,Ride-Along Program
+1340,Victim Contact Program
+1345,Treatment of Victims/Witnesses and Victim Rights Notification
+1401,Court Procedures
+1405,Expert Witness Fees
+1415,Mutual Aid Agreements
+1422,Concurrent or Special Jurisdiction
+1501,Records Security
+1503,NCIC/CCIC Records Validation
+1505,Police Employee Information
+1510,Criminal Records Information
+1515,Juvenile Records
+1520,Requests For Bulk Computer Records
+1550,Public Information Office And News Media
+1551,Recording of Police Activity
+1553,Social Media Usage
+1580,Articles for Publication
+1585,Mail Delivery System
+1600,Ethics Committee
+1605,Orders and Discretionary Judgment
+1610,Discipline
+1620,Complaints and Internal Investigations
+1623,Mediation of Complaints
+1625,Investigative Rights
+1626,Rights of Appeal
+1630,Drug Testing of Civil Service Employees
+1640,Psychological Fitness for Duty
+1650,Employee Conduct (Sworn And Civilian)
+1655,Police Officer Conduct
+1660,Conflicts of Interest
+1661,Sick Leave
+1662,Work Performance
+1663,Uniforms and Appearance
+1665,Political Activities
+1666,Display and Respect for the United States Flag
+1668,Internal Solicitation
+1670,Outside Employment
+1672,Extra Duty Employment
+1680,Personal Appearance and Grooming
+1701,Police Training Section
+1702,Educational Requirements for Sworn Promotional Positions
+1705,Career Development
+1720,Remedial Training
+1732,Firearms Qualification
+1737,PR-24 Baton Training
+1760,Executive Development Advisory Board
+1770,Police Training Officer Program
+1821,Pre-Employment Polygraphs
+1830,Performance Evaluation
+1835,Complaint Resolution Procedures
+1850,Intra-Department Transfers
+1855,Retention of Personnel in Specialized Units
+1885,Meritorious Service Awards
+1887,Gun and Badge Retention
+1890,Chief's Vision and Values Award Program
+1905,Exposure to Communicable Disease
+1910,Employee Injury Reporting
+1912,Department Approved Athletics
+1915,Health Fitness and Disability Assignments
+1917,Early Intervention Program
+1930,Meals During Overtime
+1940,Threatening Communications
+1950,Family Notification: Officer Death or Trauma
+1960,Peer Support Program
+1963,Psychological Services In Deadly Force Incidents
+1965,"Behavioral Health and Wellness, Suicide Prevention and Related Employee Support Services"
+1968,Military Support Officer (MSO)
+1990,Guidelines for Hardship Requests
