@@ -28,12 +28,15 @@ span.new {
 
 a {
   color: #337ab7;
-  font-weight: bold;
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
+}
+
+a.lead-link {
+  font-weight: bold;
 }
 
 p.also {
