@@ -16,16 +16,6 @@ body {
   padding: 0 20px
 }
 
-span.new {
-  background-color: red;
-  color: white;
-  padding: 2px 3px 0px 5px;
-  border-radius: 20%;
-  font-size: 14px;
-  margin-left: 10px;
-  vertical-align: middle
-}
-
 a {
   color: #337ab7;
   text-decoration: none;
