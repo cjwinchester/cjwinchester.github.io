@@ -16,15 +16,6 @@ body {
   padding: 0 20px
 }
 
-a {
-  color: #337ab7;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
 a.lead-link {
   font-weight: bold;
 }
